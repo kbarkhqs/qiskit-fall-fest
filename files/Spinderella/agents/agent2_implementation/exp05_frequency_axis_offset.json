@@ -1,0 +1,143 @@
+{
+  "rows": [
+    {
+      "f0_hz": -150.0,
+      "expected_line_position_hz": 150.0,
+      "centre_on_notebook_axis_hz": 149.08339780809808,
+      "notebook_axis_minus_expected_hz": -0.9166021919019158,
+      "centre_on_derived_axis_hz": 150.00006458240128,
+      "derived_axis_minus_expected_hz": 6.458240127926729e-05
+    },
+    {
+      "f0_hz": -60.0,
+      "expected_line_position_hz": 60.0,
+      "centre_on_notebook_axis_hz": 59.233199281039965,
+      "notebook_axis_minus_expected_hz": -0.7668007189600345,
+      "centre_on_derived_axis_hz": 59.999865723913125,
+      "derived_axis_minus_expected_hz": -0.00013427608687521797
+    },
+    {
+      "f0_hz": -20.0,
+      "expected_line_position_hz": 20.0,
+      "centre_on_notebook_axis_hz": 19.299854357139388,
+      "notebook_axis_minus_expected_hz": -0.7001456428606119,
+      "centre_on_derived_axis_hz": 19.99985411399604,
+      "derived_axis_minus_expected_hz": -0.00014588600395981643
+    },
+    {
+      "f0_hz": -3.0,
+      "expected_line_position_hz": 3.0,
+      "centre_on_notebook_axis_hz": 2.3284191385613306,
+      "notebook_axis_minus_expected_hz": -0.6715808614386694,
+      "centre_on_derived_axis_hz": 3.0000859484754527,
+      "derived_axis_minus_expected_hz": 8.59484754527351e-05
+    },
+    {
+      "f0_hz": 0.0,
+      "expected_line_position_hz": -0.0,
+      "centre_on_notebook_axis_hz": -0.6668175914126889,
+      "notebook_axis_minus_expected_hz": -0.6668175914126889,
+      "centre_on_derived_axis_hz": -0.00015117670720001908,
+      "derived_axis_minus_expected_hz": -0.00015117670720001908
+    },
+    {
+      "f0_hz": 3.0,
+      "expected_line_position_hz": -3.0,
+      "centre_on_notebook_axis_hz": -3.661752471894657,
+      "notebook_axis_minus_expected_hz": -0.661752471894657,
+      "centre_on_derived_axis_hz": -3.0000859484754576,
+      "derived_axis_minus_expected_hz": -8.594847545762008e-05
+    },
+    {
+      "f0_hz": 20.0,
+      "expected_line_position_hz": -20.0,
+      "centre_on_notebook_axis_hz": -20.63318769047273,
+      "notebook_axis_minus_expected_hz": -0.6331876904727309,
+      "centre_on_derived_axis_hz": -19.999854113996065,
+      "derived_axis_minus_expected_hz": 0.00014588600393494744
+    },
+    {
+      "f0_hz": 60.0,
+      "expected_line_position_hz": -60.0,
+      "centre_on_notebook_axis_hz": -60.56653261437327,
+      "notebook_axis_minus_expected_hz": -0.5665326143732727,
+      "centre_on_derived_axis_hz": -59.99986572391326,
+      "derived_axis_minus_expected_hz": 0.00013427608674021485
+    },
+    {
+      "f0_hz": 150.0,
+      "expected_line_position_hz": -150.0,
+      "centre_on_notebook_axis_hz": -150.41673114143032,
+      "notebook_axis_minus_expected_hz": -0.41673114143031853,
+      "centre_on_derived_axis_hz": -150.00006458240227,
+      "derived_axis_minus_expected_hz": -6.458240227402712e-05
+    },
+    {
+      "f0_hz": 146.26433949969874,
+      "expected_line_position_hz": -146.26433949969874,
+      "centre_on_notebook_axis_hz": -146.6872268580261,
+      "notebook_axis_minus_expected_hz": -0.42288735832735824,
+      "centre_on_derived_axis_hz": -146.2643340814952,
+      "derived_axis_minus_expected_hz": 5.418203528506638e-06
+    },
+    {
+      "f0_hz": -75.28680924963578,
+      "expected_line_position_hz": 75.28680924963578,
+      "centre_on_notebook_axis_hz": 74.49470939380925,
+      "notebook_axis_minus_expected_hz": -0.7920998558265353,
+      "centre_on_derived_axis_hz": 75.2868541507272,
+      "derived_axis_minus_expected_hz": 4.490109141386256e-05
+    },
+    {
+      "f0_hz": -103.97508022846192,
+      "expected_line_position_hz": 103.97508022846192,
+      "centre_on_notebook_axis_hz": 103.13500701318414,
+      "notebook_axis_minus_expected_hz": -0.8400732152777834,
+      "centre_on_derived_axis_hz": 103.97496528866513,
+      "derived_axis_minus_expected_hz": -0.00011493979678789401
+    },
+    {
+      "f0_hz": -58.06267543625887,
+      "expected_line_position_hz": 58.06267543625887,
+      "centre_on_notebook_axis_hz": 57.29924660964812,
+      "notebook_axis_minus_expected_hz": -0.763428826610749,
+      "centre_on_derived_axis_hz": 58.0626844170099,
+      "derived_axis_minus_expected_hz": 8.980751026399503e-06
+    },
+    {
+      "f0_hz": 121.04551019766737,
+      "expected_line_position_hz": -121.04551019766737,
+      "centre_on_notebook_axis_hz": -121.5103882182377,
+      "notebook_axis_minus_expected_hz": -0.4648780205703247,
+      "centre_on_derived_axis_hz": -121.04546399155691,
+      "derived_axis_minus_expected_hz": 4.620611045424994e-05
+    },
+    {
+      "f0_hz": -120.16704264509666,
+      "expected_line_position_hz": 120.16704264509666,
+      "centre_on_notebook_axis_hz": 119.29995191518209,
+      "notebook_axis_minus_expected_hz": -0.8670907299145654,
+      "centre_on_derived_axis_hz": 120.1668967430876,
+      "derived_axis_minus_expected_hz": -0.00014590200905217898
+    }
+  ],
+  "summary": {
+    "L": 300,
+    "dt": 0.0025,
+    "testA_max_rel_diff_fft_causal_vs_fourier_sum_at_derived_axis": 4.467237675220914e-14,
+    "testA_min_rel_diff_fft_causal_vs_fourier_sum_at_notebook_axis": 0.38090208167326045,
+    "grid_spacing_notebook_axis_hz": 1.3333333333333428,
+    "grid_spacing_derived_axis_hz": 1.3355592654424129,
+    "derived_minus_notebook_axis_hz_at_left_edge": 0.3338898163605961,
+    "derived_minus_notebook_axis_hz_at_centre": 0.667779632721202,
+    "derived_minus_notebook_axis_hz_at_right_edge": 0.9994435169727467,
+    "derived_minus_notebook_axis_ppm_at_centre": 0.0013355592857833703,
+    "testB_decay_rate": 40.0,
+    "testB_line_position_error_on_notebook_axis_hz_min": -0.9166021919019158,
+    "testB_line_position_error_on_notebook_axis_hz_max": -0.41673114143031853,
+    "testB_line_position_error_on_notebook_axis_hz_mean": -0.6767072620848145,
+    "testB_line_position_error_on_derived_axis_hz_max_abs": 0.00015117670720001908,
+    "testB_line_appears_at_minus_f0": true,
+    "hz_to_ppm": 0.002000000030460597
+  }
+}

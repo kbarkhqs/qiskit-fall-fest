@@ -1,0 +1,62 @@
+{
+  "A_J02": {
+    "J_range": [
+      9.5,
+      14.0
+    ],
+    "why": "J12 - J02 shrinks",
+    "n": 10,
+    "n_never_pass": 0,
+    "threshold_at_lo": 28.31,
+    "threshold_at_hi": 12.75,
+    "spearman_threshold_vs_J_in_segment": -0.9999999999999999
+  },
+  "A_J01": {
+    "J_range": [
+      1.0,
+      4.0
+    ],
+    "why": "J01 becomes a resolvable spacing",
+    "n": 13,
+    "n_never_pass": 4,
+    "threshold_at_lo": 19.97,
+    "threshold_at_hi": 13.0,
+    "spearman_threshold_vs_J_in_segment": -0.05857791861290061
+  },
+  "B_J12": {
+    "J_range": [
+      8.5,
+      12.5
+    ],
+    "why": "J01 - J12 shrinks",
+    "n": 9,
+    "n_never_pass": 0,
+    "threshold_at_lo": 23.32,
+    "threshold_at_hi": 8.05,
+    "spearman_threshold_vs_J_in_segment": -1.0
+  },
+  "A_J12": {
+    "J_range": [
+      24.0,
+      28.0
+    ],
+    "why": "J02 = 11.8 Hz becomes the smallest spacing",
+    "n": 5,
+    "n_never_pass": 0,
+    "threshold_at_lo": 37.74,
+    "threshold_at_hi": 38.63,
+    "spearman_threshold_vs_J_in_segment": 0.9746794344808964
+  },
+  "C_J01": {
+    "J_range": [
+      3.5,
+      16.0
+    ],
+    "why": "H1 and H2 agree (critical splitting = J01)",
+    "n": 26,
+    "n_never_pass": 0,
+    "threshold_at_lo": 9.54,
+    "threshold_at_hi": 38.93,
+    "spearman_threshold_vs_J_in_segment": 0.9999999999999999
+  }
+}

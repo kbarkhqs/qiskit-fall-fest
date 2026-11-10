@@ -1,0 +1,3 @@
+molecule A: long acquisition 2400 steps; any-dip threshold Trotter 28.20 vs exact 32.45; 10% Trotter 20.10 vs exact 21.60; critical-pair spacing Trotter 6.167 Hz vs exact 6.167 Hz
+molecule B: long acquisition 2400 steps; any-dip threshold Trotter 34.80 vs exact 34.15; 10% Trotter 23.40 vs exact 23.50; critical-pair spacing Trotter 7.000 Hz vs exact 7.000 Hz
+molecule C: long acquisition 2400 steps; any-dip threshold Trotter 30.30 vs exact 30.10; 10% Trotter 23.20 vs exact 23.10; critical-pair spacing Trotter 7.833 Hz vs exact 7.833 Hz

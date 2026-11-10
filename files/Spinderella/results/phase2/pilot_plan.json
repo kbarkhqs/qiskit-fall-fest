@@ -1,0 +1,27 @@
+{
+  "status": "PROPOSED - not submitted, waiting for explicit approval",
+  "backend": "ibm_kingston (least busy together with ibm_marrakesh at selection time: 2 pending jobs; best calibration: median CZ error 1.8e-3, readout 1.1 %)",
+  "circuit": "Phase-1 best: C6 exact compilation of exp(-iHt_k); molecule A on physical qubits [152, 151, 153]: 27 CZ, depth <= 119, estimated success probability 0.93",
+  "molecule": "A (hardest: 3 spins, 27 CZ); if A works, B (same size) and C (3 CZ) are easier",
+  "time_points": [0, 20, 60, 100, 150, 200, 250, 299],
+  "states": "4 X-basis states (prod-Z symmetry); observables sum X and sum Y (Estimator: 2 measurement settings per circuit)",
+  "jobs": [
+    {"variant": "raw", "pubs": 32, "shots": 500, "estimated_qpu_seconds": "~8-12"},
+    {"variant": "trex_twirl_dd (readout mitigation + gate/measure twirling + XY4 dynamical decoupling)", "pubs": 32, "shots": 500, "estimated_qpu_seconds": "~10-15"},
+    {"variant": "zne (noise factors 1,3,5; exponential and linear extrapolation) on k = 20, 100, 200, 299", "pubs": 16, "shots": 500, "estimated_qpu_seconds": "~13-18"}
+  ],
+  "estimated_total_qpu_seconds": "35-45 of the 600 s Open-plan allocation",
+  "success_criteria_written_before_running": {
+    "t0_check": "C_xx(0) within 5 % of 24 after readout mitigation; C_yx(0) within 3 standard errors of 0",
+    "signal_quality": "mitigated values: rms deviation from ideal (after one global scale factor) <= 10 % of C_xx(0)",
+    "mitigation_is_kept_only_if": "it lowers the rms deviation from the ideal values relative to the raw run beyond the statistical uncertainty",
+    "cost_calibration": "measured QPU seconds per 1000 shots are used to re-estimate the full experiment before asking for the second approval"
+  },
+  "noisy_simulator_dry_run": "results/phase2/pilot_noisy_simulation.json: amplitude 0.960 of ideal, residual rms 0.74 (500 shots; shot-noise std ~0.54)",
+  "full_experiment_preliminary": {
+    "settings": "A 2392 + B 2392 + C 598 = 5382 measurement settings (299 time points; t = 0 known exactly)",
+    "at_128_shots": "~689k shots ~ 180-220 QPU seconds with readout mitigation + twirling + DD",
+    "zne_on_everything": "~3x, does not fit the remaining budget; to be decided per molecule from the pilot",
+    "option_to_save_time": "molecule C only needs >= 34 time points (lines within +-22.6 Hz): 50 points at 15 ms would cut C from 598 to 100 settings"
+  }
+}

@@ -1,0 +1,110 @@
+[
+ {
+  "experiment": "A_J02",
+  "J": 9.5,
+  "agent3_any": "39.54",
+  "mine_any": 39.54,
+  "agent3_10": "28.31",
+  "mine_10": 28.31,
+  "agent3_n_char": "8",
+  "mine_n_char": 8,
+  "agent3_monotonic_10": "True",
+  "mine_ntrans_10": 1
+ },
+ {
+  "experiment": "A_J02",
+  "J": 13.0,
+  "agent3_any": "21.53",
+  "mine_any": 21.53,
+  "agent3_10": "15.42",
+  "mine_10": 15.42,
+  "agent3_n_char": "8",
+  "mine_n_char": 8,
+  "agent3_monotonic_10": "True",
+  "mine_ntrans_10": 1
+ },
+ {
+  "experiment": "A_J02",
+  "J": 16.0,
+  "agent3_any": "51.31",
+  "mine_any": 51.31,
+  "agent3_10": "43.13",
+  "mine_10": 43.13,
+  "agent3_n_char": "7",
+  "mine_n_char": 7,
+  "agent3_monotonic_10": "True",
+  "mine_ntrans_10": 1
+ },
+ {
+  "experiment": "A_J12",
+  "J": 20.0,
+  "agent3_any": "38.02",
+  "mine_any": 38.02,
+  "agent3_10": "26.63",
+  "mine_10": 26.63,
+  "agent3_n_char": "8",
+  "mine_n_char": 8,
+  "agent3_monotonic_10": "True",
+  "mine_ntrans_10": 1
+ },
+ {
+  "experiment": "A_J01",
+  "J": 3.75,
+  "agent3_any": "15.75",
+  "mine_any": 15.75,
+  "agent3_10": "11.65",
+  "mine_10": 11.65,
+  "agent3_n_char": "12",
+  "mine_n_char": 12,
+  "agent3_monotonic_10": "False",
+  "mine_ntrans_10": 2
+ },
+ {
+  "experiment": "B_J12",
+  "J": 10.0,
+  "agent3_any": "24.59",
+  "mine_any": 24.59,
+  "agent3_10": "17.34",
+  "mine_10": 17.34,
+  "agent3_n_char": "8",
+  "mine_n_char": 8,
+  "agent3_monotonic_10": "True",
+  "mine_ntrans_10": 1
+ },
+ {
+  "experiment": "B_J12",
+  "J": 6.0,
+  "agent3_any": "26.2",
+  "mine_any": 26.2,
+  "agent3_10": "18.77",
+  "mine_10": 18.77,
+  "agent3_n_char": "8",
+  "mine_n_char": 8,
+  "agent3_monotonic_10": "True",
+  "mine_ntrans_10": 1
+ },
+ {
+  "experiment": "C_J01",
+  "J": 4.0,
+  "agent3_any": "14.19",
+  "mine_any": 14.19,
+  "agent3_10": "11.19",
+  "mine_10": 11.19,
+  "agent3_n_char": "4",
+  "mine_n_char": 4,
+  "agent3_monotonic_10": "True",
+  "mine_ntrans_10": 1
+ },
+ {
+  "experiment": "C_J01",
+  "J": 12.0,
+  "agent3_any": "40.57",
+  "mine_any": 40.57,
+  "agent3_10": "32.0",
+  "mine_10": 32.0,
+  "agent3_n_char": "4",
+  "mine_n_char": 4,
+  "agent3_monotonic_10": "True",
+  "mine_ntrans_10": 1
+ }
+]

@@ -1,0 +1,104 @@
+{
+ "doublets_Hz_exact": [
+  [
+   15.522461903194252,
+   16.46386587256048
+  ],
+  [
+   27.312402236495153,
+   28.253806135182387
+  ],
+  [
+   102.59109312404719,
+   103.53249709341343
+  ],
+  [
+   120.45974886208124,
+   121.40115283144746
+  ]
+ ],
+ "trotter_official": {
+  "1.333 Hz": {
+   "highest_Gamma_all_doublets_two_maxima": null,
+   "highest_Gamma_all_doublets_dip_10pct": null,
+   "dips_at_Gamma0": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "0.667 Hz": {
+   "highest_Gamma_all_doublets_two_maxima": null,
+   "highest_Gamma_all_doublets_dip_10pct": null,
+   "dips_at_Gamma0": [
+    0.09525920916608877,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "0.333 Hz": {
+   "highest_Gamma_all_doublets_two_maxima": 1.25,
+   "highest_Gamma_all_doublets_dip_10pct": 0.4,
+   "dips_at_Gamma0": [
+    0.17138685882898497,
+    0.17226039989677566,
+    0.2261748539276912,
+    0.27355082735698366
+   ]
+  },
+  "0.050 Hz": {
+   "highest_Gamma_all_doublets_two_maxima": 1.95,
+   "highest_Gamma_all_doublets_dip_10pct": 0.6,
+   "dips_at_Gamma0": [
+    0.19944728282931434,
+    0.20640929516814788,
+    0.2750858730614084,
+    0.2883038007390335
+   ]
+  }
+ },
+ "exact": {
+  "1.333 Hz": {
+   "highest_Gamma_all_doublets_two_maxima": null,
+   "highest_Gamma_all_doublets_dip_10pct": null,
+   "dips_at_Gamma0": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "0.667 Hz": {
+   "highest_Gamma_all_doublets_two_maxima": null,
+   "highest_Gamma_all_doublets_dip_10pct": null,
+   "dips_at_Gamma0": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "0.333 Hz": {
+   "highest_Gamma_all_doublets_two_maxima": null,
+   "highest_Gamma_all_doublets_dip_10pct": null,
+   "dips_at_Gamma0": [
+    0.00128324251851053,
+    0.0,
+    0.031124677556332858,
+    0.05767709436163537
+   ]
+  },
+  "0.050 Hz": {
+   "highest_Gamma_all_doublets_two_maxima": 0.35,
+   "highest_Gamma_all_doublets_dip_10pct": null,
+   "dips_at_Gamma0": [
+    0.017806277879392818,
+    0.024864748775909162,
+    0.07594825681427242,
+    0.09173821351691169
+   ]
+  }
+ }
+}

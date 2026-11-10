@@ -1,0 +1,14 @@
+qiskit_runtime_service.__init__:WARNING:2026-11-10 10:19:07,930: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: qiskit-fall-fest-oturki036. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService(). Alternatively, pass instance='auto' or save it to your account for auto-selection without warning.
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:19:07,931: Using instance: qiskit-fall-fest-oturki036, plan: open
+ibm_kingston operational=True pending_jobs=1 at 2026-11-10T18:19:08.810055+00:00
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:19:10,927: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted pilot_A_raw: job dbpm07tt7fqc7389los0
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:19:17,204: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted pilot_A_trex_twirl_dd: job dbpm09gou4as73cttdug
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:19:28,756: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted pilot_A_zne: job dbpm0cgqtr0c738elc8g
+pilot_A_raw done: usage 11 s
+pilot_A_trex_twirl_dd done: usage 12 s
+pilot_A_zne done: usage 0 s
+all pilot jobs finished
+exit 0

@@ -1,0 +1,16 @@
+{
+  "written": "2026-11-10, before any Phase-1 candidate was benchmarked",
+  "reference_for_accuracy": "exact evolution exp(-i H t) of the same rotating-frame Hamiltonian, same 300 sampling times (dt_s = 2.5 ms, T = 0.75 s), same weights, observables and official spectrum pipeline",
+  "baseline": "official notebook circuit: first-order Lie-Trotter (PauliEvolutionGate + LieTrotter), dt = 2.5 ms, k = 0..299 steps, transpiled at optimization_level=1 to {cx, rz, sx, x}",
+  "metrics_vs_exact": {
+    "E1_corr": "max over k of |C_xx - C_xx_exact| and |C_yx - C_yx_exact|, divided by C_xx(0) = N 2^N",
+    "E2_spectrum": "noise_strength 5 s^-1, official pipeline (normalised, abs): RMSE and cosine similarity vs the exact spectrum on the same axis",
+    "E3_peak_position": "largest |position error| of the characteristic peaks (matched reference, merge 2.667 Hz) vs the exact spectrum, Hz and ppm, parabolic sub-bin refinement on the corrected frequency axis",
+    "E4_peak_height": "largest relative height error of the characteristic peaks vs the exact spectrum",
+    "E5_science": "all characteristic peaks detected (A 8, B 8, C 4) and the one-to-one matching unchanged (A->spectrum_3, B->spectrum_2, C->spectrum_1)"
+  },
+  "accept_rule": "A candidate is ACCEPTED for a molecule if E1 <= baseline E1, E2 RMSE <= baseline and cosine >= baseline, E3 <= baseline, E4 <= baseline (each computed for that molecule) and E5 holds. A small numerical slack of 1e-9 absolute is allowed for candidates that are exact rewrites of the baseline.",
+  "high_accuracy_tier": "additionally: E3 <= 0.1 Hz, E4 <= 2 %, E2 cosine >= 0.999",
+  "exact_rewrite_check": "candidates claimed to be exact rewrites of the baseline must reproduce the baseline time-point unitaries to <= 1e-9 (max abs element difference, global phase removed)",
+  "depth_objective": "minimise transpiled depth and two-qubit depth of the deepest circuit, reported for all required initial states and both measurement bases; CX counts and SWAPs on all-to-all and on a 3-qubit line"
+}

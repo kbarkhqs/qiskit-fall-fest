@@ -1,0 +1,733 @@
+{
+ "item5_states_hamiltonian": {
+  "A": {
+   "n_states": 8,
+   "expected": 8,
+   "max|gram - I|": 6.661338147750939e-16,
+   "max eigen-residual |X_tot v - (N-2w) v|": 0.0,
+   "eigenvalues_of_sum_X": [
+    -3,
+    -1,
+    1,
+    3
+   ],
+   "min |<qiskit template state|kron state>|": 0.9999999999999996,
+   "hermiticity max|H - H^dagger| (Qiskit op)": 0.0,
+   "max|H_independent - H_qiskit_conversion| rad/s": 0.0,
+   "rotating frame: ||[H_lab, sum Z]||": 0.0,
+   "rotating frame: max|eig(H_lab) - eig(H_rf + mean*sumZ)| rad/s": 9.5367431640625e-07,
+   "max|sum_n m_n<n|X(t)|n> - Tr(X(t) X)| over 4 times": 1.0658141036401503e-14,
+   "alternative weightings, max deviation from the trace": {
+    "N-2w": 1.0658141036401503e-14,
+    "N-w": 12.000000000000004,
+    "-(N-2w)": 47.999999999999986,
+    "equal(1)": 23.999999999999996,
+    "all-plus only": 15.000000000000002
+   },
+   "delta_ppm": {
+    "0": 5.79,
+    "1": 5.97,
+    "2": 5.48
+   },
+   "J_hz": {
+    "J01": 0.9,
+    "J02": 11.8,
+    "J12": 17.9
+   }
+  },
+  "B": {
+   "n_states": 8,
+   "expected": 8,
+   "max|gram - I|": 6.661338147750939e-16,
+   "max eigen-residual |X_tot v - (N-2w) v|": 0.0,
+   "eigenvalues_of_sum_X": [
+    -3,
+    -1,
+    1,
+    3
+   ],
+   "min |<qiskit template state|kron state>|": 0.9999999999999996,
+   "hermiticity max|H - H^dagger| (Qiskit op)": 0.0,
+   "max|H_independent - H_qiskit_conversion| rad/s": 1.1368683772161603e-13,
+   "rotating frame: ||[H_lab, sum Z]||": 0.0,
+   "rotating frame: max|eig(H_lab) - eig(H_rf + mean*sumZ)| rad/s": 9.5367431640625e-07,
+   "max|sum_n m_n<n|X(t)|n> - Tr(X(t) X)| over 4 times": 1.0658141036401503e-14,
+   "alternative weightings, max deviation from the trace": {
+    "N-2w": 1.0658141036401503e-14,
+    "N-w": 12.000000000000004,
+    "-(N-2w)": 47.99999999999997,
+    "equal(1)": 23.999999999999993,
+    "all-plus only": 15.0
+   },
+   "delta_ppm": {
+    "0": 5.58,
+    "1": 5.9,
+    "2": 5.34
+   },
+   "J_hz": {
+    "J01": 15.6,
+    "J02": -0.5,
+    "J12": 8.6
+   }
+  },
+  "C": {
+   "n_states": 4,
+   "expected": 4,
+   "max|gram - I|": 4.440892098500626e-16,
+   "max eigen-residual |X_tot v - (N-2w) v|": 0.0,
+   "eigenvalues_of_sum_X": [
+    -2,
+    0,
+    2
+   ],
+   "min |<qiskit template state|kron state>|": 0.9999999999999996,
+   "hermiticity max|H - H^dagger| (Qiskit op)": 0.0,
+   "max|H_independent - H_qiskit_conversion| rad/s": 1.4210854715202004e-14,
+   "rotating frame: ||[H_lab, sum Z]||": 0.0,
+   "rotating frame: max|eig(H_lab) - eig(H_rf + mean*sumZ)| rad/s": 0.0,
+   "max|sum_n m_n<n|X(t)|n> - Tr(X(t) X)| over 4 times": 3.552713678800501e-15,
+   "alternative weightings, max deviation from the trace": {
+    "N-2w": 3.552713678800501e-15,
+    "N-w": 4.000000000000003,
+    "-(N-2w)": 16.0,
+    "equal(1)": 8.000000000000002,
+    "all-plus only": 4.000000000000003
+   },
+   "delta_ppm": {
+    "0": 6.375,
+    "1": 6.302
+   },
+   "J_hz": {
+    "J01": 7.92
+   }
+  }
+ },
+ "official_signals_reproduced": {
+  "A": {
+   "max|c_xx(independent Trotter) - c_xx(official Qiskit)|": 7.496225862269057e-13,
+   "max|c_yx diff|": 7.567280135845067e-13,
+   "C_xx(0)": 23.99999999999999,
+   "C_yx(0)": 0.0
+  },
+  "B": {
+   "max|c_xx(independent Trotter) - c_xx(official Qiskit)|": 3.197442310920451e-13,
+   "max|c_yx diff|": 3.703704010149522e-13,
+   "C_xx(0)": 23.99999999999999,
+   "C_yx(0)": 0.0
+  },
+  "C": {
+   "max|c_xx(independent Trotter) - c_xx(official Qiskit)|": 2.634004125923184e-14,
+   "max|c_yx diff|": 8.049116928532382e-15,
+   "C_xx(0)": 7.9999999999999964,
+   "C_yx(0)": 0.0
+  }
+ },
+ "item6_matching": {
+  "rows": [
+   {
+    "noise": 1.0,
+    "axis": "official",
+    "metric": "cosine_on_reference_grid",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 2.2551,
+    "second_total": 0.7912,
+    "matrix": {
+     "A-spectrum_1": 0.0003,
+     "A-spectrum_2": 0.0062,
+     "A-spectrum_3": 0.7366,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 0.7389,
+     "B-spectrum_3": 0.0055,
+     "C-spectrum_1": 0.7795,
+     "C-spectrum_2": 0.0004,
+     "C-spectrum_3": 0.0054
+    }
+   },
+   {
+    "noise": 1.0,
+    "axis": "official",
+    "metric": "peak_fraction",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 3.0,
+    "second_total": 1.0,
+    "matrix": {
+     "A-spectrum_1": 0.0,
+     "A-spectrum_2": 0.0,
+     "A-spectrum_3": 1.0,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 1.0,
+     "B-spectrum_3": 0.0,
+     "C-spectrum_1": 1.0,
+     "C-spectrum_2": 0.0,
+     "C-spectrum_3": 0.0
+    }
+   },
+   {
+    "noise": 1.0,
+    "axis": "corrected",
+    "metric": "cosine_on_reference_grid",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 2.5831,
+    "second_total": 0.8782,
+    "matrix": {
+     "A-spectrum_1": 0.0003,
+     "A-spectrum_2": 0.0059,
+     "A-spectrum_3": 0.855,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 0.8724,
+     "B-spectrum_3": 0.0041,
+     "C-spectrum_1": 0.8557,
+     "C-spectrum_2": 0.0004,
+     "C-spectrum_3": 0.0055
+    }
+   },
+   {
+    "noise": 1.0,
+    "axis": "corrected",
+    "metric": "peak_fraction",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 3.0,
+    "second_total": 1.0,
+    "matrix": {
+     "A-spectrum_1": 0.0,
+     "A-spectrum_2": 0.0,
+     "A-spectrum_3": 1.0,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 1.0,
+     "B-spectrum_3": 0.0,
+     "C-spectrum_1": 1.0,
+     "C-spectrum_2": 0.0,
+     "C-spectrum_3": 0.0
+    }
+   },
+   {
+    "noise": 2.0,
+    "axis": "official",
+    "metric": "cosine_on_reference_grid",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 2.3341,
+    "second_total": 0.8692,
+    "matrix": {
+     "A-spectrum_1": 0.0003,
+     "A-spectrum_2": 0.004,
+     "A-spectrum_3": 0.7466,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 0.7793,
+     "B-spectrum_3": 0.0036,
+     "C-spectrum_1": 0.8082,
+     "C-spectrum_2": 0.0022,
+     "C-spectrum_3": 0.0896
+    }
+   },
+   {
+    "noise": 2.0,
+    "axis": "official",
+    "metric": "peak_fraction",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 3.0,
+    "second_total": 1.0,
+    "matrix": {
+     "A-spectrum_1": 0.0,
+     "A-spectrum_2": 0.0,
+     "A-spectrum_3": 1.0,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 1.0,
+     "B-spectrum_3": 0.0,
+     "C-spectrum_1": 1.0,
+     "C-spectrum_2": 0.0,
+     "C-spectrum_3": 0.0
+    }
+   },
+   {
+    "noise": 2.0,
+    "axis": "corrected",
+    "metric": "cosine_on_reference_grid",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 2.6589,
+    "second_total": 0.9999,
+    "matrix": {
+     "A-spectrum_1": 0.0003,
+     "A-spectrum_2": 0.0039,
+     "A-spectrum_3": 0.8671,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 0.9078,
+     "B-spectrum_3": 0.0028,
+     "C-spectrum_1": 0.884,
+     "C-spectrum_2": 0.0021,
+     "C-spectrum_3": 0.0918
+    }
+   },
+   {
+    "noise": 2.0,
+    "axis": "corrected",
+    "metric": "peak_fraction",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 3.0,
+    "second_total": 1.0,
+    "matrix": {
+     "A-spectrum_1": 0.0,
+     "A-spectrum_2": 0.0,
+     "A-spectrum_3": 1.0,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 1.0,
+     "B-spectrum_3": 0.0,
+     "C-spectrum_1": 1.0,
+     "C-spectrum_2": 0.0,
+     "C-spectrum_3": 0.0
+    }
+   },
+   {
+    "noise": 5.0,
+    "axis": "official",
+    "metric": "cosine_on_reference_grid",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 2.4163,
+    "second_total": 0.8766,
+    "matrix": {
+     "A-spectrum_1": 0.0003,
+     "A-spectrum_2": 0.0042,
+     "A-spectrum_3": 0.7789,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 0.8283,
+     "B-spectrum_3": 0.0049,
+     "C-spectrum_1": 0.8092,
+     "C-spectrum_2": 0.0012,
+     "C-spectrum_3": 0.0481
+    }
+   },
+   {
+    "noise": 5.0,
+    "axis": "official",
+    "metric": "peak_fraction",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 3.0,
+    "second_total": 1.0,
+    "matrix": {
+     "A-spectrum_1": 0.0,
+     "A-spectrum_2": 0.0,
+     "A-spectrum_3": 1.0,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 1.0,
+     "B-spectrum_3": 0.0,
+     "C-spectrum_1": 1.0,
+     "C-spectrum_2": 0.0,
+     "C-spectrum_3": 0.0
+    }
+   },
+   {
+    "noise": 5.0,
+    "axis": "corrected",
+    "metric": "cosine_on_reference_grid",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 2.6733,
+    "second_total": 0.9611,
+    "matrix": {
+     "A-spectrum_1": 0.0003,
+     "A-spectrum_2": 0.0041,
+     "A-spectrum_3": 0.8893,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 0.9118,
+     "B-spectrum_3": 0.0043,
+     "C-spectrum_1": 0.8721,
+     "C-spectrum_2": 0.0011,
+     "C-spectrum_3": 0.049
+    }
+   },
+   {
+    "noise": 5.0,
+    "axis": "corrected",
+    "metric": "peak_fraction",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 3.0,
+    "second_total": 1.0,
+    "matrix": {
+     "A-spectrum_1": 0.0,
+     "A-spectrum_2": 0.0,
+     "A-spectrum_3": 1.0,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 1.0,
+     "B-spectrum_3": 0.0,
+     "C-spectrum_1": 1.0,
+     "C-spectrum_2": 0.0,
+     "C-spectrum_3": 0.0
+    }
+   },
+   {
+    "noise": 10.0,
+    "axis": "official",
+    "metric": "cosine_on_reference_grid",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 2.3163,
+    "second_total": 0.833,
+    "matrix": {
+     "A-spectrum_1": 0.0002,
+     "A-spectrum_2": 0.0087,
+     "A-spectrum_3": 0.7658,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 0.7864,
+     "B-spectrum_3": 0.0096,
+     "C-spectrum_1": 0.7641,
+     "C-spectrum_2": 0.0011,
+     "C-spectrum_3": 0.0464
+    }
+   },
+   {
+    "noise": 10.0,
+    "axis": "official",
+    "metric": "peak_fraction",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 3.0,
+    "second_total": 1.0,
+    "matrix": {
+     "A-spectrum_1": 0.0,
+     "A-spectrum_2": 0.0,
+     "A-spectrum_3": 1.0,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 1.0,
+     "B-spectrum_3": 0.0,
+     "C-spectrum_1": 1.0,
+     "C-spectrum_2": 0.0,
+     "C-spectrum_3": 0.0
+    }
+   },
+   {
+    "noise": 10.0,
+    "axis": "corrected",
+    "metric": "cosine_on_reference_grid",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 2.4665,
+    "second_total": 0.8747,
+    "matrix": {
+     "A-spectrum_1": 0.0002,
+     "A-spectrum_2": 0.0084,
+     "A-spectrum_3": 0.8372,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 0.8272,
+     "B-spectrum_3": 0.0094,
+     "C-spectrum_1": 0.8022,
+     "C-spectrum_2": 0.0011,
+     "C-spectrum_3": 0.0473
+    }
+   },
+   {
+    "noise": 10.0,
+    "axis": "corrected",
+    "metric": "peak_fraction",
+    "best": {
+     "A": "spectrum_3",
+     "B": "spectrum_2",
+     "C": "spectrum_1"
+    },
+    "best_total": 3.0,
+    "second_total": 1.0,
+    "matrix": {
+     "A-spectrum_1": 0.0,
+     "A-spectrum_2": 0.0,
+     "A-spectrum_3": 1.0,
+     "B-spectrum_1": 0.0,
+     "B-spectrum_2": 1.0,
+     "B-spectrum_3": 0.0,
+     "C-spectrum_1": 1.0,
+     "C-spectrum_2": 0.0,
+     "C-spectrum_3": 0.0
+    }
+   }
+  ],
+  "all_choices_agree": true,
+  "winner": {
+   "A": "spectrum_3",
+   "B": "spectrum_2",
+   "C": "spectrum_1"
+  },
+  "n_choices": 16
+ },
+ "item1_unit_tests": {
+  "dip formula equals 1 - I_valley/min(I1,I2) (unequal heights)": {
+   "evaluate": 0.5572081288384572,
+   "manual": 0.5572081288384572
+  },
+  "one maximum for two reference peaks -> fail": {
+   "found": false,
+   "reason": "shared or out of order"
+  },
+  "reference peak with no maximum within tolerance -> fail": {
+   "found": false,
+   "reason": "missing 5.0300"
+  },
+  "scale invariance (spectrum x 37)": {
+   "dip": 0.5572081288384572
+  },
+  "Agent 3 common.evaluate on the same case": {
+   "dip": 0.5572081288384572
+  }
+ },
+ "item2_thresholds_full_grid": {
+  "A": {
+   "matched": "spectrum_3",
+   "n_characteristic_peaks": 8,
+   "levels": {
+    "0.0": {
+     "highest_pass": 27.32,
+     "first_fail_after": 27.33,
+     "n_changes": 1,
+     "changes": [
+      [
+       27.32,
+       27.33,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.05": {
+     "highest_pass": 22.15,
+     "first_fail_after": 22.16,
+     "n_changes": 1,
+     "changes": [
+      [
+       22.15,
+       22.16,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.1": {
+     "highest_pass": 19.97,
+     "first_fail_after": 19.98,
+     "n_changes": 1,
+     "changes": [
+      [
+       19.97,
+       19.98,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.19": {
+     "highest_pass": 17.11,
+     "first_fail_after": 17.12,
+     "n_changes": 1,
+     "changes": [
+      [
+       17.11,
+       17.12,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    }
+   },
+   "min of signed spectrum at threshold": 0.008786313088106665,
+   "min dip with abs vs without abs at threshold": [
+    0.10006190796860337,
+    0.10006190796860337
+   ],
+   "threshold_10pct_vs_position_tolerance (0.05 grid)": {
+    "1.0 bins": null,
+    "1.5 bins": 19.95,
+    "2.0 bins": 19.95,
+    "3.0 bins": 19.95
+   }
+  },
+  "B": {
+   "matched": "spectrum_2",
+   "n_characteristic_peaks": 8,
+   "levels": {
+    "0.0": {
+     "highest_pass": 33.36,
+     "first_fail_after": 33.37,
+     "n_changes": 1,
+     "changes": [
+      [
+       33.36,
+       33.37,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.05": {
+     "highest_pass": 25.99,
+     "first_fail_after": 26.0,
+     "n_changes": 1,
+     "changes": [
+      [
+       25.99,
+       26.0,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.1": {
+     "highest_pass": 22.85,
+     "first_fail_after": 22.86,
+     "n_changes": 1,
+     "changes": [
+      [
+       22.85,
+       22.86,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.19": {
+     "highest_pass": 19.13,
+     "first_fail_after": 19.14,
+     "n_changes": 1,
+     "changes": [
+      [
+       19.13,
+       19.14,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    }
+   },
+   "min of signed spectrum at threshold": 0.009567737890418855,
+   "min dip with abs vs without abs at threshold": [
+    0.10014376134878866,
+    0.10014376134878866
+   ],
+   "threshold_10pct_vs_position_tolerance (0.05 grid)": {
+    "1.0 bins": null,
+    "1.5 bins": 22.85,
+    "2.0 bins": 22.85,
+    "3.0 bins": 22.85
+   }
+  },
+  "C": {
+   "matched": "spectrum_1",
+   "n_characteristic_peaks": 4,
+   "levels": {
+    "0.0": {
+     "highest_pass": 28.58,
+     "first_fail_after": 28.59,
+     "n_changes": 1,
+     "changes": [
+      [
+       28.58,
+       28.59,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.05": {
+     "highest_pass": 25.51,
+     "first_fail_after": 25.52,
+     "n_changes": 1,
+     "changes": [
+      [
+       25.51,
+       25.52,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.1": {
+     "highest_pass": 23.22,
+     "first_fail_after": 23.23,
+     "n_changes": 1,
+     "changes": [
+      [
+       23.22,
+       23.23,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    },
+    "0.19": {
+     "highest_pass": 20.02,
+     "first_fail_after": 20.03,
+     "n_changes": 1,
+     "changes": [
+      [
+       20.02,
+       20.03,
+       "pass->fail"
+      ]
+     ],
+     "passes_at_lowest": true
+    }
+   },
+   "min of signed spectrum at threshold": 0.002530329079066155,
+   "min dip with abs vs without abs at threshold": [
+    0.10002148816659473,
+    0.10002148816659473
+   ],
+   "threshold_10pct_vs_position_tolerance (0.05 grid)": {
+    "1.0 bins": 23.2,
+    "1.5 bins": 23.2,
+    "2.0 bins": 23.2,
+    "3.0 bins": 23.2
+   }
+  }
+ }
+}

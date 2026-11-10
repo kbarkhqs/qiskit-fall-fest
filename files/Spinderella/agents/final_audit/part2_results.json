@@ -1,0 +1,347 @@
+{
+ "item3_trotter_convergence_fixed_T": {
+  "A": {
+   "300 steps, dt = 2.5 ms": {
+    "max_abs_line_shift_hz": 0.7148311652568964,
+    "max_abs_intensity_change_relative_to_line": 0.1914696847169627,
+    "line_with_largest_intensity_change_hz": -148.71355509794617,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.1452238772039088,
+    "cosine_vs_exact_spectrum_noise5": 0.9327511579263769,
+    "threshold_10pct": 19.97,
+    "n_changes": 1
+   },
+   "600 steps, dt = 1.25 ms": {
+    "max_abs_line_shift_hz": 0.1404718492362349,
+    "max_abs_intensity_change_relative_to_line": 0.03726213430102494,
+    "line_with_largest_intensity_change_hz": -148.71355509794617,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.03031956412924316,
+    "cosine_vs_exact_spectrum_noise5": 0.9996990632256625,
+    "threshold_10pct": 20.92,
+    "n_changes": 1
+   },
+   "1200 steps, dt = 0.625 ms": {
+    "max_abs_line_shift_hz": 0.03353990952010122,
+    "max_abs_intensity_change_relative_to_line": 0.008870281984252857,
+    "line_with_largest_intensity_change_hz": -148.71355509794617,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.007316278040335321,
+    "cosine_vs_exact_spectrum_noise5": 0.9975823675633829,
+    "threshold_10pct": 21.58,
+    "n_changes": 1
+   },
+   "exact evolution (300 points, dt 2.5 ms)": {
+    "threshold_10pct": 21.23
+   }
+  },
+  "B": {
+   "300 steps, dt = 2.5 ms": {
+    "max_abs_line_shift_hz": 0.417980725753182,
+    "max_abs_intensity_change_relative_to_line": 0.1574228861496962,
+    "line_with_largest_intensity_change_hz": 159.19987601826062,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.12191694556287146,
+    "cosine_vs_exact_spectrum_noise5": 0.9746552481589051,
+    "threshold_10pct": 22.85,
+    "n_changes": 1
+   },
+   "600 steps, dt = 1.25 ms": {
+    "max_abs_line_shift_hz": 0.08319784371337846,
+    "max_abs_intensity_change_relative_to_line": 0.02918043983328818,
+    "line_with_largest_intensity_change_hz": 159.19987601826062,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.024294178692569782,
+    "cosine_vs_exact_spectrum_noise5": 0.9985664951811564,
+    "threshold_10pct": 23.57,
+    "n_changes": 1
+   },
+   "1200 steps, dt = 0.625 ms": {
+    "max_abs_line_shift_hz": 0.020000643074240543,
+    "max_abs_intensity_change_relative_to_line": 0.006932689943844412,
+    "line_with_largest_intensity_change_hz": 159.19987601826062,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.005848416733238466,
+    "cosine_vs_exact_spectrum_noise5": 0.9943046809982027,
+    "threshold_10pct": 23.48,
+    "n_changes": 1
+   },
+   "exact evolution (300 points, dt 2.5 ms)": {
+    "threshold_10pct": 23.48
+   }
+  },
+  "C": {
+   "300 steps, dt = 2.5 ms": {
+    "max_abs_line_shift_hz": 0.011571427231512388,
+    "max_abs_intensity_change_relative_to_line": 0.0072542423179912194,
+    "line_with_largest_intensity_change_hz": -22.634691128875186,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.004715943967403594,
+    "cosine_vs_exact_spectrum_noise5": 0.9998742964087322,
+    "threshold_10pct": 23.22,
+    "n_changes": 1
+   },
+   "600 steps, dt = 1.25 ms": {
+    "max_abs_line_shift_hz": 0.002879705801198895,
+    "max_abs_intensity_change_relative_to_line": 0.0018045576635535123,
+    "line_with_largest_intensity_change_hz": -22.634691128875186,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.001173133244552248,
+    "cosine_vs_exact_spectrum_noise5": 0.9998886756097156,
+    "threshold_10pct": 23.11,
+    "n_changes": 1
+   },
+   "1200 steps, dt = 0.625 ms": {
+    "max_abs_line_shift_hz": 0.0007191099524490596,
+    "max_abs_intensity_change_relative_to_line": 0.0004505801396244454,
+    "line_with_largest_intensity_change_hz": -22.634691128875186,
+    "max_abs_intensity_change_relative_to_strongest_line": 0.0002929197286428741,
+    "cosine_vs_exact_spectrum_noise5": 0.9996396673281788,
+    "threshold_10pct": 23.08,
+    "n_changes": 1
+   },
+   "exact evolution (300 points, dt 2.5 ms)": {
+    "threshold_10pct": 23.09
+   }
+  }
+ },
+ "item4_acquisition_and_J01": {
+  "T = 0.75 s (300 steps)": {
+   "grid_spacing_hz": 1.3333333333333333,
+   "trotter": {
+    "J01_doublets_resolved_up_to_gamma": {
+     "any_dip": null,
+     "any_dip_resolved_at_0": false,
+     "10pct": null,
+     "10pct_resolved_at_0": false
+    },
+    "official_criterion_threshold_10pct (doublets merged)": 19.97
+   },
+   "exact": {
+    "J01_doublets_resolved_up_to_gamma": {
+     "any_dip": null,
+     "any_dip_resolved_at_0": false,
+     "10pct": null,
+     "10pct_resolved_at_0": false
+    },
+    "official_criterion_threshold_10pct (doublets merged)": 21.23
+   }
+  },
+  "T = 1.5 s (600 steps)": {
+   "grid_spacing_hz": 0.6666666666666666,
+   "trotter": {
+    "J01_doublets_resolved_up_to_gamma": {
+     "any_dip": null,
+     "any_dip_resolved_at_0": false,
+     "10pct": null,
+     "10pct_resolved_at_0": false
+    },
+    "official_criterion_threshold_10pct (doublets merged)": 20.05
+   },
+   "exact": {
+    "J01_doublets_resolved_up_to_gamma": {
+     "any_dip": null,
+     "any_dip_resolved_at_0": false,
+     "10pct": null,
+     "10pct_resolved_at_0": false
+    },
+    "official_criterion_threshold_10pct (doublets merged)": 21.6
+   }
+  },
+  "T = 3.0 s (1200 steps)": {
+   "grid_spacing_hz": 0.3333333333333333,
+   "trotter": {
+    "J01_doublets_resolved_up_to_gamma": {
+     "any_dip": 4.17,
+     "any_dip_resolved_at_0": true,
+     "10pct": 3.27,
+     "10pct_resolved_at_0": true
+    },
+    "official_criterion_threshold_10pct (doublets merged)": 20.1
+   },
+   "exact": {
+    "J01_doublets_resolved_up_to_gamma": {
+     "any_dip": 3.86,
+     "any_dip_resolved_at_0": true,
+     "10pct": 3.03,
+     "10pct_resolved_at_0": true
+    },
+    "official_criterion_threshold_10pct (doublets merged)": 21.63
+   }
+  },
+  "J01_doublet_spacings_hz": {
+   "exact": [
+    0.9414,
+    0.9414,
+    0.9414,
+    0.9414
+   ],
+   "trotter": [
+    1.0072,
+    1.0072,
+    1.0072,
+    1.0072
+   ]
+  }
+ },
+ "item7_J_experiments": [
+  {
+   "molecule": "A",
+   "coupling": "J02",
+   "J_hz": 9.5,
+   "threshold_independent": 28.31,
+   "threshold_notebook": 28.31,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 8.389999999992373,
+   "first_order_formula_hz": 8.4
+  },
+  {
+   "molecule": "A",
+   "coupling": "J02",
+   "J_hz": 10.5,
+   "threshold_independent": 24.4,
+   "threshold_notebook": 24.4,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 7.379999999993545,
+   "first_order_formula_hz": 7.4
+  },
+  {
+   "molecule": "A",
+   "coupling": "J02",
+   "J_hz": 11.8,
+   "threshold_independent": 19.97,
+   "threshold_notebook": 19.97,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 6.079999999994024,
+   "first_order_formula_hz": 6.1
+  },
+  {
+   "molecule": "A",
+   "coupling": "J02",
+   "J_hz": 13.0,
+   "threshold_independent": 15.42,
+   "threshold_notebook": 15.42,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 4.869999999995271,
+   "first_order_formula_hz": 4.9
+  },
+  {
+   "molecule": "A",
+   "coupling": "J02",
+   "J_hz": 14.0,
+   "threshold_independent": 12.75,
+   "threshold_notebook": 12.75,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 3.869999999996084,
+   "first_order_formula_hz": 3.9
+  },
+  {
+   "molecule": "B",
+   "coupling": "J12",
+   "J_hz": 8.6,
+   "threshold_independent": 22.85,
+   "threshold_notebook": 22.85,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 7.019999999993589,
+   "first_order_formula_hz": 7.0
+  },
+  {
+   "molecule": "B",
+   "coupling": "J12",
+   "J_hz": 9.5,
+   "threshold_independent": 18.71,
+   "threshold_notebook": 18.71,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 6.109999999994724,
+   "first_order_formula_hz": 6.1
+  },
+  {
+   "molecule": "B",
+   "coupling": "J12",
+   "J_hz": 10.5,
+   "threshold_independent": 15.72,
+   "threshold_notebook": 15.72,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 5.119999999995178,
+   "first_order_formula_hz": 5.1
+  },
+  {
+   "molecule": "B",
+   "coupling": "J12",
+   "J_hz": 11.5,
+   "threshold_independent": 11.72,
+   "threshold_notebook": 11.72,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 4.109999999996351,
+   "first_order_formula_hz": 4.1
+  },
+  {
+   "molecule": "B",
+   "coupling": "J12",
+   "J_hz": 12.5,
+   "threshold_independent": 8.05,
+   "threshold_notebook": 8.05,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 3.109999999997164,
+   "first_order_formula_hz": 3.1
+  },
+  {
+   "molecule": "C",
+   "coupling": "J01",
+   "J_hz": 4.0,
+   "threshold_independent": 11.19,
+   "threshold_notebook": 11.19,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 3.999999999999411,
+   "first_order_formula_hz": 4.0
+  },
+  {
+   "molecule": "C",
+   "coupling": "J01",
+   "J_hz": 6.0,
+   "threshold_independent": 17.67,
+   "threshold_notebook": 17.67,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 5.999999999998673,
+   "first_order_formula_hz": 6.0
+  },
+  {
+   "molecule": "C",
+   "coupling": "J01",
+   "J_hz": 7.92,
+   "threshold_independent": 23.22,
+   "threshold_notebook": 23.22,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 7.919999999998141,
+   "first_order_formula_hz": 7.92
+  },
+  {
+   "molecule": "C",
+   "coupling": "J01",
+   "J_hz": 10.0,
+   "threshold_independent": 27.51,
+   "threshold_notebook": 27.51,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 9.999999999998083,
+   "first_order_formula_hz": 10.0
+  },
+  {
+   "molecule": "C",
+   "coupling": "J01",
+   "J_hz": 12.0,
+   "threshold_independent": 32.0,
+   "threshold_notebook": 32.0,
+   "n_changes": 1,
+   "critical_spacing_hz (exact lines)": 11.99999999999779,
+   "first_order_formula_hz": 12.0
+  }
+ ],
+ "item5_weightings_normalised_spectrum_max_difference": {
+  "A": {
+   "N-2w": 0.0,
+   "N-w": 3.3306690738754696e-16,
+   "-(N-2w)": 0.0,
+   "all-plus only": 0.04789665941863186,
+   "equal (1)": "signal is rounding noise (max |C| = 4.4e-16); rejected by the guard"
+  },
+  "C": {
+   "N-2w": 0.0,
+   "N-w": 0.0,
+   "-(N-2w)": 0.0,
+   "all-plus only": 0.0,
+   "equal (1)": "signal is rounding noise (max |C| = 0.0e+00); rejected by the guard"
+  }
+ }
+}

@@ -1,0 +1,661 @@
+{
+ "tag": "pilot_A_raw",
+ "job_id": "dbpm07tt7fqc7389los0",
+ "backend": "ibm_kingston",
+ "molecule": "molecule A",
+ "variant": "raw",
+ "shots": 500,
+ "ks": [
+  0,
+  20,
+  60,
+  100,
+  150,
+  200,
+  250,
+  299
+ ],
+ "layout": [
+  152,
+  151,
+  153
+ ],
+ "seed": 2,
+ "index": [
+  {
+   "k": 0,
+   "bits": [
+    0,
+    0,
+    0
+   ],
+   "weight": 6.0
+  },
+  {
+   "k": 0,
+   "bits": [
+    0,
+    0,
+    1
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 0,
+   "bits": [
+    0,
+    1,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 0,
+   "bits": [
+    1,
+    0,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 20,
+   "bits": [
+    0,
+    0,
+    0
+   ],
+   "weight": 6.0
+  },
+  {
+   "k": 20,
+   "bits": [
+    0,
+    0,
+    1
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 20,
+   "bits": [
+    0,
+    1,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 20,
+   "bits": [
+    1,
+    0,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 60,
+   "bits": [
+    0,
+    0,
+    0
+   ],
+   "weight": 6.0
+  },
+  {
+   "k": 60,
+   "bits": [
+    0,
+    0,
+    1
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 60,
+   "bits": [
+    0,
+    1,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 60,
+   "bits": [
+    1,
+    0,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 100,
+   "bits": [
+    0,
+    0,
+    0
+   ],
+   "weight": 6.0
+  },
+  {
+   "k": 100,
+   "bits": [
+    0,
+    0,
+    1
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 100,
+   "bits": [
+    0,
+    1,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 100,
+   "bits": [
+    1,
+    0,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 150,
+   "bits": [
+    0,
+    0,
+    0
+   ],
+   "weight": 6.0
+  },
+  {
+   "k": 150,
+   "bits": [
+    0,
+    0,
+    1
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 150,
+   "bits": [
+    0,
+    1,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 150,
+   "bits": [
+    1,
+    0,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 200,
+   "bits": [
+    0,
+    0,
+    0
+   ],
+   "weight": 6.0
+  },
+  {
+   "k": 200,
+   "bits": [
+    0,
+    0,
+    1
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 200,
+   "bits": [
+    0,
+    1,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 200,
+   "bits": [
+    1,
+    0,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 250,
+   "bits": [
+    0,
+    0,
+    0
+   ],
+   "weight": 6.0
+  },
+  {
+   "k": 250,
+   "bits": [
+    0,
+    0,
+    1
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 250,
+   "bits": [
+    0,
+    1,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 250,
+   "bits": [
+    1,
+    0,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 299,
+   "bits": [
+    0,
+    0,
+    0
+   ],
+   "weight": 6.0
+  },
+  {
+   "k": 299,
+   "bits": [
+    0,
+    0,
+    1
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 299,
+   "bits": [
+    0,
+    1,
+    0
+   ],
+   "weight": 2.0
+  },
+  {
+   "k": 299,
+   "bits": [
+    1,
+    0,
+    0
+   ],
+   "weight": 2.0
+  }
+ ],
+ "submitted_utc": "2026-11-10T18:19:12.232526+00:00",
+ "values": [
+  [
+   2.948,
+   -0.008
+  ],
+  [
+   1.1320000000000001,
+   0.096
+  ],
+  [
+   0.98,
+   0.064
+  ],
+  [
+   0.992,
+   -0.1
+  ],
+  [
+   0.508,
+   -0.424
+  ],
+  [
+   0.6,
+   0.043999999999999984
+  ],
+  [
+   -0.876,
+   0.456
+  ],
+  [
+   0.9199999999999999,
+   -0.8200000000000001
+  ],
+  [
+   -0.6,
+   -1.08
+  ],
+  [
+   0.27599999999999997,
+   -0.9160000000000001
+  ],
+  [
+   -0.23600000000000002,
+   -0.27199999999999996
+  ],
+  [
+   -0.19199999999999998,
+   -0.068
+  ],
+  [
+   0.928,
+   0.08399999999999999
+  ],
+  [
+   0.5439999999999999,
+   0.20800000000000002
+  ],
+  [
+   0.72,
+   0.272
+  ],
+  [
+   -0.4,
+   -0.027999999999999997
+  ],
+  [
+   -0.048,
+   -0.023999999999999997
+  ],
+  [
+   -0.08399999999999999,
+   0.05199999999999999
+  ],
+  [
+   0.208,
+   -0.044
+  ],
+  [
+   -0.308,
+   -0.015999999999999993
+  ],
+  [
+   -0.648,
+   0.36800000000000005
+  ],
+  [
+   0.6799999999999999,
+   -0.148
+  ],
+  [
+   -0.25599999999999995,
+   0.29200000000000004
+  ],
+  [
+   -0.728,
+   0.368
+  ],
+  [
+   0.03600000000000002,
+   -0.07600000000000001
+  ],
+  [
+   0.504,
+   0.276
+  ],
+  [
+   -0.39999999999999997,
+   -0.05600000000000001
+  ],
+  [
+   0.01200000000000001,
+   -0.348
+  ],
+  [
+   -0.064,
+   0.064
+  ],
+  [
+   -0.336,
+   -0.164
+  ],
+  [
+   0.05199999999999999,
+   -0.36000000000000004
+  ],
+  [
+   0.6000000000000001,
+   0.596
+  ]
+ ],
+ "stds": [
+  [
+   0.014282856857085706,
+   0.07740428928683474
+  ],
+  [
+   0.0235089770087939,
+   0.07729548499103941
+  ],
+  [
+   0.016398048664399072,
+   0.07732776991482426
+  ],
+  [
+   0.012583163354260327,
+   0.07739581384028467
+  ],
+  [
+   0.07213831159654348,
+   0.07336178841876743
+  ],
+  [
+   0.07113974978870814,
+   0.0741343645012217
+  ],
+  [
+   0.07134524511135974,
+   0.07369037929065096
+  ],
+  [
+   0.0700715063346008,
+   0.07418096790956559
+  ],
+  [
+   0.07584531626936497,
+   0.07069574244606247
+  ],
+  [
+   0.07579656984323235,
+   0.06838596347204592
+  ],
+  [
+   0.0758986692900475,
+   0.07107629703353995
+  ],
+  [
+   0.07626186465068895,
+   0.07116516001527713
+  ],
+  [
+   0.07111140555494597,
+   0.07735859357563321
+  ],
+  [
+   0.07297868181873389,
+   0.0770504250474973
+  ],
+  [
+   0.07128130189607931,
+   0.0771214107754779
+  ],
+  [
+   0.07303872945225705,
+   0.07733128732925633
+  ],
+  [
+   0.0773240454192614,
+   0.07718777105215566
+  ],
+  [
+   0.07730148769590402,
+   0.07709505820738446
+  ],
+  [
+   0.07717367426784862,
+   0.07743218968878511
+  ],
+  [
+   0.07622514020977593,
+   0.07731700977145974
+  ],
+  [
+   0.071026755522127,
+   0.07601220954557235
+  ],
+  [
+   0.07044135149186165,
+   0.07622262131414795
+  ],
+  [
+   0.07243645491049379,
+   0.07513039331721884
+  ],
+  [
+   0.07305318610437193,
+   0.0749950398359785
+  ],
+  [
+   0.07680062499745689,
+   0.0770576926724386
+  ],
+  [
+   0.0761896580908459,
+   0.0765803107854754
+  ],
+  [
+   0.07650819563942153,
+   0.0769959998960985
+  ],
+  [
+   0.07650003921567622,
+   0.07680145831948766
+  ],
+  [
+   0.07646719558085022,
+   0.07622576992067709
+  ],
+  [
+   0.07618503790115222,
+   0.07477732276566205
+  ],
+  [
+   0.07499610656560779,
+   0.07511527141666999
+  ],
+  [
+   0.07530758261954767,
+   0.07534348014261089
+  ]
+ ],
+ "extra_data_keys": [
+  [
+   "evs",
+   "stds",
+   "ensemble_standard_error"
+  ]
+ ],
+ "result_metadata": {
+  "options": {
+   "default_precision": 0.015625,
+   "default_shots": 500,
+   "dynamical_decoupling": {
+    "enable": false,
+    "extra_slack_distribution": "middle",
+    "scheduling_method": "alap",
+    "sequence_type": "XX",
+    "skip_reset_qubits": false
+   },
+   "environment": {
+    "image": null,
+    "job_tags": [],
+    "log_level": "WARNING",
+    "max_execution_time": null,
+    "private": false
+   },
+   "execution": {
+    "init_qubits": true,
+    "rep_delay": null,
+    "scheduler_timing": false,
+    "stretch_values": false
+   },
+   "experimental": {},
+   "max_execution_time": null,
+   "resilience": {
+    "measure_mitigation": false,
+    "pec_mitigation": false,
+    "zne_mitigation": false
+   },
+   "resilience_level": 0,
+   "simulator": {
+    "angle_decimals": 5,
+    "layer_noise_model": null,
+    "seed_simulator": null,
+    "warn_absent": true
+   },
+   "twirling": {
+    "enable_gates": false,
+    "enable_measure": false,
+    "group": "pauli",
+    "num_randomizations": "auto",
+    "shots_per_randomization": "auto",
+    "strategy": "active-accum"
+   }
+  },
+  "target_precision": null,
+  "shots": 500,
+  "executor": "Metadata(chunk_timing=[ChunkSpan(start=datetime.datetime(2026, 11, 10, 18, 19, 17, 181528, tzinfo=datetime.timezone.utc), stop=datetime.datetime(2026, 11, 10, 18, 19, 26, 541364, tzinfo=datetime.timezone.utc), parts=[ChunkPart(idx_item=0, size=2), ChunkPart(idx_item=1, size=2), ChunkPart(idx_item=2, size=2), ChunkPart(idx_item=3, size=2), ChunkPart(idx_item=4, size=2), ChunkPart(idx_item=5, size=2), ChunkPart(idx_item=6, size=2), ChunkPart(idx_item=7, size=2), ChunkPart(idx_item=8, size=2), ChunkPart(idx_item=9, size=2), ChunkPart(idx_item=10, size=2), ChunkPart(idx_item=11, size=2), ChunkPart(idx_item=12, size=2), ChunkPart(idx_item=13, size=2), ChunkPart(idx_item=14, size=2), ChunkPart(idx_item=15, size=2), ChunkPart(idx_item=16, size=2), ChunkPart(idx_item=17, size=2), ChunkPart(idx_item=18, size=2), ChunkPart(idx_item=19, size=2), ChunkPart(idx_item=20, size=2), ChunkPart(idx_item=21, size=2), ChunkPart(idx_item=22, size=2), ChunkPart(idx_item=23, size=2), ChunkPart(idx_item=24, size=2), ChunkPart(idx_item=25, size=2), ChunkPart(idx_item=26, size=2), ChunkPart(idx_item=27, size=2), ChunkPart(idx_item=28, size=2), ChunkPart(idx_item=29, size=2), ChunkPart(idx_item=30, size=2), ChunkPart(idx_item=31, size=2)])])"
+ },
+ "finished_utc": "2026-11-10T18:19:32.412367+00:00",
+ "usage": 11,
+ "metrics": {
+  "caller": "qiskit",
+  "qiskit_version": "qiskit_ibm_runtime-0.52.0,qiskit-2.6.2*,qiskit_aer-0.18.2",
+  "timestamps": {
+   "created": "2026-11-10T18:19:12.089933Z",
+   "finished": "2026-11-10T18:19:28.466765Z",
+   "running": "2026-11-10T18:19:14.093801Z"
+  },
+  "usage": {
+   "qpu_charge_time_seconds": 11,
+   "value": 0.171278,
+   "unit": "resource_units",
+   "status": "complete",
+   "details": [
+    {
+     "value": 0.171278,
+     "unit": "resource_units",
+     "metric": {
+      "id": "caffe3ca-729c-5750-8777-df63bbf8bfd9",
+      "value": 11
+     }
+    }
+   ]
+  },
+  "circuits_execution_time_ns": 8448455680
+ }
+}

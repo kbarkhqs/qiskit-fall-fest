@@ -1,0 +1,2744 @@
+{
+ "centres": {
+  "A": {
+   "ref default (h0.05 p0.02 merge 2 bins)": {
+    "n": 8,
+    "ppm": [
+     5.449317829070343,
+     5.472849681848962,
+     5.484956235625545,
+     5.508514199343757,
+     5.778697477717245,
+     5.802211606216367,
+     5.952786180321256,
+     5.988560812625576
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref merge 0.5 bin": {
+    "n": 12,
+    "ppm": [
+     5.449317829070343,
+     5.472849681848962,
+     5.484956235625545,
+     5.508514199343757,
+     5.777843673339028,
+     5.779529133147488,
+     5.801401942770725,
+     5.803025272538988,
+     5.951933775581135,
+     5.953653073532147,
+     5.987727110617974,
+     5.9894016850024405
+    ],
+    "max_shift_vs_default_Hz": null
+   },
+   "ref merge 1 bin": {
+    "n": 8,
+    "ppm": [
+     5.449317829070343,
+     5.472849681848962,
+     5.484956235625545,
+     5.508514199343757,
+     5.778697477717245,
+     5.802211606216367,
+     5.952786180321256,
+     5.988560812625576
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref merge 3 bins": {
+    "n": 8,
+    "ppm": [
+     5.449317829070343,
+     5.472849681848962,
+     5.484956235625545,
+     5.508514199343757,
+     5.778697477717245,
+     5.802211606216367,
+     5.952786180321256,
+     5.988560812625576
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.02 p0.005": {
+    "n": 8,
+    "ppm": [
+     5.449317829070343,
+     5.472849681848962,
+     5.484956235625545,
+     5.508514199343757,
+     5.778697477717245,
+     5.802211606216367,
+     5.952786180321256,
+     5.988560812625576
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.10 p0.05": {
+    "n": 8,
+    "ppm": [
+     5.449317829070343,
+     5.472849681848962,
+     5.484956235625545,
+     5.508514199343757,
+     5.778697477717245,
+     5.802211606216367,
+     5.952786180321256,
+     5.988560812625576
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.20 p0.10": {
+    "n": 8,
+    "ppm": [
+     5.449317829070343,
+     5.472849681848962,
+     5.484956235625545,
+     5.508514199343757,
+     5.778697477717245,
+     5.802211606216367,
+     5.952786180321256,
+     5.988560812625576
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.30 p0.10": {
+    "n": 8,
+    "ppm": [
+     5.449317829070343,
+     5.472849681848962,
+     5.484956235625545,
+     5.508514199343757,
+     5.778697477717245,
+     5.802211606216367,
+     5.952786180321256,
+     5.988560812625576
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "sim own spectrum at 1 s^-1": {
+    "n": 8,
+    "ppm": [
+     5.450666662077784,
+     5.47199999573603,
+     5.485333329272433,
+     5.509333329637961,
+     5.776000000366041,
+     5.800000000731568,
+     5.9493333363392935,
+     5.986666670241224
+    ],
+    "max_shift_vs_default_Hz": 1.726421964687464
+   },
+   "sim own spectrum at 2 s^-1": {
+    "n": 8,
+    "ppm": [
+     5.450666662077784,
+     5.47199999573603,
+     5.485333329272435,
+     5.509333329637961,
+     5.776000000366041,
+     5.800000000731568,
+     5.949333336339293,
+     5.986666670241224
+    ],
+    "max_shift_vs_default_Hz": 1.726421964687908
+   },
+   "sim own spectrum at 5 s^-1": {
+    "n": 8,
+    "ppm": [
+     5.450666662077784,
+     5.47199999573603,
+     5.485333329272434,
+     5.509333329637961,
+     5.776000000366041,
+     5.800000000731568,
+     5.949333336339293,
+     5.986666670241224
+    ],
+    "max_shift_vs_default_Hz": 1.726421964687908
+   },
+   "exact stick lines (merge 2 bins)": {
+    "n": 8,
+    "ppm": [
+     5.449239551795323,
+     5.472819432962411,
+     5.484976863815681,
+     5.508556744841411,
+     5.778673486687717,
+     5.8022303360371605,
+     5.952777449511184,
+     5.988521140765268
+    ],
+    "max_shift_vs_default_Hz": 0.03913863691394574
+   }
+  },
+  "B": {
+   "ref default (h0.05 p0.02 merge 2 bins)": {
+    "n": 8,
+    "ppm": [
+     5.33131548073577,
+     5.3484582894534425,
+     5.563626003645553,
+     5.594807242829651,
+     5.8766880750673565,
+     5.893834440726475,
+     5.907884320448173,
+     5.9250441293031715
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref merge 0.5 bin": {
+    "n": 8,
+    "ppm": [
+     5.33131548073577,
+     5.3484582894534425,
+     5.563626003645553,
+     5.594807242829651,
+     5.8766880750673565,
+     5.893834440726475,
+     5.907884320448173,
+     5.9250441293031715
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref merge 1 bin": {
+    "n": 8,
+    "ppm": [
+     5.33131548073577,
+     5.3484582894534425,
+     5.563626003645553,
+     5.594807242829651,
+     5.8766880750673565,
+     5.893834440726475,
+     5.907884320448173,
+     5.9250441293031715
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref merge 3 bins": {
+    "n": 8,
+    "ppm": [
+     5.33131548073577,
+     5.3484582894534425,
+     5.563626003645553,
+     5.594807242829651,
+     5.8766880750673565,
+     5.893834440726475,
+     5.907884320448173,
+     5.9250441293031715
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.02 p0.005": {
+    "n": 8,
+    "ppm": [
+     5.33131548073577,
+     5.3484582894534425,
+     5.563626003645553,
+     5.594807242829651,
+     5.8766880750673565,
+     5.893834440726475,
+     5.907884320448173,
+     5.9250441293031715
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.10 p0.05": {
+    "n": 8,
+    "ppm": [
+     5.33131548073577,
+     5.3484582894534425,
+     5.563626003645553,
+     5.594807242829651,
+     5.8766880750673565,
+     5.893834440726475,
+     5.907884320448173,
+     5.9250441293031715
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.20 p0.10": {
+    "n": 8,
+    "ppm": [
+     5.33131548073577,
+     5.3484582894534425,
+     5.563626003645553,
+     5.594807242829651,
+     5.8766880750673565,
+     5.893834440726475,
+     5.907884320448173,
+     5.9250441293031715
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.30 p0.10": {
+    "n": 8,
+    "ppm": [
+     5.33131548073577,
+     5.3484582894534425,
+     5.563626003645553,
+     5.594807242829651,
+     5.8766880750673565,
+     5.893834440726475,
+     5.907884320448173,
+     5.9250441293031715
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "sim own spectrum at 1 s^-1": {
+    "n": 8,
+    "ppm": [
+     5.33199999572206,
+     5.347999995965745,
+     5.56399999925549,
+     5.593333333035578,
+     5.873333337300062,
+     5.892000004251027,
+     5.9053333377874315,
+     5.921333338031116
+    ],
+    "max_shift_vs_default_Hz": 1.8553956077696496
+   },
+   "sim own spectrum at 2 s^-1": {
+    "n": 8,
+    "ppm": [
+     5.33199999572206,
+     5.347999995965745,
+     5.56399999925549,
+     5.593333333035578,
+     5.873333337300063,
+     5.892000004251027,
+     5.9053333377874315,
+     5.921333338031116
+    ],
+    "max_shift_vs_default_Hz": 1.8553956077696496
+   },
+   "sim own spectrum at 5 s^-1": {
+    "n": 8,
+    "ppm": [
+     5.33199999572206,
+     5.347999995965745,
+     5.56399999925549,
+     5.593333333035578,
+     5.873333337300062,
+     5.892000004251027,
+     5.9053333377874315,
+     5.921333338031116
+    ],
+    "max_shift_vs_default_Hz": 1.8553956077696496
+   },
+   "exact stick lines (merge 2 bins)": {
+    "n": 8,
+    "ppm": [
+     5.331288704923119,
+     5.34844826870526,
+     5.563642073844469,
+     5.594838540285658,
+     5.876715425397369,
+     5.89387612370923,
+     5.907905725199954,
+     5.925066423370457
+    ],
+    "max_shift_vs_default_Hz": 0.020841491060176808
+   }
+  },
+  "C": {
+   "ref default (h0.05 p0.02 merge 2 bins)": {
+    "n": 4,
+    "ppm": [
+     6.293228124079821,
+     6.309058516462956,
+     6.367941483619681,
+     6.383771875997791
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref merge 0.5 bin": {
+    "n": 4,
+    "ppm": [
+     6.293228124079821,
+     6.309058516462956,
+     6.367941483619681,
+     6.383771875997791
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref merge 1 bin": {
+    "n": 4,
+    "ppm": [
+     6.293228124079821,
+     6.309058516462956,
+     6.367941483619681,
+     6.383771875997791
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref merge 3 bins": {
+    "n": 4,
+    "ppm": [
+     6.293228124079821,
+     6.309058516462956,
+     6.367941483619681,
+     6.383771875997791
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.02 p0.005": {
+    "n": 4,
+    "ppm": [
+     6.293228124079821,
+     6.309058516462956,
+     6.367941483619681,
+     6.383771875997791
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.10 p0.05": {
+    "n": 4,
+    "ppm": [
+     6.293228124079821,
+     6.309058516462956,
+     6.367941483619681,
+     6.383771875997791
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.20 p0.10": {
+    "n": 4,
+    "ppm": [
+     6.293228124079821,
+     6.309058516462956,
+     6.367941483619681,
+     6.383771875997791
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "ref h0.30 p0.10": {
+    "n": 4,
+    "ppm": [
+     6.293228124079821,
+     6.309058516462956,
+     6.367941483619681,
+     6.383771875997791
+    ],
+    "max_shift_vs_default_Hz": 0.0
+   },
+   "sim own spectrum at 1 s^-1": {
+    "n": 4,
+    "ppm": [
+     6.293166665930592,
+     6.306499999466996,
+     6.367833333734454,
+     6.381166667270858
+    ],
+    "max_shift_vs_default_Hz": 1.3026043436276884
+   },
+   "sim own spectrum at 2 s^-1": {
+    "n": 4,
+    "ppm": [
+     6.293166665930592,
+     6.306499999466996,
+     6.367833333734454,
+     6.381166667270858
+    ],
+    "max_shift_vs_default_Hz": 1.3026043436276884
+   },
+   "sim own spectrum at 5 s^-1": {
+    "n": 4,
+    "ppm": [
+     6.293166665930593,
+     6.306499999466996,
+     6.367833333734454,
+     6.381166667270858
+    ],
+    "max_shift_vs_default_Hz": 1.3026043436276884
+   },
+   "exact stick lines (merge 2 bins)": {
+    "n": 4,
+    "ppm": [
+     6.293230617030269,
+     6.30907061727263,
+     6.36792938268834,
+     6.3837693829307005
+    ],
+    "max_shift_vs_default_Hz": 0.006050465578553489
+   }
+  }
+ },
+ "variants": [
+  {
+   "variant": "PRIMARY-type: ref default, tol 2 bins, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "PRIMARY-type: ref default, tol 2 bins, dip 5%",
+   "A": {
+    "max_pass": 22.15,
+    "first_fail": 22.16,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.15,
+      22.16,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 25.99,
+    "first_fail": 26.0,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      25.99,
+      26.0,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 25.51,
+    "first_fail": 25.52,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      25.51,
+      25.52,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "PRIMARY-type: ref default, tol 2 bins, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "PRIMARY-type: ref default, tol 2 bins, dip 19%",
+   "A": {
+    "max_pass": 17.11,
+    "first_fail": 17.12,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      17.11,
+      17.12,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 19.13,
+    "first_fail": 19.14,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.13,
+      19.14,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 20.02,
+    "first_fail": 20.03,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      20.02,
+      20.03,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "tol 0.5 bins, dip any",
+   "A": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "B": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "C": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "ranking": "undefined (some molecule never passes)"
+  },
+  {
+   "variant": "tol 0.5 bins, dip 10%",
+   "A": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "B": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "C": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "ranking": "undefined (some molecule never passes)"
+  },
+  {
+   "variant": "tol 1.0 bins, dip any",
+   "A": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "B": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "undefined (some molecule never passes)"
+  },
+  {
+   "variant": "tol 1.0 bins, dip 10%",
+   "A": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "B": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "undefined (some molecule never passes)"
+  },
+  {
+   "variant": "tol 3.0 bins, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.53,
+    "first_fail": 33.54,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.53,
+      33.54,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "tol 3.0 bins, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: ref merge 0.5 bin, dip any",
+   "A": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "undefined (some molecule never passes)"
+  },
+  {
+   "variant": "centres: ref merge 0.5 bin, dip 10%",
+   "A": {
+    "max_pass": null,
+    "first_fail": 0.01,
+    "pass_at_0": false,
+    "transitions": [],
+    "n_transitions_0.01_100": 0,
+    "n_transitions_0.1_100": 0,
+    "monotonic_0.1_100": false
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "undefined (some molecule never passes)"
+  },
+  {
+   "variant": "centres: ref merge 1 bin, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: ref merge 1 bin, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: ref merge 3 bins, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: ref merge 3 bins, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: ref h0.02 p0.005, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: ref h0.02 p0.005, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: ref h0.10 p0.05, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: ref h0.10 p0.05, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: ref h0.20 p0.10, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: ref h0.20 p0.10, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: ref h0.30 p0.10, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: ref h0.30 p0.10, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: sim own spectrum at 1 s^-1, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.53,
+    "first_fail": 33.54,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.53,
+      33.54,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: sim own spectrum at 1 s^-1, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: sim own spectrum at 2 s^-1, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.53,
+    "first_fail": 33.54,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.53,
+      33.54,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: sim own spectrum at 2 s^-1, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: sim own spectrum at 5 s^-1, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.53,
+    "first_fail": 33.54,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.53,
+      33.54,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: sim own spectrum at 5 s^-1, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "centres: exact stick lines (merge 2 bins), dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "centres: exact stick lines (merge 2 bins), dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "signed spectrum (no np.abs), dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "signed spectrum (no np.abs), dip 5%",
+   "A": {
+    "max_pass": 22.15,
+    "first_fail": 22.16,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.15,
+      22.16,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 25.99,
+    "first_fail": 26.0,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      25.99,
+      26.0,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 25.51,
+    "first_fail": 25.52,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      25.51,
+      25.52,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "signed spectrum (no np.abs), dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "signed spectrum (no np.abs), dip 19%",
+   "A": {
+    "max_pass": 17.11,
+    "first_fail": 17.12,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      17.11,
+      17.12,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 19.13,
+    "first_fail": 19.14,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.13,
+      19.14,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 20.02,
+    "first_fail": 20.03,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      20.02,
+      20.03,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "no position tolerance: count >= k per multiplet, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.53,
+    "first_fail": 33.54,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.53,
+      33.54,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "no position tolerance: count >= k per multiplet, dip 5%",
+   "A": {
+    "max_pass": 22.15,
+    "first_fail": 22.16,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.15,
+      22.16,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 25.99,
+    "first_fail": 26.0,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      25.99,
+      26.0,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 25.51,
+    "first_fail": 25.52,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      25.51,
+      25.52,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "no position tolerance: count >= k per multiplet, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "no position tolerance: count >= k per multiplet, dip 19%",
+   "A": {
+    "max_pass": 17.11,
+    "first_fail": 17.12,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      17.11,
+      17.12,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 19.13,
+    "first_fail": 19.14,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.13,
+      19.14,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 20.02,
+    "first_fail": 20.03,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      20.02,
+      20.03,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "no position tolerance: count == k per multiplet, dip any",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.53,
+    "first_fail": 33.54,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      1.2,
+      1.21,
+      "pass->fail"
+     ],
+     [
+      1.48,
+      1.49,
+      "fail->pass"
+     ],
+     [
+      33.53,
+      33.54,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 3,
+    "n_transitions_0.1_100": 3,
+    "monotonic_0.1_100": false
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      0.52,
+      0.53,
+      "pass->fail"
+     ],
+     [
+      0.74,
+      0.75,
+      "fail->pass"
+     ],
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 3,
+    "n_transitions_0.1_100": 3,
+    "monotonic_0.1_100": false
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "no position tolerance: count == k per multiplet, dip 10%",
+   "A": {
+    "max_pass": 19.97,
+    "first_fail": 19.98,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.97,
+      19.98,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.85,
+    "first_fail": 22.86,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      1.25,
+      1.26,
+      "pass->fail"
+     ],
+     [
+      1.26,
+      1.27,
+      "fail->pass"
+     ],
+     [
+      1.42,
+      1.43,
+      "pass->fail"
+     ],
+     [
+      1.48,
+      1.49,
+      "fail->pass"
+     ],
+     [
+      22.85,
+      22.86,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 5,
+    "n_transitions_0.1_100": 5,
+    "monotonic_0.1_100": false
+   },
+   "C": {
+    "max_pass": 23.22,
+    "first_fail": 23.23,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      0.54,
+      0.55,
+      "pass->fail"
+     ],
+     [
+      0.73,
+      0.74,
+      "fail->pass"
+     ],
+     [
+      23.22,
+      23.23,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 3,
+    "n_transitions_0.1_100": 3,
+    "monotonic_0.1_100": false
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "dip relative to larger peak, dip 5%",
+   "A": {
+    "max_pass": 27.32,
+    "first_fail": 27.33,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      27.32,
+      27.33,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 33.36,
+    "first_fail": 33.37,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      33.36,
+      33.37,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < C < B"
+  },
+  {
+   "variant": "dip relative to larger peak, dip 10%",
+   "A": {
+    "max_pass": 24.07,
+    "first_fail": 24.08,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      24.07,
+      24.08,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 28.19,
+    "first_fail": 28.2,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.19,
+      28.2,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  },
+  {
+   "variant": "dip relative to larger peak, dip 19%",
+   "A": {
+    "max_pass": 19.44,
+    "first_fail": 19.45,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      19.44,
+      19.45,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "B": {
+    "max_pass": 22.49,
+    "first_fail": 22.5,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      22.49,
+      22.5,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "C": {
+    "max_pass": 28.58,
+    "first_fail": 28.59,
+    "pass_at_0": true,
+    "transitions": [
+     [
+      28.58,
+      28.59,
+      "pass->fail"
+     ]
+    ],
+    "n_transitions_0.01_100": 1,
+    "n_transitions_0.1_100": 1,
+    "monotonic_0.1_100": true
+   },
+   "ranking": "A < B < C"
+  }
+ ],
+ "critical": {
+  "A": {
+   "first_fail": 19.98,
+   "pair_ppm": [
+    5.472849681848962,
+    5.484956235625545
+   ],
+   "ref_sep_Hz": 6.053276796098278,
+   "dip": 0.09979855748029809,
+   "all_dips": [
+    0.5058427900778755,
+    0.09979855748029809,
+    0.5142189382883033,
+    0.9831685884974765,
+    0.5421856729957317,
+    0.9752443193964648,
+    0.7567364658668617
+   ],
+   "any_first_fail": 27.33,
+   "any_reason": "missing",
+   "any_missing_ppm": [
+    5.484956235625545
+   ]
+  },
+  "B": {
+   "first_fail": 22.86,
+   "pair_ppm": [
+    5.893834440726475,
+    5.907884320448173
+   ],
+   "ref_sep_Hz": 7.024939753857136,
+   "dip": 0.09995087367377553,
+   "all_dips": [
+    0.23876042737944136,
+    0.9820445782333196,
+    0.6334938180324167,
+    0.9814206820417896,
+    0.1831953708515599,
+    0.09995087367377553,
+    0.23213915246586092
+   ],
+   "any_first_fail": 33.37,
+   "any_reason": "missing",
+   "any_missing_ppm": [
+    5.9250441293031715
+   ]
+  },
+  "C": {
+   "first_fail": 23.23,
+   "pair_ppm": [
+    6.293228124079821,
+    6.309058516462956
+   ],
+   "ref_sep_Hz": 7.915196071016752,
+   "dip": 0.09977813844405004,
+   "all_dips": [
+    0.09977813844405004,
+    0.862605333790522,
+    0.09977813844405026
+   ],
+   "any_first_fail": 28.59,
+   "any_reason": "missing",
+   "any_missing_ppm": [
+    6.293228124079821,
+    6.383771875997791
+   ]
+  }
+ },
+ "J01": {
+  "official_noise0_maxima_per_doublet_window": [
+   1,
+   1,
+   0,
+   1
+  ],
+  "zero_padded_exact_300steps_noise0_maxima_per_doublet": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "exact_1200_steps_all_4_doublets_resolved_up_to": 3.85,
+  "exact_2400_steps_all_4_doublets_resolved_up_to": 4.65
+ },
+ "transform_dev": {
+  "A": 3.24462678946702e-14,
+  "B": 2.683964162031316e-14,
+  "C": 7.950456563715277e-14
+ }
+}

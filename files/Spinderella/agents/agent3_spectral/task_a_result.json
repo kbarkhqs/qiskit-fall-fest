@@ -1,0 +1,323 @@
+{
+  "mapping": {
+    "molecule A": "spectrum_3",
+    "molecule B": "spectrum_2",
+    "molecule C": "spectrum_1"
+  },
+  "unanimous": true,
+  "n_choices": 27,
+  "winners": [
+    "A->3 B->2 C->1"
+  ],
+  "min_margin_by_metric": {
+    "cosine": 1.3699700402007065,
+    "multiplet_score": 2.0,
+    "nrmse": 0.04288515945141402,
+    "peak_f1": 2.0,
+    "peak_match_fraction": 2.0,
+    "pearson": 1.415954262366351
+  },
+  "leaked_C_file_identical_to": [
+    "spectrum_1"
+  ],
+  "agrees_with_leaked_file": true,
+  "summary": [
+    {
+      "noise_strength": 0.5,
+      "resampling": "binavg",
+      "metric": "cosine",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.1775904439678735,
+      "second": "A->2 B->3 C->1",
+      "second_total": 0.7435361472115012,
+      "margin": 1.4340542967563723,
+      "tie": false
+    },
+    {
+      "noise_strength": 0.5,
+      "resampling": "binavg",
+      "metric": "pearson",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.1252931707419287,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.6485893922566371,
+      "margin": 1.4767037784852914,
+      "tie": false
+    },
+    {
+      "noise_strength": 0.5,
+      "resampling": "binavg",
+      "metric": "nrmse",
+      "best": "A->3 B->2 C->1",
+      "best_total": 0.2602631665406897,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.3159141245857391,
+      "margin": 0.05565095804504938,
+      "tie": false
+    },
+    {
+      "noise_strength": 0.5,
+      "resampling": "binavg",
+      "metric": "peak_match_fraction",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 0.5,
+      "resampling": "binavg",
+      "metric": "peak_f1",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 0.5,
+      "resampling": "binavg",
+      "metric": "multiplet_score",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 0.5,
+      "resampling": "point",
+      "metric": "cosine",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.0852844066732965,
+      "second": "A->1 B->2 C->3",
+      "second_total": 0.7153143664725901,
+      "margin": 1.3699700402007065,
+      "tie": false
+    },
+    {
+      "noise_strength": 0.5,
+      "resampling": "point",
+      "metric": "pearson",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.0329884020786864,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.6170341397123352,
+      "margin": 1.415954262366351,
+      "tie": false
+    },
+    {
+      "noise_strength": 0.5,
+      "resampling": "point",
+      "metric": "nrmse",
+      "best": "A->3 B->2 C->1",
+      "best_total": 0.27896717344109045,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.3218523328925045,
+      "margin": 0.04288515945141402,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "binavg",
+      "metric": "cosine",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.3379557627416396,
+      "second": "A->2 B->3 C->1",
+      "second_total": 0.8358814351692572,
+      "margin": 1.5020743275723825,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "binavg",
+      "metric": "pearson",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.2986316048189814,
+      "second": "A->2 B->3 C->1",
+      "second_total": 0.699091767760616,
+      "margin": 1.5995398370583653,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "binavg",
+      "metric": "nrmse",
+      "best": "A->3 B->2 C->1",
+      "best_total": 0.2636682692207612,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.34866065125418155,
+      "margin": 0.08499238203342036,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "binavg",
+      "metric": "peak_match_fraction",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "binavg",
+      "metric": "peak_f1",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "binavg",
+      "metric": "multiplet_score",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "point",
+      "metric": "cosine",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.2363991262760874,
+      "second": "A->2 B->3 C->1",
+      "second_total": 0.7867422718163141,
+      "margin": 1.4496568544597732,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "point",
+      "metric": "pearson",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.1948559397934577,
+      "second": "A->2 B->3 C->1",
+      "second_total": 0.6592531162706617,
+      "margin": 1.535602823522796,
+      "tie": false
+    },
+    {
+      "noise_strength": 2.0,
+      "resampling": "point",
+      "metric": "nrmse",
+      "best": "A->3 B->2 C->1",
+      "best_total": 0.27421021010348823,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.355366495005235,
+      "margin": 0.08115628490174676,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "binavg",
+      "metric": "cosine",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.5161432643711263,
+      "second": "A->1 B->2 C->3",
+      "second_total": 0.8727558940586451,
+      "margin": 1.6433873703124813,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "binavg",
+      "metric": "pearson",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.481663276589935,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.7231119103078335,
+      "margin": 1.7585513662821017,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "binavg",
+      "metric": "nrmse",
+      "best": "A->3 B->2 C->1",
+      "best_total": 0.26385180212753934,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.3825131685692639,
+      "margin": 0.11866136644172454,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "binavg",
+      "metric": "peak_match_fraction",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "binavg",
+      "metric": "peak_f1",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "binavg",
+      "metric": "multiplet_score",
+      "best": "A->3 B->2 C->1",
+      "best_total": 3.0,
+      "second": "A->3 B->1 C->2",
+      "second_total": 1.0,
+      "margin": 2.0,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "point",
+      "metric": "cosine",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.3798389137301488,
+      "second": "A->1 B->2 C->3",
+      "second_total": 0.8344462306788765,
+      "margin": 1.5453926830512723,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "point",
+      "metric": "pearson",
+      "best": "A->3 B->2 C->1",
+      "best_total": 2.3418113763984647,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.6783940818964471,
+      "margin": 1.6634172945020176,
+      "tie": false
+    },
+    {
+      "noise_strength": 5.0,
+      "resampling": "point",
+      "metric": "nrmse",
+      "best": "A->3 B->2 C->1",
+      "best_total": 0.27623932305223103,
+      "second": "A->3 B->1 C->2",
+      "second_total": 0.3910771138505585,
+      "margin": 0.11483779079832745,
+      "tie": false
+    }
+  ]
+}

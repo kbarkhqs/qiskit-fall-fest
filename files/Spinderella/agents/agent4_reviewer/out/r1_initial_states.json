@@ -1,0 +1,517 @@
+{
+ "A": {
+  "n": 3,
+  "template_eigen_residual_max": 2.1211504774498128e-16,
+  "gram_minus_identity_max": 4.440892098500626e-16,
+  "n_states": 8,
+  "weightings": {
+   "m_s = N - 2w (claimed)": {
+    "weights": [
+     3,
+     1,
+     1,
+     -1,
+     1,
+     -1,
+     -1,
+     -3
+    ],
+    "best_scale": 0.9999999999999942,
+    "corr_rel_residual_after_scale": 6.809367884367627e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.2870594307278225e-14,
+    "note": "",
+    "max_abs_signal": 23.999999999999986
+   },
+   "equal weights 1": {
+    "weights": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "best_scale": -4.00983662941905e-19,
+    "corr_rel_residual_after_scale": 3.700232100180599e-17,
+    "spectrum_maxabs_diff_vs_trace": 0.9902433373671519,
+    "note": "",
+    "max_abs_signal": 8.881784197001252e-16
+   },
+   "only all-plus state": {
+    "weights": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "best_scale": 0.12487110055115275,
+    "corr_rel_residual_after_scale": 0.0019581826506398594,
+    "spectrum_maxabs_diff_vs_trace": 0.04789665941863219,
+    "note": "",
+    "max_abs_signal": 2.9999999999999982
+   },
+   "flipped sign -(N - 2w)": {
+    "weights": [
+     -3,
+     -1,
+     -1,
+     1,
+     -1,
+     1,
+     1,
+     3
+    ],
+    "best_scale": -0.9999999999999942,
+    "corr_rel_residual_after_scale": 6.809367884367627e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.2870594307278225e-14,
+    "note": "",
+    "max_abs_signal": 23.999999999999986
+   },
+   "Hamming weight w (number of |->)": {
+    "weights": [
+     0.0,
+     1.0,
+     1.0,
+     2.0,
+     1.0,
+     2.0,
+     2.0,
+     3.0
+    ],
+    "best_scale": -0.4999999999999971,
+    "corr_rel_residual_after_scale": 3.4046839421838136e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.298161660974074e-14,
+    "note": "",
+    "max_abs_signal": 11.999999999999993
+   },
+   "number of |+> = N - w (all >= 0)": {
+    "weights": [
+     3.0,
+     2.0,
+     2.0,
+     1.0,
+     2.0,
+     1.0,
+     1.0,
+     0.0
+    ],
+    "best_scale": 0.4999999999999971,
+    "corr_rel_residual_after_scale": 3.4046839421838136e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.2870594307278225e-14,
+    "note": "",
+    "max_abs_signal": 11.999999999999993
+   },
+   "m_s^3": {
+    "weights": [
+     27.0,
+     1.0,
+     1.0,
+     -1.0,
+     1.0,
+     -1.0,
+     -1.0,
+     -27.0
+    ],
+    "best_scale": 6.9938128264553265,
+    "corr_rel_residual_after_scale": 0.09399276723071963,
+    "spectrum_maxabs_diff_vs_trace": 0.039650215141050826,
+    "note": "",
+    "max_abs_signal": 167.99999999999991
+   },
+   "m_s + m_s^2 (even part added)": {
+    "weights": [
+     12.0,
+     2.0,
+     2.0,
+     0.0,
+     2.0,
+     0.0,
+     0.0,
+     6.0
+    ],
+    "best_scale": 0.9999999999999942,
+    "corr_rel_residual_after_scale": 6.809367884367627e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.275957200481571e-14,
+    "note": "",
+    "max_abs_signal": 23.99999999999999
+   },
+   "integer value of the bit label": {
+    "weights": [
+     0.0,
+     1.0,
+     2.0,
+     3.0,
+     4.0,
+     5.0,
+     6.0,
+     7.0
+    ],
+    "best_scale": -1.1118185494625183,
+    "corr_rel_residual_after_scale": 0.41438959770149597,
+    "spectrum_maxabs_diff_vs_trace": 0.5187394338557425,
+    "note": "",
+    "max_abs_signal": 27.999999999999986
+   },
+   "spin 0 only: (-1)^b0": {
+    "weights": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0
+    ],
+    "best_scale": 0.30354812167677536,
+    "corr_rel_residual_after_scale": 0.32352356968428847,
+    "spectrum_maxabs_diff_vs_trace": 0.9965258829410455,
+    "note": "",
+    "max_abs_signal": 7.999999999999996
+   }
+  },
+  "official_cxx0": 23.999999999999982,
+  "expected_N2N": 24,
+  "official_cyx0": -1.4695761589768222e-15,
+  "official_mx0_minus_N_minus_2w_max": 1.3322676295501878e-15,
+  "official_vs_trace_corr_max": 1.9895196601282805e-12,
+  "pauli_over_spin_ratio": 32.00000000000002,
+  "spin_vs_pauli_spectrum_maxdiff": 8.272549312238198e-14
+ },
+ "B": {
+  "n": 3,
+  "template_eigen_residual_max": 2.1211504774498128e-16,
+  "gram_minus_identity_max": 4.440892098500626e-16,
+  "n_states": 8,
+  "weightings": {
+   "m_s = N - 2w (claimed)": {
+    "weights": [
+     3,
+     1,
+     1,
+     -1,
+     1,
+     -1,
+     -1,
+     -3
+    ],
+    "best_scale": 0.9999999999999537,
+    "corr_rel_residual_after_scale": 4.588921835117314e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.1538326677728037e-14,
+    "note": "",
+    "max_abs_signal": 23.999999999999986
+   },
+   "equal weights 1": {
+    "weights": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "best_scale": 1.2746620806339533e-18,
+    "corr_rel_residual_after_scale": 3.7602779550254573e-17,
+    "spectrum_maxabs_diff_vs_trace": 0.9989416707901261,
+    "note": "",
+    "max_abs_signal": 8.881784197001252e-16
+   },
+   "only all-plus state": {
+    "weights": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "best_scale": 0.12488709661496362,
+    "corr_rel_residual_after_scale": 0.001918378763285329,
+    "spectrum_maxabs_diff_vs_trace": 0.040023665247838736,
+    "note": "",
+    "max_abs_signal": 2.9999999999999982
+   },
+   "flipped sign -(N - 2w)": {
+    "weights": [
+     -3,
+     -1,
+     -1,
+     1,
+     -1,
+     1,
+     1,
+     3
+    ],
+    "best_scale": -0.9999999999999537,
+    "corr_rel_residual_after_scale": 4.588921835117314e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.1538326677728037e-14,
+    "note": "",
+    "max_abs_signal": 23.999999999999986
+   },
+   "Hamming weight w (number of |->)": {
+    "weights": [
+     0.0,
+     1.0,
+     1.0,
+     2.0,
+     1.0,
+     2.0,
+     2.0,
+     3.0
+    ],
+    "best_scale": -0.49999999999997685,
+    "corr_rel_residual_after_scale": 2.294460917558657e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.1538326677728037e-14,
+    "note": "",
+    "max_abs_signal": 11.999999999999993
+   },
+   "number of |+> = N - w (all >= 0)": {
+    "weights": [
+     3.0,
+     2.0,
+     2.0,
+     1.0,
+     2.0,
+     1.0,
+     1.0,
+     0.0
+    ],
+    "best_scale": 0.49999999999997685,
+    "corr_rel_residual_after_scale": 2.294460917558657e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.1649348980190553e-14,
+    "note": "",
+    "max_abs_signal": 11.999999999999993
+   },
+   "m_s^3": {
+    "weights": [
+     27.0,
+     1.0,
+     1.0,
+     -1.0,
+     1.0,
+     -1.0,
+     -1.0,
+     -27.0
+    ],
+    "best_scale": 6.994580637518208,
+    "corr_rel_residual_after_scale": 0.09208218063769644,
+    "spectrum_maxabs_diff_vs_trace": 0.034402176187974365,
+    "note": "",
+    "max_abs_signal": 167.99999999999991
+   },
+   "m_s + m_s^2 (even part added)": {
+    "weights": [
+     12.0,
+     2.0,
+     2.0,
+     0.0,
+     2.0,
+     0.0,
+     0.0,
+     6.0
+    ],
+    "best_scale": 0.9999999999999537,
+    "corr_rel_residual_after_scale": 4.603724808778983e-14,
+    "spectrum_maxabs_diff_vs_trace": 2.1649348980190553e-14,
+    "note": "",
+    "max_abs_signal": 23.99999999999999
+   },
+   "integer value of the bit label": {
+    "weights": [
+     0.0,
+     1.0,
+     2.0,
+     3.0,
+     4.0,
+     5.0,
+     6.0,
+     7.0
+    ],
+    "best_scale": -1.1809608679224126,
+    "corr_rel_residual_after_scale": 0.46527530004745166,
+    "spectrum_maxabs_diff_vs_trace": 0.7550276145037453,
+    "note": "",
+    "max_abs_signal": 27.999999999999986
+   },
+   "spin 0 only: (-1)^b0": {
+    "weights": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0
+    ],
+    "best_scale": 0.3662407007228842,
+    "corr_rel_residual_after_scale": 0.3769690135437943,
+    "spectrum_maxabs_diff_vs_trace": 0.9990820291776891,
+    "note": "",
+    "max_abs_signal": 7.999999999999996
+   }
+  },
+  "official_cxx0": 23.999999999999982,
+  "expected_N2N": 24,
+  "official_cyx0": -1.4695761589768222e-15,
+  "official_mx0_minus_N_minus_2w_max": 1.3322676295501878e-15,
+  "official_vs_trace_corr_max": 1.8278711877428577e-12,
+  "pauli_over_spin_ratio": 32.000000000000014,
+  "spin_vs_pauli_spectrum_maxdiff": 5.921999002289624e-14
+ },
+ "C": {
+  "n": 2,
+  "template_eigen_residual_max": 1.7319121124709863e-16,
+  "gram_minus_identity_max": 4.440892098500626e-16,
+  "n_states": 4,
+  "weightings": {
+   "m_s = N - 2w (claimed)": {
+    "weights": [
+     2,
+     0,
+     0,
+     -2
+    ],
+    "best_scale": 0.9999999999999678,
+    "corr_rel_residual_after_scale": 3.8413716652030416e-14,
+    "spectrum_maxabs_diff_vs_trace": 1.6764367671839864e-14,
+    "note": "",
+    "max_abs_signal": 7.9999999999999964
+   },
+   "equal weights 1": {
+    "weights": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "best_scale": 0.0,
+    "corr_rel_residual_after_scale": 0.0,
+    "spectrum_maxabs_diff_vs_trace": null,
+    "note": "pipeline ValueError (zero signal): Cannot normalise the spectrum: max(|spectrum|) is 0.0. The t",
+    "max_abs_signal": 0.0
+   },
+   "only all-plus state": {
+    "weights": [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "best_scale": 0.24999999999999195,
+    "corr_rel_residual_after_scale": 9.603429163007604e-15,
+    "spectrum_maxabs_diff_vs_trace": 1.6764367671839864e-14,
+    "note": "",
+    "max_abs_signal": 1.9999999999999991
+   },
+   "flipped sign -(N - 2w)": {
+    "weights": [
+     -2,
+     0,
+     0,
+     2
+    ],
+    "best_scale": -0.9999999999999678,
+    "corr_rel_residual_after_scale": 3.8413716652030416e-14,
+    "spectrum_maxabs_diff_vs_trace": 1.6764367671839864e-14,
+    "note": "",
+    "max_abs_signal": 7.9999999999999964
+   },
+   "Hamming weight w (number of |->)": {
+    "weights": [
+     0.0,
+     1.0,
+     1.0,
+     2.0
+    ],
+    "best_scale": -0.4999999999999839,
+    "corr_rel_residual_after_scale": 1.9206858326015208e-14,
+    "spectrum_maxabs_diff_vs_trace": 1.6764367671839864e-14,
+    "note": "",
+    "max_abs_signal": 3.9999999999999982
+   },
+   "number of |+> = N - w (all >= 0)": {
+    "weights": [
+     2.0,
+     1.0,
+     1.0,
+     0.0
+    ],
+    "best_scale": 0.4999999999999839,
+    "corr_rel_residual_after_scale": 1.9206858326015208e-14,
+    "spectrum_maxabs_diff_vs_trace": 1.6764367671839864e-14,
+    "note": "",
+    "max_abs_signal": 3.9999999999999982
+   },
+   "m_s^3": {
+    "weights": [
+     8.0,
+     0.0,
+     0.0,
+     -8.0
+    ],
+    "best_scale": 3.999999999999871,
+    "corr_rel_residual_after_scale": 1.5365486660812167e-13,
+    "spectrum_maxabs_diff_vs_trace": 1.6764367671839864e-14,
+    "note": "",
+    "max_abs_signal": 31.999999999999986
+   },
+   "m_s + m_s^2 (even part added)": {
+    "weights": [
+     6.0,
+     0.0,
+     0.0,
+     2.0
+    ],
+    "best_scale": 0.9999999999999678,
+    "corr_rel_residual_after_scale": 3.8413716652030416e-14,
+    "spectrum_maxabs_diff_vs_trace": 1.6653345369377348e-14,
+    "note": "",
+    "max_abs_signal": 7.9999999999999964
+   },
+   "integer value of the bit label": {
+    "weights": [
+     0.0,
+     1.0,
+     2.0,
+     3.0
+    ],
+    "best_scale": -0.7499999999999757,
+    "corr_rel_residual_after_scale": 0.24422091011146158,
+    "spectrum_maxabs_diff_vs_trace": 0.44656969601203333,
+    "note": "",
+    "max_abs_signal": 5.999999999999997
+   },
+   "spin 0 only: (-1)^b0": {
+    "weights": [
+     1.0,
+     1.0,
+     -1.0,
+     -1.0
+    ],
+    "best_scale": 0.4999999999999839,
+    "corr_rel_residual_after_scale": 0.48844182022292315,
+    "spectrum_maxabs_diff_vs_trace": 0.9261282686409569,
+    "note": "",
+    "max_abs_signal": 3.9999999999999982
+   }
+  },
+  "official_cxx0": 7.999999999999993,
+  "expected_N2N": 8,
+  "official_cyx0": -4.898587196589409e-16,
+  "official_mx0_minus_N_minus_2w_max": 8.881784197001252e-16,
+  "official_vs_trace_corr_max": 4.671818487622659e-13,
+  "pauli_over_spin_ratio": 16.000000000000007,
+  "spin_vs_pauli_spectrum_maxdiff": 2.0045076709607201e-13
+ }
+}

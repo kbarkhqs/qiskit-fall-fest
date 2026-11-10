@@ -1,0 +1,258 @@
+{
+ "rows": [
+  {
+   "molecule": "molecule A",
+   "data": "ideal (Phase-1 best circuit, noise-free)",
+   "rmse_vs_ideal": 0.0,
+   "cosine_vs_ideal": 1.0,
+   "peaks_found": "8/8",
+   "max_peak_shift_hz": 0.0,
+   "max_peak_shift_ppm": 0.0,
+   "max_peak_height_err_pct": 0.0,
+   "corr_rms_vs_ideal": 0.0,
+   "corr_scale": 1.0,
+   "corr_rms_after_scale": 0.0,
+   "jobs": 0,
+   "qpu_seconds": 0
+  },
+  {
+   "molecule": "molecule A",
+   "data": "noisy simulator (kingston calibration, 64 shots)",
+   "rmse_vs_ideal": 0.031131491904152084,
+   "cosine_vs_ideal": 0.9810364892944662,
+   "peaks_found": "8/8",
+   "max_peak_shift_hz": 0.2456180517833076,
+   "max_peak_shift_ppm": 0.0004912361110482877,
+   "max_peak_height_err_pct": 8.079989714713264,
+   "corr_rms_vs_ideal": 1.4383313564529703,
+   "corr_scale": 0.9456649471440514,
+   "corr_rms_after_scale": 1.4165914578244592,
+   "jobs": 0,
+   "qpu_seconds": 0
+  },
+  {
+   "molecule": "molecule A",
+   "data": "IBM hardware, raw (64 shots)",
+   "rmse_vs_ideal": 0.04340030670184649,
+   "cosine_vs_ideal": 0.9654510726006135,
+   "peaks_found": "8/8",
+   "max_peak_shift_hz": 0.12927890309391213,
+   "max_peak_shift_ppm": 0.00025855781012573686,
+   "max_peak_height_err_pct": 10.299559137497361,
+   "corr_rms_vs_ideal": 1.6120157295764312,
+   "corr_scale": 0.8843911213800458,
+   "corr_rms_after_scale": 1.5223716939976266,
+   "jobs": 4,
+   "qpu_seconds": 56,
+   "cosine_95ci": [
+    0.9276,
+    0.9476
+   ],
+   "max_peak_shift_hz_95ci": [
+    0.067,
+    0.288
+   ],
+   "all_peaks_found_in_bootstrap": 1.0
+  },
+  {
+   "molecule": "molecule A",
+   "data": "IBM hardware, mitigated (128 shots)",
+   "rmse_vs_ideal": 0.03591717456925943,
+   "cosine_vs_ideal": 0.9775815062421603,
+   "peaks_found": "8/8",
+   "max_peak_shift_hz": 0.18784923380570404,
+   "max_peak_shift_ppm": 0.0003756984733334079,
+   "max_peak_height_err_pct": 23.438163533324264,
+   "corr_rms_vs_ideal": 1.2602264396746259,
+   "corr_scale": 0.8980359721054701,
+   "corr_rms_after_scale": 1.1703004482754964,
+   "jobs": 4,
+   "qpu_seconds": 100,
+   "cosine_95ci": [
+    0.9614,
+    0.9731
+   ],
+   "max_peak_shift_hz_95ci": [
+    0.103,
+    0.264
+   ],
+   "all_peaks_found_in_bootstrap": 1.0
+  },
+  {
+   "molecule": "molecule B",
+   "data": "ideal (Phase-1 best circuit, noise-free)",
+   "rmse_vs_ideal": 0.0,
+   "cosine_vs_ideal": 1.0,
+   "peaks_found": "8/8",
+   "max_peak_shift_hz": 0.0,
+   "max_peak_shift_ppm": 0.0,
+   "max_peak_height_err_pct": 0.0,
+   "corr_rms_vs_ideal": 0.0,
+   "corr_scale": 1.0,
+   "corr_rms_after_scale": 0.0,
+   "jobs": 0,
+   "qpu_seconds": 0
+  },
+  {
+   "molecule": "molecule B",
+   "data": "noisy simulator (kingston calibration, 64 shots)",
+   "rmse_vs_ideal": 0.024596480665061447,
+   "cosine_vs_ideal": 0.9807058036760623,
+   "peaks_found": "8/8",
+   "max_peak_shift_hz": 0.09532755166383122,
+   "max_peak_shift_ppm": 0.0001906551062313966,
+   "max_peak_height_err_pct": 7.45937023144565,
+   "corr_rms_vs_ideal": 1.4394000601118457,
+   "corr_scale": 0.9423835084273758,
+   "corr_rms_after_scale": 1.403919668249936,
+   "jobs": 0,
+   "qpu_seconds": 0
+  },
+  {
+   "molecule": "molecule B",
+   "data": "IBM hardware, raw (64 shots)",
+   "rmse_vs_ideal": 0.030940842414405322,
+   "cosine_vs_ideal": 0.9755774364937192,
+   "peaks_found": "8/8",
+   "max_peak_shift_hz": 0.09611022609050389,
+   "max_peak_shift_ppm": 0.00019222045510858266,
+   "max_peak_height_err_pct": 18.73417437028635,
+   "corr_rms_vs_ideal": 1.6114418461989375,
+   "corr_scale": 0.8834083955212412,
+   "corr_rms_after_scale": 1.4777161317832803,
+   "jobs": 4,
+   "qpu_seconds": 56,
+   "cosine_95ci": [
+    0.9439,
+    0.9607
+   ],
+   "max_peak_shift_hz_95ci": [
+    0.056,
+    0.277
+   ],
+   "all_peaks_found_in_bootstrap": 1.0
+  },
+  {
+   "molecule": "molecule B",
+   "data": "IBM hardware, mitigated (128 shots)",
+   "rmse_vs_ideal": 0.020286075816788113,
+   "cosine_vs_ideal": 0.9878654535011644,
+   "peaks_found": "8/8",
+   "max_peak_shift_hz": 0.03425069102263148,
+   "max_peak_shift_ppm": 6.850138308855946e-05,
+   "max_peak_height_err_pct": 11.960733954691506,
+   "corr_rms_vs_ideal": 1.1913032055283452,
+   "corr_scale": 0.9001160125784222,
+   "corr_rms_after_scale": 1.056416192912321,
+   "jobs": 4,
+   "qpu_seconds": 100,
+   "cosine_95ci": [
+    0.977,
+    0.9838
+   ],
+   "max_peak_shift_hz_95ci": [
+    0.03,
+    0.103
+   ],
+   "all_peaks_found_in_bootstrap": 1.0
+  },
+  {
+   "molecule": "molecule C",
+   "data": "ideal (Phase-1 best circuit, noise-free)",
+   "rmse_vs_ideal": 0.0,
+   "cosine_vs_ideal": 0.9999999999999998,
+   "peaks_found": "4/4",
+   "max_peak_shift_hz": 0.0,
+   "max_peak_shift_ppm": 0.0,
+   "max_peak_height_err_pct": 0.0,
+   "corr_rms_vs_ideal": 0.0,
+   "corr_scale": 1.0,
+   "corr_rms_after_scale": 0.0,
+   "jobs": 0,
+   "qpu_seconds": 0
+  },
+  {
+   "molecule": "molecule C",
+   "data": "noisy simulator (kingston calibration, 64 shots)",
+   "rmse_vs_ideal": 0.02609024340814729,
+   "cosine_vs_ideal": 0.9825162265618846,
+   "peaks_found": "4/4",
+   "max_peak_shift_hz": 0.05061580348901872,
+   "max_peak_shift_ppm": 0.00010123160851982504,
+   "max_peak_height_err_pct": 3.419898622466,
+   "corr_rms_vs_ideal": 0.6164991646202495,
+   "corr_scale": 0.9828282622347523,
+   "corr_rms_after_scale": 0.6145099196202963,
+   "jobs": 0,
+   "qpu_seconds": 0
+  },
+  {
+   "molecule": "molecule C",
+   "data": "IBM hardware, raw (64 shots)",
+   "rmse_vs_ideal": 0.03387482691029263,
+   "cosine_vs_ideal": 0.9710799215847232,
+   "peaks_found": "4/4",
+   "max_peak_shift_hz": 0.06717592418066796,
+   "max_peak_shift_ppm": 0.0001343518504075547,
+   "max_peak_height_err_pct": 6.942311654469934,
+   "corr_rms_vs_ideal": 0.6466019274021766,
+   "corr_scale": 0.9533014910740638,
+   "corr_rms_after_scale": 0.6324426402993036,
+   "jobs": 1,
+   "qpu_seconds": 13,
+   "cosine_95ci": [
+    0.9345,
+    0.9574
+   ],
+   "max_peak_shift_hz_95ci": [
+    0.034,
+    0.184
+   ],
+   "all_peaks_found_in_bootstrap": 1.0
+  },
+  {
+   "molecule": "molecule C",
+   "data": "IBM hardware, mitigated (128 shots)",
+   "rmse_vs_ideal": 0.02507980632882556,
+   "cosine_vs_ideal": 0.9837631932504485,
+   "peaks_found": "4/4",
+   "max_peak_shift_hz": 0.07895973168371648,
+   "max_peak_shift_ppm": 0.00015791946577259353,
+   "max_peak_height_err_pct": 6.612347172998478,
+   "corr_rms_vs_ideal": 0.4765342253280827,
+   "corr_scale": 0.9725438074109529,
+   "corr_rms_after_scale": 0.4699196462846585,
+   "jobs": 1,
+   "qpu_seconds": 25,
+   "cosine_95ci": [
+    0.9744,
+    0.9814
+   ],
+   "max_peak_shift_hz_95ci": [
+    0.047,
+    0.117
+   ],
+   "all_peaks_found_in_bootstrap": 1.0
+  }
+ ],
+ "matching": {
+  "IBM hardware, raw (64 shots)": {
+   "assignment": {
+    "molecule A": "spectrum_3",
+    "molecule B": "spectrum_2",
+    "molecule C": "spectrum_1"
+   },
+   "best_total": 2.895,
+   "second_best_total": 1.077
+  },
+  "IBM hardware, mitigated (128 shots)": {
+   "assignment": {
+    "molecule A": "spectrum_3",
+    "molecule B": "spectrum_2",
+    "molecule C": "spectrum_1"
+   },
+   "best_total": 2.931,
+   "second_best_total": 1.067
+  }
+ }
+}

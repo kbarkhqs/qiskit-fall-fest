@@ -1,0 +1,73 @@
+{
+  "molecule": "C",
+  "number_spins": 2,
+  "number_of_trottersteps": 300,
+  "trotter_timestep": 0.0025,
+  "noise_strength_for_peak_list": 5.0,
+  "shape_exp_x": [
+    4,
+    300
+  ],
+  "shape_exp_y": [
+    4,
+    300
+  ],
+  "shape_bits": [
+    4,
+    2
+  ],
+  "all_finite": true,
+  "max_abs_mx0_minus_expected": 8.881784197001252e-16,
+  "mx0": [
+    1.9999999999999991,
+    0.0,
+    0.0,
+    -1.9999999999999991
+  ],
+  "c_xx_raw_0": 7.999999999999993,
+  "expected_c_xx_raw_0_N_times_2powN": 8,
+  "abs_c_xx_raw_0_minus_expected": 7.105427357601002e-15,
+  "c_yx_raw_0": -4.898587196589409e-16,
+  "max_abs_exp_x": 1.9999999999999991,
+  "max_abs_exp_y": 1.9537672808916928,
+  "max_abs_c_xx_raw": 7.999999999999993,
+  "max_abs_c_yx_raw": 8.049116928532382e-15,
+  "std_c_xx_raw": 4.0681480996814,
+  "std_c_yx_raw": 2.937537754961604e-15,
+  "max_abs_exp_x_estimator_minus_fast": 0.0,
+  "max_abs_exp_y_estimator_minus_fast": 0.0,
+  "wall_time_estimator_s": 91.41702920800162,
+  "wall_time_fast_s": 0.6980215000003227,
+  "spectrum_finite": true,
+  "spectrum_max": 1.0,
+  "ppm_min": 5.938499993862246,
+  "ppm_max": 6.735833339339203,
+  "ppm_grid_spacing": 0.0026666667072809958,
+  "peaks_ppm": [
+    6.293166665930592,
+    6.306499999466996,
+    6.367833333734454,
+    6.381166667270858
+  ],
+  "peaks_height": [
+    0.7280505997967723,
+    1.0,
+    0.9999999999999992,
+    0.7280505997967728
+  ],
+  "peaks_prominence": [
+    0.6162372413718646,
+    0.9997869120058789,
+    0.9871094437416918,
+    0.6162372413718652
+  ],
+  "chemical_shifts_ppm_from_analysis": [
+    6.375,
+    6.302
+  ],
+  "chemical_shift_hz_notebook_name_rad_s": -1570806259.3635657,
+  "npz": "results/signals/molecule_C.npz",
+  "python": "3.12.13",
+  "qiskit": "2.6.2",
+  "numpy": "2.5.4"
+}

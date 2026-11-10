@@ -1,0 +1,2120 @@
+[
+ {
+  "id": "R1a",
+  "question": "Does H then RZ(pi b_i) give the complete orthonormal X-product basis with X_tot eigenvalue N - 2w?",
+  "hypotheses": [
+   "H0: every template state is an X_i eigenstate with eigenvalue (-1)^b_i and X_tot eigenvalue N-2w; Gram = I",
+   "H1: some state is not an eigenstate / the set is not orthonormal"
+  ],
+  "independent_variable": "bit string b (all 2^N)",
+  "dependent_variable": "||X_i|s> - (+-1)|s>||, ||X_tot|s> - (N-2w)|s>||, |Gram - I|",
+  "fixed_parameters": "notebook template via nmr_pipeline.enumerate_x_states, Qiskit little-endian mapping",
+  "reference": "exact eigen-equations",
+  "result": {
+   "A": {
+    "max_eigen_residual": 2.1211504774498128e-16,
+    "max_gram_dev": 4.440892098500626e-16,
+    "n_states": 8
+   },
+   "B": {
+    "max_eigen_residual": 2.1211504774498128e-16,
+    "max_gram_dev": 4.440892098500626e-16,
+    "n_states": 8
+   },
+   "C": {
+    "max_eigen_residual": 1.7319121124709863e-16,
+    "max_gram_dev": 4.440892098500626e-16,
+    "n_states": 4
+   }
+  },
+  "conclusion": "H0 holds to rounding (residual <= 2.1e-16, Gram deviation <= 4.4e-16).",
+  "limitations": "Tests the template as used by the pipeline; not the Estimator path itself (the official signal files are compared with the trace in R1c).",
+  "script": "r1_initial_states.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r1_initial_states.py"
+ },
+ {
+  "id": "R1b",
+  "question": "Is the weight m_s = N - 2w the only weighting of the 2^N state signals that reproduces Tr(A(t) X_tot)?",
+  "hypotheses": [
+   "H0 (claim): signed weights N-2w are required; equal weights and all-plus-only fail; it is the only correct weighting",
+   "H1: a class of weightings reproduces the trace exactly"
+  ],
+  "independent_variable": "weighting (10 choices)",
+  "dependent_variable": "relative residual of C_xx,C_yx after best scalar fit; max |spectrum difference| (noise 5, notebook normalisation)",
+  "fixed_parameters": "official Lie-Trotter step (own product formula, equal to official signals to 2e-12), 300 steps, dt 2.5 ms",
+  "reference": "Tr(U^-k A U^k X_tot) under the same dynamics",
+  "result": {
+   "A": {
+    "m_s = N - 2w (claimed)": {
+     "best_scale": 0.9999999999999942,
+     "corr_rel_residual": 6.809367884367627e-14,
+     "spectrum_maxabs_diff": 2.2870594307278225e-14,
+     "note": ""
+    },
+    "equal weights 1": {
+     "best_scale": -4.00983662941905e-19,
+     "corr_rel_residual": 3.700232100180599e-17,
+     "spectrum_maxabs_diff": 0.9902433373671519,
+     "note": ""
+    },
+    "only all-plus state": {
+     "best_scale": 0.12487110055115275,
+     "corr_rel_residual": 0.0019581826506398594,
+     "spectrum_maxabs_diff": 0.04789665941863219,
+     "note": ""
+    },
+    "flipped sign -(N - 2w)": {
+     "best_scale": -0.9999999999999942,
+     "corr_rel_residual": 6.809367884367627e-14,
+     "spectrum_maxabs_diff": 2.2870594307278225e-14,
+     "note": ""
+    },
+    "Hamming weight w (number of |->)": {
+     "best_scale": -0.4999999999999971,
+     "corr_rel_residual": 3.4046839421838136e-14,
+     "spectrum_maxabs_diff": 2.298161660974074e-14,
+     "note": ""
+    },
+    "number of |+> = N - w (all >= 0)": {
+     "best_scale": 0.4999999999999971,
+     "corr_rel_residual": 3.4046839421838136e-14,
+     "spectrum_maxabs_diff": 2.2870594307278225e-14,
+     "note": ""
+    },
+    "m_s^3": {
+     "best_scale": 6.9938128264553265,
+     "corr_rel_residual": 0.09399276723071963,
+     "spectrum_maxabs_diff": 0.039650215141050826,
+     "note": ""
+    },
+    "m_s + m_s^2 (even part added)": {
+     "best_scale": 0.9999999999999942,
+     "corr_rel_residual": 6.809367884367627e-14,
+     "spectrum_maxabs_diff": 2.275957200481571e-14,
+     "note": ""
+    },
+    "integer value of the bit label": {
+     "best_scale": -1.1118185494625183,
+     "corr_rel_residual": 0.41438959770149597,
+     "spectrum_maxabs_diff": 0.5187394338557425,
+     "note": ""
+    },
+    "spin 0 only: (-1)^b0": {
+     "best_scale": 0.30354812167677536,
+     "corr_rel_residual": 0.32352356968428847,
+     "spectrum_maxabs_diff": 0.9965258829410455,
+     "note": ""
+    }
+   },
+   "B": {
+    "m_s = N - 2w (claimed)": {
+     "best_scale": 0.9999999999999537,
+     "corr_rel_residual": 4.588921835117314e-14,
+     "spectrum_maxabs_diff": 2.1538326677728037e-14,
+     "note": ""
+    },
+    "equal weights 1": {
+     "best_scale": 1.2746620806339533e-18,
+     "corr_rel_residual": 3.7602779550254573e-17,
+     "spectrum_maxabs_diff": 0.9989416707901261,
+     "note": ""
+    },
+    "only all-plus state": {
+     "best_scale": 0.12488709661496362,
+     "corr_rel_residual": 0.001918378763285329,
+     "spectrum_maxabs_diff": 0.040023665247838736,
+     "note": ""
+    },
+    "flipped sign -(N - 2w)": {
+     "best_scale": -0.9999999999999537,
+     "corr_rel_residual": 4.588921835117314e-14,
+     "spectrum_maxabs_diff": 2.1538326677728037e-14,
+     "note": ""
+    },
+    "Hamming weight w (number of |->)": {
+     "best_scale": -0.49999999999997685,
+     "corr_rel_residual": 2.294460917558657e-14,
+     "spectrum_maxabs_diff": 2.1538326677728037e-14,
+     "note": ""
+    },
+    "number of |+> = N - w (all >= 0)": {
+     "best_scale": 0.49999999999997685,
+     "corr_rel_residual": 2.294460917558657e-14,
+     "spectrum_maxabs_diff": 2.1649348980190553e-14,
+     "note": ""
+    },
+    "m_s^3": {
+     "best_scale": 6.994580637518208,
+     "corr_rel_residual": 0.09208218063769644,
+     "spectrum_maxabs_diff": 0.034402176187974365,
+     "note": ""
+    },
+    "m_s + m_s^2 (even part added)": {
+     "best_scale": 0.9999999999999537,
+     "corr_rel_residual": 4.603724808778983e-14,
+     "spectrum_maxabs_diff": 2.1649348980190553e-14,
+     "note": ""
+    },
+    "integer value of the bit label": {
+     "best_scale": -1.1809608679224126,
+     "corr_rel_residual": 0.46527530004745166,
+     "spectrum_maxabs_diff": 0.7550276145037453,
+     "note": ""
+    },
+    "spin 0 only: (-1)^b0": {
+     "best_scale": 0.3662407007228842,
+     "corr_rel_residual": 0.3769690135437943,
+     "spectrum_maxabs_diff": 0.9990820291776891,
+     "note": ""
+    }
+   },
+   "C": {
+    "m_s = N - 2w (claimed)": {
+     "best_scale": 0.9999999999999678,
+     "corr_rel_residual": 3.8413716652030416e-14,
+     "spectrum_maxabs_diff": 1.6764367671839864e-14,
+     "note": ""
+    },
+    "equal weights 1": {
+     "best_scale": 0.0,
+     "corr_rel_residual": 0.0,
+     "spectrum_maxabs_diff": null,
+     "note": "pipeline ValueError (zero signal): Canno"
+    },
+    "only all-plus state": {
+     "best_scale": 0.24999999999999195,
+     "corr_rel_residual": 9.603429163007604e-15,
+     "spectrum_maxabs_diff": 1.6764367671839864e-14,
+     "note": ""
+    },
+    "flipped sign -(N - 2w)": {
+     "best_scale": -0.9999999999999678,
+     "corr_rel_residual": 3.8413716652030416e-14,
+     "spectrum_maxabs_diff": 1.6764367671839864e-14,
+     "note": ""
+    },
+    "Hamming weight w (number of |->)": {
+     "best_scale": -0.4999999999999839,
+     "corr_rel_residual": 1.9206858326015208e-14,
+     "spectrum_maxabs_diff": 1.6764367671839864e-14,
+     "note": ""
+    },
+    "number of |+> = N - w (all >= 0)": {
+     "best_scale": 0.4999999999999839,
+     "corr_rel_residual": 1.9206858326015208e-14,
+     "spectrum_maxabs_diff": 1.6764367671839864e-14,
+     "note": ""
+    },
+    "m_s^3": {
+     "best_scale": 3.999999999999871,
+     "corr_rel_residual": 1.5365486660812167e-13,
+     "spectrum_maxabs_diff": 1.6764367671839864e-14,
+     "note": ""
+    },
+    "m_s + m_s^2 (even part added)": {
+     "best_scale": 0.9999999999999678,
+     "corr_rel_residual": 3.8413716652030416e-14,
+     "spectrum_maxabs_diff": 1.6653345369377348e-14,
+     "note": ""
+    },
+    "integer value of the bit label": {
+     "best_scale": -0.7499999999999757,
+     "corr_rel_residual": 0.24422091011146158,
+     "spectrum_maxabs_diff": 0.44656969601203333,
+     "note": ""
+    },
+    "spin 0 only: (-1)^b0": {
+     "best_scale": 0.4999999999999839,
+     "corr_rel_residual": 0.48844182022292315,
+     "spectrum_maxabs_diff": 0.9261282686409569,
+     "note": ""
+    }
+   }
+  },
+  "conclusion": "Equal weights give Tr(A(t)) = 0 (|signal| <= 8.9e-16; for A and B the pipeline guard does not fire and it normalises rounding noise). N-2w is correct, but NOT unique: -(N-2w), w, N-w (all non-negative), and N-2w + (N-2w)^2 reproduce the spectrum to < 3e-14, because Tr(X_tot(t)) = 0 and flip-even weight parts cancel by Z-parity symmetry. All-plus only: exact for C (N=2), off by 4.8 % (A) and 4.0 % (B) of the maximum. m_s^3 and the integer bit label fail for N = 3.",
+  "limitations": "Spectral differences measured at one noise strength (5 s^-1).",
+  "script": "r1_initial_states.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r1_initial_states.py"
+ },
+ {
+  "id": "R1c",
+  "question": "Sum rules C_xx(0) = N 2^N, C_yx(0) = 0 in the official files; Pauli-vs-spin normalisation cancels?",
+  "hypotheses": [
+   "H0: sum rules hold; spin-1/2 operators with 1/2^N give the same normalised spectrum",
+   "H1: a constant or shape difference remains"
+  ],
+  "independent_variable": "operator convention (Pauli vs sigma/2 with 1/2^N)",
+  "dependent_variable": "C(0) values; max |spectrum difference| at noise 0.1, 5, 30",
+  "fixed_parameters": "official results/signals/*.npz",
+  "reference": "N 2^N = 24, 24, 8",
+  "result": {
+   "A": {
+    "official_cxx0": 23.999999999999982,
+    "expected_N2N": 24,
+    "official_cyx0": -1.4695761589768222e-15,
+    "official_mx0_minus_N_minus_2w_max": 1.3322676295501878e-15,
+    "official_vs_trace_corr_max": 1.9895196601282805e-12,
+    "pauli_over_spin_ratio": 32.00000000000002,
+    "spin_vs_pauli_spectrum_maxdiff": 8.272549312238198e-14
+   },
+   "B": {
+    "official_cxx0": 23.999999999999982,
+    "expected_N2N": 24,
+    "official_cyx0": -1.4695761589768222e-15,
+    "official_mx0_minus_N_minus_2w_max": 1.3322676295501878e-15,
+    "official_vs_trace_corr_max": 1.8278711877428577e-12,
+    "pauli_over_spin_ratio": 32.000000000000014,
+    "spin_vs_pauli_spectrum_maxdiff": 5.921999002289624e-14
+   },
+   "C": {
+    "official_cxx0": 7.999999999999993,
+    "expected_N2N": 8,
+    "official_cyx0": -4.898587196589409e-16,
+    "official_mx0_minus_N_minus_2w_max": 8.881784197001252e-16,
+    "official_vs_trace_corr_max": 4.671818487622659e-13,
+    "pauli_over_spin_ratio": 16.000000000000007,
+    "spin_vs_pauli_spectrum_maxdiff": 2.0045076709607201e-13
+   }
+  },
+  "conclusion": "Confirmed: C_xx(0) = 24, 24, 8; |C_yx(0)| <= 1.5e-15; official signals equal the trace correlation to 2.0e-12; Pauli/spin ratio 4*2^N (32, 32, 16); normalised spectra identical to 2e-13.",
+  "limitations": "None material.",
+  "script": "r1_initial_states.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r1_initial_states.py"
+ },
+ {
+  "id": "R2a",
+  "question": "Is the rotating-frame subtraction exact?",
+  "hypotheses": [
+   "H0: [H, Z_tot] = 0 and lab-frame lines = rotating-frame lines + one rigid shift",
+   "H1: the subtraction changes the spectrum"
+  ],
+  "independent_variable": "frame (full lab H ~1.6e9 rad/s vs rotating frame)",
+  "dependent_variable": "||[H,Z_tot]||/||H||; max line-position difference (Hz)",
+  "fixed_parameters": "own JSON parser, dense eigendecomposition",
+  "reference": "lab-frame transition frequencies",
+  "result": {
+   "A": {
+    "comm_rel_norm": 0.0,
+    "n_lines_lab": 12,
+    "n_lines_rot": 12,
+    "max_line_dev_Hz": 1.7517659856025602e-07,
+    "removed_rigid_shift_Hz": 500002865.7181404
+   },
+   "B": {
+    "comm_rel_norm": 0.0,
+    "n_lines_lab": 12,
+    "n_lines_rot": 12,
+    "max_line_dev_Hz": 1.0938660466308647e-07,
+    "removed_rigid_shift_Hz": 500002795.71814144
+   },
+   "C": {
+    "comm_rel_norm": 0.0,
+    "n_lines_lab": 4,
+    "n_lines_rot": 4,
+    "max_line_dev_Hz": 7.078531538695643e-08,
+    "removed_rigid_shift_Hz": 500003161.6348026
+   }
+  },
+  "conclusion": "Exact: commutator 0; all 12/12/4 lines agree to <= 1.8e-7 Hz after the rigid shift -2 h_mean / 2 pi.",
+  "limitations": "Eigenvalue precision of the lab-frame H limits the check to ~1e-7 Hz.",
+  "script": "r2_physics_axis_trotter.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r2_physics_axis_trotter.py"
+ },
+ {
+  "id": "R2b",
+  "question": "Does the code's '+ Im' put lines at the true ppm (and the markdown's '- Im' mirror them)?",
+  "hypotheses": [
+   "H0: '+ Im' -> true ppm",
+   "H1: '+ Im' mirrors"
+  ],
+  "independent_variable": "sign of the Im term",
+  "dependent_variable": "peak ppm of 3 uncoupled spins (J = 0 copy of A)",
+  "fixed_parameters": "exact dynamics, 300 steps, noise 1",
+  "reference": "delta_i = 5.48, 5.79, 5.97 ppm",
+  "result": {
+   "true_ppm": [
+    5.48000000000215,
+    5.789999999894491,
+    5.969999999910769
+   ],
+   "plus_Im_peaks_ppm": [
+    5.479999995857872,
+    5.789333333902444,
+    5.968000003290258
+   ],
+   "minus_Im_peaks_ppm": [
+    5.522666663174365,
+    5.701333332562179,
+    6.010666670606751
+   ],
+   "mirror_prediction_ppm": [
+    5.52333333329417,
+    5.703333333310448,
+    6.013333333202789
+   ]
+  },
+  "conclusion": "'+ Im' peaks within one grid bin of the true shifts; '- Im' peaks at the mirror image 2*mean - delta_i. Confirmed.",
+  "limitations": "Peak positions limited by the 1.333 Hz grid.",
+  "script": "r2_physics_axis_trotter.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r2_physics_axis_trotter.py"
+ },
+ {
+  "id": "R2c",
+  "question": "How far is the ppm axis offset from the frequencies the transform actually evaluates?",
+  "hypotheses": [
+   "H0 (claim): lines drawn 0.41-0.92 Hz low (sub-bin)",
+   "H1: offset >= 1 bin or different range"
+  ],
+  "independent_variable": "line frequency",
+  "dependent_variable": "label - evaluated frequency at each exact line",
+  "fixed_parameters": "own derivation f_j = (2j-(L-1))/((2L-1) dt), kernel reproduces the pipeline output to 8e-14",
+  "reference": "fftshift(fftfreq(300, dt)) labels",
+  "result": {
+   "label_minus_eval_fit": [
+    -0.0016666666666666872,
+    -0.6666666666666666
+   ],
+   "A": {
+    "line_Hz_min": -148.71355513862162,
+    "line_Hz_max": 121.40115283144746,
+    "offset_Hz_min": -0.8690019213857442,
+    "offset_Hz_max": -0.41881074143560715
+   },
+   "B": {
+    "line_Hz_min": -137.9280008252792,
+    "line_Hz_max": 159.1998759409906,
+    "offset_Hz_min": -0.9319997932349885,
+    "offset_Hz_max": -0.43678666529119703
+   },
+   "C": {
+    "line_Hz_min": -22.6346911303747,
+    "line_Hz_max": 22.6346911303747,
+    "offset_Hz_min": -0.7043911518839595,
+    "offset_Hz_max": -0.6289421814493742
+   },
+   "offset_range_all_Hz": [
+    -0.9319997932349885,
+    -0.41881074143560715
+   ]
+  },
+  "conclusion": "label - f = -0.6667 Hz - 0.001667 f exactly; over the strong lines of A, B, C the offset is -0.42 to -0.93 Hz (B's outermost line at 159.2 Hz gives 0.93). Claim confirmed up to rounding of the upper end.",
+  "limitations": "None.",
+  "script": "r2_physics_axis_trotter.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r2_physics_axis_trotter.py"
+ },
+ {
+  "id": "R2d",
+  "question": "What does first-order Trotter error at dt = 2.5 ms do to the lines?",
+  "hypotheses": [
+   "H0 (claim): line shifts <= 0.72 Hz",
+   "H1: Trotter error also changes intensities / phases materially"
+  ],
+  "independent_variable": "dt (2.5, 1.25, 0.625 ms)",
+  "dependent_variable": "per-line shift, relative absorptive amplitude change, phase",
+  "fixed_parameters": "Floquet decomposition of the one-step propagator (own product formula) vs exact",
+  "reference": "exact lines",
+  "result": {
+   "A": {
+    "dt/1": {
+     "max_abs_shift_Hz": 0.714831165256868,
+     "max_rel_absorptive_amp_change": 0.19146968471696235,
+     "max_abs_phase_rad": 1.1440897796733126e-15,
+     "n_lines": 12
+    },
+    "dt/2": {
+     "max_abs_shift_Hz": 0.1404718492362349,
+     "max_rel_absorptive_amp_change": 0.03726213430102421,
+     "max_abs_phase_rad": 5.980771540464886e-16,
+     "n_lines": 12
+    },
+    "dt/4": {
+     "max_abs_shift_Hz": 0.033539909520044375,
+     "max_rel_absorptive_amp_change": 0.008870281984252104,
+     "max_abs_phase_rad": 1.3816000595491238e-15,
+     "n_lines": 12
+    }
+   },
+   "B": {
+    "dt/1": {
+     "max_abs_shift_Hz": 0.4179807257533241,
+     "max_rel_absorptive_amp_change": 0.15742288614969624,
+     "max_abs_phase_rad": 1.5601180871948404e-16,
+     "n_lines": 12
+    },
+    "dt/2": {
+     "max_abs_shift_Hz": 0.08319784371352057,
+     "max_rel_absorptive_amp_change": 0.029180439833288663,
+     "max_abs_phase_rad": 1.1658548595022764e-15,
+     "n_lines": 12
+    },
+    "dt/4": {
+     "max_abs_shift_Hz": 0.020000643074268964,
+     "max_rel_absorptive_amp_change": 0.006932689943845105,
+     "max_abs_phase_rad": 3.34380691873609e-15,
+     "n_lines": 12
+    }
+   },
+   "C": {
+    "dt/1": {
+     "max_abs_shift_Hz": 0.011571427231510611,
+     "max_rel_absorptive_amp_change": 0.0072542423179911,
+     "max_abs_phase_rad": 4.922444955405288e-17,
+     "n_lines": 4
+    },
+    "dt/2": {
+     "max_abs_shift_Hz": 0.002879705801202448,
+     "max_rel_absorptive_amp_change": 0.0018045576635536964,
+     "max_abs_phase_rad": 7.061932181522329e-17,
+     "n_lines": 4
+    },
+    "dt/4": {
+     "max_abs_shift_Hz": 0.0007191099524668232,
+     "max_rel_absorptive_amp_change": 0.0004505801396250675,
+     "max_abs_phase_rad": 1.3947016790668146e-16,
+     "n_lines": 4
+    }
+   }
+  },
+  "conclusion": "Shifts confirmed (0.715, 0.418, 0.012 Hz; ~4-5x smaller per halving). Omitted by the claim: absorptive line amplitudes change by up to 19.1 % (A) and 15.7 % (B), 0.7 % (C); no phase twist (< 1e-3 rad). The amplitude error is what moves the thresholds (R5b).",
+  "limitations": "Lines with amplitude < 5 % of the maximum not compared.",
+  "script": "r2_physics_axis_trotter.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r2_physics_axis_trotter.py"
+ },
+ {
+  "id": "R2e",
+  "question": "Units: J in Hz vs coefficients, nu0, Hz/ppm, FWHM = Gamma/pi",
+  "hypotheses": [
+   "H0: c = pi J / 2 (isotropic), nu0 = gamma B / 2 pi = 500 MHz, FWHM = Gamma/pi",
+   "H1: a factor 2 or 2 pi is wrong"
+  ],
+  "independent_variable": "-",
+  "dependent_variable": "J, delta recovered from the files; measured FWHM at Gamma = 10 s^-1",
+  "fixed_parameters": "single line, 40000-step acquisition (0.01 Hz grid)",
+  "reference": "Gamma/pi = 3.183 Hz",
+  "result": {
+   "nu0_Hz": 499999992.3848508,
+   "Hz_per_ppm": 499.99999238485077,
+   "A": {
+    "delta_ppm": [
+     5.789999999894491,
+     5.969999999910769,
+     5.48000000000215
+    ],
+    "J_Hz": {
+     "J01": 0.9,
+     "J02": 11.8,
+     "J12": 17.9
+    },
+    "isotropic_XX_YY_ZZ": true
+   },
+   "B": {
+    "delta_ppm": [
+     5.5800000000605365,
+     5.899999999892103,
+     5.339999999964817
+    ],
+    "J_Hz": {
+     "J01": 15.6,
+     "J02": -0.5,
+     "J12": 8.6
+    },
+    "isotropic_XX_YY_ZZ": true
+   },
+   "C": {
+    "delta_ppm": [
+     6.374999999891884,
+     6.302000000069086
+    ],
+    "J_Hz": {
+     "J01": 7.920000000000001
+    },
+    "isotropic_XX_YY_ZZ": true
+   },
+   "FWHM_measured_Hz_at_Gamma10": 3.1699999916923183,
+   "FWHM_predicted_Gamma_over_pi": 3.183098861837907,
+   "grid_resolution_Hz_for_FWHM": 0.010000017784960846
+  },
+  "conclusion": "J = 0.9/11.8/17.9, 15.6/-0.5/8.6, 7.92 Hz; deltas as stated; nu0 = 499.99999 MHz, 500.0 Hz/ppm; FWHM 3.170 Hz vs 3.183 predicted (0.4 %, discrete-time line shape and grid).",
+  "limitations": "-",
+  "script": "r2_physics_axis_trotter.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r2_physics_axis_trotter.py"
+ },
+ {
+  "id": "R3",
+  "question": "Is A->spectrum_3, B->spectrum_2, C->spectrum_1 robust to the matching choices?",
+  "hypotheses": [
+   "H0: one assignment wins for every reasonable choice",
+   "H1: another assignment wins for some reasonable choice"
+  ],
+  "independent_variable": "noise (0.1-20), metric (9: cosine linear/nearest/bin-average, overlap-only cosine and Pearson, reference-grid cosine, -L1 of area-normalised spectra, peak-F1, -chamfer), axis correction (0 or +0.667 Hz)",
+  "dependent_variable": "winning one-to-one assignment, margin best - second",
+  "fixed_parameters": "official signals; references normalised; file names not used",
+  "reference": "all 6 permutations",
+  "result": {
+   "n_choices": 126,
+   "distinct_winners": [
+    "A->3 B->2 C->1"
+   ],
+   "worst_relative_margin": 0.1337100745764708,
+   "worst_case": {
+    "metric": "overlap_cos",
+    "noise": 0.1,
+    "axis_shift_Hz": 0.0,
+    "best_total": 1.9585160725984163,
+    "second": "A->1 B->2 C->3",
+    "second_total": 1.6966427424720654
+   },
+   "min_relative_margin_full_window_metrics": 0.5179984831570287,
+   "rowwise_disagreements": 21,
+   "md5": {
+    "spectrum_1.pkl": "757f240eb3903ef70b4979169cb9c422",
+    "spectrum_2.pkl": "f1755ab5e4457f015171807e0a8e4d59",
+    "spectrum_3.pkl": "7de1a86473c9d9cd8ab9055b176de1af",
+    "hqs_spectrum_tools_molecule C_B11.7433T.pkl": "757f240eb3903ef70b4979169cb9c422"
+   }
+  },
+  "conclusion": "Unanimous over 126 choices. Worst relative margin 13 % (overlap-only cosine, noise 0.1) because A's simulated tails vs spectrum_1 tails in their 0.12 ppm overlap (no lines) score 0.99; with row-wise (not one-to-one) assignment the overlap metrics would map A -> spectrum_1. Full-window metrics: margin >= 52 %.",
+  "limitations": "The upstream notebook overlays molecule A with spectrum_3 (cell 29, commit f27f229) and the C file is a byte copy of spectrum_1: two of three assignments are hinted by the supplied material; the numerical result does not use them.",
+  "script": "r3_matching.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r3_matching.py"
+ },
+ {
+  "id": "R4a",
+  "question": "Reproduce the official thresholds independently; are they monotonic over 0.01-100?",
+  "hypotheses": [
+   "H0 (claim): 10 % A 19.97, B 22.85, C 23.22 (any 27.32/33.36/28.58; 5 % 22.15/25.99/25.51; 19 % 17.11/19.13/20.02), monotonic",
+   "H1: different values or non-monotonic"
+  ],
+  "independent_variable": "noise_strength 0.01..100 step 0.01 (10 000 points) and 0",
+  "dependent_variable": "pass/fail, highest pass, transitions",
+  "fixed_parameters": "official signals, own transform (== pipeline to 8e-14), own peak/dip code, criterion.md v1",
+  "reference": "criterion.md",
+  "result": {
+   "thresholds": {
+    "any": {
+     "A": 27.32,
+     "B": 33.36,
+     "C": 28.58
+    },
+    "5%": {
+     "A": 22.15,
+     "B": 25.99,
+     "C": 25.51
+    },
+    "10%": {
+     "A": 19.97,
+     "B": 22.85,
+     "C": 23.22
+    },
+    "19%": {
+     "A": 17.11,
+     "B": 19.13,
+     "C": 20.02
+    }
+   },
+   "critical": {
+    "A": {
+     "first_fail": 19.98,
+     "pair_ppm": [
+      5.472849681848962,
+      5.484956235625545
+     ],
+     "ref_sep_Hz": 6.053276796098278,
+     "dip": 0.09979855748029809,
+     "all_dips": [
+      0.5058427900778755,
+      0.09979855748029809,
+      0.5142189382883033,
+      0.9831685884974765,
+      0.5421856729957317,
+      0.9752443193964648,
+      0.7567364658668617
+     ],
+     "any_first_fail": 27.33,
+     "any_reason": "missing",
+     "any_missing_ppm": [
+      5.484956235625545
+     ]
+    },
+    "B": {
+     "first_fail": 22.86,
+     "pair_ppm": [
+      5.893834440726475,
+      5.907884320448173
+     ],
+     "ref_sep_Hz": 7.024939753857136,
+     "dip": 0.09995087367377553,
+     "all_dips": [
+      0.23876042737944136,
+      0.9820445782333196,
+      0.6334938180324167,
+      0.9814206820417896,
+      0.1831953708515599,
+      0.09995087367377553,
+      0.23213915246586092
+     ],
+     "any_first_fail": 33.37,
+     "any_reason": "missing",
+     "any_missing_ppm": [
+      5.9250441293031715
+     ]
+    },
+    "C": {
+     "first_fail": 23.23,
+     "pair_ppm": [
+      6.293228124079821,
+      6.309058516462956
+     ],
+     "ref_sep_Hz": 7.915196071016752,
+     "dip": 0.09977813844405004,
+     "all_dips": [
+      0.09977813844405004,
+      0.862605333790522,
+      0.09977813844405026
+     ],
+     "any_first_fail": 28.59,
+     "any_reason": "missing",
+     "any_missing_ppm": [
+      6.293228124079821,
+      6.383771875997791
+     ]
+    }
+   },
+   "transitions": {
+    "any": {
+     "A": 1,
+     "B": 1,
+     "C": 1
+    },
+    "5%": {
+     "A": 1,
+     "B": 1,
+     "C": 1
+    },
+    "10%": {
+     "A": 1,
+     "B": 1,
+     "C": 1
+    },
+    "19%": {
+     "A": 1,
+     "B": 1,
+     "C": 1
+    }
+   }
+  },
+  "conclusion": "All 12 numbers reproduced exactly; one transition each over 0.01-100 and pass at noise 0. Critical pairs at 10 %: A 6.05 Hz, B 7.02 Hz, C 7.92 Hz confirmed. At any-dip the first failure is a lost maximum: A inner line 5.4850 ppm, B the OUTER line 5.9250 ppm (8.58 Hz pair, not the 7.02 Hz pair), C both outer lines.",
+  "limitations": "-",
+  "script": "r4_threshold_sensitivity.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r4_threshold_sensitivity.py"
+ },
+ {
+  "id": "R4b",
+  "question": "Are the thresholds sensitive to choices a reasonable analyst could make differently?",
+  "hypotheses": [
+   "H0: thresholds stable",
+   "H1: some reasonable choice changes them or makes a molecule never pass"
+  ],
+  "independent_variable": "merge distance (0.5/1/2/3 bins), tolerance (0.5/1/2/3 bins), peak-finder thresholds, centre source (reference / own low-noise spectrum / exact sticks), count-of-maxima without position, signed spectrum (no np.abs), dip relative to the larger peak",
+  "dependent_variable": "highest passing noise per molecule, ranking, transitions",
+  "fixed_parameters": "official signals; 0.01 grid",
+  "reference": "primary",
+  "result": {
+   "PRIMARY-type: ref default, tol 2 bins, dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "PRIMARY-type: ref default, tol 2 bins, dip 5%": {
+    "A": 22.15,
+    "B": 25.99,
+    "C": 25.51,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "PRIMARY-type: ref default, tol 2 bins, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "PRIMARY-type: ref default, tol 2 bins, dip 19%": {
+    "A": 17.11,
+    "B": 19.13,
+    "C": 20.02,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "tol 0.5 bins, dip any": {
+    "A": null,
+    "B": null,
+    "C": null,
+    "ranking": "undefined (some molecule never passes)",
+    "n_transitions_0.1_100": [
+     0,
+     0,
+     0
+    ]
+   },
+   "tol 0.5 bins, dip 10%": {
+    "A": null,
+    "B": null,
+    "C": null,
+    "ranking": "undefined (some molecule never passes)",
+    "n_transitions_0.1_100": [
+     0,
+     0,
+     0
+    ]
+   },
+   "tol 1.0 bins, dip any": {
+    "A": null,
+    "B": null,
+    "C": 28.58,
+    "ranking": "undefined (some molecule never passes)",
+    "n_transitions_0.1_100": [
+     0,
+     0,
+     1
+    ]
+   },
+   "tol 1.0 bins, dip 10%": {
+    "A": null,
+    "B": null,
+    "C": 23.22,
+    "ranking": "undefined (some molecule never passes)",
+    "n_transitions_0.1_100": [
+     0,
+     0,
+     1
+    ]
+   },
+   "tol 3.0 bins, dip any": {
+    "A": 27.32,
+    "B": 33.53,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "tol 3.0 bins, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref merge 0.5 bin, dip any": {
+    "A": null,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "undefined (some molecule never passes)",
+    "n_transitions_0.1_100": [
+     0,
+     1,
+     1
+    ]
+   },
+   "centres: ref merge 0.5 bin, dip 10%": {
+    "A": null,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "undefined (some molecule never passes)",
+    "n_transitions_0.1_100": [
+     0,
+     1,
+     1
+    ]
+   },
+   "centres: ref merge 1 bin, dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref merge 1 bin, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref merge 3 bins, dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref merge 3 bins, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref h0.02 p0.005, dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref h0.02 p0.005, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref h0.10 p0.05, dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref h0.10 p0.05, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref h0.20 p0.10, dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref h0.20 p0.10, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref h0.30 p0.10, dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: ref h0.30 p0.10, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: sim own spectrum at 1 s^-1, dip any": {
+    "A": 27.32,
+    "B": 33.53,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: sim own spectrum at 1 s^-1, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: sim own spectrum at 2 s^-1, dip any": {
+    "A": 27.32,
+    "B": 33.53,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: sim own spectrum at 2 s^-1, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: sim own spectrum at 5 s^-1, dip any": {
+    "A": 27.32,
+    "B": 33.53,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: sim own spectrum at 5 s^-1, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: exact stick lines (merge 2 bins), dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "centres: exact stick lines (merge 2 bins), dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "signed spectrum (no np.abs), dip any": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "signed spectrum (no np.abs), dip 5%": {
+    "A": 22.15,
+    "B": 25.99,
+    "C": 25.51,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "signed spectrum (no np.abs), dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "signed spectrum (no np.abs), dip 19%": {
+    "A": 17.11,
+    "B": 19.13,
+    "C": 20.02,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "no position tolerance: count >= k per multiplet, dip any": {
+    "A": 27.32,
+    "B": 33.53,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "no position tolerance: count >= k per multiplet, dip 5%": {
+    "A": 22.15,
+    "B": 25.99,
+    "C": 25.51,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "no position tolerance: count >= k per multiplet, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "no position tolerance: count >= k per multiplet, dip 19%": {
+    "A": 17.11,
+    "B": 19.13,
+    "C": 20.02,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "no position tolerance: count == k per multiplet, dip any": {
+    "A": 27.32,
+    "B": 33.53,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     3,
+     3
+    ]
+   },
+   "no position tolerance: count == k per multiplet, dip 10%": {
+    "A": 19.97,
+    "B": 22.85,
+    "C": 23.22,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     5,
+     3
+    ]
+   },
+   "dip relative to larger peak, dip 5%": {
+    "A": 27.32,
+    "B": 33.36,
+    "C": 28.58,
+    "ranking": "A < C < B",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "dip relative to larger peak, dip 10%": {
+    "A": 24.07,
+    "B": 28.19,
+    "C": 28.58,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   },
+   "dip relative to larger peak, dip 19%": {
+    "A": 19.44,
+    "B": 22.49,
+    "C": 28.58,
+    "ranking": "A < B < C",
+    "n_transitions_0.1_100": [
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  "conclusion": "Unchanged under merge 1-3 bins, all peak-finder thresholds, centres from own spectrum or exact sticks, no np.abs, count mode (only B any-dip 33.36 -> 33.53 where its any-dip failure is a position failure). Tolerance is fragile: 1 bin -> A and B NEVER pass (not even at noise 0), because at low noise the simulated maxima already sit up to 1.73 (A), 1.86 (B), 1.30 (C) Hz from the reference centres (axis offset + grid + Trotter shift). 'Exactly k maxima' count mode is non-monotonic below 1.5 s^-1 (ringing) for B and C, thresholds unchanged. Dip relative to the larger peak: 10 % gives 24.07/28.19/28.58.",
+  "limitations": "Variants are one-at-a-time.",
+  "script": "r4_threshold_sensitivity.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r4_threshold_sensitivity.py"
+ },
+ {
+  "id": "R4c",
+  "question": "Is excluding A's 0.94 Hz J01 doublets legitimate?",
+  "hypotheses": [
+   "H0 (claim): the 300-step signal cannot show them as two maxima at any noise",
+   "H1: they are resolvable with a finer frequency grid (zero filling)"
+  ],
+  "independent_variable": "frequency grid spacing (1.333 official, 0.667, 0.333, 0.05 Hz), noise 0-10",
+  "dependent_variable": "highest noise with two maxima (one within 0.3 Hz of each line) in all four doublets; with >= 10 % dip",
+  "fixed_parameters": "300 steps, official Lie-Trotter and exact dynamics",
+  "reference": "reference spectrum_3 resolves them (0.81-0.86 Hz)",
+  "result": {
+   "official_grid_noise0_maxima_per_doublet": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "zero_fill": {
+    "trotter_official": {
+     "1.333 Hz": {
+      "highest_Gamma_all_doublets_two_maxima": null,
+      "highest_Gamma_all_doublets_dip_10pct": null,
+      "dips_at_Gamma0": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "0.667 Hz": {
+      "highest_Gamma_all_doublets_two_maxima": null,
+      "highest_Gamma_all_doublets_dip_10pct": null,
+      "dips_at_Gamma0": [
+       0.09525920916608877,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "0.333 Hz": {
+      "highest_Gamma_all_doublets_two_maxima": 1.25,
+      "highest_Gamma_all_doublets_dip_10pct": 0.4,
+      "dips_at_Gamma0": [
+       0.17138685882898497,
+       0.17226039989677566,
+       0.2261748539276912,
+       0.27355082735698366
+      ]
+     },
+     "0.050 Hz": {
+      "highest_Gamma_all_doublets_two_maxima": 1.95,
+      "highest_Gamma_all_doublets_dip_10pct": 0.6,
+      "dips_at_Gamma0": [
+       0.19944728282931434,
+       0.20640929516814788,
+       0.2750858730614084,
+       0.2883038007390335
+      ]
+     }
+    },
+    "exact": {
+     "1.333 Hz": {
+      "highest_Gamma_all_doublets_two_maxima": null,
+      "highest_Gamma_all_doublets_dip_10pct": null,
+      "dips_at_Gamma0": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "0.667 Hz": {
+      "highest_Gamma_all_doublets_two_maxima": null,
+      "highest_Gamma_all_doublets_dip_10pct": null,
+      "dips_at_Gamma0": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "0.333 Hz": {
+      "highest_Gamma_all_doublets_two_maxima": null,
+      "highest_Gamma_all_doublets_dip_10pct": null,
+      "dips_at_Gamma0": [
+       0.00128324251851053,
+       0.0,
+       0.031124677556332858,
+       0.05767709436163537
+      ]
+     },
+     "0.050 Hz": {
+      "highest_Gamma_all_doublets_two_maxima": 0.35,
+      "highest_Gamma_all_doublets_dip_10pct": null,
+      "dips_at_Gamma0": [
+       0.017806277879392818,
+       0.024864748775909162,
+       0.07594825681427242,
+       0.09173821351691169
+      ]
+     }
+    }
+   },
+   "long_acquisition_exact": {
+    "exact_1200_steps_all_4_doublets_resolved_up_to": 3.85,
+    "exact_2400_steps_all_4_doublets_resolved_up_to": 4.65
+   },
+   "merge_0.5_bin_thresholds": {
+    "A": null,
+    "B": 22.85,
+    "C": 23.22
+   }
+  },
+  "conclusion": "H0 holds for the official grid (0-1 maxima per doublet at every noise; A never passes if the doublets count). It is a grid/acquisition property: zero-filled to <= 0.33 Hz, the official Trotter signal shows all four doublets up to 1.25-1.95 s^-1 (>= 10 % dip up to 0.4-0.6), exact dynamics only up to 0.35 s^-1 with dips < 10 % (the Trotter signal resolves them better than the exact one: artefact). 1200/2400-step exact acquisitions keep them up to 3.85/4.65 s^-1.",
+  "limitations": "The markdown of the notebook says zeros are added; the code does not. Using zero filling would change the official pipeline.",
+  "script": "r4_threshold_sensitivity.py; r4b_zero_fill_J01.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r4b_zero_fill_J01.py"
+ },
+ {
+  "id": "R4d",
+  "question": "Is the ranking of the three molecules robust to the dip level and to Trotter error?",
+  "hypotheses": [
+   "H0: same ranking for every dip level and dynamics",
+   "H1: the ranking changes"
+  ],
+  "independent_variable": "dip level (any, 5, 10, 19 %) x dynamics (official Trotter 300, exact 300, exact 2400)",
+  "dependent_variable": "thresholds and ranking",
+  "fixed_parameters": "reference centres, +-2.667 Hz",
+  "reference": "official primary ranking A < B < C",
+  "result": {
+   "trotter_300|any": {
+    "thresholds": {
+     "A": 27.32,
+     "B": 33.36,
+     "C": 28.58
+    },
+    "ranking": "A < C < B",
+    "B_minus_C": 4.780000000000001,
+    "A_minus_C": -1.259999999999998
+   },
+   "trotter_300|5%": {
+    "thresholds": {
+     "A": 22.15,
+     "B": 25.99,
+     "C": 25.51
+    },
+    "ranking": "A < C < B",
+    "B_minus_C": 0.4799999999999969,
+    "A_minus_C": -3.360000000000003
+   },
+   "trotter_300|10%": {
+    "thresholds": {
+     "A": 19.97,
+     "B": 22.85,
+     "C": 23.22
+    },
+    "ranking": "A < B < C",
+    "B_minus_C": -0.36999999999999744,
+    "A_minus_C": -3.25
+   },
+   "trotter_300|19%": {
+    "thresholds": {
+     "A": 17.11,
+     "B": 19.13,
+     "C": 20.02
+    },
+    "ranking": "A < B < C",
+    "B_minus_C": -0.8900000000000006,
+    "A_minus_C": -2.91
+   },
+   "exact_300|any": {
+    "thresholds": {
+     "A": 31.68,
+     "B": 33.05,
+     "C": 28.49
+    },
+    "ranking": "C < A < B",
+    "B_minus_C": 4.559999999999999,
+    "A_minus_C": 3.1900000000000013
+   },
+   "exact_300|5%": {
+    "thresholds": {
+     "A": 23.78,
+     "B": 26.62,
+     "C": 25.36
+    },
+    "ranking": "A < C < B",
+    "B_minus_C": 1.2600000000000016,
+    "A_minus_C": -1.5799999999999983
+   },
+   "exact_300|10%": {
+    "thresholds": {
+     "A": 21.23,
+     "B": 23.48,
+     "C": 23.09
+    },
+    "ranking": "A < C < B",
+    "B_minus_C": 0.39000000000000057,
+    "A_minus_C": -1.8599999999999994
+   },
+   "exact_300|19%": {
+    "thresholds": {
+     "A": 17.57,
+     "B": 19.7,
+     "C": 19.93
+    },
+    "ranking": "A < B < C",
+    "B_minus_C": -0.23000000000000043,
+    "A_minus_C": -2.3599999999999994
+   },
+   "exact_2400|any": {
+    "thresholds": {
+     "A": 32.49,
+     "B": 34.16,
+     "C": 30.11
+    },
+    "ranking": "C < A < B",
+    "B_minus_C": 4.049999999999997,
+    "A_minus_C": 2.3800000000000026
+   },
+   "exact_2400|5%": {
+    "thresholds": {
+     "A": 24.56,
+     "B": 26.64,
+     "C": 25.45
+    },
+    "ranking": "A < C < B",
+    "B_minus_C": 1.1900000000000013,
+    "A_minus_C": -0.8900000000000006
+   },
+   "exact_2400|10%": {
+    "thresholds": {
+     "A": 21.62,
+     "B": 23.53,
+     "C": 23.12
+    },
+    "ranking": "A < C < B",
+    "B_minus_C": 0.41000000000000014,
+    "A_minus_C": -1.5
+   },
+   "exact_2400|19%": {
+    "thresholds": {
+     "A": 18.24,
+     "B": 19.87,
+     "C": 20.1
+    },
+    "ranking": "A < B < C",
+    "B_minus_C": -0.23000000000000043,
+    "A_minus_C": -1.860000000000003
+   }
+  },
+  "conclusion": "Not robust. B vs C flips with the dip level (official: C < B at any/5 %, B < C at 10/19 %; |B-C| = 0.37 s^-1 at 10 %) and with Trotter error (exact dynamics at 10 %: C 23.09 < B 23.48). A vs C at any-dip flips with Trotter error (official A 27.32 < C 28.58; exact C 28.49 < A 31.68). Robust: A lowest for dip levels >= 5 % in all dynamics.",
+  "limitations": "-",
+  "script": "r5b_ranking.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r5b_ranking.py"
+ },
+ {
+  "id": "R5a",
+  "question": "Do the exact-limit any-dip thresholds equal the pre-registered continuum predictions?",
+  "hypotheses": [
+   "H0 (claim): exact 2400-step any-dip A 32.45, B 34.15, C 30.10 vs predictions 32.5, 34.2, 30.15",
+   "H1: they differ by more than the scan step"
+  ],
+  "independent_variable": "dynamics / acquisition",
+  "dependent_variable": "any-dip threshold (0.01 grid)",
+  "fixed_parameters": "reference centres, +-2.667 Hz",
+  "reference": "agents/agent1_physics/predictions.json",
+  "result": {
+   "A": {
+    "L2400_exact_any": 32.49,
+    "L2400_exact_10%": 21.62,
+    "L2400_trotter_any": 28.24,
+    "L2400_trotter_10%": 20.11,
+    "L300_exact_any": 31.68,
+    "L300_exact_10%": 21.23,
+    "L300_trotter_any": 27.32,
+    "L300_trotter_10%": 19.97,
+    "continuum_any[exact pos + exact amp|discrete]": 32.5,
+    "continuum_any[exact pos + exact amp|lorentz]": 32.45,
+    "continuum_any[trotter pos + trotter amp|discrete]": 28.25,
+    "continuum_any[exact pos + trotter amp|discrete]": 28.0,
+    "continuum_any[trotter pos + exact amp|discrete]": 32.45
+   },
+   "B": {
+    "L2400_exact_any": 34.16,
+    "L2400_exact_10%": 23.53,
+    "L2400_trotter_any": 34.83,
+    "L2400_trotter_10%": 23.41,
+    "L300_exact_any": 33.05,
+    "L300_exact_10%": 23.48,
+    "L300_trotter_any": 33.36,
+    "L300_trotter_10%": 22.85,
+    "continuum_any[exact pos + exact amp|discrete]": 34.15,
+    "continuum_any[exact pos + exact amp|lorentz]": 34.1,
+    "continuum_any[trotter pos + trotter amp|discrete]": 34.8,
+    "continuum_any[exact pos + trotter amp|discrete]": 34.85,
+    "continuum_any[trotter pos + exact amp|discrete]": 34.15
+   },
+   "C": {
+    "L2400_exact_any": 30.11,
+    "L2400_exact_10%": 23.12,
+    "L2400_trotter_any": 30.3,
+    "L2400_trotter_10%": 23.24,
+    "L300_exact_any": 28.49,
+    "L300_exact_10%": 23.09,
+    "L300_trotter_any": 28.58,
+    "L300_trotter_10%": 23.22,
+    "continuum_any[exact pos + exact amp|discrete]": 30.1,
+    "continuum_any[exact pos + exact amp|lorentz]": 30.1,
+    "continuum_any[trotter pos + trotter amp|discrete]": 30.3,
+    "continuum_any[exact pos + trotter amp|discrete]": 30.3,
+    "continuum_any[trotter pos + exact amp|discrete]": 30.1
+   }
+  },
+  "conclusion": "Confirmed: exact 2400 steps 32.49, 34.16, 30.11; own continuum (discrete-time line shape) 32.50, 34.15, 30.10; Lorentzian 32.45, 34.10, 30.10. Exact 300 steps: 31.68, 33.05, 28.49.",
+  "limitations": "Orchestrator used a 0.05 grid; mine 0.01 (differences <= 0.04).",
+  "script": "r5_exact_limit.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r5_exact_limit.py"
+ },
+ {
+  "id": "R5b",
+  "question": "Is A's lower official any-dip value caused by Trotter error in line heights rather than spacing?",
+  "hypotheses": [
+   "H0 (claim): heights",
+   "H1: positions/spacing",
+   "H2: dispersive phase errors"
+  ],
+  "independent_variable": "line set: exact/Trotter positions x exact/Trotter amplitudes",
+  "dependent_variable": "continuum any-dip threshold",
+  "fixed_parameters": "infinite-acquisition discrete-time line shape, reference centres",
+  "reference": "exact 32.50, Trotter 28.25",
+  "result": {
+   "A": {
+    "continuum_any[exact pos + exact amp|discrete]": 32.5,
+    "continuum_any[trotter pos + trotter amp|discrete]": 28.25,
+    "continuum_any[exact pos + trotter amp|discrete]": 28.0,
+    "continuum_any[trotter pos + exact amp|discrete]": 32.45
+   },
+   "B": {
+    "continuum_any[exact pos + exact amp|discrete]": 34.15,
+    "continuum_any[trotter pos + trotter amp|discrete]": 34.8,
+    "continuum_any[exact pos + trotter amp|discrete]": 34.85,
+    "continuum_any[trotter pos + exact amp|discrete]": 34.15
+   },
+   "C": {
+    "continuum_any[exact pos + exact amp|discrete]": 30.1,
+    "continuum_any[trotter pos + trotter amp|discrete]": 30.3,
+    "continuum_any[exact pos + trotter amp|discrete]": 30.3,
+    "continuum_any[trotter pos + exact amp|discrete]": 30.1
+   }
+  },
+  "conclusion": "Confirmed for A: exact positions + Trotter amplitudes 28.00 (= Trotter 28.25); Trotter positions + exact amplitudes 32.45 (= exact 32.50). Phase twist < 1e-3 rad (R2d), so H2 rejected. Decomposition of the official 27.32 vs exact-limit 32.49: Trotter 4.36 s^-1 (exact-300 31.68), finite 0.75 s acquisition 0.81 s^-1. Same mechanism raises B (34.15 -> 34.85) and C slightly (30.10 -> 30.30).",
+  "limitations": "A's 0.94 Hz doublets paired by rank (nearest pairing not one-to-one); the critical multiplet is unaffected.",
+  "script": "r5_exact_limit.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r5_exact_limit.py"
+ },
+ {
+  "id": "R6a",
+  "question": "Does raising J strength at fixed critical spacing raise the tolerance?",
+  "hypotheses": [
+   "H_J: tolerance scales with J strength",
+   "H_s: tolerance set by the smallest resolvable spacing (and the intensities of the two lines)"
+  ],
+  "independent_variable": "x: J02 = 11.8 + x, J12 = 17.9 + x (J12 - J02 = 6.1 fixed), x = -4..8",
+  "dependent_variable": "highest passing noise (any, 10 %), official Trotter and exact, 300 steps",
+  "fixed_parameters": "other couplings and shifts as in the files; centres from exact sticks merged < 2.667 Hz (validated = reference-based for A, B, C); criterion.md v1",
+  "reference": "pre-registered predictions in r6_jcoupling.py docstring",
+  "result": [
+   {
+    "x": -4,
+    "J02": 7.800000000000001,
+    "J12": 13.899999999999999,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.091341287991668,
+    "critical_spacing_Hz": 6.091341287991668,
+    "trotter_any": 30.26,
+    "trotter_10%": 20.69,
+    "exact_any": 29.91,
+    "exact_10%": 20.75
+   },
+   {
+    "x": -2,
+    "J02": 9.8,
+    "J12": 15.899999999999999,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.085966433295937,
+    "critical_spacing_Hz": 6.085966433295937,
+    "trotter_any": 28.45,
+    "trotter_10%": 20.24,
+    "exact_any": 31.7,
+    "exact_10%": 20.9
+   },
+   {
+    "x": 0,
+    "J02": 11.8,
+    "J12": 17.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.078715334054152,
+    "critical_spacing_Hz": 6.078715334054152,
+    "trotter_any": 27.32,
+    "trotter_10%": 19.97,
+    "exact_any": 31.68,
+    "exact_10%": 21.23
+   },
+   {
+    "x": 2,
+    "J02": 13.8,
+    "J12": 19.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.069332980459791,
+    "critical_spacing_Hz": 6.069332980459791,
+    "trotter_any": 26.46,
+    "trotter_10%": 19.76,
+    "exact_any": 32.02,
+    "exact_10%": 21.51
+   },
+   {
+    "x": 4,
+    "J02": 15.8,
+    "J12": 21.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.05758012412187,
+    "critical_spacing_Hz": 6.05758012412187,
+    "trotter_any": 25.73,
+    "trotter_10%": 19.59,
+    "exact_any": 32.24,
+    "exact_10%": 21.43
+   },
+   {
+    "x": 6,
+    "J02": 17.8,
+    "J12": 23.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.04323561047147,
+    "critical_spacing_Hz": 6.04323561047147,
+    "trotter_any": 25.06,
+    "trotter_10%": 19.42,
+    "exact_any": 31.08,
+    "exact_10%": 21.09
+   },
+   {
+    "x": 8,
+    "J02": 19.8,
+    "J12": 25.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.026097933699845,
+    "critical_spacing_Hz": 6.026097933699845,
+    "trotter_any": 24.42,
+    "trotter_10%": 19.25,
+    "exact_any": 30.09,
+    "exact_10%": 20.43
+   }
+  ],
+  "conclusion": "Mean of the two strong couplings doubles (10.85 -> 22.85 Hz): exact any-dip 29.91-32.24 (-5.6..+1.8 % of x=0), exact 10 % 20.43-21.51 (-3.8..+1.3 %); official Trotter any-dip FALLS 30.26 -> 24.42 (Trotter amplitude error grows with J), 10 % 20.69 -> 19.25. Pre-registered H_J (>= +50 %) refuted; H_s (+-10 %) holds for exact dynamics and at 10 %; official any-dip drifts just outside +-10 % (-10.6/+10.8 %) in the direction opposite to H_J.",
+  "limitations": "Artificial Hamiltonians, no supplied reference; a few low-noise (< 1.2 s^-1) non-monotonic windows (E1 x=6/8, E2 J12=14.9 exact) and a narrow pass window for J01 = 3.5 (12.82-13.76).",
+  "script": "r6_jcoupling.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r6_jcoupling.py"
+ },
+ {
+  "id": "R6b",
+  "question": "Is the tolerance proportional to the inner spacing J12 - J02?",
+  "hypotheses": [
+   "H_J: tolerance scales with J strength",
+   "H_s: tolerance set by the smallest resolvable spacing (and the intensities of the two lines)"
+  ],
+  "independent_variable": "J12 = 14.9..20.9 at J02 = 11.8",
+  "dependent_variable": "highest passing noise (any, 10 %), official Trotter and exact, 300 steps",
+  "fixed_parameters": "other couplings and shifts as in the files; centres from exact sticks merged < 2.667 Hz (validated = reference-based for A, B, C); criterion.md v1",
+  "reference": "pre-registered predictions in r6_jcoupling.py docstring",
+  "result": [
+   {
+    "J12": 14.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 3.0805767015324363,
+    "critical_spacing_Hz": null,
+    "trotter_any": 7.56,
+    "trotter_10%": 7.56,
+    "exact_any": 10.95,
+    "exact_10%": 8.83
+   },
+   {
+    "J12": 15.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 4.079867543570202,
+    "critical_spacing_Hz": 4.079867543570202,
+    "trotter_any": 17.73,
+    "trotter_10%": 13.48,
+    "exact_any": 18.93,
+    "exact_10%": 13.31
+   },
+   {
+    "J12": 16.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 5.079247158423129,
+    "critical_spacing_Hz": 5.079247158423129,
+    "trotter_any": 22.79,
+    "trotter_10%": 15.93,
+    "exact_any": 25.82,
+    "exact_10%": 17.21
+   },
+   {
+    "J12": 17.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.078715334054152,
+    "critical_spacing_Hz": 6.078715334054152,
+    "trotter_any": 27.32,
+    "trotter_10%": 19.97,
+    "exact_any": 31.68,
+    "exact_10%": 21.23
+   },
+   {
+    "J12": 18.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 7.0782713636733945,
+    "critical_spacing_Hz": 7.0782713636733945,
+    "trotter_any": 31.4,
+    "trotter_10%": 23.31,
+    "exact_any": 37.06,
+    "exact_10%": 24.94
+   },
+   {
+    "J12": 19.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 8.077915176601806,
+    "critical_spacing_Hz": 8.077915176601806,
+    "trotter_any": 37.4,
+    "trotter_10%": 26.21,
+    "exact_any": 41.84,
+    "exact_10%": 27.81
+   },
+   {
+    "J12": 20.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 9.077645924691524,
+    "critical_spacing_Hz": 9.077645924691524,
+    "trotter_any": 43.45,
+    "trotter_10%": 30.06,
+    "exact_any": 44.6,
+    "exact_10%": 31.92
+   }
+  ],
+  "conclusion": "Threshold proportional to the inner spacing from 4.1 to 9.1 Hz: official 10 % ratio 3.14-3.31 per Hz, exact 10 % 3.26-3.52, exact any-dip 4.64-5.24 (pi*sqrt(3) = 5.44 is the isolated-pair continuum limit), official any-dip 4.35-4.79. At 3.1 Hz (2.3 bins) the ratio drops (grid limit).",
+  "limitations": "Artificial Hamiltonians, no supplied reference; a few low-noise (< 1.2 s^-1) non-monotonic windows (E1 x=6/8, E2 J12=14.9 exact) and a narrow pass window for J01 = 3.5 (12.82-13.76).",
+  "script": "r6_jcoupling.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r6_jcoupling.py"
+ },
+ {
+  "id": "R6c",
+  "question": "Does raising the small coupling J01 raise the tolerance?",
+  "hypotheses": [
+   "H_J: tolerance scales with J strength",
+   "H_s: tolerance set by the smallest resolvable spacing (and the intensities of the two lines)"
+  ],
+  "independent_variable": "J01 = 0.9..5 Hz",
+  "dependent_variable": "highest passing noise (any, 10 %), official Trotter and exact, 300 steps",
+  "fixed_parameters": "other couplings and shifts as in the files; centres from exact sticks merged < 2.667 Hz (validated = reference-based for A, B, C); criterion.md v1",
+  "reference": "pre-registered predictions in r6_jcoupling.py docstring",
+  "result": [
+   {
+    "J01": 0.9,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.078715334054152,
+    "critical_spacing_Hz": 6.078715334054152,
+    "trotter_any": 27.32,
+    "trotter_10%": 19.97,
+    "exact_any": 31.68,
+    "exact_10%": 21.23
+   },
+   {
+    "J01": 2.0,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.064092769245605,
+    "critical_spacing_Hz": 6.064092769245605,
+    "trotter_any": 27.36,
+    "trotter_10%": 20.0,
+    "exact_any": 31.6,
+    "exact_10%": 21.17
+   },
+   {
+    "J01": 2.5,
+    "outer_inner_ratio": null,
+    "n_char": 8,
+    "min_spacing_Hz": 6.057149477017987,
+    "critical_spacing_Hz": 6.057149477017987,
+    "trotter_any": 27.38,
+    "trotter_10%": 20.02,
+    "exact_any": 31.56,
+    "exact_10%": 21.14
+   },
+   {
+    "J01": 3.0,
+    "outer_inner_ratio": null,
+    "n_char": 12,
+    "min_spacing_Hz": 3.041395236374509,
+    "critical_spacing_Hz": null,
+    "trotter_any": null,
+    "trotter_10%": null,
+    "exact_any": null,
+    "exact_10%": null
+   },
+   {
+    "J01": 3.5,
+    "outer_inner_ratio": null,
+    "n_char": 12,
+    "min_spacing_Hz": 3.5413932042100953,
+    "critical_spacing_Hz": null,
+    "trotter_any": 13.76,
+    "trotter_10%": null,
+    "exact_any": 13.31,
+    "exact_10%": 10.72
+   },
+   {
+    "J01": 4.0,
+    "outer_inner_ratio": null,
+    "n_char": 12,
+    "min_spacing_Hz": 4.041391101366685,
+    "critical_spacing_Hz": 4.041391242724671,
+    "trotter_any": 17.05,
+    "trotter_10%": 13.0,
+    "exact_any": 16.26,
+    "exact_10%": 12.74
+   },
+   {
+    "J01": 5.0,
+    "outer_inner_ratio": null,
+    "n_char": 12,
+    "min_spacing_Hz": 5.041387107716851,
+    "critical_spacing_Hz": 5.041387178395844,
+    "trotter_any": 21.21,
+    "trotter_10%": 15.94,
+    "exact_any": 20.69,
+    "exact_10%": 15.71
+   }
+  ],
+  "conclusion": "J01 0.9 -> 2.5 Hz: no change (27.32 -> 27.38, merged). J01 = 3.0: never passes; 3.5-5 Hz: any-dip 13.76 -> 21.21, 10 % none -> 15.94, i.e. a LARGER coupling LOWERS the tolerance. H_J refuted.",
+  "limitations": "Artificial Hamiltonians, no supplied reference; a few low-noise (< 1.2 s^-1) non-monotonic windows (E1 x=6/8, E2 J12=14.9 exact) and a narrow pass window for J01 = 3.5 (12.82-13.76).",
+  "script": "r6_jcoupling.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r6_jcoupling.py"
+ },
+ {
+  "id": "R6d",
+  "question": "At fixed J, does the shift difference (roof effect) change the tolerance?",
+  "hypotheses": [
+   "H_J: tolerance scales with J strength",
+   "H_s: tolerance set by the smallest resolvable spacing (and the intensities of the two lines)"
+  ],
+  "independent_variable": "delta difference 0.03..0.5 ppm, J = 7.92 Hz (molecule C)",
+  "dependent_variable": "highest passing noise (any, 10 %), official Trotter and exact, 300 steps",
+  "fixed_parameters": "other couplings and shifts as in the files; centres from exact sticks merged < 2.667 Hz (validated = reference-based for A, B, C); criterion.md v1",
+  "reference": "pre-registered predictions in r6_jcoupling.py docstring",
+  "result": [
+   {
+    "delta_diff_ppm": 0.03,
+    "dnu_over_J": 1.8939393650941319,
+    "outer_inner_ratio": 0.36340800528432454,
+    "n_char": 4,
+    "min_spacing_Hz": 7.920000000556208,
+    "critical_spacing_Hz": 7.9200000712352026,
+    "trotter_any": 21.58,
+    "trotter_10%": 17.18,
+    "exact_any": 21.53,
+    "exact_10%": 17.16
+   },
+   {
+    "delta_diff_ppm": 0.05,
+    "dnu_over_J": 3.1565656084902196,
+    "outer_inner_ratio": 0.5360897811155564,
+    "n_char": 4,
+    "min_spacing_Hz": 7.9200000005562075,
+    "critical_spacing_Hz": 7.9200000005562075,
+    "trotter_any": 25.42,
+    "trotter_10%": 21.26,
+    "exact_any": 25.28,
+    "exact_10%": 21.2
+   },
+   {
+    "delta_diff_ppm": 0.073,
+    "dnu_over_J": 4.60858578839572,
+    "outer_inner_ratio": 0.6500946280761857,
+    "n_char": 4,
+    "min_spacing_Hz": 7.920000000556213,
+    "critical_spacing_Hz": 7.920000000556213,
+    "trotter_any": 28.58,
+    "trotter_10%": 23.22,
+    "exact_any": 28.49,
+    "exact_10%": 23.09
+   },
+   {
+    "delta_diff_ppm": 0.1,
+    "dnu_over_J": 6.313131216980439,
+    "outer_inner_ratio": 0.7294313933354939,
+    "n_char": 4,
+    "min_spacing_Hz": 7.9200000005562075,
+    "critical_spacing_Hz": 7.920000071235201,
+    "trotter_any": 31.51,
+    "trotter_10%": 24.52,
+    "exact_any": 31.06,
+    "exact_10%": 24.36
+   },
+   {
+    "delta_diff_ppm": 0.15,
+    "dnu_over_J": 9.46969682547066,
+    "outer_inner_ratio": 0.8099283986186648,
+    "n_char": 4,
+    "min_spacing_Hz": 7.9200000005562075,
+    "critical_spacing_Hz": 7.9200000005562075,
+    "trotter_any": 33.31,
+    "trotter_10%": 25.65,
+    "exact_any": 32.98,
+    "exact_10%": 25.3
+   },
+   {
+    "delta_diff_ppm": 0.2,
+    "dnu_over_J": 12.626262433960878,
+    "outer_inner_ratio": 0.8536492616865354,
+    "n_char": 4,
+    "min_spacing_Hz": 7.9200000005562075,
+    "critical_spacing_Hz": 7.9200000005562075,
+    "trotter_any": 35.82,
+    "trotter_10%": 26.13,
+    "exact_any": 35.14,
+    "exact_10%": 25.69
+   },
+   {
+    "delta_diff_ppm": 0.3,
+    "dnu_over_J": 18.93939365094132,
+    "outer_inner_ratio": 0.8998285830436935,
+    "n_char": 4,
+    "min_spacing_Hz": 7.920000000556215,
+    "critical_spacing_Hz": 7.920000000556215,
+    "trotter_any": 35.61,
+    "trotter_10%": 27.41,
+    "exact_any": 34.87,
+    "exact_10%": 26.68
+   },
+   {
+    "delta_diff_ppm": 0.5,
+    "dnu_over_J": 31.565656084902194,
+    "outer_inner_ratio": 0.9386154571227483,
+    "n_char": 4,
+    "min_spacing_Hz": 7.9200000005562,
+    "critical_spacing_Hz": 7.9200000005562,
+    "trotter_any": 37.12,
+    "trotter_10%": 26.98,
+    "exact_any": 37.72,
+    "exact_10%": 27.14
+   }
+  ],
+  "conclusion": "Critical spacing is exactly J = 7.92 Hz for every shift difference, yet the tolerance rises from 21.58 to 37.12 (any) and 17.18 to 27.41 (10 %) as delta-nu/J goes 1.9 -> 31.6 (outer/inner 0.36 -> 0.94). Both 'J alone' and 'spacing alone' are refuted; spacing + relative intensity (roof effect) is supported. At C's actual delta-nu/J = 4.6 the roof effect costs ~15 % (10 %) to ~23 % (any-dip) relative to the weak-coupling limit.",
+  "limitations": "Artificial Hamiltonians, no supplied reference; a few low-noise (< 1.2 s^-1) non-monotonic windows (E1 x=6/8, E2 J12=14.9 exact) and a narrow pass window for J01 = 3.5 (12.82-13.76).",
+  "script": "r6_jcoupling.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r6_jcoupling.py"
+ },
+ {
+  "id": "R6e",
+  "question": "Are Agent 3's J-sweep numbers (results/j_coupling_sensitivity.csv) reproducible?",
+  "hypotheses": [
+   "H0: same thresholds from independent code",
+   "H1: discrepancies"
+  ],
+  "independent_variable": "9 rows (A_J02 9.5/13/16, A_J12 20, A_J01 3.75, B_J12 10/6, C_J01 4/12)",
+  "dependent_variable": "any-dip and 10 % thresholds, number of characteristic peaks, monotonicity",
+  "fixed_parameters": "own Hamiltonian builder, own Trotter, own criterion",
+  "reference": "Agent 3 CSV",
+  "result": [
+   {
+    "experiment": "A_J02",
+    "J": 9.5,
+    "agent3_any": "39.54",
+    "mine_any": 39.54,
+    "agent3_10": "28.31",
+    "mine_10": 28.31,
+    "agent3_n_char": "8",
+    "mine_n_char": 8,
+    "agent3_monotonic_10": "True",
+    "mine_ntrans_10": 1
+   },
+   {
+    "experiment": "A_J02",
+    "J": 13.0,
+    "agent3_any": "21.53",
+    "mine_any": 21.53,
+    "agent3_10": "15.42",
+    "mine_10": 15.42,
+    "agent3_n_char": "8",
+    "mine_n_char": 8,
+    "agent3_monotonic_10": "True",
+    "mine_ntrans_10": 1
+   },
+   {
+    "experiment": "A_J02",
+    "J": 16.0,
+    "agent3_any": "51.31",
+    "mine_any": 51.31,
+    "agent3_10": "43.13",
+    "mine_10": 43.13,
+    "agent3_n_char": "7",
+    "mine_n_char": 7,
+    "agent3_monotonic_10": "True",
+    "mine_ntrans_10": 1
+   },
+   {
+    "experiment": "A_J12",
+    "J": 20.0,
+    "agent3_any": "38.02",
+    "mine_any": 38.02,
+    "agent3_10": "26.63",
+    "mine_10": 26.63,
+    "agent3_n_char": "8",
+    "mine_n_char": 8,
+    "agent3_monotonic_10": "True",
+    "mine_ntrans_10": 1
+   },
+   {
+    "experiment": "A_J01",
+    "J": 3.75,
+    "agent3_any": "15.75",
+    "mine_any": 15.75,
+    "agent3_10": "11.65",
+    "mine_10": 11.65,
+    "agent3_n_char": "12",
+    "mine_n_char": 12,
+    "agent3_monotonic_10": "False",
+    "mine_ntrans_10": 2
+   },
+   {
+    "experiment": "B_J12",
+    "J": 10.0,
+    "agent3_any": "24.59",
+    "mine_any": 24.59,
+    "agent3_10": "17.34",
+    "mine_10": 17.34,
+    "agent3_n_char": "8",
+    "mine_n_char": 8,
+    "agent3_monotonic_10": "True",
+    "mine_ntrans_10": 1
+   },
+   {
+    "experiment": "B_J12",
+    "J": 6.0,
+    "agent3_any": "26.2",
+    "mine_any": 26.2,
+    "agent3_10": "18.77",
+    "mine_10": 18.77,
+    "agent3_n_char": "8",
+    "mine_n_char": 8,
+    "agent3_monotonic_10": "True",
+    "mine_ntrans_10": 1
+   },
+   {
+    "experiment": "C_J01",
+    "J": 4.0,
+    "agent3_any": "14.19",
+    "mine_any": 14.19,
+    "agent3_10": "11.19",
+    "mine_10": 11.19,
+    "agent3_n_char": "4",
+    "mine_n_char": 4,
+    "agent3_monotonic_10": "True",
+    "mine_ntrans_10": 1
+   },
+   {
+    "experiment": "C_J01",
+    "J": 12.0,
+    "agent3_any": "40.57",
+    "mine_any": 40.57,
+    "agent3_10": "32.0",
+    "mine_10": 32.0,
+    "agent3_n_char": "4",
+    "mine_n_char": 4,
+    "agent3_monotonic_10": "True",
+    "mine_ntrans_10": 1
+   }
+  ],
+  "conclusion": "9/9 rows identical (any, 10 %, n_char, monotonic flag).",
+  "limitations": "Spot check, not all 159 rows.",
+  "script": "r6b_spotcheck_agent3.py",
+  "command": "cd agents/agent4_reviewer && ../../.venv/bin/python r6b_spotcheck_agent3.py"
+ }
+]

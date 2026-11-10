@@ -1,0 +1,188 @@
+{
+ "A": {
+  "matched_reference": "spectrum_3",
+  "characteristic_peaks": 8,
+  "noise 5": {
+   "peaks_found": "8/8",
+   "vs_reference": {
+    "cosine": 0.8044,
+    "1-cosine": 0.1956,
+    "rmse_0to1_scale": 0.1006,
+    "position_error_hz_official_axis_mean_max": [
+     0.726,
+     1.479
+    ],
+    "position_error_hz_corrected_axis_mean_max": [
+     0.56,
+     0.934
+    ],
+    "mean_signed_position_error_hz_official_axis": -0.435
+   },
+   "trotter_vs_exact_same_processing": {
+    "cosine": 0.93275,
+    "rmse_0to1_scale": 0.0609,
+    "position_error_hz_mean_max": [
+     0.589,
+     1.121
+    ],
+    "peak_height_error_pct_mean_max": [
+     13.3,
+     38.1
+    ]
+   }
+  },
+  "reference linewidth (noise 3.17)": {
+   "peaks_found": "8/8",
+   "vs_reference": {
+    "cosine": 0.7744,
+    "1-cosine": 0.2256,
+    "rmse_0to1_scale": 0.1017,
+    "position_error_hz_official_axis_mean_max": [
+     0.73,
+     1.473
+    ],
+    "position_error_hz_corrected_axis_mean_max": [
+     0.564,
+     1.028
+    ],
+    "mean_signed_position_error_hz_official_axis": -0.429
+   },
+   "trotter_vs_exact_same_processing": {
+    "cosine": 0.87078,
+    "rmse_0to1_scale": 0.08,
+    "position_error_hz_mean_max": [
+     0.6,
+     1.259
+    ],
+    "peak_height_error_pct_mean_max": [
+     23.1,
+     85.3
+    ]
+   }
+  }
+ },
+ "B": {
+  "matched_reference": "spectrum_2",
+  "characteristic_peaks": 8,
+  "noise 5": {
+   "peaks_found": "8/8",
+   "vs_reference": {
+    "cosine": 0.8693,
+    "1-cosine": 0.1307,
+    "rmse_0to1_scale": 0.0726,
+    "position_error_hz_official_axis_mean_max": [
+     0.83,
+     1.589
+    ],
+    "position_error_hz_corrected_axis_mean_max": [
+     0.34,
+     0.658
+    ],
+    "mean_signed_position_error_hz_official_axis": -0.83
+   },
+   "trotter_vs_exact_same_processing": {
+    "cosine": 0.97466,
+    "rmse_0to1_scale": 0.033,
+    "position_error_hz_mean_max": [
+     0.413,
+     0.916
+    ],
+    "peak_height_error_pct_mean_max": [
+     12.1,
+     27.8
+    ]
+   }
+  },
+  "reference linewidth (noise 3.17)": {
+   "peaks_found": "8/8",
+   "vs_reference": {
+    "cosine": 0.8279,
+    "1-cosine": 0.1721,
+    "rmse_0to1_scale": 0.0664,
+    "position_error_hz_official_axis_mean_max": [
+     0.832,
+     1.698
+    ],
+    "position_error_hz_corrected_axis_mean_max": [
+     0.375,
+     0.767
+    ],
+    "mean_signed_position_error_hz_official_axis": -0.832
+   },
+   "trotter_vs_exact_same_processing": {
+    "cosine": 0.94766,
+    "rmse_0to1_scale": 0.0379,
+    "position_error_hz_mean_max": [
+     0.474,
+     1.118
+    ],
+    "peak_height_error_pct_mean_max": [
+     14.6,
+     41.7
+    ]
+   }
+  }
+ },
+ "C": {
+  "matched_reference": "spectrum_1",
+  "characteristic_peaks": 4,
+  "noise 5": {
+   "peaks_found": "4/4",
+   "vs_reference": {
+    "cosine": 0.8426,
+    "1-cosine": 0.1574,
+    "rmse_0to1_scale": 0.0905,
+    "position_error_hz_official_axis_mean_max": [
+     0.667,
+     0.916
+    ],
+    "position_error_hz_corrected_axis_mean_max": [
+     0.121,
+     0.212
+    ],
+    "mean_signed_position_error_hz_official_axis": -0.667
+   },
+   "trotter_vs_exact_same_processing": {
+    "cosine": 0.99987,
+    "rmse_0to1_scale": 0.0034,
+    "position_error_hz_mean_max": [
+     0.036,
+     0.045
+    ],
+    "peak_height_error_pct_mean_max": [
+     2.2,
+     3.6
+    ]
+   }
+  },
+  "reference linewidth (noise 3.17)": {
+   "peaks_found": "4/4",
+   "vs_reference": {
+    "cosine": 0.8394,
+    "1-cosine": 0.1606,
+    "rmse_0to1_scale": 0.0875,
+    "position_error_hz_official_axis_mean_max": [
+     0.667,
+     1.017
+    ],
+    "position_error_hz_corrected_axis_mean_max": [
+     0.187,
+     0.313
+    ],
+    "mean_signed_position_error_hz_official_axis": -0.667
+   },
+   "trotter_vs_exact_same_processing": {
+    "cosine": 0.99959,
+    "rmse_0to1_scale": 0.0058,
+    "position_error_hz_mean_max": [
+     0.05,
+     0.068
+    ],
+    "peak_height_error_pct_mean_max": [
+     3.6,
+     5.9
+    ]
+   }
+  }
+ }
+}

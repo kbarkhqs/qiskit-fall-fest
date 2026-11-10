@@ -1,0 +1,368 @@
+{
+ "A": {
+  "L2400_exact_any": {
+   "max_pass": 32.49,
+   "first_fail": 32.5,
+   "transitions": [
+    [
+     32.49,
+     32.5,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_exact_10%": {
+   "max_pass": 21.62,
+   "first_fail": 21.63,
+   "transitions": [
+    [
+     21.62,
+     21.63,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_trotter_any": {
+   "max_pass": 28.24,
+   "first_fail": 28.25,
+   "transitions": [
+    [
+     28.24,
+     28.25,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_trotter_10%": {
+   "max_pass": 20.11,
+   "first_fail": 20.12,
+   "transitions": [
+    [
+     20.11,
+     20.12,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_exact_any": {
+   "max_pass": 31.68,
+   "first_fail": 31.69,
+   "transitions": [
+    [
+     31.68,
+     31.69,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_exact_10%": {
+   "max_pass": 21.23,
+   "first_fail": 21.24,
+   "transitions": [
+    [
+     21.23,
+     21.24,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_trotter_any": {
+   "max_pass": 27.32,
+   "first_fail": 27.33,
+   "transitions": [
+    [
+     27.32,
+     27.33,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_trotter_10%": {
+   "max_pass": 19.97,
+   "first_fail": 19.98,
+   "transitions": [
+    [
+     19.97,
+     19.98,
+     "pass->fail"
+    ]
+   ]
+  },
+  "pairing": "rank (nearest was not one-to-one)",
+  "n_lines_exact": 12,
+  "n_lines_trotter": 12,
+  "one_to_one": false,
+  "unmatched_trotter_lines_Hz": [],
+  "max_rel_amp_change": 0.19146968471696235,
+  "max_shift_Hz": 0.714831165256868,
+  "continuum_any[exact pos + exact amp|discrete]": {
+   "max_pass": 32.5,
+   "first_fail": 32.55,
+   "n_transitions": 1
+  },
+  "continuum_any[exact pos + exact amp|lorentz]": {
+   "max_pass": 32.45,
+   "first_fail": 32.5,
+   "n_transitions": 1
+  },
+  "continuum_any[trotter pos + trotter amp|discrete]": {
+   "max_pass": 28.25,
+   "first_fail": 28.3,
+   "n_transitions": 1
+  },
+  "continuum_any[exact pos + trotter amp|discrete]": {
+   "max_pass": 28.0,
+   "first_fail": 28.05,
+   "n_transitions": 1
+  },
+  "continuum_any[trotter pos + exact amp|discrete]": {
+   "max_pass": 32.45,
+   "first_fail": 32.5,
+   "n_transitions": 1
+  }
+ },
+ "B": {
+  "L2400_exact_any": {
+   "max_pass": 34.16,
+   "first_fail": 34.17,
+   "transitions": [
+    [
+     34.16,
+     34.17,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_exact_10%": {
+   "max_pass": 23.53,
+   "first_fail": 23.54,
+   "transitions": [
+    [
+     23.53,
+     23.54,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_trotter_any": {
+   "max_pass": 34.83,
+   "first_fail": 34.84,
+   "transitions": [
+    [
+     34.83,
+     34.84,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_trotter_10%": {
+   "max_pass": 23.41,
+   "first_fail": 23.42,
+   "transitions": [
+    [
+     23.41,
+     23.42,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_exact_any": {
+   "max_pass": 33.05,
+   "first_fail": 33.06,
+   "transitions": [
+    [
+     33.05,
+     33.06,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_exact_10%": {
+   "max_pass": 23.48,
+   "first_fail": 23.49,
+   "transitions": [
+    [
+     23.48,
+     23.49,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_trotter_any": {
+   "max_pass": 33.36,
+   "first_fail": 33.37,
+   "transitions": [
+    [
+     33.36,
+     33.37,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_trotter_10%": {
+   "max_pass": 22.85,
+   "first_fail": 22.86,
+   "transitions": [
+    [
+     22.85,
+     22.86,
+     "pass->fail"
+    ]
+   ]
+  },
+  "pairing": "nearest",
+  "n_lines_exact": 12,
+  "n_lines_trotter": 12,
+  "one_to_one": true,
+  "unmatched_trotter_lines_Hz": [],
+  "max_rel_amp_change": 0.15742288614969624,
+  "max_shift_Hz": 0.4179807257533241,
+  "continuum_any[exact pos + exact amp|discrete]": {
+   "max_pass": 34.15,
+   "first_fail": 34.2,
+   "n_transitions": 1
+  },
+  "continuum_any[exact pos + exact amp|lorentz]": {
+   "max_pass": 34.1,
+   "first_fail": 34.15,
+   "n_transitions": 1
+  },
+  "continuum_any[trotter pos + trotter amp|discrete]": {
+   "max_pass": 34.8,
+   "first_fail": 34.85,
+   "n_transitions": 1
+  },
+  "continuum_any[exact pos + trotter amp|discrete]": {
+   "max_pass": 34.85,
+   "first_fail": 34.9,
+   "n_transitions": 1
+  },
+  "continuum_any[trotter pos + exact amp|discrete]": {
+   "max_pass": 34.15,
+   "first_fail": 34.2,
+   "n_transitions": 1
+  }
+ },
+ "C": {
+  "L2400_exact_any": {
+   "max_pass": 30.11,
+   "first_fail": 30.12,
+   "transitions": [
+    [
+     30.11,
+     30.12,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_exact_10%": {
+   "max_pass": 23.12,
+   "first_fail": 23.13,
+   "transitions": [
+    [
+     23.12,
+     23.13,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_trotter_any": {
+   "max_pass": 30.3,
+   "first_fail": 30.31,
+   "transitions": [
+    [
+     30.3,
+     30.31,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L2400_trotter_10%": {
+   "max_pass": 23.24,
+   "first_fail": 23.25,
+   "transitions": [
+    [
+     23.24,
+     23.25,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_exact_any": {
+   "max_pass": 28.49,
+   "first_fail": 28.5,
+   "transitions": [
+    [
+     28.49,
+     28.5,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_exact_10%": {
+   "max_pass": 23.09,
+   "first_fail": 23.1,
+   "transitions": [
+    [
+     23.09,
+     23.1,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_trotter_any": {
+   "max_pass": 28.58,
+   "first_fail": 28.59,
+   "transitions": [
+    [
+     28.58,
+     28.59,
+     "pass->fail"
+    ]
+   ]
+  },
+  "L300_trotter_10%": {
+   "max_pass": 23.22,
+   "first_fail": 23.23,
+   "transitions": [
+    [
+     23.22,
+     23.23,
+     "pass->fail"
+    ]
+   ]
+  },
+  "pairing": "nearest",
+  "n_lines_exact": 4,
+  "n_lines_trotter": 4,
+  "one_to_one": true,
+  "unmatched_trotter_lines_Hz": [],
+  "max_rel_amp_change": 0.0072542423179911,
+  "max_shift_Hz": 0.011571427231510611,
+  "continuum_any[exact pos + exact amp|discrete]": {
+   "max_pass": 30.1,
+   "first_fail": 30.15,
+   "n_transitions": 1
+  },
+  "continuum_any[exact pos + exact amp|lorentz]": {
+   "max_pass": 30.1,
+   "first_fail": 30.15,
+   "n_transitions": 1
+  },
+  "continuum_any[trotter pos + trotter amp|discrete]": {
+   "max_pass": 30.3,
+   "first_fail": 30.35,
+   "n_transitions": 1
+  },
+  "continuum_any[exact pos + trotter amp|discrete]": {
+   "max_pass": 30.3,
+   "first_fail": 30.35,
+   "n_transitions": 1
+  },
+  "continuum_any[trotter pos + exact amp|discrete]": {
+   "max_pass": 30.1,
+   "first_fail": 30.15,
+   "n_transitions": 1
+  }
+ }
+}

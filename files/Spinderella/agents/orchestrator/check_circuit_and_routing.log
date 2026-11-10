@@ -1,0 +1,3 @@
+molecule A: 12 gates, angle/qubit check max err 0.0e+00 rad; max|U_circuit - U_file_order| = 3.3e-16; ||[H, sum Z]|| = 0.0e+00; all-to-all: cx=18; linear chain 0-1-2: swaps inserted (opt 0) = 1, cx = 21
+molecule B: 12 gates, angle/qubit check max err 0.0e+00 rad; max|U_circuit - U_file_order| = 2.2e-16; ||[H, sum Z]|| = 0.0e+00; all-to-all: cx=18; linear chain 0-1-2: swaps inserted (opt 0) = 1, cx = 21
+molecule C: 5 gates, angle/qubit check max err 0.0e+00 rad; max|U_circuit - U_file_order| = 1.1e-16; ||[H, sum Z]|| = 0.0e+00; all-to-all: cx=6

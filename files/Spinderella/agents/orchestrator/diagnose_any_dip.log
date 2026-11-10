@@ -1,0 +1,5 @@
+molecule C 28.59 (False, 0.0, 'no maximum near 6.2932 ppm')
+molecule A acquisition 300 steps (0.75 s): any-dip 27.30, 10% 19.95
+molecule A acquisition 600 steps (1.50 s): any-dip 27.95, 10% 20.05
+molecule A acquisition 1200 steps (3.00 s): any-dip 28.15, 10% 20.10
+molecule A acquisition 2400 steps (6.00 s): any-dip 28.20, 10% 20.10

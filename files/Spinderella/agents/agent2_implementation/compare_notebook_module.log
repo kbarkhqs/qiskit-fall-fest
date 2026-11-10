@@ -1,0 +1,37 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+{
+  "notebook_wall_time_s": 387.41579308299697,
+  "in_memory_run_problems": [],
+  "in_memory_cells_executed": 34,
+  "cells_on_disk": 33,
+  "kernel_executable": "/Users/t/projects/qiskit-fall-fest/.venv/bin/python",
+  "notebook_molecule": "molecule A",
+  "notebook_noise_strength": 5.0,
+  "notebook_ppm_dtype": "object",
+  "notebook_chemical_shift_type": "CalculatorFloat",
+  "notebook_reference_max_after_normalisation": 1.0,
+  "notebook_reference_dict_max_after_cell": 107.05370787041545,
+  "max_abs_diff_exp_x_module_estimator_cached": 0.0,
+  "max_abs_diff_exp_y_module_estimator_cached": 0.0,
+  "max_abs_diff_c_xx_module_estimator_cached": 8.881784197001252e-16,
+  "max_abs_diff_c_yx_module_estimator_cached": 8.881784197001252e-16,
+  "max_abs_diff_spectrum_module_estimator_cached": 0.0,
+  "max_abs_diff_ppm_module_estimator_cached": 0.0,
+  "max_abs_diff_exp_x_module_fast": 0.0,
+  "max_abs_diff_exp_y_module_fast": 0.0,
+  "max_abs_diff_c_xx_module_fast": 8.881784197001252e-16,
+  "max_abs_diff_c_yx_module_fast": 8.881784197001252e-16,
+  "max_abs_diff_spectrum_module_fast": 0.0,
+  "max_abs_diff_ppm_module_fast": 0.0,
+  "max_abs_diff_chemical_shift": 0.0,
+  "notebook_spectrum_finite": true,
+  "notebook_spectrum_max": 1.0,
+  "notebook_spectrum_points_above_0.05": 48,
+  "notebook_max_abs_c_xx": 23.999999999999982,
+  "notebook_max_abs_c_yx": 14.541062015394402,
+  "max_abs_diff_upstream_unguarded_vs_module_spectrum_and_ppm": {
+    "A": 3.3306690738754696e-16,
+    "B": 3.3306690738754696e-16,
+    "C": 9.43689570931383e-16
+  }
+}

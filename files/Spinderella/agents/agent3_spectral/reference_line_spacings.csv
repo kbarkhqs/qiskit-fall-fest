@@ -1,0 +1,17 @@
+molecule,reference,multiplet,multiplet_centre_ppm,line_left_ppm,line_right_ppm,spacing_hz,first_order_combination,first_order_hz,strong_coupling_correction_hz,resolvable_by_300_step_acquisition
+A,spectrum_3,0,5.47891,5.44932,5.47285,11.766,J02,11.8,-0.034,True
+A,spectrum_3,0,5.47891,5.47285,5.48496,6.053,J12 - J02,6.1,-0.047,True
+A,spectrum_3,0,5.47891,5.48496,5.50851,11.779,J02,11.8,-0.021,True
+A,spectrum_3,1,5.79045,5.77784,5.77953,0.843,J01,0.9,-0.057,False
+A,spectrum_3,1,5.79045,5.77953,5.8014,10.936,J02 - J01,10.9,0.036,True
+A,spectrum_3,1,5.79045,5.8014,5.80303,0.812,J01,0.9,-0.088,False
+A,spectrum_3,2,5.97068,5.95193,5.95365,0.86,J01,0.9,-0.04,False
+A,spectrum_3,2,5.97068,5.95365,5.98773,17.037,J12 - J01,17.0,0.037,True
+A,spectrum_3,2,5.97068,5.98773,5.9894,0.837,J01,0.9,-0.063,False
+B,spectrum_2,0,5.33989,5.33132,5.34846,8.571,J12,8.6,-0.029,True
+B,spectrum_2,1,5.57922,5.56363,5.59481,15.591,J01,15.6,-0.009,True
+B,spectrum_2,2,5.90086,5.87669,5.89383,8.573,J12,8.6,-0.027,True
+B,spectrum_2,2,5.90086,5.89383,5.90788,7.025,J01 - J12,7.0,0.025,True
+B,spectrum_2,2,5.90086,5.90788,5.92504,8.58,J12,8.6,-0.02,True
+C,spectrum_1,0,6.30114,6.29323,6.30906,7.915,J01,7.92,-0.005,True
+C,spectrum_1,1,6.37586,6.36794,6.38377,7.915,J01,7.92,-0.005,True

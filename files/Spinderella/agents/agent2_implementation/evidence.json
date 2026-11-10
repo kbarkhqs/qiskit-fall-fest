@@ -1,0 +1,217 @@
+[
+ {
+  "id": "A2-E1",
+  "question": "Do 'H then RZ(phi)' and 'RX(phi) then H' prepare the same single-qubit state?",
+  "hypotheses": [
+   "H1: identical for every phi",
+   "H2: they differ"
+  ],
+  "independent_variable": "phi (0, pi, generic)",
+  "dependent_variable": "amplitude difference, fidelity, <X>, <Y>",
+  "fixed_parameters": "1 qubit, Statevector",
+  "reference": "analytic (e^{-i phi/2}|0> + e^{i phi/2}|1>)/sqrt2",
+  "result": "max |amp_a - amp_b| = 0.0 for all angles; fidelity 1.0; <X>(0)=+1, <X>(pi)=-1",
+  "conclusion": "H1. Adopted H then RZ (smallest change to the placeholder).",
+  "limitations": "global phase -i on |-> irrelevant",
+  "script": "agents/agent2_implementation/exp01_template_equivalence.py",
+  "command": ".venv/bin/python agents/agent2_implementation/exp01_template_equivalence.py"
+ },
+ {
+  "id": "A2-E2",
+  "question": "Are the official simulated signals physically consistent?",
+  "hypotheses": [
+   "H1: weights m_n = N-2w, C_xx(0)=N 2^N, C_yx(0)=0, signals non-zero",
+   "H2: initialisation still wrong"
+  ],
+  "independent_variable": "molecule",
+  "dependent_variable": "identities at t=0, finiteness",
+  "fixed_parameters": "300 steps, dt=0.0025, StatevectorEstimator",
+  "reference": "analytic sum rules",
+  "result": {
+   "A": {
+    "c_xx0": 23.999999999999982,
+    "c_yx0": -1.4695761589768222e-15,
+    "max|mx0-expected|": 1.3322676295501878e-15,
+    "all_finite": true,
+    "peaks_ppm_noise5": [
+     5.4507,
+     5.472,
+     5.4853,
+     5.5093,
+     5.776,
+     5.8,
+     5.9493,
+     5.9867
+    ]
+   },
+   "B": {
+    "c_xx0": 23.999999999999982,
+    "c_yx0": -1.4695761589768222e-15,
+    "max|mx0-expected|": 1.3322676295501878e-15,
+    "all_finite": true,
+    "peaks_ppm_noise5": [
+     5.332,
+     5.348,
+     5.564,
+     5.5933,
+     5.8733,
+     5.892,
+     5.9053,
+     5.9213
+    ]
+   },
+   "C": {
+    "c_xx0": 7.999999999999993,
+    "c_yx0": -4.898587196589409e-16,
+    "max|mx0-expected|": 8.881784197001252e-16,
+    "all_finite": true,
+    "peaks_ppm_noise5": [
+     6.2932,
+     6.3065,
+     6.3678,
+     6.3812
+    ]
+   }
+  },
+  "conclusion": "H1 for A, B, C.",
+  "limitations": "identities test t=0 and bookkeeping, not Trotter accuracy (see Agent 1 T6)",
+  "script": "agents/agent2_implementation/run_official_simulation.py",
+  "command": ".venv/bin/python agents/agent2_implementation/run_official_simulation.py"
+ },
+ {
+  "id": "A2-E3",
+  "question": "Is the step-by-step Statevector evolution identical to the notebook's estimator loop?",
+  "hypotheses": [
+   "H1: identical to < 1e-9",
+   "H2: differs"
+  ],
+  "independent_variable": "method",
+  "dependent_variable": "max |exp_x diff|, |exp_y diff|, wall time",
+  "fixed_parameters": "same Trotter circuit, 300 steps",
+  "reference": "official estimator loop",
+  "result": {
+   "A": {
+    "max_diff_x": 0.0,
+    "max_diff_y": 0.0,
+    "wall_estimator_s": 424.6,
+    "wall_fast_s": 2.37
+   },
+   "B": {
+    "max_diff_x": 0.0,
+    "max_diff_y": 0.0,
+    "wall_estimator_s": 423.7,
+    "wall_fast_s": 2.32
+   },
+   "C": {
+    "max_diff_x": 0.0,
+    "max_diff_y": 0.0,
+    "wall_estimator_s": 91.4,
+    "wall_fast_s": 0.7
+   }
+  },
+  "conclusion": "H1 (difference exactly 0.0); fast path is ~180x faster and is used for sweeps over modified Hamiltonians.",
+  "limitations": "same circuit, so it inherits the same Trotter error",
+  "script": "agents/agent2_implementation/run_official_simulation.py",
+  "command": ".venv/bin/python agents/agent2_implementation/run_official_simulation.py"
+ },
+ {
+  "id": "A2-E4",
+  "question": "Does the executed notebook produce the same arrays as the importable module?",
+  "hypotheses": [
+   "H1: identical",
+   "H2: drift between notebook and module"
+  ],
+  "independent_variable": "code path",
+  "dependent_variable": "max abs differences",
+  "fixed_parameters": "molecule A, noise 5.0",
+  "reference": "in-memory nbclient run of nmr.ipynb with a dump cell (not saved)",
+  "result": {
+   "notebook_wall_time_s": 387.41579308299697,
+   "in_memory_run_problems": [],
+   "kernel_executable": "/Users/t/projects/qiskit-fall-fest/.venv/bin/python",
+   "max_abs_diff_exp_x_module_estimator_cached": 0.0,
+   "max_abs_diff_exp_y_module_estimator_cached": 0.0,
+   "max_abs_diff_c_xx_module_estimator_cached": 8.881784197001252e-16,
+   "max_abs_diff_c_yx_module_estimator_cached": 8.881784197001252e-16,
+   "max_abs_diff_spectrum_module_estimator_cached": 0.0,
+   "max_abs_diff_ppm_module_estimator_cached": 0.0,
+   "max_abs_diff_exp_x_module_fast": 0.0,
+   "max_abs_diff_exp_y_module_fast": 0.0,
+   "max_abs_diff_c_xx_module_fast": 8.881784197001252e-16,
+   "max_abs_diff_c_yx_module_fast": 8.881784197001252e-16,
+   "max_abs_diff_spectrum_module_fast": 0.0,
+   "max_abs_diff_ppm_module_fast": 0.0,
+   "max_abs_diff_chemical_shift": 0.0,
+   "max_abs_diff_upstream_unguarded_vs_module_spectrum_and_ppm": {
+    "A": 3.3306690738754696e-16,
+    "B": 3.3306690738754696e-16,
+    "C": 9.43689570931383e-16
+   }
+  },
+  "conclusion": "H1 (<= 9e-16).",
+  "limitations": "molecule A only for the notebook path; module checked against unguarded upstream functions for A, B, C",
+  "script": "agents/agent2_implementation/compare_notebook_module.py",
+  "command": ".venv/bin/python agents/agent2_implementation/compare_notebook_module.py"
+ },
+ {
+  "id": "A2-E5",
+  "question": "Do the tests detect the original placeholder (mutation check)?",
+  "hypotheses": [
+   "H1: every detector fires on the placeholder and passes on the fix"
+  ],
+  "independent_variable": "cell 14 version",
+  "dependent_variable": "detector outcomes",
+  "fixed_parameters": "molecules A and C",
+  "reference": "-",
+  "result": [
+   {
+    "case": "upstream placeholder (git HEAD cell 14)",
+    "molecule": "molecule A",
+    "all_detectors_fired": true,
+    "all_detectors_passed": false,
+    "max_abs_c_xx_raw": 0.0
+   },
+   {
+    "case": "edited cell 14 (control)",
+    "molecule": "molecule A",
+    "all_detectors_fired": false,
+    "all_detectors_passed": true,
+    "max_abs_c_xx_raw": 23.999999999999982
+   },
+   {
+    "case": "upstream placeholder (git HEAD cell 14)",
+    "molecule": "molecule C",
+    "all_detectors_fired": true,
+    "all_detectors_passed": false,
+    "max_abs_c_xx_raw": 0.0
+   },
+   {
+    "case": "edited cell 14 (control)",
+    "molecule": "molecule C",
+    "all_detectors_fired": false,
+    "all_detectors_passed": true,
+    "max_abs_c_xx_raw": 7.999999999999993
+   }
+  ],
+  "conclusion": "H1.",
+  "limitations": "one mutant (the supplied placeholder)",
+  "script": "agents/agent2_implementation/mutation_check.py",
+  "command": ".venv/bin/python agents/agent2_implementation/mutation_check.py"
+ },
+ {
+  "id": "A2-E6",
+  "question": "Test suite",
+  "hypotheses": [
+   "all pass"
+  ],
+  "independent_variable": "-",
+  "dependent_variable": "pytest outcome",
+  "fixed_parameters": "-",
+  "reference": "-",
+  "result": "67 passed in 5.57s (24 test functions, parametrised)",
+  "conclusion": "pass",
+  "limitations": "-",
+  "script": "tests/",
+  "command": ".venv/bin/python -m pytest -q"
+ }
+]

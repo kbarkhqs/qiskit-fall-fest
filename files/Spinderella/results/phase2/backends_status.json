@@ -1,0 +1,50 @@
+{
+ "retrieved_utc": "2026-11-10T18:10:50.538490+00:00",
+ "backends": [
+  {
+   "name": "ibm_fez",
+   "qubits": 156,
+   "pending_jobs": 0,
+   "operational": true,
+   "status_msg": "active",
+   "basis": [
+    "cz",
+    "id",
+    "rz",
+    "sx",
+    "x",
+    "xslow"
+   ]
+  },
+  {
+   "name": "ibm_marrakesh",
+   "qubits": 156,
+   "pending_jobs": 0,
+   "operational": true,
+   "status_msg": "active",
+   "basis": [
+    "cz",
+    "id",
+    "rz",
+    "sx",
+    "x",
+    "xslow"
+   ]
+  },
+  {
+   "name": "ibm_kingston",
+   "qubits": 156,
+   "pending_jobs": 2,
+   "operational": true,
+   "status_msg": "active",
+   "basis": [
+    "cz",
+    "id",
+    "rz",
+    "sx",
+    "x",
+    "xslow"
+   ]
+  }
+ ]
+}

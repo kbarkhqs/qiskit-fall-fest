@@ -1,0 +1,3052 @@
+[
+  {
+    "id": "A1_matching",
+    "question": "Which reference spectrum belongs to which molecule (global one-to-one)?",
+    "hypotheses": [
+      "all 6 permutations considered; the best permutation per metric is the match"
+    ],
+    "independent_variable": "permutation of (spectrum_1, spectrum_2, spectrum_3) over (A, B, C)",
+    "dependent_variable": "summed cosine, Pearson r, NRMSE, peak match fraction, peak F1, multiplet score",
+    "fixed_parameters": {
+      "noise_strength": [
+        0.5,
+        2.0,
+        5.0
+      ],
+      "resampling": [
+        "bin average (primary)",
+        "point interpolation"
+      ],
+      "peak_tolerance_hz": 2.667,
+      "official signals": "300 steps, dt 0.0025"
+    },
+    "reference": "files/spectrum_{1,2,3}.pkl",
+    "result": {
+      "mapping": {
+        "molecule A": "spectrum_3",
+        "molecule B": "spectrum_2",
+        "molecule C": "spectrum_1"
+      },
+      "unanimous_over_choices": true,
+      "n_choices": 27,
+      "min_margin_by_metric": {
+        "cosine": 1.3699700402007065,
+        "multiplet_score": 2.0,
+        "nrmse": 0.04288515945141402,
+        "peak_f1": 2.0,
+        "peak_match_fraction": 2.0,
+        "pearson": 1.415954262366351
+      },
+      "per_choice": [
+        {
+          "noise_strength": 0.5,
+          "resampling": "binavg",
+          "metric": "cosine",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.1775904439678735,
+          "second": "A->2 B->3 C->1",
+          "second_total": 0.7435361472115012,
+          "margin": 1.4340542967563723
+        },
+        {
+          "noise_strength": 0.5,
+          "resampling": "binavg",
+          "metric": "pearson",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.1252931707419287,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.6485893922566371,
+          "margin": 1.4767037784852914
+        },
+        {
+          "noise_strength": 0.5,
+          "resampling": "binavg",
+          "metric": "nrmse",
+          "best": "A->3 B->2 C->1",
+          "best_total": 0.2602631665406897,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.3159141245857391,
+          "margin": 0.05565095804504938
+        },
+        {
+          "noise_strength": 0.5,
+          "resampling": "binavg",
+          "metric": "peak_match_fraction",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 0.5,
+          "resampling": "binavg",
+          "metric": "peak_f1",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 0.5,
+          "resampling": "binavg",
+          "metric": "multiplet_score",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 0.5,
+          "resampling": "point",
+          "metric": "cosine",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.0852844066732965,
+          "second": "A->1 B->2 C->3",
+          "second_total": 0.7153143664725901,
+          "margin": 1.3699700402007065
+        },
+        {
+          "noise_strength": 0.5,
+          "resampling": "point",
+          "metric": "pearson",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.0329884020786864,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.6170341397123352,
+          "margin": 1.415954262366351
+        },
+        {
+          "noise_strength": 0.5,
+          "resampling": "point",
+          "metric": "nrmse",
+          "best": "A->3 B->2 C->1",
+          "best_total": 0.27896717344109045,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.3218523328925045,
+          "margin": 0.04288515945141402
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "binavg",
+          "metric": "cosine",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.3379557627416396,
+          "second": "A->2 B->3 C->1",
+          "second_total": 0.8358814351692572,
+          "margin": 1.5020743275723825
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "binavg",
+          "metric": "pearson",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.2986316048189814,
+          "second": "A->2 B->3 C->1",
+          "second_total": 0.699091767760616,
+          "margin": 1.5995398370583653
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "binavg",
+          "metric": "nrmse",
+          "best": "A->3 B->2 C->1",
+          "best_total": 0.2636682692207612,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.34866065125418155,
+          "margin": 0.08499238203342036
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "binavg",
+          "metric": "peak_match_fraction",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "binavg",
+          "metric": "peak_f1",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "binavg",
+          "metric": "multiplet_score",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "point",
+          "metric": "cosine",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.2363991262760874,
+          "second": "A->2 B->3 C->1",
+          "second_total": 0.7867422718163141,
+          "margin": 1.4496568544597732
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "point",
+          "metric": "pearson",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.1948559397934577,
+          "second": "A->2 B->3 C->1",
+          "second_total": 0.6592531162706617,
+          "margin": 1.535602823522796
+        },
+        {
+          "noise_strength": 2.0,
+          "resampling": "point",
+          "metric": "nrmse",
+          "best": "A->3 B->2 C->1",
+          "best_total": 0.27421021010348823,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.355366495005235,
+          "margin": 0.08115628490174676
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "binavg",
+          "metric": "cosine",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.5161432643711263,
+          "second": "A->1 B->2 C->3",
+          "second_total": 0.8727558940586451,
+          "margin": 1.6433873703124813
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "binavg",
+          "metric": "pearson",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.481663276589935,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.7231119103078335,
+          "margin": 1.7585513662821017
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "binavg",
+          "metric": "nrmse",
+          "best": "A->3 B->2 C->1",
+          "best_total": 0.26385180212753934,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.3825131685692639,
+          "margin": 0.11866136644172454
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "binavg",
+          "metric": "peak_match_fraction",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "binavg",
+          "metric": "peak_f1",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "binavg",
+          "metric": "multiplet_score",
+          "best": "A->3 B->2 C->1",
+          "best_total": 3.0,
+          "second": "A->3 B->1 C->2",
+          "second_total": 1.0,
+          "margin": 2.0
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "point",
+          "metric": "cosine",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.3798389137301488,
+          "second": "A->1 B->2 C->3",
+          "second_total": 0.8344462306788765,
+          "margin": 1.5453926830512723
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "point",
+          "metric": "pearson",
+          "best": "A->3 B->2 C->1",
+          "best_total": 2.3418113763984647,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.6783940818964471,
+          "margin": 1.6634172945020176
+        },
+        {
+          "noise_strength": 5.0,
+          "resampling": "point",
+          "metric": "nrmse",
+          "best": "A->3 B->2 C->1",
+          "best_total": 0.27623932305223103,
+          "second": "A->3 B->1 C->2",
+          "second_total": 0.3910771138505585,
+          "margin": 0.11483779079832745
+        }
+      ],
+      "leaked_file_consistency": {
+        "identical_to": [
+          "spectrum_1"
+        ],
+        "agrees": true
+      }
+    },
+    "conclusion": "All metric/noise/resampling choices select A->spectrum_3, B->spectrum_2, C->spectrum_1. The leaked file (byte copy of spectrum_1) was checked only after the decision and agrees.",
+    "limitations": "Simulation windows (+-200 Hz) do not cover every reference fully (overlap fraction of C with spectrum_1 is 0.78 of the simulation grid); peak positions carry the known ~0.67 Hz axis offset.",
+    "script": "agents/agent3_spectral/task_a_matching.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_a_matching.py"
+  },
+  {
+    "id": "B1_threshold_A",
+    "question": "Highest noise_strength at which molecule A's characteristic peaks stay resolved (criterion v1, 10% dip)",
+    "hypotheses": [
+      "pass/fail is monotonic in noise_strength",
+      "the smallest characteristic splitting fails first"
+    ],
+    "independent_variable": "noise_strength (1/s), 0.1..100 step 0.1, transitions refined at 0.01",
+    "dependent_variable": "pass/fail of criterion v1; dips between adjacent characteristic peaks",
+    "fixed_parameters": {
+      "signals": "official, 300 Lie-Trotter steps, dt 0.0025 s",
+      "tolerance_hz": 2.667,
+      "merge_hz": 2.667,
+      "primary_dip": 0.1
+    },
+    "reference": "spectrum_3",
+    "result": {
+      "max_tolerable_noise_strength": 19.97,
+      "first_failing_noise_strength": 19.98,
+      "critical_peaks_ppm": "5.47285;5.48496",
+      "critical_splitting_hz": 6.053,
+      "n_characteristic_peaks": 8,
+      "lowest_noise_check_0p1": {
+        "found": true,
+        "reason": "",
+        "dips": [
+          0.682843089766997,
+          0.9735032955301017,
+          0.9542244670924404,
+          0.9999911466061674,
+          0.9932861058826263,
+          0.9998500469929041,
+          0.9096928623670887
+        ]
+      },
+      "transitions_fine_10pct": [
+        [
+          19.97,
+          19.98,
+          "pass->fail"
+        ]
+      ]
+    },
+    "conclusion": "Threshold 19.97 1/s (first fail 19.98); limited by the 6.05 Hz pair 5.47285;5.48496 ppm.",
+    "limitations": "Operational criterion (10% dip) replaces 'visually resolvable'; the dip is measured on the 1.333 Hz sampled grid.",
+    "script": "agents/agent3_spectral/task_b_noise.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_b_noise.py"
+  },
+  {
+    "id": "B1_threshold_B",
+    "question": "Highest noise_strength at which molecule B's characteristic peaks stay resolved (criterion v1, 10% dip)",
+    "hypotheses": [
+      "pass/fail is monotonic in noise_strength",
+      "the smallest characteristic splitting fails first"
+    ],
+    "independent_variable": "noise_strength (1/s), 0.1..100 step 0.1, transitions refined at 0.01",
+    "dependent_variable": "pass/fail of criterion v1; dips between adjacent characteristic peaks",
+    "fixed_parameters": {
+      "signals": "official, 300 Lie-Trotter steps, dt 0.0025 s",
+      "tolerance_hz": 2.667,
+      "merge_hz": 2.667,
+      "primary_dip": 0.1
+    },
+    "reference": "spectrum_2",
+    "result": {
+      "max_tolerable_noise_strength": 22.85,
+      "first_failing_noise_strength": 22.86,
+      "critical_peaks_ppm": "5.89383;5.90788",
+      "critical_splitting_hz": 7.025,
+      "n_characteristic_peaks": 8,
+      "lowest_noise_check_0p1": {
+        "found": true,
+        "reason": "",
+        "dips": [
+          0.996238433601785,
+          0.999138157247522,
+          0.9099723695211691,
+          0.9999944062991196,
+          0.7930679901419989,
+          0.9678791173756256,
+          0.8451618794789302
+        ]
+      },
+      "transitions_fine_10pct": [
+        [
+          22.85,
+          22.86,
+          "pass->fail"
+        ]
+      ]
+    },
+    "conclusion": "Threshold 22.85 1/s (first fail 22.86); limited by the 7.03 Hz pair 5.89383;5.90788 ppm.",
+    "limitations": "Operational criterion (10% dip) replaces 'visually resolvable'; the dip is measured on the 1.333 Hz sampled grid.",
+    "script": "agents/agent3_spectral/task_b_noise.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_b_noise.py"
+  },
+  {
+    "id": "B1_threshold_C",
+    "question": "Highest noise_strength at which molecule C's characteristic peaks stay resolved (criterion v1, 10% dip)",
+    "hypotheses": [
+      "pass/fail is monotonic in noise_strength",
+      "the smallest characteristic splitting fails first"
+    ],
+    "independent_variable": "noise_strength (1/s), 0.1..100 step 0.1, transitions refined at 0.01",
+    "dependent_variable": "pass/fail of criterion v1; dips between adjacent characteristic peaks",
+    "fixed_parameters": {
+      "signals": "official, 300 Lie-Trotter steps, dt 0.0025 s",
+      "tolerance_hz": 2.667,
+      "merge_hz": 2.667,
+      "primary_dip": 0.1
+    },
+    "reference": "spectrum_1",
+    "result": {
+      "max_tolerable_noise_strength": 23.22,
+      "first_failing_noise_strength": 23.23,
+      "critical_peaks_ppm": "6.29323;6.30906",
+      "critical_splitting_hz": 7.915,
+      "n_characteristic_peaks": 4,
+      "lowest_noise_check_0p1": {
+        "found": true,
+        "reason": "",
+        "dips": [
+          0.6085881152816699,
+          0.9492221793159819,
+          0.608588115281666
+        ]
+      },
+      "transitions_fine_10pct": [
+        [
+          23.22,
+          23.23,
+          "pass->fail"
+        ]
+      ]
+    },
+    "conclusion": "Threshold 23.22 1/s (first fail 23.23); limited by the 7.92 Hz pair 6.29323;6.30906 ppm.",
+    "limitations": "Operational criterion (10% dip) replaces 'visually resolvable'; the dip is measured on the 1.333 Hz sampled grid.",
+    "script": "agents/agent3_spectral/task_b_noise.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_b_noise.py"
+  },
+  {
+    "id": "B2_dip_depth_sensitivity",
+    "question": "How much does the threshold depend on the required dip depth?",
+    "hypotheses": [
+      "threshold decreases as the required dip increases"
+    ],
+    "independent_variable": "dip level: any dip, 5%, 10% (primary), 19%",
+    "dependent_variable": "max tolerable noise_strength",
+    "fixed_parameters": {
+      "signals": "official 300 steps"
+    },
+    "reference": "matched references",
+    "result": {
+      "A": {
+        "any_dip": 27.32,
+        "5pct": 22.15,
+        "10pct": 19.97,
+        "19pct": 17.11
+      },
+      "B": {
+        "any_dip": 33.36,
+        "5pct": 25.99,
+        "10pct": 22.85,
+        "19pct": 19.13
+      },
+      "C": {
+        "any_dip": 28.58,
+        "5pct": 25.51,
+        "10pct": 23.22,
+        "19pct": 20.02
+      }
+    },
+    "conclusion": "Ordering of thresholds between dip levels is monotonic for every molecule; see report for spread.",
+    "limitations": "For 'any dip' the failure is the disappearance of a local maximum (shoulder), not a position failure.",
+    "script": "agents/agent3_spectral/task_b_noise.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_b_noise.py"
+  },
+  {
+    "id": "B3_monotonicity",
+    "question": "Is pass/fail monotonic in noise_strength (truncation ringing / np.abs at low noise)?",
+    "hypotheses": [
+      "H0: monotonic (single pass->fail transition)",
+      "H1: non-monotonic at low noise"
+    ],
+    "independent_variable": "noise_strength on the coarse grid (0.1..100) and on a 0.1 grid (0.1..100), refined at 0.01",
+    "dependent_variable": "number and type of pass/fail transitions",
+    "fixed_parameters": {
+      "signals": "official"
+    },
+    "reference": "matched references",
+    "result": {
+      "A": {
+        "coarse": {
+          "any_dip": [
+            [
+              25.0,
+              27.5,
+              "pass->fail"
+            ]
+          ],
+          "5pct": [
+            [
+              20.0,
+              22.5,
+              "pass->fail"
+            ]
+          ],
+          "10pct": [
+            [
+              17.5,
+              20.0,
+              "pass->fail"
+            ]
+          ],
+          "19pct": [
+            [
+              15.0,
+              17.5,
+              "pass->fail"
+            ]
+          ]
+        },
+        "dense_0p1": {
+          "any_dip": [
+            [
+              27.3,
+              27.4,
+              "pass->fail"
+            ]
+          ],
+          "5pct": [
+            [
+              22.1,
+              22.2,
+              "pass->fail"
+            ]
+          ],
+          "10pct": [
+            [
+              19.9,
+              20.0,
+              "pass->fail"
+            ]
+          ],
+          "19pct": [
+            [
+              17.1,
+              17.2,
+              "pass->fail"
+            ]
+          ]
+        },
+        "fine_monotonic": {
+          "any_dip": true,
+          "5pct": true,
+          "10pct": true,
+          "19pct": true
+        }
+      },
+      "B": {
+        "coarse": {
+          "any_dip": [
+            [
+              32.5,
+              35.0,
+              "pass->fail"
+            ]
+          ],
+          "5pct": [
+            [
+              25.0,
+              27.5,
+              "pass->fail"
+            ]
+          ],
+          "10pct": [
+            [
+              22.5,
+              25.0,
+              "pass->fail"
+            ]
+          ],
+          "19pct": [
+            [
+              17.5,
+              20.0,
+              "pass->fail"
+            ]
+          ]
+        },
+        "dense_0p1": {
+          "any_dip": [
+            [
+              33.3,
+              33.4,
+              "pass->fail"
+            ]
+          ],
+          "5pct": [
+            [
+              25.9,
+              26.0,
+              "pass->fail"
+            ]
+          ],
+          "10pct": [
+            [
+              22.8,
+              22.9,
+              "pass->fail"
+            ]
+          ],
+          "19pct": [
+            [
+              19.1,
+              19.2,
+              "pass->fail"
+            ]
+          ]
+        },
+        "fine_monotonic": {
+          "any_dip": true,
+          "5pct": true,
+          "10pct": true,
+          "19pct": true
+        }
+      },
+      "C": {
+        "coarse": {
+          "any_dip": [
+            [
+              27.5,
+              30.0,
+              "pass->fail"
+            ]
+          ],
+          "5pct": [
+            [
+              25.0,
+              27.5,
+              "pass->fail"
+            ]
+          ],
+          "10pct": [
+            [
+              22.5,
+              25.0,
+              "pass->fail"
+            ]
+          ],
+          "19pct": [
+            [
+              20.0,
+              22.5,
+              "pass->fail"
+            ]
+          ]
+        },
+        "dense_0p1": {
+          "any_dip": [
+            [
+              28.5,
+              28.6,
+              "pass->fail"
+            ]
+          ],
+          "5pct": [
+            [
+              25.5,
+              25.6,
+              "pass->fail"
+            ]
+          ],
+          "10pct": [
+            [
+              23.2,
+              23.3,
+              "pass->fail"
+            ]
+          ],
+          "19pct": [
+            [
+              20.0,
+              20.1,
+              "pass->fail"
+            ]
+          ]
+        },
+        "fine_monotonic": {
+          "any_dip": true,
+          "5pct": true,
+          "10pct": true,
+          "19pct": true
+        }
+      }
+    },
+    "conclusion": "Every molecule and every dip level shows exactly one pass->fail transition; passes from 0.1 up. No bisection was needed (dense scan used).",
+    "limitations": "Monotonicity verified on 0.1 grid globally and 0.01 grid only inside transition intervals.",
+    "script": "agents/agent3_spectral/task_b_noise.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_b_noise.py"
+  },
+  {
+    "id": "B4_trotter_error_sensitivity",
+    "question": "How much does first-order Trotter error move the threshold?",
+    "hypotheses": [
+      "Trotter error changes line positions/intensities and therefore the threshold"
+    ],
+    "independent_variable": "signals: Lie-Trotter (official) vs exact dense diagonalisation, both 300 points dt 0.0025",
+    "dependent_variable": "threshold at each dip level; line positions and weights of H_eff = i log(U_step)/dt",
+    "fixed_parameters": {
+      "criterion": "v1",
+      "reference": "matched"
+    },
+    "reference": "matched references",
+    "result": {
+      "A": {
+        "trotter": {
+          "any_dip": 27.32,
+          "5pct": 22.15,
+          "10pct": 19.97,
+          "19pct": 17.11
+        },
+        "exact": {
+          "any_dip": 31.68,
+          "5pct": 23.78,
+          "10pct": 21.23,
+          "19pct": 17.57
+        },
+        "critical_pair_sep_exact_vs_trotter_Heff_hz": [
+          [
+            11.789940369730408,
+            6.078715316859068,
+            11.789940369730408,
+            135.51882485064175,
+            10.848536426050487,
+            75.27869092165379,
+            18.810059630269397
+          ],
+          [
+            11.731104366907688,
+            6.130560364642815,
+            11.731104366907688,
+            134.80806811206565,
+            11.731104366907688,
+            74.87785473730537,
+            17.8616647315505
+          ]
+        ],
+        "line_shift_trotter_minus_exact_hz": [
+          0.714831165256701,
+          0.6559951624339814,
+          0.7078402102177281,
+          0.6490042073950084,
+          -0.06175253118108555,
+          0.8208154096761151,
+          0.4199792253276901,
+          -0.5284156733912032
+        ],
+        "weights_exact": [
+          0.7428401077449968,
+          0.8589720807990743,
+          0.8532221141529933,
+          1.0,
+          0.9093117587480959,
+          0.9497791473366296,
+          0.8002436654850326,
+          0.7959373816986094,
+          0.9392202886510155,
+          0.9140019884477745,
+          0.8063775780443687,
+          0.7954347734454991
+        ],
+        "weights_trotter": [
+          0.9499608952420188,
+          1.0,
+          0.8409717499200253,
+          0.9174444316771411,
+          0.9470941342068802,
+          0.9703574958744405,
+          0.8910508911801932,
+          0.8998889523860284,
+          0.8843047801386937,
+          0.8741136116802641,
+          0.9859366799393877,
+          0.9640264255244217
+        ]
+      },
+      "B": {
+        "trotter": {
+          "any_dip": 33.36,
+          "5pct": 25.99,
+          "10pct": 22.85,
+          "19pct": 19.13
+        },
+        "exact": {
+          "any_dip": 33.05,
+          "5pct": 26.62,
+          "10pct": 23.48,
+          "19pct": 19.7
+        },
+        "critical_pair_sep_exact_vs_trotter_Heff_hz": [
+          [
+            8.58034901350232,
+            107.12477947747264,
+            15.59514968444697,
+            141.17660132361647,
+            8.58034901350232,
+            7.014800670944651,
+            8.58034901350232
+          ],
+          [
+            8.560856164224726,
+            107.67467048787276,
+            15.570935665709518,
+            140.5682479561445,
+            8.560856164224726,
+            7.0100795014852375,
+            8.560856164224282
+          ]
+        ],
+        "line_shift_trotter_minus_exact_hz": [
+          -0.27210463265170975,
+          -0.291597481929304,
+          0.2582935284708089,
+          0.23407950973335662,
+          -0.3742738577386094,
+          -0.39376670701620364,
+          -0.39848787647561756,
+          -0.4179807257536559
+        ],
+        "weights_exact": [
+          0.85119357335323,
+          0.8603559822326794,
+          0.9072034105600071,
+          0.9126036005969743,
+          0.8061068268332563,
+          0.7881907294035162,
+          0.9668882739530138,
+          0.9702417724663364,
+          1.0,
+          0.9370968176764914,
+          0.8198093003707384,
+          0.7744550271231747
+        ],
+        "weights_trotter": [
+          0.9702559959105573,
+          0.9674295547525583,
+          0.8717432586407672,
+          0.8847640697447767,
+          0.8909307874618883,
+          0.8828928390479335,
+          0.9612284373936764,
+          0.9590720158616194,
+          0.9203551249057997,
+          1.0,
+          0.8361724754884768,
+          0.9377058226718484
+        ]
+      },
+      "C": {
+        "trotter": {
+          "any_dip": 28.58,
+          "5pct": 25.51,
+          "10pct": 23.22,
+          "19pct": 20.02
+        },
+        "exact": {
+          "any_dip": 28.49,
+          "5pct": 25.36,
+          "10pct": 23.09,
+          "19pct": 19.93
+        },
+        "critical_pair_sep_exact_vs_trotter_Heff_hz": [
+          [
+            7.919999999999917,
+            29.42938225775034,
+            7.919999999999917
+          ],
+          [
+            7.919999999999917,
+            29.406239403287177,
+            7.919999999999917
+          ]
+        ],
+        "line_shift_trotter_minus_exact_hz": [
+          0.011571427231583066,
+          0.011571427231583066,
+          -0.011571427231583066,
+          -0.011571427231583066
+        ],
+        "weights_exact": [
+          0.6500946288639028,
+          1.0,
+          1.0,
+          0.6500946288639028
+        ],
+        "weights_trotter": [
+          0.6579132548767164,
+          1.0,
+          1.0,
+          0.6579132548767164
+        ]
+      }
+    },
+    "conclusion": "Trotter error barely changes the critical splittings but changes relative line intensities in A and B, which shifts their thresholds.",
+    "limitations": "H_eff from the principal matrix logarithm (max |eigenphase| < pi checked); 'nearest line' separations involving merged sub-grid pairs are not meaningful.",
+    "script": "agents/agent3_spectral/task_b_noise.py; agents/agent3_spectral/trotter_effective_lines.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_b_noise.py && .venv/bin/python agents/agent3_spectral/trotter_effective_lines.py"
+  },
+  {
+    "id": "B5_acquisition_length_sensitivity",
+    "question": "How much does the finite 0.75 s acquisition (300 steps) move the threshold?",
+    "hypotheses": [
+      "at thresholds of ~20 1/s the window has decayed by exp(-15), so truncation is irrelevant; only the grid spacing changes"
+    ],
+    "independent_variable": "number of Lie-Trotter steps 300 / 600 / 1200 at dt 0.0025 (and exact 1200)",
+    "dependent_variable": "threshold at each dip level",
+    "fixed_parameters": {
+      "criterion": "v1 (same characteristic peaks and tolerance in Hz)"
+    },
+    "reference": "matched references",
+    "result": {
+      "A": {
+        "trotter_600": {
+          "any_dip": 27.98,
+          "5pct": 22.34,
+          "10pct": 20.05,
+          "19pct": 17.1
+        },
+        "trotter_1200": {
+          "any_dip": 28.16,
+          "5pct": 22.53,
+          "10pct": 20.1,
+          "19pct": 17.11
+        },
+        "exact_1200": {
+          "any_dip": 32.41,
+          "5pct": 24.55,
+          "10pct": 21.63,
+          "19pct": 18.2
+        }
+      },
+      "B": {
+        "trotter_600": {
+          "any_dip": 34.59,
+          "5pct": 26.64,
+          "10pct": 23.36,
+          "19pct": 19.52
+        },
+        "trotter_1200": {
+          "any_dip": 34.79,
+          "5pct": 26.61,
+          "10pct": 23.38,
+          "19pct": 19.66
+        },
+        "exact_1200": {
+          "any_dip": 34.13,
+          "5pct": 26.63,
+          "10pct": 23.48,
+          "19pct": 19.84
+        }
+      },
+      "C": {
+        "trotter_600": {
+          "any_dip": 30.2,
+          "5pct": 25.48,
+          "10pct": 23.1,
+          "19pct": 20.13
+        },
+        "trotter_1200": {
+          "any_dip": 30.28,
+          "5pct": 25.56,
+          "10pct": 23.23,
+          "19pct": 20.15
+        },
+        "exact_1200": {
+          "any_dip": 30.09,
+          "5pct": 25.42,
+          "10pct": 23.13,
+          "19pct": 20.06
+        }
+      }
+    },
+    "conclusion": "Longer acquisitions shift thresholds by a fraction of 1/s at the 5/10/19% levels (grid sampling effect).",
+    "limitations": "Finer grids sample peaks and valleys more accurately; the change mixes grid sampling with truncation.",
+    "script": "agents/agent3_spectral/task_b_noise.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_b_noise.py"
+  },
+  {
+    "id": "C0_synthetic_reference_validation",
+    "question": "Can an exact-stick + 1 Hz Lorentzian reference stand in for the supplied references?",
+    "hypotheses": [
+      "same characteristic peaks and identical thresholds on the real molecules"
+    ],
+    "independent_variable": "reference type (supplied vs synthetic)",
+    "dependent_variable": "characteristic peaks, thresholds at all dip levels",
+    "fixed_parameters": {
+      "signals": "official"
+    },
+    "reference": "matched references",
+    "result": [
+      {
+        "molecule": "A",
+        "same_number_of_char_peaks": true,
+        "max_position_diff_hz": 0.03782952525482413,
+        "thresholds_real_ref": {
+          "any_dip": 27.32,
+          "5pct": 22.15,
+          "10pct": 19.97,
+          "19pct": 17.11
+        },
+        "thresholds_synthetic_ref": {
+          "any_dip": 27.32,
+          "5pct": 22.15,
+          "10pct": 19.97,
+          "19pct": 17.11
+        },
+        "identical_thresholds": true
+      },
+      {
+        "molecule": "B",
+        "same_number_of_char_peaks": true,
+        "max_position_diff_hz": 0.02186192677121944,
+        "thresholds_real_ref": {
+          "any_dip": 33.36,
+          "5pct": 25.99,
+          "10pct": 22.85,
+          "19pct": 19.13
+        },
+        "thresholds_synthetic_ref": {
+          "any_dip": 33.36,
+          "5pct": 25.99,
+          "10pct": 22.85,
+          "19pct": 19.13
+        },
+        "identical_thresholds": true
+      },
+      {
+        "molecule": "C",
+        "same_number_of_char_peaks": true,
+        "max_position_diff_hz": 0.006050392950872949,
+        "thresholds_real_ref": {
+          "any_dip": 28.58,
+          "5pct": 25.51,
+          "10pct": 23.22,
+          "19pct": 20.02
+        },
+        "thresholds_synthetic_ref": {
+          "any_dip": 28.58,
+          "5pct": 25.51,
+          "10pct": 23.22,
+          "19pct": 20.02
+        },
+        "identical_thresholds": true
+      }
+    ],
+    "conclusion": "Synthetic references reproduce the characteristic peaks within 0.04 Hz and give identical thresholds; used for the artificial experiments.",
+    "limitations": "Assumes the same 1 Hz linewidth for modified Hamiltonians.",
+    "script": "agents/agent3_spectral/task_c_jcoupling.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_c_jcoupling.py"
+  },
+  {
+    "id": "C1_observational",
+    "question": "Across the three real molecules, does the threshold follow J strength or the critical splitting?",
+    "hypotheses": [
+      "H1: threshold scales with J strength (mean/max/min |J|)",
+      "H2: threshold scales with the smallest resolvable line spacing"
+    ],
+    "independent_variable": "molecule (n = 3)",
+    "dependent_variable": "primary threshold",
+    "fixed_parameters": {
+      "criterion": "v1"
+    },
+    "reference": "matched references",
+    "result": {
+      "table": [
+        {
+          "molecule": "A",
+          "reference": "spectrum_3",
+          "couplings_hz": "{\"J01\": 0.9, \"J02\": 11.8, \"J12\": 17.9}",
+          "shift_ppm": "{\"0\": 5.79, \"1\": 5.97, \"2\": 5.48}",
+          "mean_abs_J": 10.200000000000001,
+          "max_abs_J": 17.9,
+          "min_abs_J": 0.9,
+          "critical_splitting_hz": 6.053276796098279,
+          "critical_origin": "J12 - J02",
+          "critical_first_order_hz": 6.100000000000412,
+          "threshold_any_dip": 27.32,
+          "threshold_5pct": 22.15,
+          "threshold_10pct": 19.97,
+          "threshold_19pct": 17.11,
+          "ratio_threshold_to_critical": 3.2990396231132086
+        },
+        {
+          "molecule": "B",
+          "reference": "spectrum_2",
+          "couplings_hz": "{\"J01\": 15.6, \"J02\": -0.5, \"J12\": 8.6}",
+          "shift_ppm": "{\"0\": 5.58, \"1\": 5.9, \"2\": 5.34}",
+          "mean_abs_J": 8.233333333333333,
+          "max_abs_J": 15.599999999999998,
+          "min_abs_J": 0.5,
+          "critical_splitting_hz": 7.0249397538571365,
+          "critical_origin": "J01 - J12",
+          "critical_first_order_hz": 7.00000000000008,
+          "threshold_any_dip": 33.36,
+          "threshold_5pct": 25.99,
+          "threshold_10pct": 22.85,
+          "threshold_19pct": 19.13,
+          "ratio_threshold_to_critical": 3.252696934155756
+        },
+        {
+          "molecule": "C",
+          "reference": "spectrum_1",
+          "couplings_hz": "{\"J01\": 7.92}",
+          "shift_ppm": "{\"0\": 6.375, \"1\": 6.302}",
+          "mean_abs_J": 7.919999999999999,
+          "max_abs_J": 7.919999999999999,
+          "min_abs_J": 7.919999999999999,
+          "critical_splitting_hz": 7.915196071016753,
+          "critical_origin": "J01",
+          "critical_first_order_hz": 7.919999999999917,
+          "threshold_any_dip": 28.58,
+          "threshold_5pct": 25.51,
+          "threshold_10pct": 23.22,
+          "threshold_19pct": 20.02,
+          "ratio_threshold_to_critical": 2.9335975750525223
+        }
+      ],
+      "correlations_n3": {
+        "mean_abs_J": {
+          "pearson_r": -0.9997368604452539,
+          "spearman_rho": -1.0
+        },
+        "max_abs_J": {
+          "pearson_r": -0.7510362067531067,
+          "spearman_rho": -1.0
+        },
+        "min_abs_J": {
+          "pearson_r": 0.5478755073693704,
+          "spearman_rho": 0.5
+        },
+        "critical_splitting_hz": {
+          "pearson_r": 0.9233060282776884,
+          "spearman_rho": 1.0
+        }
+      }
+    },
+    "conclusion": "Threshold is anti-ordered with mean and max |J| and ordered with the critical splitting (n = 3, correlation only).",
+    "limitations": "n = 3; no causal claim from this part.",
+    "script": "agents/agent3_spectral/task_c_jcoupling.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_c_jcoupling.py"
+  },
+  {
+    "id": "C2_artificial_A_J01",
+    "question": "ARTIFICIAL: how does the threshold change when only J01 of molecule A is varied?",
+    "hypotheses": [
+      "H1: threshold scales with the J-coupling strength itself",
+      "H2: threshold is set by the smallest resolvable line spacing",
+      "H1: threshold rises with J01. H2: once J01 > 2.67 Hz the J01 doublets become resolvable and J01 is the new smallest spacing, so threshold falls"
+    ],
+    "independent_variable": "J01 from 0.0 to 8.0 Hz",
+    "dependent_variable": "threshold (10% dip, plus any/5/19%), critical splitting",
+    "fixed_parameters": {
+      "other couplings and shifts": "as in the file",
+      "steps": 300,
+      "dt": 0.0025,
+      "criterion": "v1",
+      "reference": "synthetic (exact sticks, 1 Hz Lorentzian)"
+    },
+    "reference": "synthetic",
+    "result": {
+      "stats": {
+        "spearman_threshold_vs_J": -0.6890011137370862,
+        "spearman_threshold_vs_critical_splitting": 0.8894640164181512,
+        "n": 29,
+        "J_range": [
+          0.0,
+          8.0
+        ],
+        "threshold_range": [
+          11.49,
+          20.02
+        ]
+      },
+      "disagreement_segment": {
+        "J_range": [
+          1.0,
+          4.0
+        ],
+        "why": "J01 becomes a resolvable spacing",
+        "n": 13,
+        "n_never_pass": 4,
+        "threshold_at_lo": 19.97,
+        "threshold_at_hi": 13.0,
+        "spearman_threshold_vs_J_in_segment": -0.05857791861290061
+      },
+      "points": [
+        {
+          "J_hz": 0.0,
+          "threshold_10pct": 19.93,
+          "threshold_5pct": 22.11,
+          "threshold_19pct": 17.08,
+          "threshold_any_dip": 27.28,
+          "critical_splitting_hz": 6.090000000051397,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 0.25,
+          "threshold_10pct": 19.94,
+          "threshold_5pct": 22.12,
+          "threshold_19pct": 17.09,
+          "threshold_any_dip": 27.29,
+          "critical_splitting_hz": 6.090000000051841,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 0.5,
+          "threshold_10pct": 19.95,
+          "threshold_5pct": 22.13,
+          "threshold_19pct": 17.1,
+          "threshold_any_dip": 27.3,
+          "critical_splitting_hz": 6.090000000051841,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 0.75,
+          "threshold_10pct": 19.96,
+          "threshold_5pct": 22.15,
+          "threshold_19pct": 17.11,
+          "threshold_any_dip": 27.31,
+          "critical_splitting_hz": 6.080000000051756,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 1.0,
+          "threshold_10pct": 19.97,
+          "threshold_5pct": 22.16,
+          "threshold_19pct": 17.11,
+          "threshold_any_dip": 27.32,
+          "critical_splitting_hz": 6.080000000051756,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 1.25,
+          "threshold_10pct": 19.98,
+          "threshold_5pct": 22.17,
+          "threshold_19pct": 17.12,
+          "threshold_any_dip": 27.33,
+          "critical_splitting_hz": 6.070000000052115,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 1.5,
+          "threshold_10pct": 19.99,
+          "threshold_5pct": 22.18,
+          "threshold_19pct": 17.13,
+          "threshold_any_dip": 27.34,
+          "critical_splitting_hz": 6.070000000051671,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 1.75,
+          "threshold_10pct": 20.0,
+          "threshold_5pct": 22.19,
+          "threshold_19pct": 17.13,
+          "threshold_any_dip": 27.35,
+          "critical_splitting_hz": 6.060000000051586,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 2.0,
+          "threshold_10pct": 20.0,
+          "threshold_5pct": 22.2,
+          "threshold_19pct": 17.14,
+          "threshold_any_dip": 27.36,
+          "critical_splitting_hz": 6.070000000052115,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 2.25,
+          "threshold_10pct": 20.01,
+          "threshold_5pct": 22.2,
+          "threshold_19pct": 17.14,
+          "threshold_any_dip": 27.37,
+          "critical_splitting_hz": 6.060000000051586,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 2.5,
+          "threshold_10pct": 20.02,
+          "threshold_5pct": 22.21,
+          "threshold_19pct": 17.15,
+          "threshold_any_dip": 27.38,
+          "critical_splitting_hz": 6.06000000005203,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 2.75,
+          "threshold_10pct": NaN,
+          "threshold_5pct": NaN,
+          "threshold_19pct": NaN,
+          "threshold_any_dip": NaN,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 3.0,
+          "threshold_10pct": NaN,
+          "threshold_5pct": NaN,
+          "threshold_19pct": NaN,
+          "threshold_any_dip": NaN,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 3.25,
+          "threshold_10pct": NaN,
+          "threshold_5pct": NaN,
+          "threshold_19pct": NaN,
+          "threshold_any_dip": NaN,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 3.5,
+          "threshold_10pct": NaN,
+          "threshold_5pct": NaN,
+          "threshold_19pct": NaN,
+          "threshold_any_dip": 13.76,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 3.75,
+          "threshold_10pct": 11.65,
+          "threshold_5pct": 12.92,
+          "threshold_19pct": 10.03,
+          "threshold_any_dip": 15.75,
+          "critical_splitting_hz": 3.7900000000322627,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 4.0,
+          "threshold_10pct": 13.0,
+          "threshold_5pct": 14.34,
+          "threshold_19pct": 11.18,
+          "threshold_any_dip": 17.05,
+          "critical_splitting_hz": 4.040000000033946,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 4.25,
+          "threshold_10pct": 14.14,
+          "threshold_5pct": 15.76,
+          "threshold_19pct": 11.94,
+          "threshold_any_dip": 18.24,
+          "critical_splitting_hz": 4.290000000036518,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 4.5,
+          "threshold_10pct": 14.82,
+          "threshold_5pct": 16.65,
+          "threshold_19pct": 12.45,
+          "threshold_any_dip": 19.16,
+          "critical_splitting_hz": 4.5400000000386465,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 4.75,
+          "threshold_10pct": 15.42,
+          "threshold_5pct": 17.4,
+          "threshold_19pct": 12.88,
+          "threshold_any_dip": 20.31,
+          "critical_splitting_hz": 4.790000000040331,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 5.0,
+          "threshold_10pct": 15.94,
+          "threshold_5pct": 18.06,
+          "threshold_19pct": 13.23,
+          "threshold_any_dip": 21.21,
+          "critical_splitting_hz": 5.040000000042459,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 5.25,
+          "threshold_10pct": 16.39,
+          "threshold_5pct": 18.65,
+          "threshold_19pct": 13.59,
+          "threshold_any_dip": 22.03,
+          "critical_splitting_hz": 5.290000000045032,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 5.5,
+          "threshold_10pct": 16.77,
+          "threshold_5pct": 19.16,
+          "threshold_19pct": 14.6,
+          "threshold_any_dip": 22.76,
+          "critical_splitting_hz": 5.54000000004716,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 5.75,
+          "threshold_10pct": 17.7,
+          "threshold_5pct": 19.61,
+          "threshold_19pct": 15.48,
+          "threshold_any_dip": 23.41,
+          "critical_splitting_hz": 5.790000000049288,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 6.0,
+          "threshold_10pct": 18.59,
+          "threshold_5pct": 20.2,
+          "threshold_19pct": 15.7,
+          "threshold_any_dip": 22.04,
+          "critical_splitting_hz": 6.040000000051416,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 6.25,
+          "threshold_10pct": 17.33,
+          "threshold_5pct": 19.54,
+          "threshold_19pct": 14.62,
+          "threshold_any_dip": 23.75,
+          "critical_splitting_hz": 5.540000000047604,
+          "critical_label_first_order": "J02 - J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 6.5,
+          "threshold_10pct": 15.92,
+          "threshold_5pct": 18.64,
+          "threshold_19pct": 13.43,
+          "threshold_any_dip": 24.27,
+          "critical_splitting_hz": 5.2900000000445875,
+          "critical_label_first_order": "J02 - J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 6.75,
+          "threshold_10pct": 15.35,
+          "threshold_5pct": 17.8,
+          "threshold_19pct": 12.52,
+          "threshold_any_dip": 22.53,
+          "critical_splitting_hz": 5.050000000043433,
+          "critical_label_first_order": "J02 - J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 7.0,
+          "threshold_10pct": 14.73,
+          "threshold_5pct": 16.91,
+          "threshold_19pct": 12.14,
+          "threshold_any_dip": 20.87,
+          "critical_splitting_hz": 4.790000000040775,
+          "critical_label_first_order": "J02 - J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 7.25,
+          "threshold_10pct": 14.04,
+          "threshold_5pct": 15.97,
+          "threshold_19pct": 11.69,
+          "threshold_any_dip": 19.27,
+          "critical_splitting_hz": 4.5500000000391765,
+          "critical_label_first_order": "J02 - J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 7.5,
+          "threshold_10pct": 13.28,
+          "threshold_5pct": 14.98,
+          "threshold_19pct": 11.16,
+          "threshold_any_dip": 17.71,
+          "critical_splitting_hz": 4.3000000000370475,
+          "critical_label_first_order": "J02 - J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 7.75,
+          "threshold_10pct": 12.43,
+          "threshold_5pct": 13.91,
+          "threshold_19pct": 10.54,
+          "threshold_any_dip": 16.16,
+          "critical_splitting_hz": 4.050000000034475,
+          "critical_label_first_order": "J02 - J01",
+          "n_char_peaks": 12
+        },
+        {
+          "J_hz": 8.0,
+          "threshold_10pct": 11.49,
+          "threshold_5pct": 12.76,
+          "threshold_19pct": 9.81,
+          "threshold_any_dip": 14.59,
+          "critical_splitting_hz": 3.8100000000324328,
+          "critical_label_first_order": "J02 - J01",
+          "n_char_peaks": 12
+        }
+      ]
+    },
+    "conclusion": "Segment [1.0, 4.0] (J01 becomes a resolvable spacing): threshold 19.97 -> 13.0 1/s, Spearman(threshold, J) = -0.05857791861290061; supports H2 (threshold falls or stays flat while J rises). Whole sweep: Spearman vs J -0.69, vs critical splitting 0.89.",
+    "limitations": "Artificial Hamiltonians, not the supplied molecules; synthetic references. Splittings of 2.7-3.5 Hz pass the 2-bin merge rule but are never resolved (no passing noise). Some points fail in narrow windows at 0.1-0.5 1/s (low-noise ringing). A_J12 >= 29 Hz fails detection at every noise: Trotter line shifts plus the axis offset exceed the 2.667 Hz tolerance.",
+    "script": "agents/agent3_spectral/task_c_jcoupling.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_c_jcoupling.py"
+  },
+  {
+    "id": "C2_artificial_A_J02",
+    "question": "ARTIFICIAL: how does the threshold change when only J02 of molecule A is varied?",
+    "hypotheses": [
+      "H1: threshold scales with the J-coupling strength itself",
+      "H2: threshold is set by the smallest resolvable line spacing",
+      "H1: threshold rises with J02. H2: critical splitting = |J12 - J02| shrinks for 11.8 < J02 < 17.9, so threshold falls"
+    ],
+    "independent_variable": "J02 from 4.0 to 30.0 Hz",
+    "dependent_variable": "threshold (10% dip, plus any/5/19%), critical splitting",
+    "fixed_parameters": {
+      "other couplings and shifts": "as in the file",
+      "steps": 300,
+      "dt": 0.0025,
+      "criterion": "v1",
+      "reference": "synthetic (exact sticks, 1 Hz Lorentzian)"
+    },
+    "reference": "synthetic",
+    "result": {
+      "stats": {
+        "spearman_threshold_vs_J": 0.2673303167420814,
+        "spearman_threshold_vs_critical_splitting": 0.9973755656108598,
+        "n": 51,
+        "J_range": [
+          4.0,
+          30.0
+        ],
+        "threshold_range": [
+          5.62,
+          48.88
+        ]
+      },
+      "disagreement_segment": {
+        "J_range": [
+          9.5,
+          14.0
+        ],
+        "why": "J12 - J02 shrinks",
+        "n": 10,
+        "n_never_pass": 0,
+        "threshold_at_lo": 28.31,
+        "threshold_at_hi": 12.75,
+        "spearman_threshold_vs_J_in_segment": -0.9999999999999999
+      },
+      "points": [
+        {
+          "J_hz": 4.0,
+          "threshold_10pct": 11.81,
+          "threshold_5pct": 13.62,
+          "threshold_19pct": 9.98,
+          "threshold_any_dip": 17.06,
+          "critical_splitting_hz": 3.98353536125843,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 4.5,
+          "threshold_10pct": 14.38,
+          "threshold_5pct": 16.26,
+          "threshold_19pct": 11.74,
+          "threshold_any_dip": 20.21,
+          "critical_splitting_hz": 4.48454294757327,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 5.0,
+          "threshold_10pct": 15.87,
+          "threshold_5pct": 18.49,
+          "threshold_19pct": 12.81,
+          "threshold_any_dip": 23.17,
+          "critical_splitting_hz": 4.985058227078518,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 5.5,
+          "threshold_10pct": 17.27,
+          "threshold_5pct": 20.19,
+          "threshold_19pct": 14.78,
+          "threshold_any_dip": 25.66,
+          "critical_splitting_hz": 5.485357656947113,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 6.0,
+          "threshold_10pct": 19.5,
+          "threshold_5pct": 21.82,
+          "threshold_19pct": 16.65,
+          "threshold_any_dip": 27.51,
+          "critical_splitting_hz": 6.000000000051076,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 6.5,
+          "threshold_10pct": 21.61,
+          "threshold_5pct": 24.11,
+          "threshold_19pct": 18.31,
+          "threshold_any_dip": 29.13,
+          "critical_splitting_hz": 6.500000000055332,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 7.0,
+          "threshold_10pct": 23.44,
+          "threshold_5pct": 26.11,
+          "threshold_19pct": 19.89,
+          "threshold_any_dip": 30.54,
+          "critical_splitting_hz": 7.000000000059588,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 7.5,
+          "threshold_10pct": 24.67,
+          "threshold_5pct": 27.64,
+          "threshold_19pct": 20.78,
+          "threshold_any_dip": 32.03,
+          "critical_splitting_hz": 7.500000000063844,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 8.0,
+          "threshold_10pct": 25.72,
+          "threshold_5pct": 28.96,
+          "threshold_19pct": 22.3,
+          "threshold_any_dip": 34.22,
+          "critical_splitting_hz": 7.990000000068459,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 8.5,
+          "threshold_10pct": 27.37,
+          "threshold_5pct": 30.09,
+          "threshold_19pct": 23.66,
+          "threshold_any_dip": 36.19,
+          "critical_splitting_hz": 8.490000000072271,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 9.0,
+          "threshold_10pct": 28.89,
+          "threshold_5pct": 31.6,
+          "threshold_19pct": 25.01,
+          "threshold_any_dip": 37.96,
+          "critical_splitting_hz": 9.000000000076612,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 9.5,
+          "threshold_10pct": 28.31,
+          "threshold_5pct": 32.07,
+          "threshold_19pct": 23.82,
+          "threshold_any_dip": 39.54,
+          "critical_splitting_hz": 8.390000000072309,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 10.0,
+          "threshold_10pct": 25.88,
+          "threshold_5pct": 29.73,
+          "threshold_19pct": 21.97,
+          "threshold_any_dip": 37.92,
+          "critical_splitting_hz": 7.880000000067523,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 10.5,
+          "threshold_10pct": 24.4,
+          "threshold_5pct": 27.8,
+          "threshold_19pct": 20.34,
+          "threshold_any_dip": 33.89,
+          "critical_splitting_hz": 7.390000000062908,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 11.0,
+          "threshold_10pct": 22.84,
+          "threshold_5pct": 25.75,
+          "threshold_19pct": 19.26,
+          "threshold_any_dip": 31.17,
+          "critical_splitting_hz": 6.8800000000590105,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 11.5,
+          "threshold_10pct": 21.11,
+          "threshold_5pct": 23.55,
+          "threshold_19pct": 17.99,
+          "threshold_any_dip": 28.75,
+          "critical_splitting_hz": 6.38000000005431,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 12.0,
+          "threshold_10pct": 19.16,
+          "threshold_5pct": 21.18,
+          "threshold_19pct": 16.47,
+          "threshold_any_dip": 26.36,
+          "critical_splitting_hz": 5.880000000050054,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 12.5,
+          "threshold_10pct": 16.93,
+          "threshold_5pct": 19.1,
+          "threshold_19pct": 14.65,
+          "threshold_any_dip": 23.96,
+          "critical_splitting_hz": 5.380000000045353,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 13.0,
+          "threshold_10pct": 15.42,
+          "threshold_5pct": 17.7,
+          "threshold_19pct": 12.64,
+          "threshold_any_dip": 21.53,
+          "critical_splitting_hz": 4.880000000041541,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 13.5,
+          "threshold_10pct": 14.22,
+          "threshold_5pct": 16.09,
+          "threshold_19pct": 11.88,
+          "threshold_any_dip": 19.02,
+          "critical_splitting_hz": 4.3700000000372,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 14.0,
+          "threshold_10pct": 12.75,
+          "threshold_5pct": 14.23,
+          "threshold_19pct": 10.82,
+          "threshold_any_dip": 14.69,
+          "critical_splitting_hz": 3.8700000000329435,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 14.5,
+          "threshold_10pct": 9.11,
+          "threshold_5pct": 9.11,
+          "threshold_19pct": 9.11,
+          "threshold_any_dip": 9.11,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 15.0,
+          "threshold_10pct": 5.11,
+          "threshold_5pct": 5.11,
+          "threshold_19pct": 5.11,
+          "threshold_any_dip": 5.11,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 15.5,
+          "threshold_10pct": 42.42,
+          "threshold_5pct": 46.28,
+          "threshold_19pct": 37.11,
+          "threshold_any_dip": 49.14,
+          "critical_splitting_hz": 16.694391689407382,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 16.0,
+          "threshold_10pct": 43.13,
+          "threshold_5pct": 47.3,
+          "threshold_19pct": 37.7,
+          "threshold_any_dip": 51.31,
+          "critical_splitting_hz": 16.885512353002287,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 16.5,
+          "threshold_10pct": 43.63,
+          "threshold_5pct": 48.16,
+          "threshold_19pct": 38.55,
+          "threshold_any_dip": 53.25,
+          "critical_splitting_hz": 17.147754203735825,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 17.0,
+          "threshold_10pct": 44.54,
+          "threshold_5pct": 48.91,
+          "threshold_19pct": 39.21,
+          "threshold_any_dip": 54.98,
+          "critical_splitting_hz": 17.392711705133923,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 17.5,
+          "threshold_10pct": 45.47,
+          "threshold_5pct": 49.53,
+          "threshold_19pct": 39.68,
+          "threshold_any_dip": 56.52,
+          "critical_splitting_hz": 17.650000000150246,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 18.0,
+          "threshold_10pct": 46.11,
+          "threshold_5pct": 50.32,
+          "threshold_19pct": 40.22,
+          "threshold_any_dip": 52.22,
+          "critical_splitting_hz": 17.900000000152374,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 18.5,
+          "threshold_10pct": 46.49,
+          "threshold_5pct": 51.01,
+          "threshold_19pct": 40.71,
+          "threshold_any_dip": 54.49,
+          "critical_splitting_hz": 17.9500000001528,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 19.0,
+          "threshold_10pct": 47.16,
+          "threshold_5pct": 51.61,
+          "threshold_19pct": 41.51,
+          "threshold_any_dip": 56.5,
+          "critical_splitting_hz": 18.385527519271964,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 19.5,
+          "threshold_10pct": 47.7,
+          "threshold_5pct": 52.12,
+          "threshold_19pct": 41.97,
+          "threshold_any_dip": 58.29,
+          "critical_splitting_hz": 18.618398020982497,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 20.0,
+          "threshold_10pct": 48.34,
+          "threshold_5pct": 52.89,
+          "threshold_19pct": 42.26,
+          "threshold_any_dip": 59.89,
+          "critical_splitting_hz": 18.8402367102443,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 20.5,
+          "threshold_10pct": 48.88,
+          "threshold_5pct": 53.53,
+          "threshold_19pct": 42.44,
+          "threshold_any_dip": 54.72,
+          "critical_splitting_hz": 19.075904845638686,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 21.0,
+          "threshold_10pct": 5.62,
+          "threshold_5pct": 6.14,
+          "threshold_19pct": 4.84,
+          "threshold_any_dip": 7.64,
+          "critical_splitting_hz": 3.1700000000269846,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 21.5,
+          "threshold_10pct": 9.41,
+          "threshold_5pct": 10.42,
+          "threshold_19pct": 7.98,
+          "threshold_any_dip": 11.71,
+          "critical_splitting_hz": 3.670000000031241,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 22.0,
+          "threshold_10pct": 12.14,
+          "threshold_5pct": 13.48,
+          "threshold_19pct": 10.34,
+          "threshold_any_dip": 15.29,
+          "critical_splitting_hz": 4.180000000035582,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 22.5,
+          "threshold_10pct": 14.18,
+          "threshold_5pct": 15.86,
+          "threshold_19pct": 11.99,
+          "threshold_any_dip": 18.29,
+          "critical_splitting_hz": 4.680000000039839,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 23.0,
+          "threshold_10pct": 15.8,
+          "threshold_5pct": 17.84,
+          "threshold_19pct": 13.2,
+          "threshold_any_dip": 20.97,
+          "critical_splitting_hz": 5.180000000043651,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 23.5,
+          "threshold_10pct": 17.11,
+          "threshold_5pct": 19.53,
+          "threshold_19pct": 14.11,
+          "threshold_any_dip": 23.43,
+          "critical_splitting_hz": 5.680000000048795,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 24.0,
+          "threshold_10pct": 18.24,
+          "threshold_5pct": 20.98,
+          "threshold_19pct": 15.8,
+          "threshold_any_dip": 25.72,
+          "critical_splitting_hz": 6.1900000000526925,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 24.5,
+          "threshold_10pct": 20.46,
+          "threshold_5pct": 22.51,
+          "threshold_19pct": 17.66,
+          "threshold_any_dip": 27.86,
+          "critical_splitting_hz": 6.690000000056949,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 25.0,
+          "threshold_10pct": 22.37,
+          "threshold_5pct": 24.75,
+          "threshold_19pct": 19.19,
+          "threshold_any_dip": 29.87,
+          "critical_splitting_hz": 7.190000000061205,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 25.5,
+          "threshold_10pct": 24.02,
+          "threshold_5pct": 26.74,
+          "threshold_19pct": 20.46,
+          "threshold_any_dip": 31.76,
+          "critical_splitting_hz": 7.710000000065632,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 26.0,
+          "threshold_10pct": 25.46,
+          "threshold_5pct": 28.54,
+          "threshold_19pct": 21.52,
+          "threshold_any_dip": 32.96,
+          "critical_splitting_hz": 8.210000000069888,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 26.5,
+          "threshold_10pct": 26.72,
+          "threshold_5pct": 30.17,
+          "threshold_19pct": 22.77,
+          "threshold_any_dip": 35.81,
+          "critical_splitting_hz": 8.710000000074144,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 27.0,
+          "threshold_10pct": 28.34,
+          "threshold_5pct": 31.63,
+          "threshold_19pct": 24.46,
+          "threshold_any_dip": 38.53,
+          "critical_splitting_hz": 9.220000000078485,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 27.5,
+          "threshold_10pct": 30.17,
+          "threshold_5pct": 33.38,
+          "threshold_19pct": 25.92,
+          "threshold_any_dip": 41.11,
+          "critical_splitting_hz": 9.720000000082742,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 28.0,
+          "threshold_10pct": 31.82,
+          "threshold_5pct": 35.39,
+          "threshold_19pct": 27.19,
+          "threshold_any_dip": 38.43,
+          "critical_splitting_hz": 10.220000000086998,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 28.5,
+          "threshold_10pct": 33.31,
+          "threshold_5pct": 37.23,
+          "threshold_19pct": 28.29,
+          "threshold_any_dip": 42.06,
+          "critical_splitting_hz": 10.730000000091783,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 29.0,
+          "threshold_10pct": 34.64,
+          "threshold_5pct": 38.92,
+          "threshold_19pct": 29.48,
+          "threshold_any_dip": 45.47,
+          "critical_splitting_hz": 11.230000000095595,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 29.5,
+          "threshold_10pct": 36.13,
+          "threshold_5pct": 40.48,
+          "threshold_19pct": 31.07,
+          "threshold_any_dip": 48.71,
+          "critical_splitting_hz": 11.730000000099851,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 30.0,
+          "threshold_10pct": 37.92,
+          "threshold_5pct": 42.12,
+          "threshold_19pct": 32.48,
+          "threshold_any_dip": 51.81,
+          "critical_splitting_hz": 12.240000000104192,
+          "critical_label_first_order": "J02 - J12",
+          "n_char_peaks": 8
+        }
+      ]
+    },
+    "conclusion": "Segment [9.5, 14.0] (J12 - J02 shrinks): threshold 28.31 -> 12.75 1/s, Spearman(threshold, J) = -0.9999999999999999; supports H2 (threshold falls or stays flat while J rises). Whole sweep: Spearman vs J 0.27, vs critical splitting 1.00.",
+    "limitations": "Artificial Hamiltonians, not the supplied molecules; synthetic references. Splittings of 2.7-3.5 Hz pass the 2-bin merge rule but are never resolved (no passing noise). Some points fail in narrow windows at 0.1-0.5 1/s (low-noise ringing). A_J12 >= 29 Hz fails detection at every noise: Trotter line shifts plus the axis offset exceed the 2.667 Hz tolerance.",
+    "script": "agents/agent3_spectral/task_c_jcoupling.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_c_jcoupling.py"
+  },
+  {
+    "id": "C2_artificial_A_J12",
+    "question": "ARTIFICIAL: how does the threshold change when only J12 of molecule A is varied?",
+    "hypotheses": [
+      "H1: threshold scales with the J-coupling strength itself",
+      "H2: threshold is set by the smallest resolvable line spacing",
+      "H1 and H2 both predict a rise while J12 - J02 is the smallest spacing; H2 predicts saturation when another spacing becomes smallest"
+    ],
+    "independent_variable": "J12 from 12.0 to 30.0 Hz",
+    "dependent_variable": "threshold (10% dip, plus any/5/19%), critical splitting",
+    "fixed_parameters": {
+      "other couplings and shifts": "as in the file",
+      "steps": 300,
+      "dt": 0.0025,
+      "criterion": "v1",
+      "reference": "synthetic (exact sticks, 1 Hz Lorentzian)"
+    },
+    "reference": "synthetic",
+    "result": {
+      "stats": {
+        "spearman_threshold_vs_J": 0.7608537747840488,
+        "spearman_threshold_vs_critical_splitting": 0.6536217591432584,
+        "n": 16,
+        "J_range": [
+          12.0,
+          28.0
+        ],
+        "threshold_range": [
+          13.77,
+          38.63
+        ]
+      },
+      "disagreement_segment": {
+        "J_range": [
+          24.0,
+          28.0
+        ],
+        "why": "J02 = 11.8 Hz becomes the smallest spacing",
+        "n": 5,
+        "n_never_pass": 0,
+        "threshold_at_lo": 37.74,
+        "threshold_at_hi": 38.63,
+        "spearman_threshold_vs_J_in_segment": 0.9746794344808964
+      },
+      "points": [
+        {
+          "J_hz": 12.0,
+          "threshold_10pct": 30.52,
+          "threshold_5pct": 33.08,
+          "threshold_19pct": 26.77,
+          "threshold_any_dip": 38.5,
+          "critical_splitting_hz": 11.900000000101299,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 13.0,
+          "threshold_10pct": 31.21,
+          "threshold_5pct": 34.43,
+          "threshold_19pct": 27.62,
+          "threshold_any_dip": 39.48,
+          "critical_splitting_hz": 12.399414132471634,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 14.0,
+          "threshold_10pct": 32.12,
+          "threshold_5pct": 35.66,
+          "threshold_19pct": 28.42,
+          "threshold_any_dip": 40.81,
+          "critical_splitting_hz": 12.866307998542696,
+          "critical_label_first_order": "0.5 J02 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 15.0,
+          "threshold_10pct": 8.36,
+          "threshold_5pct": 8.36,
+          "threshold_19pct": 8.36,
+          "threshold_any_dip": 8.36,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 16.0,
+          "threshold_10pct": 13.77,
+          "threshold_5pct": 15.53,
+          "threshold_19pct": 11.56,
+          "threshold_any_dip": 18.27,
+          "critical_splitting_hz": 4.180000000035582,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 17.0,
+          "threshold_10pct": 16.12,
+          "threshold_5pct": 18.68,
+          "threshold_19pct": 13.84,
+          "threshold_any_dip": 23.26,
+          "critical_splitting_hz": 5.180000000044095,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 18.0,
+          "threshold_10pct": 20.35,
+          "threshold_5pct": 22.61,
+          "threshold_19pct": 17.41,
+          "threshold_any_dip": 27.74,
+          "critical_splitting_hz": 6.1800000000530515,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 19.0,
+          "threshold_10pct": 23.6,
+          "threshold_5pct": 26.66,
+          "threshold_19pct": 19.83,
+          "threshold_any_dip": 31.78,
+          "critical_splitting_hz": 7.18000000006112,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 20.0,
+          "threshold_10pct": 26.63,
+          "threshold_5pct": 29.95,
+          "threshold_19pct": 22.76,
+          "threshold_any_dip": 38.02,
+          "critical_splitting_hz": 8.180000000069189,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 21.0,
+          "threshold_10pct": 30.4,
+          "threshold_5pct": 34.28,
+          "threshold_19pct": 25.68,
+          "threshold_any_dip": 44.03,
+          "critical_splitting_hz": 9.180000000077701,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 22.0,
+          "threshold_10pct": 33.45,
+          "threshold_5pct": 38.19,
+          "threshold_19pct": 28.1,
+          "threshold_any_dip": 44.91,
+          "critical_splitting_hz": 10.170000000086572,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 23.0,
+          "threshold_10pct": 37.29,
+          "threshold_5pct": 41.53,
+          "threshold_19pct": 31.34,
+          "threshold_any_dip": 47.49,
+          "critical_splitting_hz": 11.18000000009517,
+          "critical_label_first_order": "J12 - J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 24.0,
+          "threshold_10pct": 37.74,
+          "threshold_5pct": 41.63,
+          "threshold_19pct": 32.65,
+          "threshold_any_dip": 42.73,
+          "critical_splitting_hz": 11.780000000100278,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 25.0,
+          "threshold_10pct": 38.11,
+          "threshold_5pct": 42.42,
+          "threshold_19pct": 32.39,
+          "threshold_any_dip": 46.19,
+          "critical_splitting_hz": 11.780000000100278,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 26.0,
+          "threshold_10pct": 38.11,
+          "threshold_5pct": 42.52,
+          "threshold_19pct": 33.03,
+          "threshold_any_dip": 48.74,
+          "critical_splitting_hz": 11.770000000100193,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 27.0,
+          "threshold_10pct": 38.43,
+          "threshold_5pct": 42.42,
+          "threshold_19pct": 33.08,
+          "threshold_any_dip": 43.7,
+          "critical_splitting_hz": 11.780000000100278,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 28.0,
+          "threshold_10pct": 38.63,
+          "threshold_5pct": 43.16,
+          "threshold_19pct": 32.7,
+          "threshold_any_dip": 47.11,
+          "critical_splitting_hz": 11.770000000100193,
+          "critical_label_first_order": "J02",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 29.0,
+          "threshold_10pct": NaN,
+          "threshold_5pct": NaN,
+          "threshold_19pct": NaN,
+          "threshold_any_dip": NaN,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 30.0,
+          "threshold_10pct": 0.23,
+          "threshold_5pct": 0.23,
+          "threshold_19pct": 0.23,
+          "threshold_any_dip": 0.23,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 8
+        }
+      ]
+    },
+    "conclusion": "Segment [24.0, 28.0] (J02 = 11.8 Hz becomes the smallest spacing): threshold 37.74 -> 38.63 1/s, Spearman(threshold, J) = 0.9746794344808964; supports H2 (threshold falls or stays flat while J rises). Whole sweep: Spearman vs J 0.76, vs critical splitting 0.65.",
+    "limitations": "Artificial Hamiltonians, not the supplied molecules; synthetic references. Splittings of 2.7-3.5 Hz pass the 2-bin merge rule but are never resolved (no passing noise). Some points fail in narrow windows at 0.1-0.5 1/s (low-noise ringing). A_J12 >= 29 Hz fails detection at every noise: Trotter line shifts plus the axis offset exceed the 2.667 Hz tolerance.",
+    "script": "agents/agent3_spectral/task_c_jcoupling.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_c_jcoupling.py"
+  },
+  {
+    "id": "C2_artificial_B_J12",
+    "question": "ARTIFICIAL: how does the threshold change when only J12 of molecule B is varied?",
+    "hypotheses": [
+      "H1: threshold scales with the J-coupling strength itself",
+      "H2: threshold is set by the smallest resolvable line spacing",
+      "H1: threshold rises with J12. H2: critical = min(J12, J01 - J12) peaks near J12 = 7.8 and falls on both sides"
+    ],
+    "independent_variable": "J12 from 2.0 to 15.0 Hz",
+    "dependent_variable": "threshold (10% dip, plus any/5/19%), critical splitting",
+    "fixed_parameters": {
+      "other couplings and shifts": "as in the file",
+      "steps": 300,
+      "dt": 0.0025,
+      "criterion": "v1",
+      "reference": "synthetic (exact sticks, 1 Hz Lorentzian)"
+    },
+    "reference": "synthetic",
+    "result": {
+      "stats": {
+        "spearman_threshold_vs_J": 0.2636928289102203,
+        "spearman_threshold_vs_critical_splitting": 0.9943534726143423,
+        "n": 22,
+        "J_range": [
+          4.0,
+          15.0
+        ],
+        "threshold_range": [
+          8.05,
+          38.4
+        ]
+      },
+      "disagreement_segment": {
+        "J_range": [
+          8.5,
+          12.5
+        ],
+        "why": "J01 - J12 shrinks",
+        "n": 9,
+        "n_never_pass": 0,
+        "threshold_at_lo": 23.32,
+        "threshold_at_hi": 8.05,
+        "spearman_threshold_vs_J_in_segment": -1.0
+      },
+      "points": [
+        {
+          "J_hz": 2.0,
+          "threshold_10pct": 51.41,
+          "threshold_5pct": 51.41,
+          "threshold_19pct": 44.12,
+          "threshold_any_dip": 51.41,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 5
+        },
+        {
+          "J_hz": 2.5,
+          "threshold_10pct": 50.46,
+          "threshold_5pct": 50.46,
+          "threshold_19pct": 43.29,
+          "threshold_any_dip": 50.46,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 5
+        },
+        {
+          "J_hz": 3.0,
+          "threshold_10pct": NaN,
+          "threshold_5pct": NaN,
+          "threshold_19pct": NaN,
+          "threshold_any_dip": NaN,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 3.5,
+          "threshold_10pct": NaN,
+          "threshold_5pct": NaN,
+          "threshold_19pct": NaN,
+          "threshold_any_dip": NaN,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 4.0,
+          "threshold_10pct": 12.48,
+          "threshold_5pct": 13.76,
+          "threshold_19pct": 10.71,
+          "threshold_any_dip": 15.6,
+          "critical_splitting_hz": 3.990000000033965,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 4.5,
+          "threshold_10pct": 14.46,
+          "threshold_5pct": 16.19,
+          "threshold_19pct": 12.34,
+          "threshold_any_dip": 18.8,
+          "critical_splitting_hz": 4.490000000038221,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 5.0,
+          "threshold_10pct": 16.17,
+          "threshold_5pct": 18.31,
+          "threshold_19pct": 13.44,
+          "threshold_any_dip": 21.31,
+          "critical_splitting_hz": 4.990000000042477,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 5.5,
+          "threshold_10pct": 17.6,
+          "threshold_5pct": 20.09,
+          "threshold_19pct": 14.51,
+          "threshold_any_dip": 24.03,
+          "critical_splitting_hz": 5.4800000000466484,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 6.0,
+          "threshold_10pct": 18.77,
+          "threshold_5pct": 21.61,
+          "threshold_19pct": 15.63,
+          "threshold_any_dip": 26.2,
+          "critical_splitting_hz": 5.99000000005099,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 6.5,
+          "threshold_10pct": 20.37,
+          "threshold_5pct": 22.88,
+          "threshold_19pct": 17.6,
+          "threshold_any_dip": 28.1,
+          "critical_splitting_hz": 6.490000000055247,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 7.0,
+          "threshold_10pct": 22.27,
+          "threshold_5pct": 24.49,
+          "threshold_19pct": 19.2,
+          "threshold_any_dip": 29.76,
+          "critical_splitting_hz": 6.980000000059418,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 7.5,
+          "threshold_10pct": 23.88,
+          "threshold_5pct": 26.34,
+          "threshold_19pct": 20.51,
+          "threshold_any_dip": 31.18,
+          "critical_splitting_hz": 7.480000000063674,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 8.0,
+          "threshold_10pct": 25.24,
+          "threshold_5pct": 27.92,
+          "threshold_19pct": 21.09,
+          "threshold_any_dip": 30.02,
+          "critical_splitting_hz": 7.98000000006793,
+          "critical_label_first_order": "J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 8.5,
+          "threshold_10pct": 23.32,
+          "threshold_5pct": 26.59,
+          "threshold_19pct": 19.48,
+          "threshold_any_dip": 29.82,
+          "critical_splitting_hz": 7.120000000060609,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 9.0,
+          "threshold_10pct": 20.86,
+          "threshold_5pct": 23.5,
+          "threshold_19pct": 17.59,
+          "threshold_any_dip": 31.36,
+          "critical_splitting_hz": 6.610000000056268,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 9.5,
+          "threshold_10pct": 18.71,
+          "threshold_5pct": 21.82,
+          "threshold_19pct": 15.39,
+          "threshold_any_dip": 27.89,
+          "critical_splitting_hz": 6.120000000052096,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 10.0,
+          "threshold_10pct": 17.34,
+          "threshold_5pct": 19.96,
+          "threshold_19pct": 14.43,
+          "threshold_any_dip": 24.59,
+          "critical_splitting_hz": 5.610000000047755,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 10.5,
+          "threshold_10pct": 15.72,
+          "threshold_5pct": 17.86,
+          "threshold_19pct": 13.37,
+          "threshold_any_dip": 21.33,
+          "critical_splitting_hz": 5.110000000043499,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 11.0,
+          "threshold_10pct": 13.88,
+          "threshold_5pct": 15.44,
+          "threshold_19pct": 12.0,
+          "threshold_any_dip": 17.98,
+          "critical_splitting_hz": 4.620000000039328,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 11.5,
+          "threshold_10pct": 11.72,
+          "threshold_5pct": 12.77,
+          "threshold_19pct": 10.22,
+          "threshold_any_dip": 14.29,
+          "critical_splitting_hz": 4.120000000035072,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 12.0,
+          "threshold_10pct": 8.96,
+          "threshold_5pct": 9.97,
+          "threshold_19pct": 7.8,
+          "threshold_any_dip": 12.38,
+          "critical_splitting_hz": 3.6100000000307304,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 12.5,
+          "threshold_10pct": 8.05,
+          "threshold_5pct": 9.2,
+          "threshold_19pct": 6.59,
+          "threshold_any_dip": 10.93,
+          "critical_splitting_hz": 3.110000000026474,
+          "critical_label_first_order": "J01 - J12",
+          "n_char_peaks": 8
+        },
+        {
+          "J_hz": 13.0,
+          "threshold_10pct": 34.24,
+          "threshold_5pct": 34.24,
+          "threshold_19pct": 30.98,
+          "threshold_any_dip": 34.24,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 13.5,
+          "threshold_10pct": 36.34,
+          "threshold_5pct": 37.98,
+          "threshold_19pct": 31.5,
+          "threshold_any_dip": 37.98,
+          "critical_splitting_hz": 14.47816664650229,
+          "critical_label_first_order": "0.5 J01 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 14.0,
+          "threshold_10pct": 37.07,
+          "threshold_5pct": 40.56,
+          "threshold_19pct": 32.06,
+          "threshold_any_dip": 41.03,
+          "critical_splitting_hz": 14.748133905692804,
+          "critical_label_first_order": "0.5 J01 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 14.5,
+          "threshold_10pct": 37.63,
+          "threshold_5pct": 41.25,
+          "threshold_19pct": 33.02,
+          "threshold_any_dip": 43.62,
+          "critical_splitting_hz": 15.008114716695585,
+          "critical_label_first_order": "0.5 J01 + 0.5 J12",
+          "n_char_peaks": 7
+        },
+        {
+          "J_hz": 15.0,
+          "threshold_10pct": 38.4,
+          "threshold_5pct": 41.76,
+          "threshold_19pct": 33.85,
+          "threshold_any_dip": 45.87,
+          "critical_splitting_hz": 15.110000000129068,
+          "critical_label_first_order": "0.5 J01 + 0.5 J12",
+          "n_char_peaks": 7
+        }
+      ]
+    },
+    "conclusion": "Segment [8.5, 12.5] (J01 - J12 shrinks): threshold 23.32 -> 8.05 1/s, Spearman(threshold, J) = -1.0; supports H2 (threshold falls or stays flat while J rises). Whole sweep: Spearman vs J 0.26, vs critical splitting 0.99.",
+    "limitations": "Artificial Hamiltonians, not the supplied molecules; synthetic references. Splittings of 2.7-3.5 Hz pass the 2-bin merge rule but are never resolved (no passing noise). Some points fail in narrow windows at 0.1-0.5 1/s (low-noise ringing). A_J12 >= 29 Hz fails detection at every noise: Trotter line shifts plus the axis offset exceed the 2.667 Hz tolerance.",
+    "script": "agents/agent3_spectral/task_c_jcoupling.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_c_jcoupling.py"
+  },
+  {
+    "id": "C2_artificial_C_J01",
+    "question": "ARTIFICIAL: how does the threshold change when only J01 of molecule C is varied?",
+    "hypotheses": [
+      "H1: threshold scales with the J-coupling strength itself",
+      "H2: threshold is set by the smallest resolvable line spacing",
+      "H1 and H2 both predict an increase (critical splitting = J01); intensity ratio of the AB quartet changes"
+    ],
+    "independent_variable": "J01 from 3.0 to 16.0 Hz",
+    "dependent_variable": "threshold (10% dip, plus any/5/19%), critical splitting",
+    "fixed_parameters": {
+      "other couplings and shifts": "as in the file",
+      "steps": 300,
+      "dt": 0.0025,
+      "criterion": "v1",
+      "reference": "synthetic (exact sticks, 1 Hz Lorentzian)"
+    },
+    "reference": "synthetic",
+    "result": {
+      "stats": {
+        "spearman_threshold_vs_J": 0.9999999999999999,
+        "spearman_threshold_vs_critical_splitting": 0.9999999999999999,
+        "n": 26,
+        "J_range": [
+          3.5,
+          16.0
+        ],
+        "threshold_range": [
+          9.54,
+          38.93
+        ]
+      },
+      "disagreement_segment": {
+        "J_range": [
+          3.5,
+          16.0
+        ],
+        "why": "H1 and H2 agree (critical splitting = J01)",
+        "n": 26,
+        "n_never_pass": 0,
+        "threshold_at_lo": 9.54,
+        "threshold_at_hi": 38.93,
+        "spearman_threshold_vs_J_in_segment": 0.9999999999999999
+      },
+      "points": [
+        {
+          "J_hz": 3.0,
+          "threshold_10pct": NaN,
+          "threshold_5pct": NaN,
+          "threshold_19pct": NaN,
+          "threshold_any_dip": NaN,
+          "critical_splitting_hz": NaN,
+          "critical_label_first_order": "detection failure",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 3.5,
+          "threshold_10pct": 9.54,
+          "threshold_5pct": 11.03,
+          "threshold_19pct": 7.65,
+          "threshold_any_dip": 13.39,
+          "critical_splitting_hz": 3.500000000029794,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 4.0,
+          "threshold_10pct": 11.19,
+          "threshold_5pct": 12.11,
+          "threshold_19pct": 9.8,
+          "threshold_any_dip": 14.19,
+          "critical_splitting_hz": 4.000000000034494,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 4.5,
+          "threshold_10pct": 13.24,
+          "threshold_5pct": 14.41,
+          "threshold_19pct": 11.58,
+          "threshold_any_dip": 16.43,
+          "critical_splitting_hz": 4.500000000038306,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 5.0,
+          "threshold_10pct": 14.98,
+          "threshold_5pct": 16.78,
+          "threshold_19pct": 12.8,
+          "threshold_any_dip": 19.34,
+          "critical_splitting_hz": 5.000000000042562,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 5.5,
+          "threshold_10pct": 16.52,
+          "threshold_5pct": 18.63,
+          "threshold_19pct": 13.81,
+          "threshold_any_dip": 21.75,
+          "critical_splitting_hz": 5.5000000000468185,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 6.0,
+          "threshold_10pct": 17.67,
+          "threshold_5pct": 20.09,
+          "threshold_19pct": 14.61,
+          "threshold_any_dip": 23.77,
+          "critical_splitting_hz": 6.000000000051076,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 6.5,
+          "threshold_10pct": 18.79,
+          "threshold_5pct": 21.21,
+          "threshold_19pct": 16.37,
+          "threshold_any_dip": 25.45,
+          "critical_splitting_hz": 6.500000000055332,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 7.0,
+          "threshold_10pct": 20.7,
+          "threshold_5pct": 22.59,
+          "threshold_19pct": 18.01,
+          "threshold_any_dip": 26.79,
+          "critical_splitting_hz": 7.000000000059588,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 7.5,
+          "threshold_10pct": 22.21,
+          "threshold_5pct": 24.32,
+          "threshold_19pct": 19.24,
+          "threshold_any_dip": 27.82,
+          "critical_splitting_hz": 7.500000000063844,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 8.0,
+          "threshold_10pct": 23.38,
+          "threshold_5pct": 25.71,
+          "threshold_19pct": 20.15,
+          "threshold_any_dip": 28.96,
+          "critical_splitting_hz": 8.0000000000681,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 8.5,
+          "threshold_10pct": 24.25,
+          "threshold_5pct": 26.78,
+          "threshold_19pct": 20.75,
+          "threshold_any_dip": 31.09,
+          "critical_splitting_hz": 8.500000000072356,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 9.0,
+          "threshold_10pct": 25.14,
+          "threshold_5pct": 27.56,
+          "threshold_19pct": 22.18,
+          "threshold_any_dip": 32.87,
+          "critical_splitting_hz": 9.000000000076612,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 9.5,
+          "threshold_10pct": 26.48,
+          "threshold_5pct": 28.67,
+          "threshold_19pct": 23.31,
+          "threshold_any_dip": 34.33,
+          "critical_splitting_hz": 9.500000000080869,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 10.0,
+          "threshold_10pct": 27.51,
+          "threshold_5pct": 30.37,
+          "threshold_19pct": 24.14,
+          "threshold_any_dip": 35.51,
+          "critical_splitting_hz": 10.000000000085125,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 10.5,
+          "threshold_10pct": 28.65,
+          "threshold_5pct": 31.74,
+          "threshold_19pct": 24.68,
+          "threshold_any_dip": 35.37,
+          "critical_splitting_hz": 10.500000000089381,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 11.0,
+          "threshold_10pct": 29.53,
+          "threshold_5pct": 32.81,
+          "threshold_19pct": 25.63,
+          "threshold_any_dip": 37.44,
+          "critical_splitting_hz": 11.000000000093637,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 11.5,
+          "threshold_10pct": 30.78,
+          "threshold_5pct": 33.61,
+          "threshold_19pct": 26.96,
+          "threshold_any_dip": 39.16,
+          "critical_splitting_hz": 11.500000000097893,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 12.0,
+          "threshold_10pct": 32.0,
+          "threshold_5pct": 34.75,
+          "threshold_19pct": 27.98,
+          "threshold_any_dip": 40.57,
+          "critical_splitting_hz": 12.000000000102151,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 12.5,
+          "threshold_10pct": 32.93,
+          "threshold_5pct": 35.83,
+          "threshold_19pct": 28.71,
+          "threshold_any_dip": 38.98,
+          "critical_splitting_hz": 12.500000000106407,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 13.0,
+          "threshold_10pct": 33.61,
+          "threshold_5pct": 36.7,
+          "threshold_19pct": 29.37,
+          "threshold_any_dip": 41.27,
+          "critical_splitting_hz": 13.000000000110663,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 13.5,
+          "threshold_10pct": 34.31,
+          "threshold_5pct": 37.68,
+          "threshold_19pct": 30.43,
+          "threshold_any_dip": 43.16,
+          "critical_splitting_hz": 13.50000000011492,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 14.0,
+          "threshold_10pct": 35.44,
+          "threshold_5pct": 38.64,
+          "threshold_19pct": 31.22,
+          "threshold_any_dip": 44.73,
+          "critical_splitting_hz": 14.000000000119176,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 14.5,
+          "threshold_10pct": 36.5,
+          "threshold_5pct": 39.84,
+          "threshold_19pct": 31.75,
+          "threshold_any_dip": 42.27,
+          "critical_splitting_hz": 14.500000000123432,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 15.0,
+          "threshold_10pct": 37.29,
+          "threshold_5pct": 40.76,
+          "threshold_19pct": 32.37,
+          "threshold_any_dip": 44.7,
+          "critical_splitting_hz": 15.000000000127688,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 15.5,
+          "threshold_10pct": 37.93,
+          "threshold_5pct": 41.43,
+          "threshold_19pct": 33.51,
+          "threshold_any_dip": 46.7,
+          "critical_splitting_hz": 15.500000000131944,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        },
+        {
+          "J_hz": 16.0,
+          "threshold_10pct": 38.93,
+          "threshold_5pct": 41.96,
+          "threshold_19pct": 34.36,
+          "threshold_any_dip": 48.35,
+          "critical_splitting_hz": 16.0000000001362,
+          "critical_label_first_order": "J01",
+          "n_char_peaks": 4
+        }
+      ]
+    },
+    "conclusion": "Segment [3.5, 16.0] (H1 and H2 agree (critical splitting = J01)): threshold 9.54 -> 38.93 1/s, Spearman(threshold, J) = 0.9999999999999999; H1 and H2 agree here; threshold rises with J. Whole sweep: Spearman vs J 1.00, vs critical splitting 1.00.",
+    "limitations": "Artificial Hamiltonians, not the supplied molecules; synthetic references. Splittings of 2.7-3.5 Hz pass the 2-bin merge rule but are never resolved (no passing noise). Some points fail in narrow windows at 0.1-0.5 1/s (low-noise ringing). A_J12 >= 29 Hz fails detection at every noise: Trotter line shifts plus the axis offset exceed the 2.667 Hz tolerance.",
+    "script": "agents/agent3_spectral/task_c_jcoupling.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_c_jcoupling.py"
+  },
+  {
+    "id": "C3_pooled_fit",
+    "question": "ARTIFICIAL + real: does one proportionality threshold = a x critical splitting describe all points?",
+    "hypotheses": [
+      "H2 predicts a near-universal proportionality modulated by intensity ratios"
+    ],
+    "independent_variable": "critical splitting (Hz)",
+    "dependent_variable": "threshold (10% dip)",
+    "fixed_parameters": {
+      "criterion": "v1"
+    },
+    "reference": "synthetic",
+    "result": {
+      "fit": {
+        "a": 2.8109181244337327,
+        "R2": 0.9180812263988225,
+        "n": 144
+      },
+      "spearman_vs_J": 0.5379783353541265,
+      "spearman_vs_critical": 0.9889737466454707
+    },
+    "conclusion": "See report.",
+    "limitations": "Points with no passing value excluded from the fit.",
+    "script": "agents/agent3_spectral/task_c_jcoupling.py",
+    "command": ".venv/bin/python agents/agent3_spectral/task_c_jcoupling.py"
+  }
+]

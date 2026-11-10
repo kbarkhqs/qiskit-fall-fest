@@ -1,0 +1,17 @@
+{
+ "molecule A": {
+  "max_line_offset_hz": 148.71355509794617,
+  "max_sampling_interval_ms": 3.362168295087079,
+  "min_time_points_for_0.75s": 224
+ },
+ "molecule B": {
+  "max_line_offset_hz": 159.19987601826068,
+  "max_sampling_interval_ms": 3.1407059635062065,
+  "min_time_points_for_0.75s": 239
+ },
+ "molecule C": {
+  "max_line_offset_hz": 22.634691128875186,
+  "max_sampling_interval_ms": 22.08998555152129,
+  "min_time_points_for_0.75s": 34
+ }
+}

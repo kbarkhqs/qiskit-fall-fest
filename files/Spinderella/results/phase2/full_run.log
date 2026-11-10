@@ -1,0 +1,59 @@
+qiskit_runtime_service.__init__:WARNING:2026-11-10 10:22:11,361: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: qiskit-fall-fest-oturki036. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService(). Alternatively, pass instance='auto' or save it to your account for auto-selection without warning.
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:22:11,362: Using instance: qiskit-fall-fest-oturki036, plan: open
+ibm_kingston operational=True pending=0; snapshot saved
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:23:00,677: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_A_000_trex_twirl_dd: job dbpm228ou4as73cttgjg (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:23:14,236: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_A_000_raw: job dbpm250ou4as73cttgog (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:24:04,030: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_A_001_trex_twirl_dd: job dbpm2hoou4as73ctth70 (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:24:16,152: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_A_001_raw: job dbpm2k8qtr0c738elfeg (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:25:04,480: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_A_010_trex_twirl_dd: job dbpm3144148s739urr60 (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:25:17,904: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_A_010_raw: job dbpm33oou4as73ctths0 (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:26:07,754: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_A_100_trex_twirl_dd: job dbpm3h8qtr0c738elgpg (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:26:22,224: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_A_100_raw: job dbpm3jtt7fqc7389lub0 (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:27:13,996: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_B_000_trex_twirl_dd: job dbpm41gou4as73cttjgg (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:27:27,835: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_B_000_raw: job dbpm4444148s739urte0 (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:28:17,424: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_B_001_trex_twirl_dd: job dbpm4h44148s739uru6g (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:28:29,854: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_B_001_raw: job dbpm4jlt7fqc7389lvvg (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:29:20,396: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_B_010_trex_twirl_dd: job dbpm515t7fqc7389m0o0 (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:29:34,019: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_B_010_raw: job dbpm53oqtr0c738eljl0 (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:30:23,890: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_B_100_trex_twirl_dd: job dbpm5goqtr0c738elkb0 (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:30:36,462: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_B_100_raw: job dbpm5j8ou4as73cttm8g (300 pubs, <= 27 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:31:12,469: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_C_00_trex_twirl_dd: job dbpm5s8ou4as73cttmjg (300 pubs, <= 3 CZ)
+qiskit_runtime_service.backends:WARNING:2026-11-10 10:31:17,523: Using instance: qiskit-fall-fest-oturki036, plan: open
+submitted full_C_00_raw: job dbpm5tlt7fqc7389m2cg (300 pubs, <= 3 CZ)
+full_A_000_trex_twirl_dd done (usage 25 s)
+full_A_000_raw done (usage 14 s)
+full_A_001_trex_twirl_dd done (usage 25 s)
+full_A_001_raw done (usage 14 s)
+full_A_010_trex_twirl_dd done (usage 25 s)
+full_A_010_raw done (usage 14 s)
+full_A_100_trex_twirl_dd done (usage 25 s)
+full_A_100_raw done (usage 14 s)
+full_B_000_trex_twirl_dd done (usage 25 s)
+full_B_000_raw done (usage 14 s)
+full_B_001_trex_twirl_dd done (usage 25 s)
+full_B_001_raw done (usage 14 s)
+full_B_010_trex_twirl_dd done (usage 25 s)
+full_B_010_raw done (usage 14 s)
+full_B_100_trex_twirl_dd done (usage 25 s)
+full_B_100_raw done (usage 14 s)
+full_C_00_trex_twirl_dd done (usage 25 s)
+full_C_00_raw done (usage 13 s)
+all jobs finished; account usage 390 s of 600
+exit 0

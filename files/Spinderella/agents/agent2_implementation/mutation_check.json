@@ -1,0 +1,70 @@
+[
+  {
+    "case": "upstream placeholder (git HEAD cell 14)",
+    "molecule": "molecule A",
+    "number_spins": 3,
+    "number_of_states": 1,
+    "detector1_state_checks": "AssertionError: expected 8 bit tuples, got 1",
+    "detector2_notebook_cell_15": "AssertionError: need exactly 2^N states",
+    "max_abs_mx0": 0.0,
+    "max_abs_c_xx_raw": 0.0,
+    "max_abs_c_yx_raw": 0.0,
+    "detector3_guard": "ValueError: Cannot normalise the spectrum: max(|spectrum|) is 0.0. The time signals c_xx and c_yx are all zero or not finite; check the initial states (section 5) and the simulated expectation values.",
+    "upstream_function_warnings": [
+      "RuntimeWarning: invalid value encountered in divide"
+    ],
+    "upstream_function_spectrum_all_nan": true,
+    "all_detectors_fired": true,
+    "all_detectors_passed": false
+  },
+  {
+    "case": "edited cell 14 (control)",
+    "molecule": "molecule A",
+    "number_spins": 3,
+    "number_of_states": 8,
+    "detector1_state_checks": "pass",
+    "detector2_notebook_cell_15": "pass",
+    "max_abs_mx0": 2.9999999999999987,
+    "max_abs_c_xx_raw": 23.999999999999982,
+    "max_abs_c_yx_raw": 8.678947623519367,
+    "detector3_guard": "pass",
+    "upstream_function_warnings": [],
+    "upstream_function_spectrum_all_nan": false,
+    "all_detectors_fired": false,
+    "all_detectors_passed": true
+  },
+  {
+    "case": "upstream placeholder (git HEAD cell 14)",
+    "molecule": "molecule C",
+    "number_spins": 2,
+    "number_of_states": 1,
+    "detector1_state_checks": "AssertionError: expected 4 bit tuples, got 1",
+    "detector2_notebook_cell_15": "AssertionError: need exactly 2^N states",
+    "max_abs_mx0": 0.0,
+    "max_abs_c_xx_raw": 0.0,
+    "max_abs_c_yx_raw": 0.0,
+    "detector3_guard": "ValueError: Cannot normalise the spectrum: max(|spectrum|) is 0.0. The time signals c_xx and c_yx are all zero or not finite; check the initial states (section 5) and the simulated expectation values.",
+    "upstream_function_warnings": [
+      "RuntimeWarning: invalid value encountered in divide"
+    ],
+    "upstream_function_spectrum_all_nan": true,
+    "all_detectors_fired": true,
+    "all_detectors_passed": false
+  },
+  {
+    "case": "edited cell 14 (control)",
+    "molecule": "molecule C",
+    "number_spins": 2,
+    "number_of_states": 4,
+    "detector1_state_checks": "pass",
+    "detector2_notebook_cell_15": "pass",
+    "max_abs_mx0": 1.9999999999999991,
+    "max_abs_c_xx_raw": 7.999999999999993,
+    "max_abs_c_yx_raw": 6.661338147750936e-16,
+    "detector3_guard": "pass",
+    "upstream_function_warnings": [],
+    "upstream_function_spectrum_all_nan": false,
+    "all_detectors_fired": false,
+    "all_detectors_passed": true
+  }
+]

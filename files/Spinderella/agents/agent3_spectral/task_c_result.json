@@ -1,0 +1,203 @@
+{
+  "observational": [
+    {
+      "molecule": "A",
+      "reference": "spectrum_3",
+      "couplings_hz": "{\"J01\": 0.9, \"J02\": 11.8, \"J12\": 17.9}",
+      "shift_ppm": "{\"0\": 5.79, \"1\": 5.97, \"2\": 5.48}",
+      "mean_abs_J": 10.200000000000001,
+      "max_abs_J": 17.9,
+      "min_abs_J": 0.9,
+      "critical_splitting_hz": 6.053276796098279,
+      "critical_origin": "J12 - J02",
+      "critical_first_order_hz": 6.100000000000412,
+      "threshold_any_dip": 27.32,
+      "threshold_5pct": 22.15,
+      "threshold_10pct": 19.97,
+      "threshold_19pct": 17.11,
+      "ratio_threshold_to_critical": 3.2990396231132086
+    },
+    {
+      "molecule": "B",
+      "reference": "spectrum_2",
+      "couplings_hz": "{\"J01\": 15.6, \"J02\": -0.5, \"J12\": 8.6}",
+      "shift_ppm": "{\"0\": 5.58, \"1\": 5.9, \"2\": 5.34}",
+      "mean_abs_J": 8.233333333333333,
+      "max_abs_J": 15.599999999999998,
+      "min_abs_J": 0.5,
+      "critical_splitting_hz": 7.0249397538571365,
+      "critical_origin": "J01 - J12",
+      "critical_first_order_hz": 7.00000000000008,
+      "threshold_any_dip": 33.36,
+      "threshold_5pct": 25.99,
+      "threshold_10pct": 22.85,
+      "threshold_19pct": 19.13,
+      "ratio_threshold_to_critical": 3.252696934155756
+    },
+    {
+      "molecule": "C",
+      "reference": "spectrum_1",
+      "couplings_hz": "{\"J01\": 7.92}",
+      "shift_ppm": "{\"0\": 6.375, \"1\": 6.302}",
+      "mean_abs_J": 7.919999999999999,
+      "max_abs_J": 7.919999999999999,
+      "min_abs_J": 7.919999999999999,
+      "critical_splitting_hz": 7.915196071016753,
+      "critical_origin": "J01",
+      "critical_first_order_hz": 7.919999999999917,
+      "threshold_any_dip": 28.58,
+      "threshold_5pct": 25.51,
+      "threshold_10pct": 23.22,
+      "threshold_19pct": 20.02,
+      "ratio_threshold_to_critical": 2.9335975750525223
+    }
+  ],
+  "correlations_n3": {
+    "mean_abs_J": {
+      "pearson_r": -0.9997368604452539,
+      "spearman_rho": -1.0
+    },
+    "max_abs_J": {
+      "pearson_r": -0.7510362067531067,
+      "spearman_rho": -1.0
+    },
+    "min_abs_J": {
+      "pearson_r": 0.5478755073693704,
+      "spearman_rho": 0.5
+    },
+    "critical_splitting_hz": {
+      "pearson_r": 0.9233060282776884,
+      "spearman_rho": 1.0
+    }
+  },
+  "synthetic_reference_validation": [
+    {
+      "molecule": "A",
+      "same_number_of_char_peaks": true,
+      "max_position_diff_hz": 0.03782952525482413,
+      "thresholds_real_ref": {
+        "any_dip": 27.32,
+        "5pct": 22.15,
+        "10pct": 19.97,
+        "19pct": 17.11
+      },
+      "thresholds_synthetic_ref": {
+        "any_dip": 27.32,
+        "5pct": 22.15,
+        "10pct": 19.97,
+        "19pct": 17.11
+      },
+      "identical_thresholds": true
+    },
+    {
+      "molecule": "B",
+      "same_number_of_char_peaks": true,
+      "max_position_diff_hz": 0.02186192677121944,
+      "thresholds_real_ref": {
+        "any_dip": 33.36,
+        "5pct": 25.99,
+        "10pct": 22.85,
+        "19pct": 19.13
+      },
+      "thresholds_synthetic_ref": {
+        "any_dip": 33.36,
+        "5pct": 25.99,
+        "10pct": 22.85,
+        "19pct": 19.13
+      },
+      "identical_thresholds": true
+    },
+    {
+      "molecule": "C",
+      "same_number_of_char_peaks": true,
+      "max_position_diff_hz": 0.006050392950872949,
+      "thresholds_real_ref": {
+        "any_dip": 28.58,
+        "5pct": 25.51,
+        "10pct": 23.22,
+        "19pct": 20.02
+      },
+      "thresholds_synthetic_ref": {
+        "any_dip": 28.58,
+        "5pct": 25.51,
+        "10pct": 23.22,
+        "19pct": 20.02
+      },
+      "identical_thresholds": true
+    }
+  ],
+  "experiment_stats": {
+    "A_J01": {
+      "spearman_threshold_vs_J": -0.6890011137370862,
+      "spearman_threshold_vs_critical_splitting": 0.8894640164181512,
+      "n": 29,
+      "J_range": [
+        0.0,
+        8.0
+      ],
+      "threshold_range": [
+        11.49,
+        20.02
+      ]
+    },
+    "A_J02": {
+      "spearman_threshold_vs_J": 0.2673303167420814,
+      "spearman_threshold_vs_critical_splitting": 0.9973755656108598,
+      "n": 51,
+      "J_range": [
+        4.0,
+        30.0
+      ],
+      "threshold_range": [
+        5.62,
+        48.88
+      ]
+    },
+    "A_J12": {
+      "spearman_threshold_vs_J": 0.7608537747840488,
+      "spearman_threshold_vs_critical_splitting": 0.6536217591432584,
+      "n": 16,
+      "J_range": [
+        12.0,
+        28.0
+      ],
+      "threshold_range": [
+        13.77,
+        38.63
+      ]
+    },
+    "B_J12": {
+      "spearman_threshold_vs_J": 0.2636928289102203,
+      "spearman_threshold_vs_critical_splitting": 0.9943534726143423,
+      "n": 22,
+      "J_range": [
+        4.0,
+        15.0
+      ],
+      "threshold_range": [
+        8.05,
+        38.4
+      ]
+    },
+    "C_J01": {
+      "spearman_threshold_vs_J": 0.9999999999999999,
+      "spearman_threshold_vs_critical_splitting": 0.9999999999999999,
+      "n": 26,
+      "J_range": [
+        3.5,
+        16.0
+      ],
+      "threshold_range": [
+        9.54,
+        38.93
+      ]
+    },
+    "pooled_fit_threshold_eq_a_times_critical_splitting": {
+      "a": 2.8109181244337327,
+      "R2": 0.9180812263988225,
+      "n": 144
+    },
+    "pooled_spearman_threshold_vs_J": 0.5379783353541265,
+    "pooled_spearman_threshold_vs_critical": 0.9889737466454707
+  }
+}

@@ -1,0 +1,89 @@
+{
+ "A": {
+  "300 steps": {
+   "threshold_trotter": 19.97,
+   "threshold_exact_same_grid": 21.23,
+   "difference": -1.26,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 0.93275,
+    "noise 20": 0.9938
+   }
+  },
+  "600 steps": {
+   "threshold_trotter": 20.92,
+   "threshold_exact_same_grid": 21.46,
+   "difference": -0.54,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 0.99725,
+    "noise 20": 0.99976
+   }
+  },
+  "1200 steps": {
+   "threshold_trotter": 21.58,
+   "threshold_exact_same_grid": 21.54,
+   "difference": 0.04,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 0.99985,
+    "noise 20": 0.99999
+   }
+  }
+ },
+ "B": {
+  "300 steps": {
+   "threshold_trotter": 22.85,
+   "threshold_exact_same_grid": 23.48,
+   "difference": -0.63,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 0.97466,
+    "noise 20": 0.99808
+   }
+  },
+  "600 steps": {
+   "threshold_trotter": 23.57,
+   "threshold_exact_same_grid": 23.48,
+   "difference": 0.09,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 0.99905,
+    "noise 20": 0.99992
+   }
+  },
+  "1200 steps": {
+   "threshold_trotter": 23.48,
+   "threshold_exact_same_grid": 23.44,
+   "difference": 0.04,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 0.99995,
+    "noise 20": 1.0
+   }
+  }
+ },
+ "C": {
+  "300 steps": {
+   "threshold_trotter": 23.22,
+   "threshold_exact_same_grid": 23.09,
+   "difference": 0.13,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 0.99987,
+    "noise 20": 0.99999
+   }
+  },
+  "600 steps": {
+   "threshold_trotter": 23.11,
+   "threshold_exact_same_grid": 23.08,
+   "difference": 0.03,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 0.99999,
+    "noise 20": 1.0
+   }
+  },
+  "1200 steps": {
+   "threshold_trotter": 23.08,
+   "threshold_exact_same_grid": 23.08,
+   "difference": 0.0,
+   "cosine_trotter_vs_exact": {
+    "noise 5": 1.0,
+    "noise 20": 1.0
+   }
+  }
+ }
+}

@@ -1,0 +1,377 @@
+{
+  "challenge": "HQS Quantum Simulations NMR challenge, Qiskit Fall Fest 2026 (intermediate), repo kbarkhqs/qiskit-fall-fest, nmr.ipynb",
+  "date": "2026-11-10",
+  "environment": {
+    "python": "3.12.13",
+    "qiskit": "2.6.2",
+    "struqture_py": "2.6.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "simulation_settings": {
+    "field_T": 11.7433,
+    "proton_larmor_MHz": 499.99999,
+    "hz_per_ppm": 500.0,
+    "trotter": "first-order Lie-Trotter (PauliEvolutionGate + LieTrotter)",
+    "trotter_timestep_s": 0.0025,
+    "number_of_trottersteps": 300,
+    "acquisition_s": 0.75,
+    "frequency_grid_hz": 1.3333,
+    "estimator": "StatevectorEstimator (ideal, noise-free)"
+  },
+  "initial_states": {
+    "construction": "H then RZ(phi_i) on every qubit, phi_i = pi * bit_i (0 -> |+>, pi -> |-> up to global phase -i); identical to RX(phi) then H",
+    "number_of_states": "2^N (8 for A and B, 4 for C), all bit strings via itertools.product((0,1), repeat=N)",
+    "eigenvalue_of_sum_X": "N - 2w, w = number of qubits in |-> (not the bit label)",
+    "weight_in_correlation_sum": "m_n = N - 2w (measured as <sum X> at t=0); signed, not equal weights",
+    "checks": {
+      "C_xx(0)": "N*2^N = 24, 24, 8 (measured 24.000, 24.000, 8.000)",
+      "C_yx(0)": "0 (measured |.| <= 1.5e-15)",
+      "orthonormal_and_complete": "Gram - 1 = 4e-16"
+    },
+    "caveats": [
+      "weights are unique only up to scale: a*m+b (a != 0) gives a times the trace (Tr A(t) = 0 removes b), e.g. N-w = (m+N)/2 gives half, -(N-2w) minus the trace; normalised spectra identical (3e-16) because of the division by the maximum and np.abs",
+      "all-plus state alone: exact for C, off by 4.8 % (A) and 4.0 % (B) of the spectrum maximum",
+      "equal weights give 8.9e-16 rounding noise; guard now rejects signal scale < 1e-8"
+    ]
+  },
+  "task_A_matching": {
+    "assignment": {
+      "molecule A": "spectrum_3",
+      "molecule B": "spectrum_2",
+      "molecule C": "spectrum_1"
+    },
+    "expected_score": "3 of 3 if correct (1 point per correct match)",
+    "method": "all 6 one-to-one assignments scored; cosine similarity on the simulation's ppm grid (reference bin-averaged), peak and multiplet checks",
+    "total_cosine_best_vs_second": [
+      2.516,
+      0.873
+    ],
+    "robustness": "same assignment in all 27 (specialist) and all 126 (reviewer) metric/noise/resampling combinations; worst relative margin 13 % (cosine restricted to overlap window)",
+    "hints_not_used_for_decision": [
+      "files/hqs_spectrum_tools_molecule C_B11.7433T.pkl is byte-identical to spectrum_1.pkl",
+      "the original notebook overlays molecule A with spectrum_3.pkl"
+    ]
+  },
+  "task_B_noise_tolerance": {
+    "criterion": {
+      "characteristic_peaks": "maxima of the matched reference with height >= 0.05 and prominence >= 0.02 (normalised); components closer than 2 grid bins (2.667 Hz) merged",
+      "detection": "each characteristic peak needs its own simulated local maximum within +-2.667 Hz, in order",
+      "separation_primary": "dip between every pair of neighbouring characteristic peaks >= 10 % of the smaller maximum",
+      "search": "noise_strength 0.1-100 in steps of 0.1, every pass/fail change refined in steps of 0.01",
+      "fixed_before_sweep": true
+    },
+    "monotonic": "exactly one pass->fail change per molecule and dip level; all pass at noise_strength = 0",
+    "robust_conclusions": [
+      "molecule A has the lowest tolerance at every dip level >= 5 %",
+      "B vs C order is NOT robust: flips with dip level and with Trotter error (exact evolution: C 23.09 < B 23.48)"
+    ],
+    "pre_registered_prediction_check": {
+      "continuum_any_dip_predicted": {
+        "A": 32.5,
+        "B": 34.15,
+        "C": 30.15
+      },
+      "exact_evolution_2400_steps_any_dip_measured": {
+        "A": 32.45,
+        "B": 34.15,
+        "C": 30.1
+      }
+    },
+    "why_A_official_value_is_lower": "first-order Trotter error changes line intensities by up to 19 % (A); swap test: exact positions + Trotter intensities = 28.00, Trotter positions + exact intensities = 32.45"
+  },
+  "molecules": {
+    "molecule A": {
+      "spins": 3,
+      "chemical_shifts_ppm": [
+        5.79,
+        5.97,
+        5.48
+      ],
+      "j_couplings_hz": {
+        "J01": 0.9,
+        "J02": 11.8,
+        "J12": 17.9
+      },
+      "matched_reference": "spectrum_3",
+      "matching_cosine_similarity_noise5": 0.804,
+      "best_other_reference_cosine_max": 0.005,
+      "max_tolerable_noise_strength_s-1": 19.97,
+      "first_failing_noise_strength_s-1": 19.98,
+      "critical_pair_ppm": [
+        5.47285,
+        5.48496
+      ],
+      "critical_splitting_hz": 6.053,
+      "critical_splitting_origin": "J12 - J02: inner lines of spin 2's doublet of doublets (5.48 ppm)",
+      "threshold_other_dip_levels_s-1": {
+        "any_dip": 27.32,
+        "5_percent": 22.15,
+        "19_percent": 17.11
+      },
+      "threshold_sensitivity_s-1": {
+        "exact_evolution_300_points": 21.23,
+        "trotter_600_steps": 20.05,
+        "trotter_1200_steps": 20.1
+      }
+    },
+    "molecule B": {
+      "spins": 3,
+      "chemical_shifts_ppm": [
+        5.58,
+        5.9,
+        5.34
+      ],
+      "j_couplings_hz": {
+        "J01": 15.6,
+        "J02": -0.5,
+        "J12": 8.6
+      },
+      "matched_reference": "spectrum_2",
+      "matching_cosine_similarity_noise5": 0.869,
+      "best_other_reference_cosine_max": 0.005,
+      "max_tolerable_noise_strength_s-1": 22.85,
+      "first_failing_noise_strength_s-1": 22.86,
+      "critical_pair_ppm": [
+        5.89383,
+        5.90788
+      ],
+      "critical_splitting_hz": 7.025,
+      "critical_splitting_origin": "J01 - J12: inner lines of spin 1's doublet of doublets (5.90 ppm)",
+      "threshold_other_dip_levels_s-1": {
+        "any_dip": 33.36,
+        "5_percent": 25.99,
+        "19_percent": 19.13
+      },
+      "threshold_sensitivity_s-1": {
+        "exact_evolution_300_points": 23.48,
+        "trotter_600_steps": 23.36,
+        "trotter_1200_steps": 23.38
+      }
+    },
+    "molecule C": {
+      "spins": 2,
+      "chemical_shifts_ppm": [
+        6.375,
+        6.302
+      ],
+      "j_couplings_hz": {
+        "J01": 7.92
+      },
+      "matched_reference": "spectrum_1",
+      "matching_cosine_similarity_noise5": 0.843,
+      "best_other_reference_cosine_max": 0.005,
+      "max_tolerable_noise_strength_s-1": 23.22,
+      "first_failing_noise_strength_s-1": 23.23,
+      "critical_pair_ppm": [
+        6.29323,
+        6.30906
+      ],
+      "critical_splitting_hz": 7.915,
+      "critical_splitting_origin": "J01: outer, weaker lines of the AB quartet (roof effect)",
+      "threshold_other_dip_levels_s-1": {
+        "any_dip": 28.58,
+        "5_percent": 25.51,
+        "19_percent": 20.02
+      },
+      "threshold_sensitivity_s-1": {
+        "exact_evolution_300_points": 23.09,
+        "trotter_600_steps": 23.1,
+        "trotter_1200_steps": 23.23
+      }
+    }
+  },
+  "j_coupling_answer": {
+    "short": "The tolerance is set by the smallest line spacing that must stay resolved, not by the J strength itself.",
+    "hypothesis_H1_tolerance_grows_with_J": "rejected as a general rule",
+    "hypothesis_H2_set_by_critical_spacing_topology_intensities": "supported",
+    "observation": "A has the largest couplings (mean |J| 10.2 Hz) and the lowest tolerance",
+    "topology": "A and B are near-chains (one coupling ~0); the central spin's doublet of doublets has an inner spacing equal to the DIFFERENCE of its two couplings (6.1 Hz in A, 7.0 Hz in B); C is an AB system with shift difference 4.6 J, outer lines 1.54x weaker",
+    "controlled_experiments_one_coupling_changed": {
+      "A_J02_hz_vs_threshold": {
+        "9.5": 28.31,
+        "10.5": 24.4,
+        "11.8": 19.97,
+        "13.0": 15.42,
+        "14.0": 12.75
+      },
+      "B_J12_hz_vs_threshold": {
+        "8.6": 22.85,
+        "9.5": 18.71,
+        "10.5": 15.72,
+        "11.5": 11.72,
+        "12.5": 8.05
+      },
+      "C_J01_hz_vs_threshold": {
+        "4.0": 11.19,
+        "6.0": 17.67,
+        "7.92": 23.22,
+        "10.0": 27.51,
+        "12.0": 32.0
+      }
+    },
+    "pooled_159_artificial_hamiltonians": {
+      "spearman_threshold_vs_critical_spacing": 0.989,
+      "spearman_threshold_vs_J": 0.538
+    },
+    "reviewer_tests": [
+      "raising J02 and J12 together at fixed difference: threshold changes only -6 % / +2 %",
+      "changing only C's shift difference at fixed J: threshold changes by a factor 1.7"
+    ],
+    "rule_of_thumb": "FWHM = Gamma/pi Hz; equal isolated lines D Hz apart lose their dip at Gamma = pi*sqrt(3)*D = 5.44 D (upper bound); measured ~3.3 D at 10 % dip, 4.4-4.8 D any dip"
+  },
+  "pipeline_checks": {
+    "rotating_frame_exact": "||[H, sum Z]|| = 0",
+    "trotter_circuit": "gate angles = 2*coeff*dt (error 0); unitary = file-order product to 3.3e-16",
+    "statevector_stepwise_vs_estimator": "max difference 0.0",
+    "trotter_line_shift_max_hz": {
+      "A": 0.715,
+      "B": 0.418,
+      "C": 0.012
+    },
+    "spectrum_sign": "code's '+ Im' correct; markdown's '- Im' would mirror the spectrum",
+    "ppm_axis_offset": "lines drawn 0.42-0.93 Hz low (fftfreq labels vs fft_causal sample points); sub-bin, code left unchanged",
+    "routing": "no SWAP in the ideal simulator; linear 0-1-2 hardware needs 1 SWAP per Trotter step for A and B",
+    "notebook_execution": "clean kernel, exit 0, 220 s, no errors or warnings",
+    "pytest": "68 passed"
+  },
+  "limitations": [
+    "noise_strength is an artificial exponential window on an ideal simulation, not hardware noise",
+    "thresholds depend on the dip level: -16 % to +46 % between the 19 % and any-dip levels",
+    "A's 0.9 Hz J01 doublets are excluded (never two maxima on the 1.333 Hz grid); if required, A never passes",
+    "2-bin position tolerance is necessary (1 bin: A and B never pass even at noise 0)",
+    "splittings below about 3.5-4 Hz are never resolved with 300 steps of 2.5 ms",
+    "n = 3 molecules: across-molecule relation is correlation only; causal claim rests on one-coupling-at-a-time experiments"
+  ],
+  "final_audit": {
+    "verdict": "PASS WITH CAVEATS",
+    "recommendation": "READY FOR SUBMISSION",
+    "independence_note": "run by the orchestrator with new code (NumPy Hamiltonian/Trotter/exact, own criterion); official FFT reused",
+    "thresholds_full_0.01_grid_reproduced": true,
+    "matching_choices_agreeing": "16/16",
+    "j_experiments_reproduced": "15/15",
+    "clean_notebook_copy": "exit 0, no errors, printed outputs identical in all 46 cells; original unchanged (MD5)",
+    "trotter_threshold_error_vs_exact_same_grid_10pct": {
+      "A": {
+        "300": -1.26,
+        "600": -0.54,
+        "1200": 0.04
+      },
+      "B": {
+        "300": -0.63,
+        "600": 0.09,
+        "1200": 0.04
+      },
+      "C": {
+        "300": 0.13,
+        "600": 0.03,
+        "1200": 0.0
+      }
+    },
+    "converged_thresholds_10pct_approx": {
+      "A": 21.5,
+      "B": 23.45,
+      "C": 23.08
+    },
+    "J01_0.94Hz_doublets": {
+      "0.75 s": "never resolved, even at noise 0",
+      "1.5 s": "never resolved, even at noise 0",
+      "3.0 s": "resolved up to noise 3.03 (exact) / 3.27 (Trotter) at 10 % dip"
+    },
+    "issues": [
+      "threshold search refines only at coarse (0.1) transitions: no effect here (full 0.01 grid: one change per molecule)",
+      "weighting wording said N-w etc. reproduce the trace; they give a multiple of it (same normalised spectrum) - corrected"
+    ],
+    "report": "agents/final_audit/AUDIT_REPORT.md"
+  },
+  "matching_errors_official": {
+    "mean_max_position_error_hz_official_axis": {
+      "A": [
+        0.73,
+        1.48
+      ],
+      "B": [
+        0.83,
+        1.59
+      ],
+      "C": [
+        0.67,
+        0.92
+      ]
+    },
+    "mean_max_position_error_hz_corrected_axis": {
+      "A": [
+        0.56,
+        0.93
+      ],
+      "B": [
+        0.34,
+        0.66
+      ],
+      "C": [
+        0.12,
+        0.21
+      ]
+    },
+    "exact_evolution_floor_hz": {
+      "A": [
+        0.1,
+        0.24
+      ],
+      "B": [
+        0.17,
+        0.26
+      ],
+      "C": [
+        0.13,
+        0.18
+      ]
+    },
+    "cosine_sim_exact_bestwrong": {
+      "A": [
+        0.804,
+        0.875,
+        0.005
+      ],
+      "B": [
+        0.869,
+        0.858,
+        0.004
+      ],
+      "C": [
+        0.843,
+        0.843,
+        0.0
+      ]
+    }
+  },
+  "circuit_parameter_study": {
+    "best_value_change": "first-order Lie-Trotter with dt = 1.25 ms (2x CNOTs): A line shift 0.72 -> 0.14 Hz, height error 19.2 -> 3.7 %, mean peak error vs reference 0.56 -> 0.12 Hz",
+    "second_order_dt_2.5ms": "line shift unchanged (0.72 Hz), height error 11.6 %, 1.9x CNOTs",
+    "fourth_order_dt_2.5ms": "line shift 0.011 Hz, height error 1.1 %, 9.4x CNOTs",
+    "term_order": "at most 19.2 -> 17.7 % height error (grouped XX/YY/ZZ); reversed identical",
+    "signal_length_with_dt_1.25ms_cosine": {
+      "0.75 s": {
+        "A": 0.874,
+        "B": 0.857,
+        "C": 0.843
+      },
+      "1.5 s": {
+        "A": 0.95,
+        "B": 0.943,
+        "C": 0.924
+      },
+      "3 s": {
+        "A": 0.971,
+        "B": 0.969,
+        "C": 0.961
+      }
+    },
+    "thresholds_10pct_dt_1.25ms": {
+      "A": 20.92,
+      "B": 23.57,
+      "C": 23.11
+    },
+    "official_answers_unchanged": true
+  }
+}

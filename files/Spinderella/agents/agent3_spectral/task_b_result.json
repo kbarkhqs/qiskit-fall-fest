@@ -1,0 +1,2016 @@
+{
+  "A": {
+    "reference": "spectrum_3",
+    "n_char_peaks": 8,
+    "char_peaks_ppm": [
+      5.449317829070343,
+      5.472849681848962,
+      5.484956235625545,
+      5.508514199343757,
+      5.778697477717245,
+      5.802211606216367,
+      5.952786180321256,
+      5.988560812625576
+    ],
+    "lowest_noise_check": {
+      "found": true,
+      "reason": "",
+      "dips": [
+        0.682843089766997,
+        0.9735032955301017,
+        0.9542244670924404,
+        0.9999911466061674,
+        0.9932861058826263,
+        0.9998500469929041,
+        0.9096928623670887
+      ]
+    },
+    "coarse_transitions": {
+      "any_dip": [
+        [
+          25.0,
+          27.5,
+          "pass->fail"
+        ]
+      ],
+      "5pct": [
+        [
+          20.0,
+          22.5,
+          "pass->fail"
+        ]
+      ],
+      "10pct": [
+        [
+          17.5,
+          20.0,
+          "pass->fail"
+        ]
+      ],
+      "19pct": [
+        [
+          15.0,
+          17.5,
+          "pass->fail"
+        ]
+      ]
+    },
+    "dense_0p1_transitions": {
+      "any_dip": [
+        [
+          27.3,
+          27.4,
+          "pass->fail"
+        ]
+      ],
+      "5pct": [
+        [
+          22.1,
+          22.2,
+          "pass->fail"
+        ]
+      ],
+      "10pct": [
+        [
+          19.9,
+          20.0,
+          "pass->fail"
+        ]
+      ],
+      "19pct": [
+        [
+          17.1,
+          17.2,
+          "pass->fail"
+        ]
+      ]
+    },
+    "thresholds": {
+      "any_dip": {
+        "max_pass": 27.32,
+        "first_fail": 27.33,
+        "transitions_coarse": [
+          [
+            27.3,
+            27.4,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            27.32,
+            27.33,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "5pct": {
+        "max_pass": 22.15,
+        "first_fail": 22.16,
+        "transitions_coarse": [
+          [
+            22.1,
+            22.2,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            22.15,
+            22.16,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "10pct": {
+        "max_pass": 19.97,
+        "first_fail": 19.98,
+        "transitions_coarse": [
+          [
+            19.9,
+            20.0,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            19.97,
+            19.98,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "19pct": {
+        "max_pass": 17.11,
+        "first_fail": 17.12,
+        "transitions_coarse": [
+          [
+            17.1,
+            17.2,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            17.11,
+            17.12,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      }
+    },
+    "critical_pair": [
+      5.472849681848962,
+      5.484956235625545,
+      6.053276796098279
+    ],
+    "critical_index": 1,
+    "critical_desc": "dip 0.0998 < 0.1 at 19.98",
+    "eval_at_max_pass": {
+      "found": true,
+      "reason": "",
+      "peaks": [
+        {
+          "ref_ppm": 5.449317829070343,
+          "sim_ppm": 5.450666662077784,
+          "err_hz": 0.6744164934489006,
+          "height": 0.5403977036382372
+        },
+        {
+          "ref_ppm": 5.472849681848962,
+          "sim_ppm": 5.474666662443311,
+          "err_hz": 0.9084902833377465,
+          "height": 0.6492721592455953
+        },
+        {
+          "ref_ppm": 5.484956235625545,
+          "sim_ppm": 5.485333329272434,
+          "err_hz": 0.1885468205727555,
+          "height": 0.5935406989112877
+        },
+        {
+          "ref_ppm": 5.508514199343757,
+          "sim_ppm": 5.509333329637961,
+          "err_hz": 0.40956514086408746,
+          "height": 0.5224885641803613
+        },
+        {
+          "ref_ppm": 5.778697477717245,
+          "sim_ppm": 5.776000000366041,
+          "err_hz": -1.3487386550600093,
+          "height": 1.0
+        },
+        {
+          "ref_ppm": 5.802211606216367,
+          "sim_ppm": 5.800000000731568,
+          "err_hz": -1.1058027255574256,
+          "height": 0.9690022179453095
+        },
+        {
+          "ref_ppm": 5.952786180321256,
+          "sim_ppm": 5.949333336339293,
+          "err_hz": -1.7264219646879082,
+          "height": 0.9085418990051053
+        },
+        {
+          "ref_ppm": 5.988560812625576,
+          "sim_ppm": 5.986666670241224,
+          "err_hz": -0.9470711777520086,
+          "height": 0.9875311904560774
+        }
+      ],
+      "dips": [
+        0.5061782911775905,
+        0.10006190796860148,
+        0.5145538971983916,
+        0.9831837217300827,
+        0.5424914754754023,
+        0.9752672493573264,
+        0.756935802578008
+      ],
+      "pairs": [
+        [
+          5.449317829070343,
+          5.472849681848962,
+          11.765926210111164
+        ],
+        [
+          5.472849681848962,
+          5.484956235625545,
+          6.053276796098279
+        ],
+        [
+          5.484956235625545,
+          5.508514199343757,
+          11.778981679708679
+        ],
+        [
+          5.508514199343757,
+          5.778697477717245,
+          135.09163712925763
+        ],
+        [
+          5.778697477717245,
+          5.802211606216367,
+          11.757064070497426
+        ],
+        [
+          5.802211606216367,
+          5.952786180321256,
+          75.28728590579696
+        ],
+        [
+          5.952786180321256,
+          5.988560812625576,
+          17.88731587973083
+        ]
+      ]
+    },
+    "eval_at_first_fail": {
+      "found": true,
+      "reason": "",
+      "peaks": [
+        {
+          "ref_ppm": 5.449317829070343,
+          "sim_ppm": 5.450666662077784,
+          "err_hz": 0.6744164934489006,
+          "height": 0.5404074159459037
+        },
+        {
+          "ref_ppm": 5.472849681848962,
+          "sim_ppm": 5.474666662443311,
+          "err_hz": 0.9084902833377465,
+          "height": 0.6493574673160996
+        },
+        {
+          "ref_ppm": 5.484956235625545,
+          "sim_ppm": 5.485333329272434,
+          "err_hz": 0.1885468205727555,
+          "height": 0.5936147958614838
+        },
+        {
+          "ref_ppm": 5.508514199343757,
+          "sim_ppm": 5.509333329637961,
+          "err_hz": 0.40956514086408746,
+          "height": 0.5224872363048185
+        },
+        {
+          "ref_ppm": 5.778697477717245,
+          "sim_ppm": 5.776000000366041,
+          "err_hz": -1.3487386550600093,
+          "height": 1.0
+        },
+        {
+          "ref_ppm": 5.802211606216367,
+          "sim_ppm": 5.800000000731568,
+          "err_hz": -1.1058027255574256,
+          "height": 0.9689993855386201
+        },
+        {
+          "ref_ppm": 5.952786180321256,
+          "sim_ppm": 5.949333336339293,
+          "err_hz": -1.7264219646879082,
+          "height": 0.9085112776874775
+        },
+        {
+          "ref_ppm": 5.988560812625576,
+          "sim_ppm": 5.986666670241224,
+          "err_hz": -0.9470711777520086,
+          "height": 0.9875013184576016
+        }
+      ],
+      "dips": [
+        0.505842790077873,
+        0.0997985574802982,
+        0.514218938288304,
+        0.9831685884974767,
+        0.5421856729957313,
+        0.9752443193964647,
+        0.7567364658668614
+      ],
+      "pairs": [
+        [
+          5.449317829070343,
+          5.472849681848962,
+          11.765926210111164
+        ],
+        [
+          5.472849681848962,
+          5.484956235625545,
+          6.053276796098279
+        ],
+        [
+          5.484956235625545,
+          5.508514199343757,
+          11.778981679708679
+        ],
+        [
+          5.508514199343757,
+          5.778697477717245,
+          135.09163712925763
+        ],
+        [
+          5.778697477717245,
+          5.802211606216367,
+          11.757064070497426
+        ],
+        [
+          5.802211606216367,
+          5.952786180321256,
+          75.28728590579696
+        ],
+        [
+          5.952786180321256,
+          5.988560812625576,
+          17.88731587973083
+        ]
+      ]
+    },
+    "sensitivity": {
+      "exact_300": {
+        "any_dip": {
+          "max_pass": 31.68,
+          "first_fail": 31.69,
+          "transitions_coarse": [
+            [
+              31.6,
+              31.7,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              31.68,
+              31.69,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 23.78,
+          "first_fail": 23.79,
+          "transitions_coarse": [
+            [
+              23.7,
+              23.8,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.78,
+              23.79,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 21.23,
+          "first_fail": 21.24,
+          "transitions_coarse": [
+            [
+              21.2,
+              21.3,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              21.23,
+              21.24,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 17.57,
+          "first_fail": 17.58,
+          "transitions_coarse": [
+            [
+              17.5,
+              17.6,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              17.57,
+              17.58,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "trotter_600": {
+        "any_dip": {
+          "max_pass": 27.98,
+          "first_fail": 27.99,
+          "transitions_coarse": [
+            [
+              27.9,
+              28.0,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              27.98,
+              27.99,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 22.34,
+          "first_fail": 22.35,
+          "transitions_coarse": [
+            [
+              22.3,
+              22.4,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              22.34,
+              22.35,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 20.05,
+          "first_fail": 20.06,
+          "transitions_coarse": [
+            [
+              20.0,
+              20.1,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              20.05,
+              20.06,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 17.1,
+          "first_fail": 17.11,
+          "transitions_coarse": [
+            [
+              17.1,
+              17.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              17.1,
+              17.11,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "trotter_1200": {
+        "any_dip": {
+          "max_pass": 28.16,
+          "first_fail": 28.17,
+          "transitions_coarse": [
+            [
+              28.1,
+              28.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              28.16,
+              28.17,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 22.53,
+          "first_fail": 22.54,
+          "transitions_coarse": [
+            [
+              22.5,
+              22.6,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              22.53,
+              22.54,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 20.1,
+          "first_fail": 20.11,
+          "transitions_coarse": [
+            [
+              20.1,
+              20.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              20.1,
+              20.11,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 17.11,
+          "first_fail": 17.12,
+          "transitions_coarse": [
+            [
+              17.1,
+              17.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              17.11,
+              17.12,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "exact_1200": {
+        "any_dip": {
+          "max_pass": 32.41,
+          "first_fail": 32.42,
+          "transitions_coarse": [
+            [
+              32.4,
+              32.5,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              32.41,
+              32.42,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 24.55,
+          "first_fail": 24.56,
+          "transitions_coarse": [
+            [
+              24.5,
+              24.6,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              24.55,
+              24.56,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 21.63,
+          "first_fail": 21.64,
+          "transitions_coarse": [
+            [
+              21.6,
+              21.7,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              21.63,
+              21.64,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 18.2,
+          "first_fail": 18.21,
+          "transitions_coarse": [
+            [
+              18.2,
+              18.3,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              18.2,
+              18.21,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      }
+    }
+  },
+  "B": {
+    "reference": "spectrum_2",
+    "n_char_peaks": 8,
+    "char_peaks_ppm": [
+      5.33131548073577,
+      5.3484582894534425,
+      5.563626003645553,
+      5.594807242829651,
+      5.8766880750673565,
+      5.893834440726475,
+      5.907884320448173,
+      5.9250441293031715
+    ],
+    "lowest_noise_check": {
+      "found": true,
+      "reason": "",
+      "dips": [
+        0.996238433601785,
+        0.999138157247522,
+        0.9099723695211691,
+        0.9999944062991196,
+        0.7930679901419989,
+        0.9678791173756256,
+        0.8451618794789302
+      ]
+    },
+    "coarse_transitions": {
+      "any_dip": [
+        [
+          32.5,
+          35.0,
+          "pass->fail"
+        ]
+      ],
+      "5pct": [
+        [
+          25.0,
+          27.5,
+          "pass->fail"
+        ]
+      ],
+      "10pct": [
+        [
+          22.5,
+          25.0,
+          "pass->fail"
+        ]
+      ],
+      "19pct": [
+        [
+          17.5,
+          20.0,
+          "pass->fail"
+        ]
+      ]
+    },
+    "dense_0p1_transitions": {
+      "any_dip": [
+        [
+          33.3,
+          33.4,
+          "pass->fail"
+        ]
+      ],
+      "5pct": [
+        [
+          25.9,
+          26.0,
+          "pass->fail"
+        ]
+      ],
+      "10pct": [
+        [
+          22.8,
+          22.9,
+          "pass->fail"
+        ]
+      ],
+      "19pct": [
+        [
+          19.1,
+          19.2,
+          "pass->fail"
+        ]
+      ]
+    },
+    "thresholds": {
+      "any_dip": {
+        "max_pass": 33.36,
+        "first_fail": 33.37,
+        "transitions_coarse": [
+          [
+            33.3,
+            33.4,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            33.36,
+            33.37,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "5pct": {
+        "max_pass": 25.99,
+        "first_fail": 26.0,
+        "transitions_coarse": [
+          [
+            25.9,
+            26.0,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            25.99,
+            26.0,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "10pct": {
+        "max_pass": 22.85,
+        "first_fail": 22.86,
+        "transitions_coarse": [
+          [
+            22.8,
+            22.9,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            22.85,
+            22.86,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "19pct": {
+        "max_pass": 19.13,
+        "first_fail": 19.14,
+        "transitions_coarse": [
+          [
+            19.1,
+            19.2,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            19.13,
+            19.14,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      }
+    },
+    "critical_pair": [
+      5.893834440726475,
+      5.907884320448173,
+      7.0249397538571365
+    ],
+    "critical_index": 5,
+    "critical_desc": "dip 0.1000 < 0.1 at 22.86",
+    "eval_at_max_pass": {
+      "found": true,
+      "reason": "",
+      "peaks": [
+        {
+          "ref_ppm": 5.33131548073577,
+          "sim_ppm": 5.33199999572206,
+          "err_hz": 0.342257487932187,
+          "height": 1.0
+        },
+        {
+          "ref_ppm": 5.3484582894534425,
+          "sim_ppm": 5.347999995965745,
+          "err_hz": -0.22914674035868945,
+          "height": 0.9360749682596875
+        },
+        {
+          "ref_ppm": 5.563626003645553,
+          "sim_ppm": 5.56399999925549,
+          "err_hz": 0.1869978021201929,
+          "height": 0.8396814499578626
+        },
+        {
+          "ref_ppm": 5.594807242829651,
+          "sim_ppm": 5.593333333035578,
+          "err_hz": -0.7369548858123586,
+          "height": 0.913931281875385
+        },
+        {
+          "ref_ppm": 5.8766880750673565,
+          "sim_ppm": 5.876000004007342,
+          "err_hz": -0.34403552476729476,
+          "height": 0.5153064194751054
+        },
+        {
+          "ref_ppm": 5.893834440726475,
+          "sim_ppm": 5.892000004251027,
+          "err_hz": -0.9172182237542196,
+          "height": 0.6262875603968612
+        },
+        {
+          "ref_ppm": 5.907884320448173,
+          "sim_ppm": 5.9053333377874315,
+          "err_hz": -1.2754913109446346,
+          "height": 0.5688533988182096
+        },
+        {
+          "ref_ppm": 5.9250441293031715,
+          "sim_ppm": 5.921333338031116,
+          "err_hz": -1.8553956077696498,
+          "height": 0.523018175731911
+        }
+      ],
+      "dips": [
+        0.23905899479041448,
+        0.9820588970313435,
+        0.6337293275849747,
+        0.9814329153900999,
+        0.18345171506955826,
+        0.10014376134878733,
+        0.2324364429366641
+      ],
+      "pairs": [
+        [
+          5.33131548073577,
+          5.3484582894534425,
+          8.571404228291032
+        ],
+        [
+          5.3484582894534425,
+          5.563626003645553,
+          107.58385545752121
+        ],
+        [
+          5.563626003645553,
+          5.594807242829651,
+          15.590619354598983
+        ],
+        [
+          5.594807242829651,
+          5.8766880750673565,
+          140.94041397228818
+        ],
+        [
+          5.8766880750673565,
+          5.893834440726475,
+          8.573182698987079
+        ],
+        [
+          5.893834440726475,
+          5.907884320448173,
+          7.0249397538571365
+        ],
+        [
+          5.907884320448173,
+          5.9250441293031715,
+          8.579904296824726
+        ]
+      ]
+    },
+    "eval_at_first_fail": {
+      "found": true,
+      "reason": "",
+      "peaks": [
+        {
+          "ref_ppm": 5.33131548073577,
+          "sim_ppm": 5.33199999572206,
+          "err_hz": 0.342257487932187,
+          "height": 1.0
+        },
+        {
+          "ref_ppm": 5.3484582894534425,
+          "sim_ppm": 5.347999995965745,
+          "err_hz": -0.22914674035868945,
+          "height": 0.9360617912203453
+        },
+        {
+          "ref_ppm": 5.563626003645553,
+          "sim_ppm": 5.56399999925549,
+          "err_hz": 0.1869978021201929,
+          "height": 0.8396370539134741
+        },
+        {
+          "ref_ppm": 5.594807242829651,
+          "sim_ppm": 5.593333333035578,
+          "err_hz": -0.7369548858123586,
+          "height": 0.9138623455338997
+        },
+        {
+          "ref_ppm": 5.8766880750673565,
+          "sim_ppm": 5.876000004007342,
+          "err_hz": -0.34403552476729476,
+          "height": 0.5153515965208484
+        },
+        {
+          "ref_ppm": 5.893834440726475,
+          "sim_ppm": 5.892000004251027,
+          "err_hz": -0.9172182237542196,
+          "height": 0.6263384479849194
+        },
+        {
+          "ref_ppm": 5.907884320448173,
+          "sim_ppm": 5.9053333377874315,
+          "err_hz": -1.2754913109446346,
+          "height": 0.5689176894921444
+        },
+        {
+          "ref_ppm": 5.9250441293031715,
+          "sim_ppm": 5.921333338031116,
+          "err_hz": -1.8553956077696498,
+          "height": 0.5230388657645767
+        }
+      ],
+      "dips": [
+        0.23876042737944214,
+        0.9820445782333197,
+        0.6334938180324166,
+        0.98142068204179,
+        0.18319537085156057,
+        0.09995087367377575,
+        0.2321391524658638
+      ],
+      "pairs": [
+        [
+          5.33131548073577,
+          5.3484582894534425,
+          8.571404228291032
+        ],
+        [
+          5.3484582894534425,
+          5.563626003645553,
+          107.58385545752121
+        ],
+        [
+          5.563626003645553,
+          5.594807242829651,
+          15.590619354598983
+        ],
+        [
+          5.594807242829651,
+          5.8766880750673565,
+          140.94041397228818
+        ],
+        [
+          5.8766880750673565,
+          5.893834440726475,
+          8.573182698987079
+        ],
+        [
+          5.893834440726475,
+          5.907884320448173,
+          7.0249397538571365
+        ],
+        [
+          5.907884320448173,
+          5.9250441293031715,
+          8.579904296824726
+        ]
+      ]
+    },
+    "sensitivity": {
+      "exact_300": {
+        "any_dip": {
+          "max_pass": 33.05,
+          "first_fail": 33.06,
+          "transitions_coarse": [
+            [
+              33.0,
+              33.1,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              33.05,
+              33.06,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 26.62,
+          "first_fail": 26.63,
+          "transitions_coarse": [
+            [
+              26.6,
+              26.7,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              26.62,
+              26.63,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 23.48,
+          "first_fail": 23.49,
+          "transitions_coarse": [
+            [
+              23.4,
+              23.5,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.48,
+              23.49,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 19.7,
+          "first_fail": 19.71,
+          "transitions_coarse": [
+            [
+              19.7,
+              19.8,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              19.7,
+              19.71,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "trotter_600": {
+        "any_dip": {
+          "max_pass": 34.59,
+          "first_fail": 34.6,
+          "transitions_coarse": [
+            [
+              34.5,
+              34.6,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              34.59,
+              34.6,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 26.64,
+          "first_fail": 26.65,
+          "transitions_coarse": [
+            [
+              26.6,
+              26.7,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              26.64,
+              26.65,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 23.36,
+          "first_fail": 23.37,
+          "transitions_coarse": [
+            [
+              23.3,
+              23.4,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.36,
+              23.37,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 19.52,
+          "first_fail": 19.53,
+          "transitions_coarse": [
+            [
+              19.5,
+              19.6,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              19.52,
+              19.53,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "trotter_1200": {
+        "any_dip": {
+          "max_pass": 34.79,
+          "first_fail": 34.8,
+          "transitions_coarse": [
+            [
+              34.7,
+              34.8,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              34.79,
+              34.8,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 26.61,
+          "first_fail": 26.62,
+          "transitions_coarse": [
+            [
+              26.6,
+              26.7,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              26.61,
+              26.62,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 23.38,
+          "first_fail": 23.39,
+          "transitions_coarse": [
+            [
+              23.3,
+              23.4,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.38,
+              23.39,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 19.66,
+          "first_fail": 19.67,
+          "transitions_coarse": [
+            [
+              19.6,
+              19.7,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              19.66,
+              19.67,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "exact_1200": {
+        "any_dip": {
+          "max_pass": 34.13,
+          "first_fail": 34.14,
+          "transitions_coarse": [
+            [
+              34.1,
+              34.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              34.13,
+              34.14,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 26.63,
+          "first_fail": 26.64,
+          "transitions_coarse": [
+            [
+              26.6,
+              26.7,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              26.63,
+              26.64,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 23.48,
+          "first_fail": 23.49,
+          "transitions_coarse": [
+            [
+              23.4,
+              23.5,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.48,
+              23.49,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 19.84,
+          "first_fail": 19.85,
+          "transitions_coarse": [
+            [
+              19.8,
+              19.9,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              19.84,
+              19.85,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      }
+    }
+  },
+  "C": {
+    "reference": "spectrum_1",
+    "n_char_peaks": 4,
+    "char_peaks_ppm": [
+      6.293228124079821,
+      6.309058516462956,
+      6.367941483619681,
+      6.383771875997791
+    ],
+    "lowest_noise_check": {
+      "found": true,
+      "reason": "",
+      "dips": [
+        0.6085881152816699,
+        0.9492221793159819,
+        0.608588115281666
+      ]
+    },
+    "coarse_transitions": {
+      "any_dip": [
+        [
+          27.5,
+          30.0,
+          "pass->fail"
+        ]
+      ],
+      "5pct": [
+        [
+          25.0,
+          27.5,
+          "pass->fail"
+        ]
+      ],
+      "10pct": [
+        [
+          22.5,
+          25.0,
+          "pass->fail"
+        ]
+      ],
+      "19pct": [
+        [
+          20.0,
+          22.5,
+          "pass->fail"
+        ]
+      ]
+    },
+    "dense_0p1_transitions": {
+      "any_dip": [
+        [
+          28.5,
+          28.6,
+          "pass->fail"
+        ]
+      ],
+      "5pct": [
+        [
+          25.5,
+          25.6,
+          "pass->fail"
+        ]
+      ],
+      "10pct": [
+        [
+          23.2,
+          23.3,
+          "pass->fail"
+        ]
+      ],
+      "19pct": [
+        [
+          20.0,
+          20.1,
+          "pass->fail"
+        ]
+      ]
+    },
+    "thresholds": {
+      "any_dip": {
+        "max_pass": 28.58,
+        "first_fail": 28.59,
+        "transitions_coarse": [
+          [
+            28.5,
+            28.6,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            28.58,
+            28.59,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "5pct": {
+        "max_pass": 25.51,
+        "first_fail": 25.52,
+        "transitions_coarse": [
+          [
+            25.5,
+            25.6,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            25.51,
+            25.52,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "10pct": {
+        "max_pass": 23.22,
+        "first_fail": 23.23,
+        "transitions_coarse": [
+          [
+            23.2,
+            23.3,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            23.22,
+            23.23,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      },
+      "19pct": {
+        "max_pass": 20.02,
+        "first_fail": 20.03,
+        "transitions_coarse": [
+          [
+            20.0,
+            20.1,
+            "pass->fail"
+          ]
+        ],
+        "transitions_fine": [
+          [
+            20.02,
+            20.03,
+            "pass->fail"
+          ]
+        ],
+        "monotonic": true,
+        "n_points": 1009
+      }
+    },
+    "critical_pair": [
+      6.293228124079821,
+      6.309058516462956,
+      7.915196071016753
+    ],
+    "critical_index": 0,
+    "critical_desc": "dip 0.0998 < 0.1 at 23.23",
+    "eval_at_max_pass": {
+      "found": true,
+      "reason": "",
+      "peaks": [
+        {
+          "ref_ppm": 6.293228124079821,
+          "sim_ppm": 6.293166665930592,
+          "err_hz": -0.03072907414664193,
+          "height": 0.7630022214620094
+        },
+        {
+          "ref_ppm": 6.309058516462956,
+          "sim_ppm": 6.306499999466996,
+          "err_hz": -1.2792584784966738,
+          "height": 1.0
+        },
+        {
+          "ref_ppm": 6.367941483619681,
+          "sim_ppm": 6.367833333734454,
+          "err_hz": -0.054074941789869296,
+          "height": 0.9999999999999998
+        },
+        {
+          "ref_ppm": 6.383771875997791,
+          "sim_ppm": 6.381166667270858,
+          "err_hz": -1.3026043436276886,
+          "height": 0.7630022214620098
+        }
+      ],
+      "dips": [
+        0.10002148816659495,
+        0.8627007562998021,
+        0.10002148816659506
+      ],
+      "pairs": [
+        [
+          6.293228124079821,
+          6.309058516462956,
+          7.915196071016753
+        ],
+        [
+          6.309058516462956,
+          6.367941483619681,
+          29.441483129959938
+        ],
+        [
+          6.367941483619681,
+          6.383771875997791,
+          7.9151960685040965
+        ]
+      ]
+    },
+    "eval_at_first_fail": {
+      "found": true,
+      "reason": "",
+      "peaks": [
+        {
+          "ref_ppm": 6.293228124079821,
+          "sim_ppm": 6.293166665930592,
+          "err_hz": -0.03072907414664193,
+          "height": 0.7630568179883441
+        },
+        {
+          "ref_ppm": 6.309058516462956,
+          "sim_ppm": 6.306499999466996,
+          "err_hz": -1.2792584784966738,
+          "height": 1.0
+        },
+        {
+          "ref_ppm": 6.367941483619681,
+          "sim_ppm": 6.367833333734454,
+          "err_hz": -0.054074941789869296,
+          "height": 0.9999999999999992
+        },
+        {
+          "ref_ppm": 6.383771875997791,
+          "sim_ppm": 6.381166667270858,
+          "err_hz": -1.3026043436276886,
+          "height": 0.7630568179883445
+        }
+      ],
+      "dips": [
+        0.09977813844404781,
+        0.8626053337905222,
+        0.09977813844404826
+      ],
+      "pairs": [
+        [
+          6.293228124079821,
+          6.309058516462956,
+          7.915196071016753
+        ],
+        [
+          6.309058516462956,
+          6.367941483619681,
+          29.441483129959938
+        ],
+        [
+          6.367941483619681,
+          6.383771875997791,
+          7.9151960685040965
+        ]
+      ]
+    },
+    "sensitivity": {
+      "exact_300": {
+        "any_dip": {
+          "max_pass": 28.49,
+          "first_fail": 28.5,
+          "transitions_coarse": [
+            [
+              28.4,
+              28.5,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              28.49,
+              28.5,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 25.36,
+          "first_fail": 25.37,
+          "transitions_coarse": [
+            [
+              25.3,
+              25.4,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              25.36,
+              25.37,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 23.09,
+          "first_fail": 23.1,
+          "transitions_coarse": [
+            [
+              23.0,
+              23.1,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.09,
+              23.1,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 19.93,
+          "first_fail": 19.94,
+          "transitions_coarse": [
+            [
+              19.9,
+              20.0,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              19.93,
+              19.94,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "trotter_600": {
+        "any_dip": {
+          "max_pass": 30.2,
+          "first_fail": 30.21,
+          "transitions_coarse": [
+            [
+              30.2,
+              30.3,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              30.2,
+              30.21,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 25.48,
+          "first_fail": 25.49,
+          "transitions_coarse": [
+            [
+              25.4,
+              25.5,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              25.48,
+              25.49,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 23.1,
+          "first_fail": 23.11,
+          "transitions_coarse": [
+            [
+              23.1,
+              23.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.1,
+              23.11,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 20.13,
+          "first_fail": 20.14,
+          "transitions_coarse": [
+            [
+              20.1,
+              20.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              20.13,
+              20.14,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "trotter_1200": {
+        "any_dip": {
+          "max_pass": 30.28,
+          "first_fail": 30.29,
+          "transitions_coarse": [
+            [
+              30.2,
+              30.3,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              30.28,
+              30.29,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 25.56,
+          "first_fail": 25.57,
+          "transitions_coarse": [
+            [
+              25.5,
+              25.6,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              25.56,
+              25.57,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 23.23,
+          "first_fail": 23.24,
+          "transitions_coarse": [
+            [
+              23.2,
+              23.3,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.23,
+              23.24,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 20.15,
+          "first_fail": 20.16,
+          "transitions_coarse": [
+            [
+              20.1,
+              20.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              20.15,
+              20.16,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      },
+      "exact_1200": {
+        "any_dip": {
+          "max_pass": 30.09,
+          "first_fail": 30.1,
+          "transitions_coarse": [
+            [
+              30.0,
+              30.1,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              30.09,
+              30.1,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "5pct": {
+          "max_pass": 25.42,
+          "first_fail": 25.43,
+          "transitions_coarse": [
+            [
+              25.4,
+              25.5,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              25.42,
+              25.43,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "10pct": {
+          "max_pass": 23.13,
+          "first_fail": 23.14,
+          "transitions_coarse": [
+            [
+              23.1,
+              23.2,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              23.13,
+              23.14,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        },
+        "19pct": {
+          "max_pass": 20.06,
+          "first_fail": 20.07,
+          "transitions_coarse": [
+            [
+              20.0,
+              20.1,
+              "pass->fail"
+            ]
+          ],
+          "transitions_fine": [
+            [
+              20.06,
+              20.07,
+              "pass->fail"
+            ]
+          ],
+          "monotonic": true,
+          "n_points": 1009
+        }
+      }
+    }
+  }
+}

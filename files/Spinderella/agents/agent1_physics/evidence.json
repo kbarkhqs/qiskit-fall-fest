@@ -1,0 +1,1666 @@
+[
+ {
+  "id": "T1_xbasis_states",
+  "question": "Which states do 'H then RZ(phi)' and 'RX(phi) then H' prepare, and what are the eigenvalues, degeneracies and sum rules of the X-basis product states?",
+  "hypotheses": [
+   "H1: both constructions give the same state vector (e^-iphi/2|0> + e^+iphi/2|1>)/sqrt2 for every phi",
+   "H2: for phi_i = pi b_i the eigenvalue of sum X is N - 2w (w = Hamming weight), not the binary label",
+   "H3: the 2^N states are orthonormal and complete, degeneracy binomial(N,w), sum m^2 = N 2^N, C_yx(0) = 0"
+  ],
+  "independent_variable": "phi (401 values), bit string b, N in {2,3}",
+  "dependent_variable": "state-vector differences, eigen-residuals, Gram/completeness errors, sums",
+  "fixed_parameters": {
+   "qubit_order": "site 0 = rightmost Kronecker factor (index = sum b_i 2^i)"
+  },
+  "reference": "analytic derivation in report.md section T1",
+  "result": {
+   "a": {
+    "max|RZ(phi)H|0> - H RX(phi)|0>| over 401 phi in [-2pi,2pi]": 0.0,
+    "max|RZ(phi)H|0> - (e^-iphi/2,e^+iphi/2)/sqrt2|": 0.0,
+    "max Bloch-vector error vs (cos phi, sin phi, 0)": 4.440892098500626e-16,
+    "|state(phi=0) - |+>|": 0.0,
+    "|state(phi=pi) - (-i)|->|": 4.329780281177466e-17,
+    "<X> at phi=0, pi, pi/2": [
+     0.9999999999999998,
+     -0.9999999999999998,
+     2.220446049250313e-16
+    ],
+    "placeholder RZ(phi)|0>: max |<X>| over phi": 0.0
+   },
+   "N=2": {
+    "eigen-residual |Xtot psi_b - (N-2w) psi_b|": 0.0,
+    "eigenvalues sum X (by index 0..2^N-1)": [
+     2.0,
+     0.0,
+     0.0,
+     -2.0
+    ],
+    "eigenvalues I_x^tot = N/2 - w": [
+     1.0,
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "binary label equals eigenvalue": false,
+    "gram - 1": 4.440892098500626e-16,
+    "completeness - 1": 4.440892098500626e-16,
+    "degeneracy {eigenvalue of sum X: count}": {
+     "2": 1,
+     "0": 2,
+     "-2": 1
+    },
+    "degeneracy equals binomial(N,w)": true,
+    "spectrum of sum X matches {N-2w}": true,
+    "sum_n m_n^2 (Pauli)": 7.9999999999999964,
+    "N 2^N": 8,
+    "Tr(Xtot Xtot)": 8.0,
+    "sum_n (m_n/2)^2 (spin-1/2)": 1.9999999999999991,
+    "N 2^(N-2)": 2,
+    "|Tr(Ytot Xtot)|": 0.0,
+    "max_n |<psi_n|Ytot|psi_n>|": 0.0,
+    "sum_n label_n * m_n (if label were used as weight)": -5.999999999999998
+   },
+   "N=3": {
+    "eigen-residual |Xtot psi_b - (N-2w) psi_b|": 0.0,
+    "eigenvalues sum X (by index 0..2^N-1)": [
+     3.0,
+     1.0,
+     1.0,
+     -1.0,
+     1.0,
+     -1.0,
+     -1.0,
+     -3.0
+    ],
+    "eigenvalues I_x^tot = N/2 - w": [
+     1.5,
+     0.5,
+     0.5,
+     -0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -1.5
+    ],
+    "binary label equals eigenvalue": false,
+    "gram - 1": 6.661338147750939e-16,
+    "completeness - 1": 4.440892098500626e-16,
+    "degeneracy {eigenvalue of sum X: count}": {
+     "3": 1,
+     "1": 3,
+     "-1": 3,
+     "-3": 1
+    },
+    "degeneracy equals binomial(N,w)": true,
+    "spectrum of sum X matches {N-2w}": true,
+    "sum_n m_n^2 (Pauli)": 23.999999999999993,
+    "N 2^N": 24,
+    "Tr(Xtot Xtot)": 24.0,
+    "sum_n (m_n/2)^2 (spin-1/2)": 5.999999999999998,
+    "N 2^(N-2)": 6,
+    "|Tr(Ytot Xtot)|": 0.0,
+    "max_n |<psi_n|Ytot|psi_n>|": 5.551115123125783e-17,
+    "sum_n label_n * m_n (if label were used as weight)": -27.999999999999993
+   }
+  },
+  "conclusion": "All three hypotheses confirmed to machine precision. The two constructions are the identical vector (H RX(phi) H = RZ(phi)); phi=0 -> |+>, phi=pi -> -i|->; eigenvalue of sum X is N-2w; C_xx(0) = N 2^N = 8 (N=2), 24 (N=3); C_yx(0) = 0.",
+  "limitations": "N = 2, 3 only (the sizes of the challenge molecules). The global phase -i of |-> is irrelevant for expectation values.",
+  "script": "agents/agent1_physics/t1_xbasis.py",
+  "command": ".venv/bin/python -I agents/agent1_physics/t1_xbasis.py"
+ },
+ {
+  "id": "T2_normalisation",
+  "question": "Does using Pauli operators instead of spin-1/2 operators, and omitting 1/2^N, change the max-normalised spectrum?",
+  "hypotheses": [
+   "H1: no - both signals differ by the constant factor 4*2^N, removed by the division by the maximum",
+   "H2: yes - the spectrum shape changes"
+  ],
+  "independent_variable": "operator normalisation (Pauli, no 1/2^N) vs (spin-1/2, with 1/2^N)",
+  "dependent_variable": "max abs difference of the two max-normalised spectra (verbatim notebook function, Gamma = 5)",
+  "fixed_parameters": {
+   "dt": 0.0025,
+   "n_steps": 300,
+   "gamma": 5.0,
+   "evolution": "exact"
+  },
+  "reference": "Tr(I_a(t) I_x)/2^N with I = sigma/2",
+  "result": {
+   "A": {
+    "C_xx(0) Pauli": 23.999999999999993,
+    "C_xx(0) spin with 1/2^N": 0.7499999999999999,
+    "expected ratio 4*2^N": 32,
+    "max|C_xx^Pauli - 4*2^N*C_xx^spin|": 1.4415135751733033e-12,
+    "max|C_yx^Pauli - 4*2^N*C_yx^spin|": 1.5204504322241519e-12,
+    "max|normalised spectrum difference|": 2.6645352591003757e-14
+   },
+   "B": {
+    "C_xx(0) Pauli": 23.999999999999993,
+    "C_xx(0) spin with 1/2^N": 0.7499999999999998,
+    "expected ratio 4*2^N": 32,
+    "max|C_xx^Pauli - 4*2^N*C_xx^spin|": 2.3852031461046863e-12,
+    "max|C_yx^Pauli - 4*2^N*C_yx^spin|": 3.1379343568005424e-12,
+    "max|normalised spectrum difference|": 4.54081217071689e-14
+   },
+   "C": {
+    "C_xx(0) Pauli": 7.9999999999999964,
+    "C_xx(0) spin with 1/2^N": 0.5000000000000001,
+    "expected ratio 4*2^N": 16,
+    "max|C_xx^Pauli - 4*2^N*C_xx^spin|": 1.0125233984581428e-13,
+    "max|C_yx^Pauli - 4*2^N*C_yx^spin|": 5.551115123125782e-16,
+    "max|normalised spectrum difference|": 3.1086244689504383e-15
+   }
+  },
+  "conclusion": "H1 confirmed for A, B, C: constant factor 4*2^N (16 for N=2, 32 for N=3); normalised spectra identical to rounding.",
+  "limitations": "Only absolute intensities are lost; relative intensities between molecules cannot be compared after the division by the maximum.",
+  "script": "agents/agent1_physics/t2_normalisation.py",
+  "command": ".venv/bin/python -I agents/agent1_physics/t2_normalisation.py"
+ },
+ {
+  "id": "T3_hamiltonian_conventions",
+  "question": "Do the files obey h_i = -gamma B (1+delta_i)/2 and c_ij = pi J_ij/2 with the claimed delta and J, and is any factor 2 or 2 pi missing in the chain?",
+  "hypotheses": [
+   "H1: the claimed delta/J table is exact",
+   "H2: the table needs a correction",
+   "H3: transition angular frequency of an uncoupled spin is 2|h'_i| (Pauli coefficient = half the frequency)"
+  ],
+  "independent_variable": "molecule file (A, B, C)",
+  "dependent_variable": "delta_i (ppm), J_ij (Hz), differences to the claimed table, rotating-frame frequencies",
+  "fixed_parameters": {
+   "gamma": 267522128.0,
+   "B": 11.7433
+  },
+  "reference": "claimed table in docs/challenge_analysis.md",
+  "result": {
+   "gamma*B/(2pi) Hz": 499999992.3848508,
+   "Hz_to_ppm": 0.002000000030460597,
+   "A": {
+    "n_spins": 3,
+    "term_order_in_file": [
+     "0Z",
+     "1Z",
+     "2Z",
+     "0X1X",
+     "0Y1Y",
+     "0Z1Z",
+     "0X2X",
+     "0Y2Y",
+     "0Z2Z",
+     "1X2X",
+     "1Y2Y",
+     "1Z2Z"
+    ],
+    "delta_ppm": [
+     5.79,
+     5.97,
+     5.48
+    ],
+    "delta_claimed": [
+     5.79,
+     5.97,
+     5.48
+    ],
+    "max|delta - claim| ppm": 1.0550937901143698e-10,
+    "J_hz": {
+     "01": 0.9,
+     "02": 11.8,
+     "12": 17.9
+    },
+    "max|J - claim| Hz": 0.0,
+    "max|h(claim) - h(file)| rad/s": 2.384185791015625e-07,
+    "mean_h (notebook 'chemical_shift_hz') rad/s": -1570805329.7139537,
+    "mean delta ppm": 5.7466666666024695,
+    "h'_i rotating frame rad/s": [
+     -68.06784,
+     -350.811174,
+     418.879014
+    ],
+    "uncoupled transition omega_i = -2h'_i rad/s": [
+     136.135679,
+     701.622348,
+     -837.758028
+    ],
+    "uncoupled transition nu_i = -h'_i/pi Hz": [
+     21.666666,
+     111.666665,
+     -133.333331
+    ],
+    "nu0*(delta_i - mean)*1e-6 Hz": [
+     21.666666,
+     111.666665,
+     -133.333331
+    ],
+    "max|h'|*dt (rad)": 1.0471975350379945,
+    "notebook chem_shift constant": -5.746666666585952,
+    "-(mean delta ppm)": -5.7466666666024695,
+    "chem_shift + mean delta (ppm)": 1.651745407116323e-11,
+    "shift differences Hz": {
+     "01": -90.0,
+     "02": 155.0,
+     "12": 245.0
+    },
+    "|shift difference / J|": {
+     "01": 100.0,
+     "02": 13.136,
+     "12": 13.687
+    },
+    "table_confirmed": true
+   },
+   "B": {
+    "n_spins": 3,
+    "term_order_in_file": [
+     "0Z",
+     "1Z",
+     "2Z",
+     "0X1X",
+     "0Y1Y",
+     "0Z1Z",
+     "0X2X",
+     "0Y2Y",
+     "0Z2Z",
+     "1X2X",
+     "1Y2Y",
+     "1Z2Z"
+    ],
+    "delta_ppm": [
+     5.58,
+     5.9,
+     5.34
+    ],
+    "delta_claimed": [
+     5.58,
+     5.9,
+     5.34
+    ],
+    "max|delta - claim| ppm": 1.0789769078201061e-10,
+    "J_hz": {
+     "01": 15.6,
+     "02": -0.5,
+     "12": 8.6
+    },
+    "max|J - claim| Hz": 0.0,
+    "max|h(claim) - h(file)| rad/s": 2.384185791015625e-07,
+    "mean_h (notebook 'chemical_shift_hz') rad/s": -1570805109.8024712,
+    "mean delta ppm": 5.6066666666391525,
+    "h'_i rotating frame rad/s": [
+     41.887901,
+     -460.766916,
+     418.879014
+    ],
+    "uncoupled transition omega_i = -2h'_i rad/s": [
+     -83.775802,
+     921.533831,
+     -837.758028
+    ],
+    "uncoupled transition nu_i = -h'_i/pi Hz": [
+     -13.333333,
+     146.666664,
+     -133.333331
+    ],
+    "nu0*(delta_i - mean)*1e-6 Hz": [
+     -13.333333,
+     146.666664,
+     -133.333331
+    ],
+    "max|h'|*dt (rad)": 1.1519172888994218,
+    "notebook chem_shift constant": -5.606666666571982,
+    "-(mean delta ppm)": -5.6066666666391525,
+    "chem_shift + mean delta (ppm)": 6.717026934666137e-11,
+    "shift differences Hz": {
+     "01": -160.0,
+     "02": 120.0,
+     "12": 280.0
+    },
+    "|shift difference / J|": {
+     "01": 10.256,
+     "02": 240.0,
+     "12": 32.558
+    },
+    "table_confirmed": true
+   },
+   "C": {
+    "n_spins": 2,
+    "term_order_in_file": [
+     "0Z",
+     "1Z",
+     "0X1X",
+     "0Y1Y",
+     "0Z1Z"
+    ],
+    "delta_ppm": [
+     6.375,
+     6.302
+    ],
+    "delta_claimed": [
+     6.375,
+     6.302
+    ],
+    "max|delta - claim| ppm": 1.0811618267325684e-10,
+    "J_hz": {
+     "01": 7.92
+    },
+    "max|J - claim| Hz": 8.881784197001252e-16,
+    "max|h(claim) - h(file)| rad/s": 2.384185791015625e-07,
+    "mean_h (notebook 'chemical_shift_hz') rad/s": -1570806259.3635657,
+    "mean delta ppm": 6.338499999980485,
+    "h'_i rotating frame rad/s": [
+     -57.334065,
+     57.334065
+    ],
+    "uncoupled transition omega_i = -2h'_i rad/s": [
+     114.66813,
+     -114.66813
+    ],
+    "uncoupled transition nu_i = -h'_i/pi Hz": [
+     18.25,
+     -18.25
+    ],
+    "nu0*(delta_i - mean)*1e-6 Hz": [
+     18.25,
+     -18.25
+    ],
+    "max|h'|*dt (rad)": 0.14333516240119934,
+    "notebook chem_shift constant": -6.338499999954365,
+    "-(mean delta ppm)": -6.338499999980485,
+    "chem_shift + mean delta (ppm)": 2.6119550966541283e-11,
+    "shift differences Hz": {
+     "01": 36.5
+    },
+    "|shift difference / J|": {
+     "01": 4.609
+    },
+    "table_confirmed": true
+   },
+   "single-spin factor check": {
+    "h rad/s": 137.0,
+    "measured d(phase)/dt of <X>+i<Y> rad/s": 274.0,
+    "2h": 274.0,
+    "ratio": 2.0
+   }
+  },
+  "conclusion": "Claimed table confirmed for A, B, C (deviations < 5e-4 ppm / Hz). Uncoupled-spin line: omega = -2 h'_i rad/s = nu0 (delta_i - mean delta) Hz. The notebook's '2*chem_shift_hz/(2 pi)' is the correct factor (chem_shift_hz is a Pauli coefficient in rad/s, misnamed); the ppm constant equals -(mean delta) to < 1e-6 ppm. No factor 2 or 2 pi missing.",
+  "limitations": "Tolerance 5e-4 on the rounded table values; float64 on h ~ 1.6e9 rad/s limits delta to ~1e-9 ppm.",
+  "script": "agents/agent1_physics/t3_hamiltonian.py",
+  "command": ".venv/bin/python -I agents/agent1_physics/t3_hamiltonian.py"
+ },
+ {
+  "id": "T4_sign_and_axis",
+  "question": "Does the original code (Re FFT[C_xx] + Im FFT[C_yx], numpy FFT sign) put each line at its true ppm, and is the ppm axis offset?",
+  "hypotheses": [
+   "H_a: '+ Im' with numpy's FFT sign puts each line at its true ppm",
+   "H_b: the code is mirrored about the mean shift (the markdown's '- Im' would be needed)",
+   "H_c: fft_causal samples odd harmonics of 1/((2L-1)dt), so the notebook axis reads label = f*(2L-1)/(2L) - 1/(2L dt)"
+  ],
+  "independent_variable": "true line position (delta of a single spin; which spin is observed; true frequency sweep -180..180 Hz)",
+  "dependent_variable": "fitted line position on the notebook's ppm axis",
+  "fixed_parameters": {
+   "dt": 0.0025,
+   "n_steps": 300,
+   "window_gamma_for_position_fits": 20.0,
+   "window_gamma_molecule_test": 5.0
+  },
+  "reference": "exact dense-matrix evolution; analytic Lorentzian; exact line list",
+  "result": {
+   "verbatim_text_identical_to_HEAD_cell": true,
+   "fft_causal": {
+    "max|fft_causal(f) - FFT_{2L-1}(zero-padded f, f0/2)[::2]|": 9.155133597044475e-16,
+    "max|fft_causal(f) - DTFT at (2j-(L-1))/((2L-1)dt)|": 9.439365632316587e-14,
+    "max|fft_causal(f) - DTFT at notebook axis fftfreq(L,dt)|": 2.855746318617843,
+    "typical |fft_causal(f)|": 0.6466751548793284,
+    "true grid spacing Hz": 1.3355592654424129,
+    "notebook grid spacing Hz": 1.3333333333333428,
+    "true axis ends Hz": [
+     -199.6661101836394,
+     199.6661101836394
+    ],
+    "notebook axis ends Hz": [
+     -200.0,
+     198.66666666666666
+    ],
+    "true frequency at the bin labelled 0 Hz": 0.667779632721202,
+    "predicted label(f) = f*(2L-1)/(2L) - 1/(2 L dt)": {
+     "slope": 0.9983333333333333,
+     "intercept_hz": -0.6666666666666666
+    }
+   },
+   "single_spin": [
+    {
+     "delta_ref": 5.0,
+     "delta_true": 5.1,
+     "peak_ppm_code(+Im)": 5.098500000777283,
+     "err_Ha_hz": -0.7499995999357472,
+     "err_Hb_hz": 99.24999887703406,
+     "peak_ppm_markdown(-Im)": 4.898833332515439,
+     "markdown_err_vs_mirror_hz": -0.5833337333963536
+    },
+    {
+     "delta_ref": 5.0,
+     "delta_true": 4.9,
+     "peak_ppm_code(+Im)": 4.898833332515439,
+     "err_Ha_hz": -0.5833337333963536,
+     "err_Hb_hz": -100.58333221036617,
+     "peak_ppm_markdown(-Im)": 5.098500000777283,
+     "markdown_err_vs_mirror_hz": -0.7499995999357472
+    },
+    {
+     "delta_ref": 6.0,
+     "delta_true": 6.2345,
+     "peak_ppm_code(+Im)": 6.232775831403188,
+     "err_Ha_hz": -0.8620842852759286,
+     "err_Hb_hz": 233.6379121432188,
+     "peak_ppm_markdown(-Im)": 5.764557501889534,
+     "markdown_err_vs_mirror_hz": -0.47124904805572804
+    },
+    {
+     "delta_ref": 5.5,
+     "delta_true": 5.4321,
+     "peak_ppm_code(+Im)": 5.430879832378055,
+     "err_Ha_hz": -0.6100838016806254,
+     "err_Hb_hz": -68.51008276754321,
+     "peak_ppm_markdown(-Im)": 5.566453500914667,
+     "markdown_err_vs_mirror_hz": -0.7232495316510313
+    }
+   ],
+   "two_spin": [
+    {
+     "J_hz": 0.0,
+     "delta": [
+      5.2,
+      5.05
+     ],
+     "spin0-only signal: intensity-weighted centroid ppm": 5.198539211209352,
+     "nearer to": "delta_0 (H_a)",
+     "exact line ppm": [
+      5.05,
+      5.05,
+      5.2,
+      5.2
+     ],
+     "exact intensities": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ],
+     "full signal: corr with exact Lorentzian sticks on the corrected axis": 0.9999997812763729
+    },
+    {
+     "J_hz": 10.0,
+     "delta": [
+      5.2,
+      5.05
+     ],
+     "spin0-only signal: intensity-weighted centroid ppm": 5.197798733693668,
+     "nearer to": "delta_0 (H_a)",
+     "exact line ppm": [
+      5.03934,
+      5.05934,
+      5.19066,
+      5.21066
+     ],
+     "exact intensities": [
+      0.43392,
+      0.56608,
+      0.56608,
+      0.43392
+     ],
+     "full signal: corr with exact Lorentzian sticks on the corrected axis": 0.9999996642849855
+    }
+   ],
+   "molecule_exact_signal": {
+    "A": {
+     "notebook axis: corr with exact lines at true ppm [H_a]": 0.877120972878155,
+     "notebook axis: corr with exact lines mirrored about the mean [H_b]": 0.07097083338744237,
+     "corrected axis: corr [H_a]": 0.9997644720569909,
+     "corrected axis: corr [H_b]": 0.01952648413132747
+    },
+    "B": {
+     "notebook axis: corr with exact lines at true ppm [H_a]": 0.8606896130951487,
+     "notebook axis: corr with exact lines mirrored about the mean [H_b]": 0.003930340473028342,
+     "corrected axis: corr [H_a]": 0.9999157658503243,
+     "corrected axis: corr [H_b]": 0.01379230061357924
+    }
+   },
+   "axis_offset": {
+    "gamma_window": 20.0,
+    "n_lines": 44,
+    "fit label_hz = slope*f_true + intercept": {
+     "slope": 0.9983333325777667,
+     "intercept_hz": -0.6666666399266519
+    },
+    "predicted": {
+     "slope": 0.9983333333333333,
+     "intercept_hz": -0.6666666666666666
+    },
+    "label - true (Hz) at f = -180, 0, +180": [
+     -0.36666570909872576,
+     -0.6666666611036111,
+     -0.9666676242333665
+    ],
+    "intercept in ppm": -0.0013333333001603678,
+    "intercept in notebook bins": -0.4999999799449889,
+    "max|fit residual| Hz": 1.0976136479712295e-06,
+    "corrected axis: max|position - true| Hz": 9.709217982933893e-07
+   },
+   "absorptive_check": {
+    "min(raw)/max(raw)": 0.0006470151148746842,
+    "max|raw - analytic Lorentzian|/max": 0.0005314442731149978
+   }
+  },
+  "conclusion": "H_a supported, H_b rejected: lines appear at their true ppm with '+ Im'; the markdown's '- Im' would mirror them. H_c supported: measured label = 0.998333*f -0.6667 Hz (predicted 0.998333*f - 0.6667 Hz): every line is drawn 0.667 Hz (0.00133 ppm, half a bin) too low plus a 1/600 compression about the mean; the axis (2j-(L-1))/((2L-1)dt) removes it.",
+  "limitations": "Position fits use Gamma = 20 s^-1 (well-sampled Lorentzian); at small Gamma the line shape on this grid is not Lorentzian (see T7). First version of the script used an absolute threshold corr > 0.9 for the molecule test; the measured H_a correlations on the notebook axis are 0.877 (A) and 0.861 (B) because the pure-Lorentzian model ignores the half-bin shift and the truncation, so the verdict now uses the comparative rule written in the script (H_a minus H_b > 0.5).",
+  "script": "agents/agent1_physics/t4_sign_axis.py",
+  "command": ".venv/bin/python -I agents/agent1_physics/t4_sign_axis.py"
+ },
+ {
+  "id": "T5_exact_lines_and_reference_match",
+  "question": "What are the exact transition frequencies/intensities of A, B, C, and which reference file contains which molecule's lines?",
+  "hypotheses": [
+   "each reference file contains the exact line list of exactly one molecule (3! = 6 possible assignments)"
+  ],
+  "independent_variable": "molecule (A, B, C) x reference file (1, 2, 3)",
+  "dependent_variable": "correlation of the reference spectrum with the exact stick spectrum (Lorentzian width fitted); peak-to-line distances",
+  "fixed_parameters": {
+   "weak_line_threshold": 0.001,
+   "peak_prominence": "1% of the file maximum",
+   "file names not used": true
+  },
+  "reference": "files/spectrum_{1,2,3}.pkl (read without unpickling)",
+  "result": {
+   "assignment": {
+    "A": "spectrum_3",
+    "B": "spectrum_2",
+    "C": "spectrum_1"
+   },
+   "assignment_is_a_permutation": true,
+   "match_matrix": {
+    "A-spectrum_1": {
+     "fraction of exact lines inside the file's ppm window": 0.0,
+     "best corr(reference, exact sticks)": null,
+     "best-fit Lorentzian FWHM hz": null,
+     "max distance ref peak -> nearest exact line (Hz)": 197.15000896242535,
+     "max distance exact line -> nearest ref peak (Hz)": 421.99571778823747
+    },
+    "A-spectrum_2": {
+     "fraction of exact lines inside the file's ppm window": 1.0,
+     "best corr(reference, exact sticks)": -0.026800233335618876,
+     "best-fit Lorentzian FWHM hz": 0.05,
+     "max distance ref peak -> nearest exact line (Hz)": 58.971453598097675,
+     "max distance exact line -> nearest ref peak (Hz)": 50.394285983243385
+    },
+    "A-spectrum_3": {
+     "fraction of exact lines inside the file's ppm window": 1.0,
+     "best corr(reference, exact sticks)": 0.9999951603219128,
+     "best-fit Lorentzian FWHM hz": 1.0076688429708665,
+     "max distance ref peak -> nearest exact line (Hz)": 0.05613051630114327,
+     "max distance exact line -> nearest ref peak (Hz)": 0.05613051630114327
+    },
+    "B-spectrum_1": {
+     "fraction of exact lines inside the file's ppm window": 0.0,
+     "best corr(reference, exact sticks)": null,
+     "best-fit Lorentzian FWHM hz": null,
+     "max distance ref peak -> nearest exact line (Hz)": 229.3512846466918,
+     "max distance exact line -> nearest ref peak (Hz)": 481.21016248250453
+    },
+    "B-spectrum_2": {
+     "fraction of exact lines inside the file's ppm window": 1.0,
+     "best corr(reference, exact sticks)": 0.9999951944712938,
+     "best-fit Lorentzian FWHM hz": 1.0076688429708665,
+     "max distance ref peak -> nearest exact line (Hz)": 0.2362226993851045,
+     "max distance exact line -> nearest ref peak (Hz)": 0.24735185244392172
+    },
+    "B-spectrum_3": {
+     "fraction of exact lines inside the file's ppm window": 1.0,
+     "best corr(reference, exact sticks)": -0.01845818630854918,
+     "best-fit Lorentzian FWHM hz": 0.05,
+     "max distance ref peak -> nearest exact line (Hz)": 50.1587715951118,
+     "max distance exact line -> nearest ref peak (Hz)": 59.21461930656283
+    },
+    "C-spectrum_1": {
+     "fraction of exact lines inside the file's ppm window": 1.0,
+     "best corr(reference, exact sticks)": 0.9999925681140533,
+     "best-fit Lorentzian FWHM hz": 1.0076688429708665,
+     "max distance ref peak -> nearest exact line (Hz)": 0.00019163705796807273,
+     "max distance exact line -> nearest ref peak (Hz)": 0.00019163705796807273
+    },
+    "C-spectrum_2": {
+     "fraction of exact lines inside the file's ppm window": 0.0,
+     "best corr(reference, exact sticks)": null,
+     "best-fit Lorentzian FWHM hz": null,
+     "max distance ref peak -> nearest exact line (Hz)": 480.9669797492772,
+     "max distance exact line -> nearest ref peak (Hz)": 229.35182839760068
+    },
+    "C-spectrum_3": {
+     "fraction of exact lines inside the file's ppm window": 0.0,
+     "best corr(reference, exact sticks)": null,
+     "best-fit Lorentzian FWHM hz": null,
+     "max distance ref peak -> nearest exact line (Hz)": 421.99535153888377,
+     "max distance exact line -> nearest ref peak (Hz)": 197.20408482752865
+    }
+   },
+   "assignment_detail": {
+    "A": {
+     "file": "spectrum_3",
+     "n_ref_peaks": 12,
+     "n_exact_lines(>1e-3)": 12,
+     "ref peak ppm": [
+      5.44924,
+      5.47282,
+      5.48498,
+      5.50856,
+      5.77782,
+      5.77949,
+      5.8014,
+      5.80307,
+      5.95195,
+      5.95362,
+      5.98769,
+      5.98936
+     ],
+     "ref peak rel height": [
+      0.6385,
+      0.7465,
+      0.7421,
+      0.8624,
+      0.9741,
+      1.0,
+      0.8503,
+      0.8461,
+      0.991,
+      0.9744,
+      0.8528,
+      0.8455
+     ],
+     "ref peak - nearest exact line (Hz)": [
+      0.0002,
+      0.0004,
+      -0.0004,
+      -0.0003,
+      0.0561,
+      -0.05,
+      0.053,
+      -0.0532,
+      0.0516,
+      -0.0547,
+      0.0523,
+      -0.0539
+     ],
+     "mean offset hz": 9.591804104777553e-05,
+     "max|offset| hz": 0.05613051630114327,
+     "smallest spacing between reference peaks (Hz)": 0.8351448142468337
+    },
+    "B": {
+     "file": "spectrum_2",
+     "n_ref_peaks": 8,
+     "n_exact_lines(>1e-3)": 12,
+     "ref peak ppm": [
+      5.3313,
+      5.34845,
+      5.56363,
+      5.59484,
+      5.87672,
+      5.89388,
+      5.90791,
+      5.92507
+     ],
+     "ref peak rel height": [
+      0.8867,
+      0.9423,
+      0.8237,
+      1.0,
+      0.6347,
+      0.5969,
+      0.5235,
+      0.4922
+     ],
+     "ref peak - nearest exact line (Hz)": [
+      -0.2325,
+      -0.2357,
+      0.2281,
+      -0.2362,
+      -0.0,
+      -0.0,
+      -0.0003,
+      -0.0004
+     ],
+     "mean offset hz": -0.05961876217529072,
+     "max|offset| hz": 0.2362226993851045,
+     "smallest spacing between reference peaks (Hz)": 7.014570566843941
+    },
+    "C": {
+     "file": "spectrum_1",
+     "n_ref_peaks": 4,
+     "n_exact_lines(>1e-3)": 4,
+     "ref peak ppm": [
+      6.29323,
+      6.30907,
+      6.36793,
+      6.38377
+     ],
+     "ref peak rel height": [
+      0.6525,
+      1.0,
+      1.0,
+      0.6525
+     ],
+     "ref peak - nearest exact line (Hz)": [
+      0.0002,
+      -0.0001,
+      0.0001,
+      -0.0002
+     ],
+     "mean offset hz": 3.775646404641182e-08,
+     "max|offset| hz": 0.00019163705796807273,
+     "smallest spacing between reference peaks (Hz)": 7.91972344236645
+    }
+   },
+   "AB_check_C": {
+    "dnu_hz": 36.49999935549318,
+    "J": 7.920000000000001,
+    "C=sqrt(dnu^2+J^2)": 37.34938222984421,
+    "analytic lines hz": [
+     -22.634691114922106,
+     -14.714691114922104,
+     14.714691114922104,
+     22.634691114922106
+    ],
+    "analytic intensities": [
+     0.3939741499436169,
+     0.6060258500563831,
+     0.6060258500563831,
+     0.3939741499436169
+    ],
+    "inner/outer intensity": 1.5382375979315235,
+    "max|ED - analytic| hz": 1.3953087574236633e-08,
+    "max|ED - analytic| intensity": 7.921896472140588e-11
+   },
+   "smallest_spacings_hz": {
+    "A": [
+     0.9414,
+     0.9414,
+     0.9414,
+     0.9414
+    ],
+    "B": [
+     0.4755,
+     0.4755,
+     0.4755,
+     0.4755
+    ],
+    "C": [
+     7.92,
+     7.92,
+     29.4294
+    ]
+   },
+   "multiplets": {
+    "A": [
+     {
+      "spin": 0,
+      "delta_ppm": 5.789999999894491,
+      "nu_first_order_hz": 21.6667,
+      "line_hz": [
+       15.5225,
+       16.4639,
+       27.3124,
+       28.2538
+      ],
+      "line_ppm": [
+       5.777712,
+       5.779594,
+       5.801291,
+       5.803174
+      ],
+      "intensity": [
+       0.26317,
+       0.27489,
+       0.23161,
+       0.23036
+      ],
+      "centroid_minus_nu_hz": -0.2222,
+      "max/min intensity (roof)": 1.1933,
+      "spacings": [
+       {
+        "spacing_hz": 0.9414,
+        "origin": "|J01|",
+        "first_order_hz": 0.9,
+        "deviation_hz": 0.0414
+       },
+       {
+        "spacing_hz": 10.8485,
+        "origin": "||J01|-|J02||",
+        "first_order_hz": 10.9,
+        "deviation_hz": -0.0515
+       },
+       {
+        "spacing_hz": 0.9414,
+        "origin": "|J01|",
+        "first_order_hz": 0.9,
+        "deviation_hz": 0.0414
+       }
+      ]
+     },
+     {
+      "spin": 1,
+      "delta_ppm": 5.969999999910769,
+      "nu_first_order_hz": 111.6667,
+      "line_hz": [
+       102.5911,
+       103.5325,
+       120.4597,
+       121.4012
+      ],
+      "line_ppm": [
+       5.951849,
+       5.953732,
+       5.987586,
+       5.989469
+      ],
+      "intensity": [
+       0.27183,
+       0.26453,
+       0.23338,
+       0.23022
+      ],
+      "centroid_minus_nu_hz": -0.3256,
+      "max/min intensity (roof)": 1.1808,
+      "spacings": [
+       {
+        "spacing_hz": 0.9414,
+        "origin": "|J01|",
+        "first_order_hz": 0.9,
+        "deviation_hz": 0.0414
+       },
+       {
+        "spacing_hz": 16.9273,
+        "origin": "||J01|-|J12||",
+        "first_order_hz": 17.0,
+        "deviation_hz": -0.0727
+       },
+       {
+        "spacing_hz": 0.9414,
+        "origin": "|J01|",
+        "first_order_hz": 0.9,
+        "deviation_hz": 0.0414
+       }
+      ]
+     },
+     {
+      "spin": 2,
+      "delta_ppm": 5.48000000000215,
+      "nu_first_order_hz": -133.3333,
+      "line_hz": [
+       -148.7136,
+       -136.9236,
+       -130.8449,
+       -119.055
+      ],
+      "line_ppm": [
+       5.44924,
+       5.472819,
+       5.484977,
+       5.508557
+      ],
+      "intensity": [
+       0.21499,
+       0.24861,
+       0.24694,
+       0.28942
+      ],
+      "centroid_minus_nu_hz": 0.5478,
+      "max/min intensity (roof)": 1.3462,
+      "spacings": [
+       {
+        "spacing_hz": 11.7899,
+        "origin": "|J02|",
+        "first_order_hz": 11.8,
+        "deviation_hz": -0.0101
+       },
+       {
+        "spacing_hz": 6.0787,
+        "origin": "||J02|-|J12||",
+        "first_order_hz": 6.1,
+        "deviation_hz": -0.0213
+       },
+       {
+        "spacing_hz": 11.7899,
+        "origin": "|J02|",
+        "first_order_hz": 11.8,
+        "deviation_hz": -0.0101
+       }
+      ]
+     }
+    ],
+    "B": [
+     {
+      "spin": 0,
+      "delta_ppm": 5.5800000000605365,
+      "nu_first_order_hz": -13.3333,
+      "line_hz": [
+       -21.7474,
+       -21.2719,
+       -6.1522,
+       -5.6767
+      ],
+      "line_ppm": [
+       5.563172,
+       5.564123,
+       5.594362,
+       5.595313
+      ],
+      "intensity": [
+       0.22827,
+       0.2232,
+       0.2738,
+       0.27475
+      ],
+      "centroid_minus_nu_hz": 0.3773,
+      "max/min intensity (roof)": 1.231,
+      "spacings": [
+       {
+        "spacing_hz": 0.4755,
+        "origin": "|J02|",
+        "first_order_hz": 0.5,
+        "deviation_hz": -0.0245
+       },
+       {
+        "spacing_hz": 15.1197,
+        "origin": "||J01|-|J02||",
+        "first_order_hz": 15.1,
+        "deviation_hz": 0.0197
+       },
+       {
+        "spacing_hz": 0.4755,
+        "origin": "|J02|",
+        "first_order_hz": 0.5,
+        "deviation_hz": -0.0245
+       }
+      ]
+     },
+     {
+      "spin": 1,
+      "delta_ppm": 5.899999999892103,
+      "nu_first_order_hz": 146.6667,
+      "line_hz": [
+       135.0244,
+       143.6047,
+       150.6195,
+       159.1999
+      ],
+      "line_ppm": [
+       5.876715,
+       5.893876,
+       5.907906,
+       5.925066
+      ],
+      "intensity": [
+       0.28317,
+       0.26536,
+       0.23215,
+       0.21931
+      ],
+      "centroid_minus_nu_hz": -0.4431,
+      "max/min intensity (roof)": 1.2912,
+      "spacings": [
+       {
+        "spacing_hz": 8.5803,
+        "origin": "|J12|",
+        "first_order_hz": 8.6,
+        "deviation_hz": -0.0197
+       },
+       {
+        "spacing_hz": 7.0148,
+        "origin": "||J01|-|J12||",
+        "first_order_hz": 7.0,
+        "deviation_hz": 0.0148
+       },
+       {
+        "spacing_hz": 8.5803,
+        "origin": "|J12|",
+        "first_order_hz": 8.6,
+        "deviation_hz": -0.0197
+       }
+      ]
+     },
+     {
+      "spin": 2,
+      "delta_ppm": 5.339999999964817,
+      "nu_first_order_hz": -133.3333,
+      "line_hz": [
+       -137.928,
+       -137.4525,
+       -129.3477,
+       -128.8722
+      ],
+      "line_ppm": [
+       5.330811,
+       5.331762,
+       5.347971,
+       5.348922
+      ],
+      "intensity": [
+       0.24104,
+       0.24363,
+       0.2569,
+       0.25843
+      ],
+      "centroid_minus_nu_hz": 0.0658,
+      "max/min intensity (roof)": 1.0721,
+      "spacings": [
+       {
+        "spacing_hz": 0.4755,
+        "origin": "|J02|",
+        "first_order_hz": 0.5,
+        "deviation_hz": -0.0245
+       },
+       {
+        "spacing_hz": 8.1049,
+        "origin": "||J02|-|J12||",
+        "first_order_hz": 8.1,
+        "deviation_hz": 0.0049
+       },
+       {
+        "spacing_hz": 0.4755,
+        "origin": "|J02|",
+        "first_order_hz": 0.5,
+        "deviation_hz": -0.0245
+       }
+      ]
+     }
+    ],
+    "C": [
+     {
+      "spin": 0,
+      "delta_ppm": 6.374999999891884,
+      "nu_first_order_hz": 18.25,
+      "line_hz": [
+       14.7147,
+       22.6347
+      ],
+      "line_ppm": [
+       6.367929,
+       6.383769
+      ],
+      "intensity": [
+       0.60603,
+       0.39397
+      ],
+      "centroid_minus_nu_hz": -0.415,
+      "max/min intensity (roof)": 1.5382,
+      "spacings": [
+       {
+        "spacing_hz": 7.92,
+        "origin": "|J01|",
+        "first_order_hz": 7.92,
+        "deviation_hz": 0.0
+       }
+      ]
+     },
+     {
+      "spin": 1,
+      "delta_ppm": 6.302000000069086,
+      "nu_first_order_hz": -18.25,
+      "line_hz": [
+       -22.6347,
+       -14.7147
+      ],
+      "line_ppm": [
+       6.293231,
+       6.309071
+      ],
+      "intensity": [
+       0.39397,
+       0.60603
+      ],
+      "centroid_minus_nu_hz": 0.415,
+      "max/min intensity (roof)": 1.5382,
+      "spacings": [
+       {
+        "spacing_hz": 7.92,
+        "origin": "|J01|",
+        "first_order_hz": 7.92,
+        "deviation_hz": 0.0
+       }
+      ]
+     }
+    ]
+   },
+   "combination_lines": {
+    "A": [
+     {
+      "hz": -223.992,
+      "intensity": 2.820574056350181e-06
+     },
+     {
+      "hz": -43.776,
+      "intensity": 3.7164060658458744e-05
+     },
+     {
+      "hz": 267.769,
+      "intensity": 2.7734139650255433e-06
+     }
+    ],
+    "B": [
+     {
+      "hz": -294.224,
+      "intensity": 9.998357038367787e-07
+     },
+     {
+      "hz": 27.424,
+      "intensity": 1.0409357172671632e-05
+     },
+     {
+      "hz": 266.8,
+      "intensity": 3.5158951278557723e-07
+     }
+    ],
+    "C": []
+   }
+  },
+  "conclusion": "Assignment by line positions: A -> spectrum_3, B -> spectrum_2, C -> spectrum_1 (a permutation; max |reference peak - exact line| = A: 0.056 Hz, B: 0.236 Hz, C: 0.000 Hz).",
+  "limitations": "Reference peaks located by a 3-point parabola on a non-uniform grid; unresolved reference doublets give one peak for two lines.",
+  "script": "agents/agent1_physics/t5_exact_lines.py",
+  "command": ".venv/bin/python -I agents/agent1_physics/t5_exact_lines.py"
+ },
+ {
+  "id": "T6_exact_signals_and_trotter_error",
+  "question": "How large is the first-order Lie-Trotter error at dt = 0.0025 s in the time signals and in the line positions, and how does it scale with dt?",
+  "hypotheses": [
+   "H1: signal error is first order in dt (halves when dt halves)",
+   "H2: line-position error is second order in dt (quarters when dt halves), because the O(dt) term of the effective Hamiltonian has zero diagonal in the real eigenbasis",
+   "H3: line shifts at dt = 0.0025 s are below the 1.33 Hz grid spacing"
+  ],
+  "independent_variable": "Trotter step dt in {0.0025, 0.00125, 0.000625} s at fixed total time 0.75 s",
+  "dependent_variable": "max |C_trotter - C_exact| / C_xx(0); shift of each allowed line (quasi-energy differences of the Trotter step)",
+  "fixed_parameters": {
+   "term_order": "file order: all Z, then XX, YY, ZZ per pair (0,1),(0,2),(1,2)",
+   "total_time_s": 0.75,
+   "weak_line_threshold": 0.001
+  },
+  "reference": "exact diagonalisation of the rotating-frame Hamiltonian",
+  "result": {
+   "A": {
+    "C_xx(0)": 23.999999999999993,
+    "C_yx(0)": 0.0,
+    "max|trace formula - state-sum recipe| (xx, yx)": [
+     1.156186257844638e-12,
+     1.4011014570769476e-12
+    ],
+    "signal_error": {
+     "dt/1": {
+      "dt": 0.0025,
+      "n_steps": 300,
+      "max|dC_xx|/C_xx(0)": 0.7289080408770874,
+      "max|dC_yx|/C_xx(0)": 0.6476511623493024,
+      "rms|dC|/C_xx(0)": 0.27326754714798085
+     },
+     "dt/2": {
+      "dt": 0.00125,
+      "n_steps": 600,
+      "max|dC_xx|/C_xx(0)": 0.2210406307492925,
+      "max|dC_yx|/C_xx(0)": 0.22031987576204706,
+      "rms|dC|/C_xx(0)": 0.06704432073612114
+     },
+     "dt/4": {
+      "dt": 0.000625,
+      "n_steps": 1200,
+      "max|dC_xx|/C_xx(0)": 0.055624624386741456,
+      "max|dC_yx|/C_xx(0)": 0.05356008649881777,
+      "rms|dC|/C_xx(0)": 0.01616197922100125
+     },
+     "order (log2 of error ratio) dt->dt/2, dt/2->dt/4": [
+      1.721425231395405,
+      1.9905159899568912
+     ],
+     "reversed term order, dt: max|dC|/C_xx(0)": 0.7289080408771048
+    },
+    "line_shift": {
+     "dt/1": {
+      "shift_hz": [
+       0.71483,
+       0.656,
+       0.70784,
+       0.649,
+       -0.12758,
+       -0.06175,
+       -0.18642,
+       -0.12059,
+       -0.58725,
+       -0.52142,
+       -0.59424,
+       -0.52842
+      ],
+      "max|shift| hz": 0.7148311652568964,
+      "rms shift hz": 0.5149462270032106,
+      "max|intensity change|": 0.04203097871786568
+     },
+     "dt/2": {
+      "shift_hz": [
+       0.14047,
+       0.13203,
+       0.13971,
+       0.13127,
+       -0.02889,
+       -0.01969,
+       -0.03733,
+       -0.02813,
+       -0.11158,
+       -0.10238,
+       -0.11234,
+       -0.10314
+      ],
+      "max|shift| hz": 0.1404718492362349,
+      "rms shift hz": 0.10145431209548668,
+      "max|intensity change|": 0.008775147580324272
+     },
+     "dt/4": {
+      "shift_hz": [
+       0.03354,
+       0.03162,
+       0.0334,
+       0.03148,
+       -0.00706,
+       -0.00501,
+       -0.00898,
+       -0.00692,
+       -0.02648,
+       -0.02442,
+       -0.02662,
+       -0.02456
+      ],
+      "max|shift| hz": 0.03353990952012964,
+      "rms shift hz": 0.024228647741766106,
+      "max|intensity change|": 0.002117491507099445
+     },
+     "order (log2 of max-shift ratio) dt->dt/2, dt/2->dt/4": [
+      2.347321493246605,
+      2.066330339125022
+     ],
+     "exact line hz": [
+      -148.7136,
+      -136.9236,
+      -130.8449,
+      -119.055,
+      15.5225,
+      16.4639,
+      27.3124,
+      28.2538,
+      102.5911,
+      103.5325,
+      120.4597,
+      121.4012
+     ],
+     "line spin": [
+      2,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+     ],
+     "line that moves most at dt": {
+      "exact_hz": -148.7135550979462,
+      "ppm": 5.449239551876674,
+      "spin": 2,
+      "shift_hz": 0.71483
+     },
+     "mean shift per spin multiplet at dt (Hz)": {
+      "0": -0.124085,
+      "1": -0.5578325000000001,
+      "2": 0.6819175
+     },
+     "splitting change at dt (Hz) per multiplet": {
+      "0": [
+       0.06583,
+       -0.12466,
+       0.06583
+      ],
+      "1": [
+       0.06583,
+       -0.07282,
+       0.06583
+      ],
+      "2": [
+       -0.05884,
+       0.05185,
+       -0.05884
+      ]
+     }
+    },
+    "spectrum_peak_shift (Gamma=5, 300 pts, fine grid)": {
+     "n_peaks": 8,
+     "exact_peak_hz": [
+      -148.713,
+      -136.913,
+      -130.856,
+      -119.055,
+      16.025,
+      27.774,
+      103.04,
+      120.926
+     ],
+     "shift_hz": [
+      0.7148,
+      0.654,
+      0.7069,
+      0.6471,
+      -0.0997,
+      -0.1409,
+      -0.5551,
+      -0.5724
+     ],
+     "max|shift| hz": 0.7148313286863015
+    }
+   },
+   "B": {
+    "C_xx(0)": 23.999999999999996,
+    "C_yx(0)": 0.0,
+    "max|trace formula - state-sum recipe| (xx, yx)": [
+     2.474465077284549e-12,
+     2.879474436667806e-12
+    ],
+    "signal_error": {
+     "dt/1": {
+      "dt": 0.0025,
+      "n_steps": 300,
+      "max|dC_xx|/C_xx(0)": 0.5739795692580631,
+      "max|dC_yx|/C_xx(0)": 0.6811913629087512,
+      "rms|dC|/C_xx(0)": 0.2091616421714872
+     },
+     "dt/2": {
+      "dt": 0.00125,
+      "n_steps": 600,
+      "max|dC_xx|/C_xx(0)": 0.15102172600664973,
+      "max|dC_yx|/C_xx(0)": 0.14490642574853227,
+      "rms|dC|/C_xx(0)": 0.04499878728584587
+     },
+     "dt/4": {
+      "dt": 0.000625,
+      "n_steps": 1200,
+      "max|dC_xx|/C_xx(0)": 0.03913630219865405,
+      "max|dC_yx|/C_xx(0)": 0.036054235744802564,
+      "rms|dC|/C_xx(0)": 0.010875971166170468
+     },
+     "order (log2 of error ratio) dt->dt/2, dt/2->dt/4": [
+      2.1733040318475276,
+      1.948176756604132
+     ],
+     "reversed term order, dt: max|dC|/C_xx(0)": 0.6811913629087396
+    },
+    "line_shift": {
+     "dt/1": {
+      "shift_hz": [
+       0.20339,
+       0.15969,
+       0.1839,
+       0.14019,
+       0.25829,
+       0.21459,
+       0.23408,
+       0.19037,
+       -0.37427,
+       -0.39377,
+       -0.39849,
+       -0.41798
+      ],
+      "max|shift| hz": 0.41798072575323886,
+      "rms shift hz": 0.28177633202430874,
+      "max|intensity change|": 0.03452372909657553
+     },
+     "dt/2": {
+      "shift_hz": [
+       0.034,
+       0.02802,
+       0.03004,
+       0.02406,
+       0.05518,
+       0.0492,
+       0.05316,
+       0.04717,
+       -0.07721,
+       -0.08117,
+       -0.07924,
+       -0.0832
+      ],
+      "max|shift| hz": 0.08319784371320793,
+      "rms shift hz": 0.0575104269245854,
+      "max|intensity change|": 0.006879483733240155
+     },
+     "dt/4": {
+      "shift_hz": [
+       0.00794,
+       0.00658,
+       0.007,
+       0.00563,
+       0.01342,
+       0.01206,
+       0.013,
+       0.01164,
+       -0.01864,
+       -0.01958,
+       -0.01906,
+       -0.02
+      ],
+      "max|shift| hz": 0.0200006430741837,
+      "rms shift hz": 0.013877753674539087,
+      "max|intensity change|": 0.0016561205172094806
+     },
+     "order (log2 of max-shift ratio) dt->dt/2, dt/2->dt/4": [
+      2.3288183743843223,
+      2.056499750435357
+     ],
+     "exact line hz": [
+      -137.928,
+      -137.4525,
+      -129.3477,
+      -128.8722,
+      -21.7474,
+      -21.2719,
+      -6.1522,
+      -5.6767,
+      135.0244,
+      143.6047,
+      150.6195,
+      159.1999
+     ],
+     "line spin": [
+      2,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+     ],
+     "line that moves most at dt": {
+      "exact_hz": 159.19987601826057,
+      "ppm": 5.925066423524997,
+      "spin": 1,
+      "shift_hz": -0.41798
+     },
+     "mean shift per spin multiplet at dt (Hz)": {
+      "0": 0.22433250000000002,
+      "1": -0.3961275,
+      "2": 0.17179250000000001
+     },
+     "splitting change at dt (Hz) per multiplet": {
+      "0": [
+       -0.04371,
+       0.01949,
+       -0.04371
+      ],
+      "1": [
+       -0.01949,
+       -0.00472,
+       -0.01949
+      ],
+      "2": [
+       -0.04371,
+       0.02421,
+       -0.04371
+      ]
+     }
+    },
+    "spectrum_peak_shift (Gamma=5, 300 pts, fine grid)": {
+     "n_peaks": 8,
+     "exact_peak_hz": [
+      -137.685,
+      -129.112,
+      -21.512,
+      -5.915,
+      135.029,
+      143.602,
+      150.621,
+      159.195
+     ],
+     "shift_hz": [
+      0.1792,
+      0.1626,
+      0.2387,
+      0.2109,
+      -0.3737,
+      -0.3926,
+      -0.3985,
+      -0.4169
+     ],
+     "max|shift| hz": 0.4169202521484294
+    }
+   },
+   "C": {
+    "C_xx(0)": 8.000000000000002,
+    "C_yx(0)": 0.0,
+    "max|trace formula - state-sum recipe| (xx, yx)": [
+     9.015010959956271e-14,
+     5.551115123125782e-16
+    ],
+    "signal_error": {
+     "dt/1": {
+      "dt": 0.0025,
+      "n_steps": 300,
+      "max|dC_xx|/C_xx(0)": 0.04885359032483934,
+      "max|dC_yx|/C_xx(0)": 6.938893903907226e-17,
+      "rms|dC|/C_xx(0)": 0.016234458109435263
+     },
+     "dt/2": {
+      "dt": 0.00125,
+      "n_steps": 600,
+      "max|dC_xx|/C_xx(0)": 0.012224699177374298,
+      "max|dC_yx|/C_xx(0)": 6.938893903907226e-17,
+      "rms|dC|/C_xx(0)": 0.004039157545538451
+     },
+     "dt/4": {
+      "dt": 0.000625,
+      "n_steps": 1200,
+      "max|dC_xx|/C_xx(0)": 0.003051077195753745,
+      "max|dC_yx|/C_xx(0)": 9.714451465470116e-17,
+      "rms|dC|/C_xx(0)": 0.0010085749086150876
+     },
+     "order (log2 of error ratio) dt->dt/2, dt/2->dt/4": [
+      1.9986656278462254,
+      2.0024083767710255
+     ],
+     "reversed term order, dt: max|dC|/C_xx(0)": 0.04885359032483573
+    },
+    "line_shift": {
+     "dt/1": {
+      "shift_hz": [
+       0.01157,
+       0.01157,
+       -0.01157,
+       -0.01157
+      ],
+      "max|shift| hz": 0.011571427231498177,
+      "rms shift hz": 0.011571427231494624,
+      "max|intensity change|": 0.0028579839512904437
+     },
+     "dt/2": {
+      "shift_hz": [
+       0.00288,
+       0.00288,
+       -0.00288,
+       -0.00288
+      ],
+      "max|shift| hz": 0.002879705801202448,
+      "rms shift hz": 0.002879705801198895,
+      "max|intensity change|": 0.0007109490716659117
+     },
+     "dt/4": {
+      "shift_hz": [
+       0.00072,
+       0.00072,
+       -0.00072,
+       -0.00072
+      ],
+      "max|shift| hz": 0.0007191099524526123,
+      "rms shift hz": 0.0007191099524206379,
+      "max|intensity change|": 0.0001775169275257671
+     },
+     "order (log2 of max-shift ratio) dt->dt/2, dt/2->dt/4": [
+      2.006573484331867,
+      2.0016371476362376
+     ],
+     "exact line hz": [
+      -22.6347,
+      -14.7147,
+      14.7147,
+      22.6347
+     ],
+     "line spin": [
+      1,
+      1,
+      0,
+      0
+     ],
+     "line that moves most at dt": {
+      "exact_hz": -22.634691128875193,
+      "ppm": 6.293230617033268,
+      "spin": 1,
+      "shift_hz": 0.01157
+     },
+     "mean shift per spin multiplet at dt (Hz)": {
+      "0": -0.01157,
+      "1": 0.01157
+     },
+     "splitting change at dt (Hz) per multiplet": {
+      "0": [
+       0.0
+      ],
+      "1": [
+       0.0
+      ]
+     }
+    },
+    "spectrum_peak_shift (Gamma=5, 300 pts, fine grid)": {
+     "n_peaks": 4,
+     "exact_peak_hz": [
+      -22.642,
+      -14.715,
+      14.715,
+      22.642
+     ],
+     "shift_hz": [
+      0.0118,
+      0.0116,
+      -0.0116,
+      -0.0118
+     ],
+     "max|shift| hz": 0.011756851414141067
+    }
+   }
+  },
+  "conclusion": "A: signal error 0.7289 of C_xx(0) (order 1.72), max line shift 0.7148 Hz (order 2.35); B: signal error 0.6812 of C_xx(0) (order 2.17), max line shift 0.4180 Hz (order 2.33); C: signal error 0.0489 of C_xx(0) (order 2.00), max line shift 0.0116 Hz (order 2.01)",
+  "limitations": "NumPy emulation of the term-by-term product; that Qiskit's LieTrotter synthesis uses the same order (first SparsePauliOp term first) is assumed, NOT RUN here (Qiskit excluded by the independence rule). struqture 2.6.0 keeps the file order (checked). Reversed order is reported as a sensitivity number.",
+  "script": "agents/agent1_physics/t6_signals_trotter.py",
+  "command": ".venv/bin/python -I agents/agent1_physics/t6_signals_trotter.py"
+ }
+]
